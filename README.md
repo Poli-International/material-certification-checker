@@ -2,11 +2,11 @@
 
 > **Verify and understand body jewelry safety certifications like ASTM F136 Titanium and ISO standards.**
 
-[![License](https://img.shields.io/github/license/Poli-International/material-certification)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/Poli-International/material-certification)](https://github.com/Poli-International/material-certification/commits/master)
-[![GitHub Stars](https://img.shields.io/github/stars/Poli-International/material-certification?style=social)](https://github.com/Poli-International/material-certification/stargazers)
+[![License](https://img.shields.io/github/license/Poli-International/material-certification-checker)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/Poli-International/material-certification-checker)](https://github.com/Poli-International/material-certification-checker/commits/master)
+[![GitHub Stars](https://img.shields.io/github/stars/Poli-International/material-certification-checker?style=social)](https://github.com/Poli-International/material-certification-checker/stargazers)
 
-**Live Demo:** [https://poliinternational.com/tools/material-certification/](https://poliinternational.com/tools/material-certification/)
+**Live Demo:** [https://poliinternational.com/tools/material-certification-checker/](https://poliinternational.com/tools/material-certification-checker/)
 
 ---
 
@@ -42,7 +42,7 @@ The Body Jewelry Material Certification Guide is a reference tool for profession
 
 ### Try It Live
 
-**👉 [Use the tool now](https://poliinternational.com/tools/material-certification/)**
+**👉 [Use the tool now](https://poliinternational.com/tools/material-certification-checker/)**
 
 ---
 
@@ -51,7 +51,7 @@ The Body Jewelry Material Certification Guide is a reference tool for profession
 ### Option 1: Use Online (Recommended)
 
 No installation needed! Just visit:
-**[https://poliinternational.com/tools/material-certification/](https://poliinternational.com/tools/material-certification/)**
+**[https://poliinternational.com/tools/material-certification-checker/](https://poliinternational.com/tools/material-certification-checker/)**
 
 ---
 
@@ -72,7 +72,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Get Help
 
 - 📧 **Email**: <support@poliinternational.com>
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/Poli-International/material-certification/issues)
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/Poli-International/material-certification-checker/issues)
 
 ---
 
