@@ -381,37 +381,13 @@ body {
   font-size: var(--font-size-2xl);
 }
 
-/* Ko-fi Button */
-.cert-decoder__kofi-button {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  background: #FF5E5B;
-  color: white;
-  border: none;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-sm) var(--spacing-md);
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition-speed) var(--transition-ease);
-  font-size: var(--font-size-sm);
-  text-decoration: none;
-}
+/
 
-.cert-decoder__kofi-button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
-  background: #FF4E4B;
-}
 
-.kofi-icon {
-  font-size: 1.1rem;
-  line-height: 1;
-}
 
-.kofi-text {
-  white-space: nowrap;
-}
+
+
+
 
 /* Responsive Header */
 @media (max-width: 768px) {
@@ -1311,11 +1287,7 @@ body.light-mode .cert-decoder__email-title {
   text-shadow: none;
 }
 
-/* Ko-fi Support */
-.cert-decoder__support {
-  text-align: center;
-  margin-bottom: var(--spacing-2xl);
-}
+/
 
 .cert-decoder__support-text {
   font-size: var(--font-size-base);
@@ -1323,27 +1295,11 @@ body.light-mode .cert-decoder__email-title {
   margin-bottom: var(--spacing-md);
 }
 
-.cert-decoder__kofi {
-  display: inline-block;
-  transition: all var(--transition-speed) var(--transition-ease);
-}
 
-.cert-decoder__kofi:hover {
-  transform: translateY(-3px) scale(1.05);
-}
 
-.cert-decoder__kofi-img {
-  height: 70px;
-  width: auto;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-medium);
-}
 
-@media (min-width: 768px) {
-  .cert-decoder__kofi-img {
-    height: 80px;
-  }
-}
+
+
 
 /* Footer Info */
 .cert-decoder__footer-info {
@@ -1590,15 +1546,7 @@ body.light-mode .cert-decoder__email-title {
   margin-bottom: var(--spacing-md);
 }
 
-/* Modal Ko-fi */
-.cert-decoder__modal-support {
-  padding: var(--spacing-lg);
-  background: linear-gradient(135deg, rgba(0, 119, 190, 0.1) 0%, rgba(0, 170, 68, 0.1) 100%);
-  border: 2px solid var(--color-border);
-  border-radius: var(--border-radius);
-  text-align: center;
-  margin-bottom: var(--spacing-xl);
-}
+/
 
 .cert-decoder__modal-support-text {
   font-size: var(--font-size-base);
@@ -1606,20 +1554,11 @@ body.light-mode .cert-decoder__email-title {
   margin-bottom: var(--spacing-md);
 }
 
-.cert-decoder__modal-kofi {
-  display: inline-block;
-  transition: all var(--transition-speed) var(--transition-ease);
-}
 
-.cert-decoder__modal-kofi:hover {
-  transform: translateY(-2px) scale(1.05);
-}
 
-.cert-decoder__modal-kofi-img {
-  height: 50px;
-  width: auto;
-  border-radius: var(--border-radius);
-}
+
+
+
 
 /* Modal Features */
 .cert-decoder__modal-features {
