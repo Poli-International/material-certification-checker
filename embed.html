@@ -1,1123 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material Certification Decoder - Embed</title>
-    <style>
-        /* ========================================
-           RESET & BASE STYLES
-        ======================================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #F8F9FA;
-            color: #2C3E50;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        /* ========================================
-           COLOR SYSTEM
-        ======================================== */
-        :root {
-            /* Medical/Clinical Colors */
-            --color-medical-blue: #0077BE;
-            --color-safe-green: #00AA44;
-            --color-caution-yellow: #FFB800;
-            --color-danger-red: #DC3545;
-
-            /* Backgrounds */
-            --color-bg-primary: #FFFFFF;
-            --color-bg-secondary: #F8F9FA;
-            --color-bg-elevated: #FFFFFF;
-
-            /* Text */
-            --color-text-primary: #2C3E50;
-            --color-text-secondary: #5A6C7D;
-            --color-text-muted: #8B9BA8;
-
-            /* Borders */
-            --color-border: #E1E8ED;
-            --color-border-hover: #CBD5E0;
-
-            /* Spacing */
-            --spacing-xs: 0.25rem;
-            --spacing-sm: 0.5rem;
-            --spacing-md: 1rem;
-            --spacing-lg: 1.5rem;
-            --spacing-xl: 2rem;
-
-            /* Border Radius */
-            --border-radius: 8px;
-            --border-radius-lg: 12px;
-
-            /* Shadows */
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.10);
-            --shadow-lg: 0 10px 15px rgba(0,0,0,0.12);
-        }
-
-        body.light-mode {
-            --color-bg-primary: #FFFFFF;
-            --color-bg-secondary: #F8F9FA;
-            --color-text-primary: #2C3E50;
-            --color-text-secondary: #5A6C7D;
-            --color-border: #E1E8ED;
-        }
-
-        body.dark-mode {
-            --color-bg-primary: #1A1D23;
-            --color-bg-secondary: #0F1115;
-            --color-bg-elevated: #252930;
-            --color-text-primary: #E8EAED;
-            --color-text-secondary: #A8B2C0;
-            --color-text-muted: #6E7A8A;
-            --color-border: #2D3340;
-            --color-border-hover: #3D4555;
-        }
-
-        /* ========================================
-           EMBED CONTAINER
-        ======================================== */
-        .embed-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: var(--spacing-lg);
-            background: var(--color-bg-primary);
-        }
-
-        /* ========================================
-           HEADER - SIMPLIFIED
-        ======================================== */
-        .embed-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--spacing-xl);
-            padding-bottom: var(--spacing-lg);
-            border-bottom: 2px solid var(--color-border);
-        }
-
-        .embed-header__title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-medical-blue);
-        }
-
-        
-
-        
-
-        
-
-        
-
-        .embed-header__dark-mode-toggle {
-            background: var(--color-bg-secondary);
-            border: 2px solid var(--color-border);
-            border-radius: var(--border-radius);
-            padding: var(--spacing-sm) var(--spacing-md);
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: all 0.2s ease;
-        }
-
-        .embed-header__dark-mode-toggle:hover {
-            border-color: var(--color-medical-blue);
-            transform: scale(1.05);
-        }
-
-        /* ========================================
-           SECTIONS
-        ======================================== */
-        .cert-section {
-            background: var(--color-bg-elevated);
-            border: 2px solid var(--color-border);
-            border-radius: var(--border-radius-lg);
-            padding: var(--spacing-xl);
-            margin-bottom: var(--spacing-xl);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .cert-section__title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--color-medical-blue);
-            margin-bottom: var(--spacing-md);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-        }
-
-        /* ========================================
-           SEARCH
-        ======================================== */
-        .search-box {
-            display: flex;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .search-input {
-            flex: 1;
-            padding: var(--spacing-md);
-            border: 2px solid var(--color-border);
-            border-radius: var(--border-radius);
-            font-size: 1rem;
-            background: var(--color-bg-primary);
-            color: var(--color-text-primary);
-            transition: border-color 0.2s ease;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: var(--color-medical-blue);
-        }
-
-        .search-button {
-            padding: var(--spacing-md) var(--spacing-xl);
-            background: var(--color-medical-blue);
-            color: white;
-            border: none;
-            border-radius: var(--border-radius);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-
-        .search-button:hover {
-            background: #005A94;
-            transform: translateY(-1px);
-        }
-
-        .search-results {
-            margin-top: var(--spacing-lg);
-        }
-
-        /* ========================================
-           FORM ELEMENTS
-        ======================================== */
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-label {
-            font-weight: 600;
-            color: var(--color-text-primary);
-            margin-bottom: var(--spacing-sm);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-        }
-
-        .form-select {
-            padding: var(--spacing-md);
-            border: 2px solid var(--color-border);
-            border-radius: var(--border-radius);
-            font-size: 1rem;
-            background: var(--color-bg-primary);
-            color: var(--color-text-primary);
-            cursor: pointer;
-            transition: border-color 0.2s ease;
-        }
-
-        .form-select:focus {
-            outline: none;
-            border-color: var(--color-medical-blue);
-        }
-
-        .submit-button {
-            width: 100%;
-            padding: var(--spacing-md);
-            background: var(--color-medical-blue);
-            color: white;
-            border: none;
-            border-radius: var(--border-radius);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .submit-button:hover {
-            background: #005A94;
-            transform: translateY(-1px);
-        }
-
-        /* ========================================
-           RESULTS & DETAILS
-        ======================================== */
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-md);
-        }
-
-        .detail-box {
-            background: var(--color-bg-secondary);
-            border: 2px solid var(--color-border);
-            border-radius: var(--border-radius);
-            padding: var(--spacing-lg);
-        }
-
-        .detail-box h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--color-medical-blue);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .detail-box p {
-            color: var(--color-text-secondary);
-            line-height: 1.6;
-        }
-
-        .detail-box ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .detail-box li {
-            padding: var(--spacing-xs) 0;
-            color: var(--color-text-secondary);
-        }
-
-        .detail-box li::before {
-            content: "• ";
-            color: var(--color-medical-blue);
-            font-weight: bold;
-        }
-
-        /* ========================================
-           SAFETY BADGES
-        ======================================== */
-        .safety-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-            padding: var(--spacing-sm) var(--spacing-md);
-            border-radius: var(--border-radius);
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .safety-badge--safe {
-            background: rgba(0, 170, 68, 0.2);
-            color: var(--color-safe-green);
-            border: 2px solid var(--color-safe-green);
-        }
-
-        .safety-badge--conditional {
-            background: rgba(255, 184, 0, 0.2);
-            color: var(--color-caution-yellow);
-            border: 2px solid var(--color-caution-yellow);
-        }
-
-        .safety-badge--unsafe {
-            background: rgba(220, 53, 69, 0.2);
-            color: var(--color-danger-red);
-            border: 2px solid var(--color-danger-red);
-        }
-
-        /* ========================================
-           SAFETY METER
-        ======================================== */
-        .safety-meter {
-            width: 100%;
-            height: 12px;
-            background: var(--color-bg-secondary);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            margin: var(--spacing-sm) 0;
-        }
-
-        .safety-meter-fill {
-            height: 100%;
-            transition: width 0.5s ease;
-        }
-
-        .safety-meter-fill--safe {
-            background: linear-gradient(90deg, var(--color-safe-green) 0%, #00CC55 100%);
-        }
-
-        .safety-meter-fill--conditional {
-            background: linear-gradient(90deg, var(--color-caution-yellow) 0%, #FFCC00 100%);
-        }
-
-        .safety-meter-fill--unsafe {
-            background: linear-gradient(90deg, var(--color-danger-red) 0%, #FF4455 100%);
-        }
-
-        /* ========================================
-           WARNING BOXES
-        ======================================== */
-        .warning-box {
-            background: rgba(255, 184, 0, 0.1);
-            border: 2px solid var(--color-caution-yellow);
-            border-radius: var(--border-radius);
-            padding: var(--spacing-md);
-            margin: var(--spacing-md) 0;
-        }
-
-        .warning-box h4 {
-            color: var(--color-caution-yellow);
-            font-weight: 700;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .warning-box ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .warning-box li {
-            color: var(--color-text-primary);
-            padding: var(--spacing-xs) 0;
-        }
-
-        .warning-box li::before {
-            content: "⚠️ ";
-        }
-
-        /* ========================================
-           RED FLAGS
-        ======================================== */
-        .red-flags {
-            background: rgba(220, 53, 69, 0.1);
-            border: 2px solid var(--color-danger-red);
-            border-radius: var(--border-radius);
-            padding: var(--spacing-lg);
-        }
-
-        .red-flags h3 {
-            color: var(--color-danger-red);
-            font-weight: 700;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .red-flags ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .red-flags li {
-            color: var(--color-text-primary);
-            padding: var(--spacing-xs) 0;
-        }
-
-        .red-flags li::before {
-            content: "🚩 ";
-        }
-
-        /* ========================================
-           COMPARISON CARDS
-        ======================================== */
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-        }
-
-        .comparison-card {
-            background: var(--color-bg-secondary);
-            border: 2px solid var(--color-border);
-            border-radius: var(--border-radius-lg);
-            padding: var(--spacing-lg);
-        }
-
-        .comparison-card h3 {
-            color: var(--color-medical-blue);
-            font-size: 1.2rem;
-            margin-bottom: var(--spacing-md);
-        }
-
-        /* ========================================
-           RESPONSIVE
-        ======================================== */
-        @media (max-width: 768px) {
-            .embed-container {
-                padding: var(--spacing-md);
-            }
-
-            .search-box {
-                flex-direction: column;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .details-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .comparison-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        .embed__email-section{background:linear-gradient(135deg,#3B82F6 0%,#8B5CF6 100%);padding:2rem 1rem;margin:2rem 0;border-radius:8px}
-        .embed__email-box{max-width:500px;margin:0 auto;text-align:center}
-        .embed__email-title{font-size:1.3rem;font-weight:700;color:#FFF;margin-bottom:0.5rem}
-        .embed__email-subtitle{font-size:0.9rem;color:rgba(255,255,255,0.9);margin-bottom:1rem}
-        .embed__email-input-group{display:flex;gap:0.5rem;margin-bottom:0.75rem}
-        .embed__email-input{flex:1;padding:0.75rem;border:2px solid rgba(255,255,255,0.3);border-radius:6px;background:rgba(255,255,255,0.95);color:#1A1A1A;font-size:0.9rem}
-        .embed__email-input:focus{outline:none;border-color:#FFF;background:#FFF}
-        .embed__email-submit{padding:0.75rem 1.5rem;background:#00D084;color:#FFF;border:none;border-radius:6px;font-weight:600;cursor:pointer;transition:all 0.3s ease;font-size:0.9rem}
-        .embed__email-submit:hover{background:#00B871;transform:translateY(-2px)}
-        .embed__email-success,.embed__email-error{padding:0.5rem;border-radius:6px;font-size:0.85rem;margin-top:0.5rem}
-        .embed__email-success{background:rgba(40,167,69,0.2);color:#FFF;border:1px solid rgba(40,167,69,0.5)}
-        .embed__email-error{background:rgba(220,53,69,0.2);color:#FFF;border:1px solid rgba(220,53,69,0.5)}
-        .embed__email-trust{display:flex;justify-content:center;gap:1rem;font-size:0.75rem;color:rgba(255,255,255,0.8);flex-wrap:wrap}
-        .embed__features-section{background:#F8F8F8;padding:2rem 1rem;margin:2rem 0;border-radius:8px;border:2px solid #E0E0E0}
-        .embed__features-title{font-size:1.3rem;font-weight:700;color:#00D084;margin-bottom:1rem;text-align:center}
-        .embed__features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;max-width:600px;margin:0 auto}
-        .embed__feature-item{display:flex;align-items:center;gap:0.5rem;padding:0.75rem;background:#FFF;border-radius:6px;font-size:0.9rem;border:1px solid #E8E8E8}
-        .embed__feature-check{color:#28A745;font-size:1.1rem;font-weight:700}
-        .embed__feature-text{color:#333}
-        @media (max-width:600px){.embed__email-input-group{flex-direction:column}.embed__features-grid{grid-template-columns:1fr}}
-    </style>
+<head><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embed Material Certification Checker | Poli International</title>
+  <style>
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; padding: 2rem 1rem;}
+    .container {max-width: 900px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+    h1 {color: #B76E79; margin-bottom: 1rem; font-size: 2rem;}
+    h2 {color: #9A5A66; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;}
+    h3 {color: #B76E79; margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1.25rem;}
+    p {margin-bottom: 1rem; color: #666;}
+    .intro {background-color: #F5E8EB; padding: 1.5rem; border-left: 4px solid #B76E79; border-radius: 4px; margin-bottom: 2rem;}
+    .intro p {margin-bottom: 0.5rem; color: #9A5A66;}
+    .embed-option {background-color: #FAFAFA; padding: 1.5rem; border: 1px solid #DDD; border-radius: 8px; margin-bottom: 1.5rem;}
+    .embed-option h3 {margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;}
+    .badge {display: inline-block; padding: 0.25rem 0.75rem; background-color: #B76E79; color: white; font-size: 0.75rem; border-radius: 12px; font-weight: 600;}
+    .badge.green {background-color: #00CC66;}
+    .code-block {background-color: #1E1E1E; color: #D4D4D4; padding: 1rem; border-radius: 4px; overflow-x: auto; font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace; font-size: 0.9rem; margin-top: 1rem; position: relative;}
+    .code-block code {display: block; white-space: pre-wrap; word-wrap: break-word;}
+    .copy-btn {position: absolute; top: 0.5rem; right: 0.5rem; padding: 0.5rem 1rem; background-color: #B76E79; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; font-weight: 500; transition: background-color 0.2s;}
+    .copy-btn:hover {background-color: #9A5A66;}
+    .copy-btn:active {background-color: #7A4A56;}
+    .preview {margin-top: 1rem; padding: 1rem; background-color: white; border: 2px dashed #B76E79; border-radius: 4px;}
+    .preview-label {font-weight: 600; color: #B76E79; margin-bottom: 0.5rem; font-size: 0.9rem;}
+    .features {list-style: none; margin: 1rem 0;}
+    .features li {padding-left: 1.5rem; margin-bottom: 0.5rem; position: relative; color: #666;}
+    .features li:before {content: "✓"; position: absolute; left: 0; color: #00CC66; font-weight: bold;}
+    .note {background-color: #FFF3CD; border-left: 4px solid #FFC107; padding: 1rem; margin: 1rem 0; border-radius: 4px;}
+    .note strong {color: #856404;}
+    .note p {margin-bottom: 0; color: #856404;}
+    .footer {margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #DDD; text-align: center; color: #999; font-size: 0.9rem;}
+    .footer a {color: #B76E79; text-decoration: none;}
+    .footer a:hover {text-decoration: underline;}
+    
+    
+    .doc-btn {display: inline-block; padding: 0.75rem 1.5rem; background: #B76E79; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; margin: 1rem 0.5rem;}
+    .doc-btn:hover {background: #9A5A66;}
+
+    /* Dark Mode Toggle */
+    #dark-toggle {position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; background:#FF5E5B; border: 3px solid #fff; border-radius: 50%; cursor: pointer; z-index: 999; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5); transition: transform 0.3s;}
+    #dark-toggle:hover {transform: translateY(-2px);}
+
+    /* Dark Mode Styles */
+    body.dark-mode {background-color: #0f0f0f; color: #e5e5e5;}
+    body.dark-mode .container {background: #1a1a1a; color: #e5e5e5;}
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {color: #C98794;}
+    body.dark-mode p {color: #ccc;}
+    body.dark-mode .intro {background-color: #2a1f21; border-left-color: #C98794;}
+    body.dark-mode .intro p {color: #C98794;}
+    body.dark-mode .embed-option {background-color: #222; border-color: #444;}
+    body.dark-mode .code-block {background-color: #000; border: 1px solid #333;}
+    body.dark-mode .preview {background-color: #222; border-color: #C98794;}
+    body.dark-mode .note {background-color: #3a3000; border-left-color: #FFC107;}
+    body.dark-mode .note strong, body.dark-mode .note p {color: #FFD54F;}
+    body.dark-mode .footer {border-top-color: #333; color: #999;}
+    body.dark-mode .footer a {color: #C98794;}
+    body.dark-mode .features li {color: #ccc;}
+  </style>
 </head>
-<body class="light-mode">
-    <div class="embed-container">
-        <!-- HEADER -->
-        <header class="embed-header">
-            <h1 class="embed-header__title">🔬 Material Certification Decoder</h1>
-            
-            <button id="dark-mode-toggle" class="embed-header__dark-mode-toggle" aria-label="Toggle dark mode">
-                🌙
-            </button>
-        </header>
+<body>
+  <div id="dark-toggle">🌙</div>
+  <div class="container">
+    <h1>🔧 Embed the Material Certification Checker</h1>
 
-        <!-- QUICK CERTIFICATION LOOKUP -->
-        <section class="cert-section">
-            <h2 class="cert-section__title">🔍 Quick Certification Lookup</h2>
-            <div class="search-box">
-                <input type="text" id="cert-search" class="search-input"
-                       placeholder="Enter certification code (e.g., ASTM F138)">
-                <button type="button" id="search-button" class="search-button">Search</button>
-            </div>
-            <div class="search-results" id="search-results" style="display: none;"></div>
-        </section>
-
-        <!-- MATERIAL SAFETY CHECKER -->
-        <section class="cert-section">
-            <h2 class="cert-section__title">🔬 Material Safety Checker</h2>
-            <form id="material-form">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="material-type" class="form-label">
-                            <span>🔬</span> Material Type
-                        </label>
-                        <select id="material-type" class="form-select" required>
-                            <option value="">Select material...</option>
-                            <optgroup label="Metals">
-                                <option value="titanium_grade_23">Titanium Grade 23 (Ti-6Al-4V ELI)</option>
-                                <option value="titanium_grade_5">Titanium Grade 5 (Ti-6Al-4V)</option>
-                                <option value="surgical_steel_316lvm">Surgical Steel 316LVM</option>
-                                <option value="surgical_steel_316l">Surgical Steel 316L</option>
-                                <option value="niobium">Niobium</option>
-                                <option value="gold_14k">14K Gold</option>
-                                <option value="gold_18k">18K Gold</option>
-                            </optgroup>
-                            <optgroup label="Medical-Grade Polymers">
-                                <option value="bioflex">BioFlex (Medical-Grade)</option>
-                                <option value="bioplast">Bioplast (Medical-Grade)</option>
-                                <option value="ptfe">PTFE (Medical-Grade)</option>
-                            </optgroup>
-                            <optgroup label="Other Materials">
-                                <option value="glass">Glass</option>
-                                <option value="stone">Natural Stone</option>
-                                <option value="wood">Wood / Organic</option>
-                                <option value="acrylic">Acrylic / Plastic</option>
-                            </optgroup>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="piercing-location" class="form-label">
-                            <span>📍</span> Piercing Location
-                        </label>
-                        <select id="piercing-location" class="form-select" required>
-                            <option value="">Select location...</option>
-                            <option value="ear">Ear (lobe, cartilage)</option>
-                            <option value="nose">Nose</option>
-                            <option value="lip">Lip / Labret</option>
-                            <option value="tongue">Tongue</option>
-                            <option value="eyebrow">Eyebrow</option>
-                            <option value="navel">Navel</option>
-                            <option value="nipple">Nipple</option>
-                            <option value="genital">Genital</option>
-                            <option value="surface">Surface / Dermal</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="healing-stage" class="form-label">
-                            <span>⏱️</span> Healing Stage
-                        </label>
-                        <select id="healing-stage" class="form-select" required>
-                            <option value="">Select stage...</option>
-                            <option value="initial">Initial / Fresh (0-2 weeks)</option>
-                            <option value="healing">Healing (2 weeks - 6 months)</option>
-                            <option value="healed">Fully Healed (6+ months)</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="skin-sensitivity" class="form-label">
-                            <span>🌡️</span> Skin Sensitivity
-                        </label>
-                        <select id="skin-sensitivity" class="form-select" required>
-                            <option value="">Select sensitivity...</option>
-                            <option value="normal">Normal (no known allergies)</option>
-                            <option value="sensitive">Sensitive (nickel allergy, eczema, etc.)</option>
-                            <option value="very_sensitive">Very Sensitive (multiple allergies)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <button type="submit" class="submit-button">Check Material Safety</button>
-            </form>
-            <div class="search-results" id="material-results" style="display: none;"></div>
-        </section>
-
-        <!-- COMPLIANCE VERIFICATION -->
-        <section class="cert-section">
-            <h2 class="cert-section__title">✅ Compliance Verification</h2>
-            <div class="search-box">
-                <input type="text" id="product-claim" class="search-input"
-                       placeholder='Enter product claim (e.g., "Implant Grade Titanium")'>
-                <button type="button" id="verify-button" class="search-button">Verify Claim</button>
-            </div>
-            <div class="search-results" id="verification-results" style="display: none;"></div>
-        </section>
-
-        <!-- MATERIAL COMPARISON -->
-        <section class="cert-section">
-            <h2 class="cert-section__title">⚖️ Material Comparison</h2>
-            <form id="comparison-form">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="material-1" class="form-label">Material 1</label>
-                        <select id="material-1" class="form-select" required>
-                            <option value="">Select material...</option>
-                            <option value="titanium_grade_23">Titanium Grade 23</option>
-                            <option value="titanium_grade_5">Titanium Grade 5</option>
-                            <option value="surgical_steel_316lvm">Surgical Steel 316LVM</option>
-                            <option value="surgical_steel_316l">Surgical Steel 316L</option>
-                            <option value="niobium">Niobium</option>
-                            <option value="gold_14k">14K Gold</option>
-                            <option value="gold_18k">18K Gold</option>
-                            <option value="bioflex">BioFlex</option>
-                            <option value="bioplast">Bioplast</option>
-                            <option value="ptfe">PTFE</option>
-                            <option value="glass">Glass</option>
-                            <option value="stone">Natural Stone</option>
-                            <option value="wood">Wood</option>
-                            <option value="acrylic">Acrylic</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="material-2" class="form-label">Material 2</label>
-                        <select id="material-2" class="form-select" required>
-                            <option value="">Select material...</option>
-                            <option value="titanium_grade_23">Titanium Grade 23</option>
-                            <option value="titanium_grade_5">Titanium Grade 5</option>
-                            <option value="surgical_steel_316lvm">Surgical Steel 316LVM</option>
-                            <option value="surgical_steel_316l">Surgical Steel 316L</option>
-                            <option value="niobium">Niobium</option>
-                            <option value="gold_14k">14K Gold</option>
-                            <option value="gold_18k">18K Gold</option>
-                            <option value="bioflex">BioFlex</option>
-                            <option value="bioplast">Bioplast</option>
-                            <option value="ptfe">PTFE</option>
-                            <option value="glass">Glass</option>
-                            <option value="stone">Natural Stone</option>
-                            <option value="wood">Wood</option>
-                            <option value="acrylic">Acrylic</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="material-3" class="form-label">Material 3 (Optional)</label>
-                        <select id="material-3" class="form-select">
-                            <option value="">Select material...</option>
-                            <option value="titanium_grade_23">Titanium Grade 23</option>
-                            <option value="titanium_grade_5">Titanium Grade 5</option>
-                            <option value="surgical_steel_316lvm">Surgical Steel 316LVM</option>
-                            <option value="surgical_steel_316l">Surgical Steel 316L</option>
-                            <option value="niobium">Niobium</option>
-                            <option value="gold_14k">14K Gold</option>
-                            <option value="gold_18k">18K Gold</option>
-                            <option value="bioflex">BioFlex</option>
-                            <option value="bioplast">Bioplast</option>
-                            <option value="ptfe">PTFE</option>
-                            <option value="glass">Glass</option>
-                            <option value="stone">Natural Stone</option>
-                            <option value="wood">Wood</option>
-                            <option value="acrylic">Acrylic</option>
-                        </select>
-                    </div>
-                </div>
-
-                <button type="submit" class="submit-button">Compare Materials</button>
-            </form>
-            <div class="comparison-grid" id="comparison-results" style="display: none;"></div>
-        </section>
-
-        <section class="embed__email-section">
-            <div class="embed__email-box">
-                <h2 class="embed__email-title">🔔 Get Notified of New Tools!</h2>
-                <p class="embed__email-subtitle">Be first to know when we launch new free tools for piercing professionals.</p>
-                <form id="embed-email-form"><div class="embed__email-input-group">
-                    <input type="email" id="embed-email-input" class="embed__email-input" placeholder="Your email address" required>
-                    <button type="submit" class="embed__email-submit">Notify Me</button>
-                </div>
-                <p class="embed__email-success" id="embed-email-success" style="display:none">✅ Thanks! We'll notify you when new tools launch!</p>
-                <p class="embed__email-error" id="embed-email-error" style="display:none">❌ Please enter a valid email address.</p>
-                <div class="embed__email-trust"><span>✅ Free tool updates only</span><span>✅ No spam</span><span>✅ Unsubscribe anytime</span></div>
-                </form>
-            </div>
-        </section>
-
-        <section class="embed__features-section">
-            <h2 class="embed__features-title">✨ Tool Features</h2>
-            <div class="embed__features-grid">
-                <div class="embed__feature-item"><span class="embed__feature-check">✅</span><span class="embed__feature-text">Material Certification Lookup</span></div>
-                <div class="embed__feature-item"><span class="embed__feature-check">✅</span><span class="embed__feature-text">Safety Standards Verification</span></div>
-                <div class="embed__feature-item"><span class="embed__feature-check">✅</span><span class="embed__feature-text">Biocompatibility Testing</span></div>
-                <div class="embed__feature-item"><span class="embed__feature-check">✅</span><span class="embed__feature-text">Compliance Checker</span></div>
-                <div class="embed__feature-item"><span class="embed__feature-check">✅</span><span class="embed__feature-text">Mobile-Responsive Design</span></div>
-                <div class="embed__feature-item"><span class="embed__feature-check">✅</span><span class="embed__feature-text">Dark/Light Mode</span></div>
-                <div class="embed__feature-item"><span class="embed__feature-check">✅</span><span class="embed__feature-text">100% Free, No Ads</span></div>
-                <div class="embed__feature-item"><span class="embed__feature-check">✅</span><span class="embed__feature-text">Professional Results</span></div>
-            </div>
-        </section>
-
-        <footer class="embed-footer">
-            <div class="embed-footer-content">
-                <a href="https://poliinternational.com/tools" target="_blank" class="embed-footer-btn embed-footer-btn--tools">
-                    <span class="btn-icon">🔧</span>
-                    <span class="btn-text">More Tools</span>
-                </a>
-                
-                <a href="index.html" target="_blank" class="embed-footer-link">
-                    Open Full Version →
-                </a>
-            </div>
-        </footer>
+    <div class="intro">
+      <p><strong>Add this powerful material certification checker to your website in seconds!</strong></p>
+      <p>Simply copy one of the embed codes below and paste it into your HTML. No dependencies, no API keys, no configuration needed.</p>
     </div>
 
-    <script>
-        // ============================================
-        // CERTIFICATION DATABASE
-        // ============================================
-        const certificationDatabase = {
-            'ASTM_F136': {
-                code: 'ASTM F136',
-                full_name: 'Standard Specification for Wrought Titanium-6Aluminum-4Vanadium ELI (Extra Low Interstitial) Alloy for Surgical Implant Applications',
-                organization: 'ASTM International',
-                material_type: 'Titanium Grade 23 (Ti-6Al-4V ELI)',
-                body_piercing_use: 'Excellent - Recommended for ALL piercings including initial',
-                biocompatibility: 'Excellent - ISO 10993 compliant',
-                safety_rating: 'safe'
-            },
-            'ASTM_F138': {
-                code: 'ASTM F138',
-                full_name: 'Standard Specification for Wrought 18Chromium-14Nickel-2.5Molybdenum Stainless Steel Bar and Wire for Surgical Implants',
-                organization: 'ASTM International',
-                material_type: 'Surgical Steel 316LVM',
-                body_piercing_use: 'Good - Suitable for healed piercings',
-                biocompatibility: 'Good - Contains small amounts of nickel',
-                safety_rating: 'conditional'
-            }
-            // Abbreviated for embed version
-        };
+    <div style="text-align: center; margin: 2rem 0;">
+      
+      <a href="https://poliinternational.com/material-certification-checker-documentation/" target="_blank" class="doc-link">📖 Read Documentation</a>
+    </div>
 
-        const searchKeywords = {
-            'ASTM_F136': ['f136', 'astm f136', 'titanium', 'implant grade', 'grade 23', 'ti6al4v eli'],
-            'ASTM_F138': ['f138', 'astm f138', 'surgical steel', '316lvm', 'steel']
-        };
+    <h2>📏 Choose Your Size</h2>
+    <p>Select the embed option that best fits your website layout:</p>
 
-        // ============================================
-        // MATERIAL DATABASE
-        // ============================================
-        const materialDatabase = {
-            'titanium_grade_23': {
-                name: 'Titanium Grade 23 (Ti-6Al-4V ELI)',
-                safety_rating: 'safe',
-                biocompatibility: 'Excellent - ISO 10993 compliant',
-                nickel_free: true,
-                autoclave_safe: true,
-                allergy_risk: 'very_low',
-                healing_stage: ['initial', 'healed'],
-                pros: ['Hypoallergenic', 'Lightweight', 'Industry gold standard'],
-                cons: ['Cannot be soldered', 'Slightly higher cost']
-            },
-            'surgical_steel_316lvm': {
-                name: 'Surgical Steel 316LVM',
-                safety_rating: 'conditional',
-                biocompatibility: 'Good - Contains trace nickel',
-                nickel_free: false,
-                autoclave_safe: true,
-                allergy_risk: 'low',
-                healing_stage: ['healed'],
-                pros: ['Affordable', 'Durable', 'Widely available'],
-                cons: ['Contains nickel', 'Not for initial piercings']
-            },
-            'acrylic': {
-                name: 'Acrylic / Plastic',
-                safety_rating: 'unsafe',
-                biocompatibility: 'Poor - can leach chemicals',
-                nickel_free: true,
-                autoclave_safe: false,
-                allergy_risk: 'high',
-                healing_stage: [],
-                pros: ['Very cheap', 'Colorful'],
-                cons: ['NOT SAFE for body piercing', 'Cannot be sterilized', 'Porous']
-            }
-            // Abbreviated for embed version
-        };
+    <!-- Standard Version -->
+    <div class="embed-option">
+      <h3>
+        <span>Standard Version</span>
+        <span class="badge">100%×800px</span>
+        <span class="badge green">Recommended</span>
+      </h3>
+      <p>Best all-around option. Full-width responsive design with all features.</p>
 
-        const productClaimVerification = {
-            'implant_grade_titanium': {
-                claim: 'Implant Grade Titanium',
-                required_certs: ['ASTM F136'],
-                red_flags: ['No mill certification', 'Suspiciously low price']
-            }
-        };
+      <ul class="features">
+        <li>Responsive full-width design</li>
+        <li>All 6 tabs: Visualizer, Try-On, Compare, Body Guide, Styles, Stretching</li>
+        <li>1:1 scale display with calibration</li>
+        <li>Optimized for most websites</li>
+      </ul>
 
-        // ============================================
-        // DARK MODE
-        // ============================================
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const body = document.body;
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this, 'standard')">Copy Code</button>
+        <code id="standard">&lt;iframe
+  src="https://poliinternational.com/tools/material-certification-checker/index.html"
+  width="100%"
+  height="800"
+  frameborder="0"
+  style="border: 1px solid #ddd; border-radius: 8px;"
+  title="Material Certification Checker by Poli International"&gt;
+&lt;/iframe&gt;</code>
+      </div>
 
-        function initDarkMode() {
-            const savedTheme = localStorage.getItem('certDecoderTheme') || 'light';
-            if (savedTheme === 'dark') {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                darkModeToggle.textContent = '☀️';
-            }
-        }
+      <div class="preview">
+        <div class="preview-label">📱 Live Preview:</div>
+        <iframe
+          src="index.html"
+          width="100%"
+          height="800"
+          frameborder="0"
+          style="border: 1px solid #ddd; border-radius: 8px;"
+          title="Material Certification Checker by Poli International">
+        </iframe>
+      </div>
+    </div>
 
-        darkModeToggle.addEventListener('click', function() {
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                darkModeToggle.textContent = '☀️';
-                localStorage.setItem('certDecoderTheme', 'dark');
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                darkModeToggle.textContent = '🌙';
-                localStorage.setItem('certDecoderTheme', 'light');
-            }
-        });
+    <!-- Large Version -->
+    <div class="embed-option">
+      <h3>
+        <span>Large Version</span>
+        <span class="badge">100%×1000px</span>
+      </h3>
+      <p>Maximum visibility. Includes all features with extra breathing room for larger displays.</p>
 
-        // ============================================
-        // CERTIFICATION SEARCH
-        // ============================================
-        document.getElementById('search-button').addEventListener('click', function() {
-            const query = document.getElementById('cert-search').value.trim().toUpperCase();
-            const resultsDiv = document.getElementById('search-results');
+      <ul class="features">
+        <li>Maximum vertical space (1000px)</li>
+        <li>Full-width responsive</li>
+        <li>All features visible without scrolling</li>
+        <li>Ideal for dedicated tool pages</li>
+      </ul>
 
-            if (!query) {
-                resultsDiv.style.display = 'none';
-                return;
-            }
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this, 'large')">Copy Code</button>
+        <code id="large">&lt;iframe
+  src="https://poliinternational.com/tools/material-certification-checker/index.html"
+  width="100%"
+  height="1000"
+  frameborder="0"
+  style="border: 1px solid #ddd; border-radius: 8px;"
+  title="Material Certification Checker by Poli International"&gt;
+&lt;/iframe&gt;</code>
+      </div>
+    </div>
 
-            const cert = findCertification(query);
+    <!-- Compact Version -->
+    <div class="embed-option">
+      <h3>
+        <span>Compact Version</span>
+        <span class="badge">100%×600px</span>
+      </h3>
+      <p>Space-saving option. May require scrolling for some features.</p>
 
-            if (cert) {
-                displayCertificationResult(cert, resultsDiv);
-            } else {
-                resultsDiv.style.display = 'block';
-                resultsDiv.innerHTML = '<div class="detail-box"><p>No certification found matching "' + query + '". Try searching for common codes like ASTM F136, ASTM F138, ISO 5832-1, etc.</p></div>';
-            }
-        });
+      <ul class="features">
+        <li>Minimal height (600px)</li>
+        <li>Full-width responsive</li>
+        <li>All functionality included</li>
+        <li>Best for space-constrained layouts</li>
+      </ul>
 
-        function findCertification(query) {
-            for (const [key, cert] of Object.entries(certificationDatabase)) {
-                if (cert.code.toUpperCase() === query) {
-                    return cert;
-                }
-            }
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this, 'compact')">Copy Code</button>
+        <code id="compact">&lt;iframe
+  src="https://poliinternational.com/tools/material-certification-checker/index.html"
+  width="100%"
+  height="600"
+  frameborder="0"
+  style="border: 1px solid #ddd; border-radius: 8px;"
+  title="Material Certification Checker by Poli International"&gt;
+&lt;/iframe&gt;</code>
+      </div>
+    </div>
 
-            for (const [key, keywords] of Object.entries(searchKeywords)) {
-                for (const keyword of keywords) {
-                    if (keyword.toUpperCase().includes(query) || query.includes(keyword.toUpperCase())) {
-                        return certificationDatabase[key];
-                    }
-                }
-            }
+    <h2>⚙️ Customization Options</h2>
+    <p>You can customize the iframe styling by modifying the <code>style</code> attribute:</p>
 
-            return null;
-        }
+    <div class="code-block">
+      <code>&lt;!-- Example: Custom border and shadow --&gt;
+&lt;iframe
+  src="https://poliinternational.com/tools/material-certification-checker/index.html"
+  width="100%"
+  height="800"
+  frameborder="0"
+  style="border: 2px solid #B76E79; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+  title="Material Certification Checker by Poli International"&gt;
+&lt;/iframe&gt;</code>
+    </div>
 
-        function displayCertificationResult(cert, container) {
-            container.style.display = 'block';
-            container.innerHTML = `
-                <div class="details-grid">
-                    <div class="detail-box" style="grid-column: 1 / -1;">
-                        <h3>${cert.code}</h3>
-                        <p><strong>${cert.full_name}</strong></p>
-                        <p><em>${cert.organization}</em></p>
-                        ${getSafetyBadgeHTML(cert.safety_rating)}
-                    </div>
-                    <div class="detail-box">
-                        <h3>Material Type</h3>
-                        <p>${cert.material_type}</p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Body Piercing Use</h3>
-                        <p>${cert.body_piercing_use}</p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Biocompatibility</h3>
-                        <p>${cert.biocompatibility}</p>
-                    </div>
-                </div>
-            `;
-        }
+    <h2>📋 Implementation Notes</h2>
 
-        // ============================================
-        // MATERIAL SAFETY CHECKER
-        // ============================================
-        document.getElementById('material-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+    <div class="note">
+      <p><strong>Important:</strong> This tool works best when users calibrate their screen for accurate 1:1 scale display. The calibration prompt will appear automatically on first use.</p>
+    </div>
 
-            const materialType = document.getElementById('material-type').value;
-            const location = document.getElementById('piercing-location').value;
-            const healing = document.getElementById('healing-stage').value;
-            const sensitivity = document.getElementById('skin-sensitivity').value;
-            const resultsDiv = document.getElementById('material-results');
+    <h3>✅ Features Included</h3>
+    <ul class="features">
+      <li><strong>Interactive Visualizer:</strong> See jewelry at true 1:1 scale</li>
+      <li><strong>Virtual Try-On:</strong> Use your camera to preview jewelry</li>
+      <li><strong>Size Comparison:</strong> Compare multiple sizes side-by-side</li>
+      <li><strong>Body Placement Guide:</strong> Recommended jewelry for each piercing</li>
+      <li><strong>Style Selector:</strong> Browse jewelry by type and material</li>
+      <li><strong>Stretching Guide:</strong> Safe ear stretching timeline and advice</li>
+      <li><strong>Responsive Design:</strong> Adapts to container width automatically</li>
+      <li><strong>Mobile-Friendly:</strong> Touch-optimized for mobile devices</li>
+    </ul>
 
-            const material = materialDatabase[materialType];
+    <h3>🔒 Security & Privacy</h3>
+    <ul class="features">
+      <li>No external API calls or tracking</li>
+      <li>No cookies or data collection</li>
+      <li>Camera access only for Virtual Try-On (user permission required)</li>
+      <li>Works on HTTP and HTTPS</li>
+      <li>No cross-origin security issues</li>
+    </ul>
 
-            if (!material) {
-                resultsDiv.style.display = 'block';
-                resultsDiv.innerHTML = '<div class="detail-box"><p>Material not found in database.</p></div>';
-                return;
-            }
+    <h3>🌐 Browser Support</h3>
+    <ul class="features">
+      <li>Chrome 90+ (and all Chromium-based browsers)</li>
+      <li>Firefox 88+</li>
+      <li>Safari 14+</li>
+      <li>Edge 90+</li>
+      <li>iOS Safari 14+</li>
+      <li>Android Chrome 90+</li>
+    </ul>
 
-            const compatibility = checkCompatibility(material, healing, sensitivity);
+    <h2>🛠️ Technical Specifications</h2>
+    <p>The jewelry size visualizer includes:</p>
+    <ul class="features">
+      <li>Comprehensive jewelry database (rings, barbells, labrets, etc.)</li>
+      <li>Gauge sizes from 22G to 00G</li>
+      <li>Diameter/length options from 6mm to 16mm+</li>
+      <li>1:1 scale rendering with screen calibration</li>
+      <li>Camera-based virtual try-on functionality</li>
+      <li>Side-by-side comparison for up to 3 items</li>
+    </ul>
 
-            displayMaterialResult(material, compatibility, resultsDiv);
-        });
+    <h2>💼 License & Attribution</h2>
+    <p>This tool is provided by <strong>Poli International</strong>, a leading manufacturer of professional body piercing jewelry for over 25 years.</p>
+    <p>The embed includes a subtle "Powered by Poli International" footer with a link back to the Poli website. This attribution must remain intact.</p>
 
-        function checkCompatibility(material, healing, sensitivity) {
-            const warnings = [];
+    <h2>🆘 Support</h2>
+    <p>If you encounter any issues or have questions about embedding this tool:</p>
+    <ul class="features">
+      <li>Documentation: <a href="https://poliinternational.com/material-certification-checker-documentation/" target="_blank">View Full Documentation</a></li>
+      <li>Website: <a href="https://poliinternational.com" target="_blank">poliinternational.com</a></li>
+      
+      <li>More Tools: <a href="https://poliinternational.com/tools/" target="_blank">Browse All Professional Tools</a></li>
+    </ul>
 
-            if (healing === 'initial' && !material.healing_stage.includes('initial')) {
-                warnings.push('This material is NOT recommended for initial/fresh piercings.');
-            }
+    <div class="footer">
+      <p>Material Certification Checker | Created by <a href="https://poliinternational.com" target="_blank">Poli International</a></p>
+      <p>&copy; 2025 Poli International. All rights reserved.</p>
+    </div>
+  </div>
 
-            if (sensitivity === 'sensitive' && material.allergy_risk !== 'very_low') {
-                warnings.push('This material may not be suitable for sensitive skin.');
-            }
+  <script>
+    // Dark Mode Toggle
+    (function() {
+      const toggle = document.getElementById('dark-toggle');
+      const savedTheme = localStorage.getItem('embed-theme') || 'light';
 
-            if (!material.nickel_free && sensitivity !== 'normal') {
-                warnings.push('This material contains nickel, which can cause allergic reactions.');
-            }
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        toggle.textContent = '☀️';
+      }
 
-            return { warnings };
-        }
+      toggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        toggle.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('embed-theme', isDark ? 'dark' : 'light');
+      });
+    })();
 
-        function displayMaterialResult(material, compatibility, container) {
-            container.style.display = 'block';
+    // Copy Code Function
+    function copyCode(button, codeId) {
+      const codeElement = document.getElementById(codeId);
+      const textToCopy = codeElement.textContent;
 
-            let warningsHTML = '';
-            if (compatibility.warnings.length > 0) {
-                warningsHTML = `
-                    <div class="warning-box">
-                        <h4>⚠️ Compatibility Warnings</h4>
-                        <ul>
-                            ${compatibility.warnings.map(w => `<li>${w}</li>`).join('')}
-                        </ul>
-                    </div>
-                `;
-            }
+      // Copy to clipboard
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        // Visual feedback
+        const originalText = button.textContent;
+        button.textContent = '✓ Copied!';
+        button.style.backgroundColor = '#00CC66';
 
-            container.innerHTML = `
-                <div class="details-grid">
-                    <div class="detail-box" style="grid-column: 1 / -1;">
-                        <h3>${material.name}</h3>
-                        ${getSafetyBadgeHTML(material.safety_rating)}
-                        ${getSafetyMeterHTML(material.safety_rating)}
-                    </div>
-                    ${warningsHTML}
-                    <div class="detail-box">
-                        <h3>Biocompatibility</h3>
-                        <p>${material.biocompatibility}</p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Nickel Free</h3>
-                        <p>${material.nickel_free ? 'Yes ✅' : 'No ❌'}</p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Autoclave Safe</h3>
-                        <p>${material.autoclave_safe ? 'Yes ✅' : 'No ❌'}</p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Pros</h3>
-                        <ul>
-                            ${material.pros.map(pro => `<li>${pro}</li>`).join('')}
-                        </ul>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Cons</h3>
-                        <ul>
-                            ${material.cons.map(con => `<li>${con}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
-            `;
-        }
-
-        // ============================================
-        // COMPLIANCE VERIFICATION
-        // ============================================
-        document.getElementById('verify-button').addEventListener('click', function() {
-            const claim = document.getElementById('product-claim').value.trim().toLowerCase();
-            const resultsDiv = document.getElementById('verification-results');
-
-            if (!claim) {
-                resultsDiv.style.display = 'none';
-                return;
-            }
-
-            let foundClaim = null;
-            for (const [key, data] of Object.entries(productClaimVerification)) {
-                if (claim.includes(data.claim.toLowerCase()) || data.claim.toLowerCase().includes(claim)) {
-                    foundClaim = data;
-                    break;
-                }
-            }
-
-            if (foundClaim) {
-                displayVerificationResult(foundClaim, resultsDiv);
-            } else {
-                resultsDiv.style.display = 'block';
-                resultsDiv.innerHTML = '<div class="detail-box"><p>No specific verification data found for this claim. Please ensure you request proper mill certifications from your supplier.</p></div>';
-            }
-        });
-
-        function displayVerificationResult(data, container) {
-            container.style.display = 'block';
-            container.innerHTML = `
-                <div class="details-grid">
-                    <div class="detail-box" style="grid-column: 1 / -1;">
-                        <h3>Claim: "${data.claim}"</h3>
-                        <p><strong>Required Certifications:</strong></p>
-                        <ul>
-                            ${data.required_certs.map(cert => `<li>${cert}</li>`).join('')}
-                        </ul>
-                    </div>
-                    <div class="detail-box" style="grid-column: 1 / -1;">
-                        <div class="red-flags">
-                            <h3>🚩 Red Flags</h3>
-                            <ul>
-                                ${data.red_flags.map(flag => `<li>${flag}</li>`).join('')}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-
-        // ============================================
-        // MATERIAL COMPARISON
-        // ============================================
-        document.getElementById('comparison-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const material1 = document.getElementById('material-1').value;
-            const material2 = document.getElementById('material-2').value;
-            const material3 = document.getElementById('material-3').value;
-            const resultsDiv = document.getElementById('comparison-results');
-
-            const materials = [material1, material2];
-            if (material3) materials.push(material3);
-
-            displayComparison(materials, resultsDiv);
-        });
-
-        function displayComparison(materialIds, container) {
-            container.style.display = 'grid';
-
-            let html = '';
-            materialIds.forEach(id => {
-                const material = materialDatabase[id];
-                if (material) {
-                    html += `
-                        <div class="comparison-card">
-                            <h3>${material.name}</h3>
-                            ${getSafetyBadgeHTML(material.safety_rating)}
-                            <div style="margin-top: 1rem;">
-                                <p><strong>Biocompatibility:</strong> ${material.biocompatibility}</p>
-                                <p><strong>Nickel Free:</strong> ${material.nickel_free ? 'Yes ✅' : 'No ❌'}</p>
-                                <p><strong>Autoclave Safe:</strong> ${material.autoclave_safe ? 'Yes ✅' : 'No ❌'}</p>
-                                <p><strong>Allergy Risk:</strong> ${material.allergy_risk}</p>
-                            </div>
-                        </div>
-                    `;
-                }
-            });
-
-            container.innerHTML = html;
-        }
-
-        // ============================================
-        // HELPER FUNCTIONS
-        // ============================================
-        function getSafetyBadgeHTML(rating) {
-            const badges = {
-                safe: '<div class="safety-badge safety-badge--safe">✅ SAFE</div>',
-                conditional: '<div class="safety-badge safety-badge--conditional">⚠️ CONDITIONAL</div>',
-                unsafe: '<div class="safety-badge safety-badge--unsafe">❌ UNSAFE</div>'
-            };
-            return badges[rating] || '';
-        }
-
-        function getSafetyMeterHTML(rating) {
-            const widths = {
-                safe: 100,
-                conditional: 60,
-                unsafe: 30
-            };
-            const width = widths[rating] || 0;
-            return `
-                <div class="safety-meter">
-                    <div class="safety-meter-fill safety-meter-fill--${rating}" style="width: ${width}%;"></div>
-                </div>
-            `;
-        }
-
-        // ============================================
-        // INITIALIZATION
-        // ============================================
-        initDarkMode();
-    </script>
+        // Reset after 2 seconds
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.style.backgroundColor = '#B76E79';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+        alert('Please manually copy the code');
+      });
+    }
+  </script>
 </body>
 </html>
