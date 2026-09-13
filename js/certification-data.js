@@ -11,7 +11,7 @@ Version: 1.0
  * Contains ASTM, ISO, and EN standards
  */
 
-const certificationDatabase = {
+const rawCertificationDatabase = {
   // ═══════════════════════════════════════════════════════════
   // ASTM STANDARDS (American Society for Testing and Materials)
   // ═══════════════════════════════════════════════════════════
@@ -312,7 +312,7 @@ const certificationDatabase = {
 /**
  * Common product claims and their required certifications
  */
-const productClaimVerification = {
+const rawProductClaimVerification = {
   'implant_grade_titanium': {
     claim: 'Implant Grade Titanium',
     required_certs: ['ASTM F136'],
@@ -403,3 +403,84 @@ const searchKeywords = {
   'EN_1441': ['en 1441', 'en1441', 'nickel release', 'nickel regulation'],
   'REACH': ['reach', 'reach compliance', 'eu chemicals']
 };
+
+// ═══════════════════════════════════════════════════════════
+// TRANSLATION RESOLUTION PROXIES
+// ═══════════════════════════════════════════════════════════
+const TRANSLATABLE_CERT_FIELDS = [
+  'code', 'full_name', 'organization', 'material_type', 'body_piercing_use',
+  'biocompatibility', 'sterilization', 'important_notes', 'verification_method', 'common_uses'
+];
+
+function createCertProxy(id, staticEntry) {
+  const entry = Object.assign({}, staticEntry);
+  TRANSLATABLE_CERT_FIELDS.forEach(field => {
+    Object.defineProperty(entry, field, {
+      get() {
+        if (typeof t === 'function') {
+          const key = 'certs.' + id + '.' + field;
+          const translated = t(key);
+          if (translated && translated !== key) {
+            return translated;
+          }
+        }
+        return staticEntry[field];
+      },
+      enumerable: true,
+      configurable: true
+    });
+  });
+  return entry;
+}
+
+const certificationDatabase = {};
+for (const [key, data] of Object.entries(rawCertificationDatabase)) {
+  certificationDatabase[key] = createCertProxy(key, data);
+}
+
+const TRANSLATABLE_CLAIM_FIELDS = ['claim', 'red_flags', 'verification_steps'];
+
+function createClaimProxy(id, staticEntry) {
+  const entry = Object.assign({}, staticEntry);
+  TRANSLATABLE_CLAIM_FIELDS.forEach(field => {
+    Object.defineProperty(entry, field, {
+      get() {
+        if (typeof t === 'function') {
+          const key = 'product_claims.' + id + '.' + field;
+          const translated = t(key);
+          if (translated && translated !== key) {
+            return translated;
+          }
+        }
+        return staticEntry[field];
+      },
+      enumerable: true,
+      configurable: true
+    });
+  });
+  return entry;
+}
+
+const productClaimVerification = {};
+for (const [key, data] of Object.entries(rawProductClaimVerification)) {
+  productClaimVerification[key] = createClaimProxy(key, data);
+}
+
+if (typeof window !== 'undefined') {
+  window.certificationDatabase = certificationDatabase;
+  window.rawCertificationDatabase = rawCertificationDatabase;
+  window.productClaimVerification = productClaimVerification;
+  window.rawProductClaimVerification = rawProductClaimVerification;
+  window.searchKeywords = searchKeywords;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    certificationDatabase,
+    rawCertificationDatabase,
+    productClaimVerification,
+    rawProductClaimVerification,
+    searchKeywords
+  };
+}
+
