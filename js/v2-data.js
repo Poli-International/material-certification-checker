@@ -54,8 +54,8 @@ const CERT_READER_PRESETS = [
   },
   {
     id: 'grade5_aerospace',
-    name: "Wrong Grade: 'Grade 5 Titanium (Ti-6Al-4V)'",
-    tag: 'Industrial Alloy',
+    name: "Not F136: 'Grade 5 Titanium (Ti-6Al-4V)'",
+    tag: 'Not ELI',
     tier: 1,
     text: "Grade 5 Titanium (Ti-6Al-4V) piercing ball. ISO 5832-3 compliant. Ultra strong aerospace alloy. High tensile strength."
   },
@@ -86,7 +86,7 @@ const SUPPLIER_QUESTIONS_CONFIG = {
         {
           q: 'Does the Mill Test Report explicitly state "ELI" (Extra Low Interstitial) and verify oxygen content ≤ 0.13% and iron ≤ 0.25%?',
           satisfactory: 'Chemical breakdown table listing exact weight percentages with Oxygen (O) strictly ≤ 0.13% and Iron (Fe) ≤ 0.25%.',
-          unsatisfactory: 'Listing as "Ti-6Al-4V" without ELI designation, or oxygen content above 0.13% (which indicates Grade 5 / ISO 5832-3 industrial alloy, not surgical Grade 23).'
+          unsatisfactory: 'Listing as "Ti-6Al-4V" without ELI designation, or oxygen content above 0.13% (which indicates Grade 5 under ISO 5832-3 or ASTM F1472, not ELI Grade 23).'
         },
         {
           q: 'What is the unique Heat Number / Melt Lot Number on this material, and how does it correlate with the batch label on our shipment?',
@@ -303,7 +303,7 @@ const CLAIM_MATRIX_DATA = [
     category: 'Metals',
     required_document: 'Mill Test Report (MTR / EN 10204 Type 3.1) citing ASTM F136 or ISO 5832-3 ELI',
     what_it_proves: 'Substantiates wrought Ti-6Al-4V ELI (Extra Low Interstitial) alloy with maximum 0.13% oxygen, certified mechanical tensile/yield data, and unique melt heat lot identification.',
-    what_absence_means: 'Absence means the term functions purely as unregulated sales copy. The alloy may be industrial Grade 5 (0.20% oxygen), scrap remelt, or commercial titanium with high interstitial impurities. No documentary evidence supports biocompatibility.',
+    what_absence_means: 'Absence means the term functions purely as unregulated sales copy. The alloy may be Grade 5 (0.20% oxygen limit), scrap remelt, or commercial titanium with high interstitial impurities. No documentary evidence supports biocompatibility.',
     verification_action: 'Request the mill test report. Confirm "ASTM F136", "ELI", oxygen ≤ 0.13%, and heat number matching the shipment lot.'
   },
   {
@@ -400,14 +400,14 @@ const CERTIFIED_COMPARISON_DATA = {
   },
   titanium_grade_5: {
     name: 'Titanium Grade 5 (Ti-6Al-4V - Non-ELI)',
-    governing_standard: 'ASTM B348 / ISO 5832-3 (Standard Industrial Specification)',
-    certified_composition: 'Ti (Balance), Al: 5.5–6.5%, V: 3.5–4.5%, Fe ≤ 0.40%, O ≤ 0.20% (Higher Oxygen), C ≤ 0.08%, N ≤ 0.05%',
-    melting_process: 'Standard industrial VAR or plasma melt (aerospace/industrial grade)',
-    biocompatibility_standard: 'Higher interstitial oxygen causes increased cellular reactivity in fresh wound canals',
+    governing_standard: 'ISO 5832-3 / ASTM F1472 (surgical implant) or ASTM B348 (industrial bar)',
+    certified_composition: 'Ti (Balance), Al: 5.5–6.75%, V: 3.5–4.5%, Fe ≤ 0.30% (implant specifications; 0.40% under ASTM B348), O ≤ 0.20% (higher than ELI), C ≤ 0.08%, N ≤ 0.05%',
+    melting_process: 'Vacuum arc or plasma melt; implant specifications add chemistry and microstructure requirements',
+    biocompatibility_standard: 'Implant specifications exist (ISO 5832-3, ASTM F1472); most piercing guidance names its extra-low-interstitial version, ASTM F136 (Grade 23)',
     autoclave_thermal_limit: 'Steam autoclave safe to 134°C; no thermal degradation',
-    traceability_unit: 'Commercial heat lot number (industrial standard)',
-    surface_finish_spec: 'Commercial lathe finish or standard tumble polish (Ra 0.2–0.4 µm)',
-    tissue_boundary: 'Industrial & aerospace applications; orthopedic hardware (not fresh piercing fistula)'
+    traceability_unit: 'Heat lot number, stated on the mill certificate',
+    surface_finish_spec: 'Set by the jewellery maker, not by the alloy specification',
+    tissue_boundary: 'Surgical implants and orthopaedic hardware under implant specifications; industrial and aerospace parts under ASTM B348'
   },
   surgical_steel_316lvm: {
     name: 'Surgical Stainless Steel 316LVM',
