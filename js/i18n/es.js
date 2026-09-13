@@ -337,7 +337,7 @@
     "Borosilicate Glass": "Vidrio resistente al choque térmico y químico formulado con sílice y trióxido de boro, no poroso y seguro para piercings cicatrizados.",
     "Cytotoxicity": "Cualidad de ser tóxico para las células biológicas vivas; medida in vitro mediante ensayos de células de mamíferos bajo ISO 10993-5.",
     "ELI": "Extra Low Interstitial: grado de aleación ultrapuro con niveles reducidos de oxígeno, nitrógeno e hierro para mejorar la ductilidad y la tenacidad a la fractura (ASTM F136).",
-    "EN 1811": "Método de ensayo de referencia europeo para medir la liberación de níquel en conjuntos de vástagos y artículos en contacto directo con la piel (<0.2 µg/cm²/semana).",
+    "EN 1811": "Método de ensayo europeo de referencia para la liberación de níquel: una semana en sudor artificial a 30 °C. Límites REACH: menos de 0,2 µg/cm²/semana para vástagos en piel perforada, 0,5 µg/cm²/semana para otros artículos en contacto prolongado con la piel.",
     "EU REACH Annex XVII": "Reglamento químico europeo que restringe la liberación de níquel en vástagos de piercing corporal a <0.2 µg/cm²/semana.",
     "ISO 5832-1": "Norma internacional para implantes quirúrgicos - Materiales metálicos - Parte 1: Acero inoxidable forjado.",
     "ISO 5832-3": "Norma internacional para implantes quirúrgicos - Materiales metálicos - Parte 3: Aleación forjada de titanio-6aluminio-4vanadio.",
@@ -522,16 +522,33 @@
     },
     "EN_1441": {
       "code": "EN 1441",
-      "full_name": "Productos sanitarios - Análisis de riesgos (precursora de ISO 14971)",
-      "organization": "European Committee for Standardization",
-      "material_type": "Marco analítico de gestión y mitigación de riesgos",
-      "body_piercing_use": "Evaluación sistemática de riesgos asociados al diseño, material y acabado de la pieza.",
-      "biocompatibility": "Mitiga riesgos de desprendimiento de micropartículas y bordes afilados.",
+      "full_name": "Productos sanitarios - Análisis de riesgos (EN 1441:1997, anulada; sustituida por la EN ISO 14971)",
+      "organization": "Comité Europeo de Normalización",
+      "material_type": "Procedimiento de análisis de riesgos para fabricantes de productos sanitarios. No es una norma de materiales, joyería ni níquel.",
+      "body_piercing_use": "Ningún uso directo: se aplicaba a productos sanitarios, no a joyería corporal, y no fija ningún límite de níquel.",
+      "biocompatibility": "No es un ensayo de biocompatibilidad",
       "sterilization": "No aplicable",
-      "important_notes": "Establece los principios para evaluar riesgos mecánicos, químicos y biológicos en el paciente.",
-      "verification_method": "Dossier de análisis de riesgos del fabricante",
+      "important_notes": "La EN 1441 era la norma europea de análisis de riesgos de productos sanitarios, publicada en 1997 y sustituida por la EN ISO 14971. A veces se cita en documentos de joyería como si fuera una norma sobre el níquel; no lo es. La liberación de níquel de la joyería de piercing se mide según la EN 1811, y los límites legales están en el anexo XVII, entrada 27, del reglamento REACH.",
+      "verification_method": "Si un proveedor cita la EN 1441 para el níquel o la seguridad del material, pida en su lugar un informe de ensayo de liberación de níquel según la EN 1811.",
       "common_uses": [
-        "Gestión de riesgos en dispositivos sanitarios"
+        "Gestión de riesgos de productos sanitarios (histórico)",
+        "Precursora de la EN ISO 14971"
+      ]
+    },
+    "EN_1811": {
+      "code": "EN 1811",
+      "full_name": "Método de ensayo de referencia para la liberación de níquel de todos los vástagos que se introducen en partes perforadas del cuerpo humano y de los artículos destinados a entrar en contacto directo y prolongado con la piel",
+      "organization": "Comité Europeo de Normalización",
+      "material_type": "Método de ensayo de liberación de níquel para cualquier artículo metálico que pueda contener níquel",
+      "body_piercing_use": "El ensayo que demuestra si una joya de piercing con níquel cumple el límite de la UE para vástagos en piel perforada: menos de 0,2 µg/cm²/semana.",
+      "biocompatibility": "Mide solo la liberación de níquel. No es un ensayo de biocompatibilidad y no sustituye a la ISO 10993.",
+      "sterilization": "No aplicable (método de ensayo)",
+      "important_notes": "Los límites proceden del anexo XVII, entrada 27, de REACH; la EN 1811 es el método de referencia para medirlos. Los vástagos introducidos en orejas perforadas y otras partes perforadas del cuerpo deben liberar menos de 0,2 µg/cm²/semana; los demás artículos en contacto directo y prolongado con la piel, 0,5 µg/cm²/semana. Los artículos recubiertos deben mantenerse dentro del límite durante al menos dos años de uso normal, simulados con la EN 12472 antes del ensayo EN 1811. El artículo permanece una semana en sudor artificial a 30 °C. Una prueba rápida con dimetilglioxima (DMG) es solo un cribado (CEN/TR 12471), no una prueba de conformidad. Edición vigente: EN 1811:2023, que sustituye a la EN 1811:2011+A1:2015.",
+      "verification_method": "Pida un informe de ensayo EN 1811 de un laboratorio acreditado que indique el artículo ensayado, el resultado en µg/cm²/semana y la edición de la norma. El acero quirúrgico contiene níquel y lo necesita.",
+      "common_uses": [
+        "Conformidad UE de joyería con níquel",
+        "Informes de ensayo de proveedores",
+        "Controles de vigilancia del mercado"
       ]
     },
     "REACH": {
@@ -926,7 +943,7 @@
       "verification_steps": [
         "Asegurar que el material esté libre de níquel (titanio, niobio, BioFlex)",
         "Solicitar informes de ensayos de biocompatibilidad según ISO 10993",
-        "Comprobar la conformidad con EN 1811 respecto a la tasa de liberación de níquel",
+        "Pedir un informe de ensayo de liberación de níquel EN 1811 si el material contiene níquel",
         "Evitar materiales chapados o recubiertos independientemente de las promesas publicitarias"
       ]
     },
