@@ -337,7 +337,7 @@
     "Borosilicate Glass": "Thermisch en chemisch resistent glas samengesteld met silica en boortrioxide, niet-poreus en lichaamsveilig voor genezen piercings.",
     "Cytotoxicity": "Eigenschap van toxiciteit voor levende biologische cellen; in vitro gemeten via zoogdierceltests onder ISO 10993-5.",
     "ELI": "Extra Low Interstitial: ultrazuivere legeringskwaliteit met verlaagd zuurstof-, stikstof- en ijzergehalte voor verbeterde ductiliteit en breuktaaiheid (ASTM F136).",
-    "EN 1811": "Europese referentietestmethode voor het meten van de afgifte van nikkel uit stiftconstructies en voorwerpen in direct contact met de huid (<0.2 µg/cm²/week).",
+    "EN 1811": "Europese referentietestmethode voor nikkelafgifte: een week in kunstzweet bij 30 °C. REACH-limieten: minder dan 0,2 µg/cm²/week voor staafjes in doorboorde huid, 0,5 µg/cm²/week voor andere artikelen met langdurig huidcontact.",
     "EU REACH Annex XVII": "Europese chemische regelgeving die de nikkelafgifte van piercingstiften beperkt tot <0.2 µg/cm²/week.",
     "ISO 5832-1": "Internationale norm voor chirurgische implantaten - Metalen materialen - Deel 1: Gesmeed roestvrij staal.",
     "ISO 5832-3": "Internationale norm voor chirurgische implantaten - Metalen materialen - Deel 3: Gesmede titanium 6-aluminium 4-vanadium legering.",
@@ -522,16 +522,33 @@
     },
     "EN_1441": {
       "code": "EN 1441",
-      "full_name": "Medische hulpmiddelen - Risicoanalyse (voorloper van ISO 14971)",
-      "organization": "European Committee for Standardization",
-      "material_type": "Analytisch kader voor risicobeheer en -beheersing",
-      "body_piercing_use": "Systematische evaluatie van risico's verbonden aan ontwerp, materiaal en afwerking.",
-      "biocompatibility": "Beheerst risico's op loslatende deeltjes en scherpe randen.",
+      "full_name": "Medische hulpmiddelen - Risicoanalyse (EN 1441:1997, ingetrokken; vervangen door EN ISO 14971)",
+      "organization": "Europees Comité voor Normalisatie",
+      "material_type": "Procedure voor risicoanalyse door fabrikanten van medische hulpmiddelen. Geen materiaal-, sieraden- of nikkelnorm.",
+      "body_piercing_use": "Geen direct gebruik: de norm gold voor medische hulpmiddelen, niet voor lichaamssieraden, en legt geen nikkellimiet vast.",
+      "biocompatibility": "Geen biocompatibiliteitstest",
       "sterilization": "Niet van toepassing",
-      "important_notes": "Biedt de basis voor het beoordelen van mechanische, chemische en biologische risico's voor de drager.",
-      "verification_method": "Risicoanalysedossier van de fabrikant",
+      "important_notes": "EN 1441 was de Europese norm voor risicoanalyse van medische hulpmiddelen, gepubliceerd in 1997 en vervangen door EN ISO 14971. Ze wordt soms op sieradendocumenten genoemd alsof het een nikkelregel is; dat is ze niet. De nikkelafgifte van piercingsieraden wordt gemeten volgens EN 1811, en de wettelijke limieten staan in REACH bijlage XVII, vermelding 27.",
+      "verification_method": "Als een leverancier EN 1441 noemt voor nikkel of materiaalveiligheid, vraag dan in plaats daarvan een testrapport voor nikkelafgifte volgens EN 1811.",
       "common_uses": [
-        "Risicobeheer bij medische hulpmiddelen"
+        "Risicobeheer van medische hulpmiddelen (historisch)",
+        "Voorloper van EN ISO 14971"
+      ]
+    },
+    "EN_1811": {
+      "code": "EN 1811",
+      "full_name": "Referentietestmethode voor de afgifte van nikkel door alle staafjes die in doorboorde delen van het menselijk lichaam worden ingebracht en door artikelen die bestemd zijn voor direct en langdurig contact met de huid",
+      "organization": "Europees Comité voor Normalisatie",
+      "material_type": "Testmethode voor nikkelafgifte voor elk metalen artikel dat nikkel kan bevatten",
+      "body_piercing_use": "De test die aantoont of piercingsieraden met nikkel voldoen aan de EU-limiet voor staafjes in doorboorde huid: minder dan 0,2 µg/cm²/week.",
+      "biocompatibility": "Meet alleen de nikkelafgifte. Geen biocompatibiliteitstest en geen vervanging voor ISO 10993.",
+      "sterilization": "Niet van toepassing (testmethode)",
+      "important_notes": "De limieten komen uit REACH bijlage XVII, vermelding 27; EN 1811 is de referentiemethode om ertegen te meten. Staafjes in doorboorde oren en andere doorboorde lichaamsdelen moeten minder dan 0,2 µg/cm²/week afgeven; andere artikelen met direct en langdurig huidcontact 0,5 µg/cm²/week. Gecoate artikelen moeten minstens twee jaar normaal gebruik binnen de limiet blijven, gesimuleerd met EN 12472 vóór de EN 1811-test. Het artikel ligt een week in kunstzweet bij 30 °C. Een dimethylglyoxim-sneltest (DMG) is alleen een screening (CEN/TR 12471), geen bewijs van conformiteit. Huidige editie: EN 1811:2023, die EN 1811:2011+A1:2015 vervangt.",
+      "verification_method": "Vraag een EN 1811-testrapport van een geaccrediteerd laboratorium met het geteste artikel, het resultaat in µg/cm²/week en de editie van de norm. Chirurgisch staal bevat nikkel en heeft er een nodig.",
+      "common_uses": [
+        "EU-conformiteit van nikkelhoudende sieraden",
+        "Testrapporten van leveranciers",
+        "Markttoezichtstests"
       ]
     },
     "REACH": {
@@ -926,7 +943,7 @@
       "verification_steps": [
         "Waarborgen dat het materiaal nikkelvrij is (titanium, niobium, BioFlex)",
         "Biocompatibiliteitstestrapporten volgens ISO 10993 opvragen",
-        "Conformiteit met EN 1811 betreffende nikkelafgifte controleren",
+        "Een EN 1811-testrapport voor nikkelafgifte vragen als het materiaal nikkel bevat",
         "Vergulde of gecoate materialen vermijden, ongeacht commerciële claims"
       ]
     },
