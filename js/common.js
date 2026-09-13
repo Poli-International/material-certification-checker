@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (textarea) {
         const cleanUrl = window.location.href.split('?')[0].split('#')[0];
-        textarea.value = `<iframe src="${cleanUrl}" width="100%" height="800" frameborder="0" style="border:1px solid #333; border-radius:12px;"></iframe>`;
+        textarea.value = `<iframe src="${cleanUrl}" width="100%" height="800" frameborder="0" style="border:1px solid var(--color-border); border-radius:12px;"></iframe>`;
     }
 
     if (embedBtn && modal) {
@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
             textarea.select();
             navigator.clipboard.writeText(textarea.value).then(() => {
                 const originalText = copyBtn.innerHTML;
-                copyBtn.innerHTML = '✅ Copied!';
+                copyBtn.innerHTML = typeof window.t === 'function' ? window.t('embed_tab.copied') : '✅ Copied!';
                 setTimeout(() => copyBtn.innerHTML = originalText, 2000);
-            });
+            }).catch(() => document.execCommand('copy')); // refused in an iframe: text is already selected
         });
     }
 
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const btn = form.querySelector('button');
             const originalText = btn.textContent;
             
-            btn.textContent = '✅ Subscribed!';
+            btn.textContent = typeof window.t === 'function' ? window.t('email.subscribed') : '✅ Subscribed!';
             btn.disabled = true;
             input.value = '';
             
