@@ -1361,6 +1361,11 @@ function printMaterialPDFReport(material, healing, sensitivity, location, compat
   }, 300);
 }
 
+// library.js keeps its escapeHTML private; the material views need one too.
+function escapeHTML(str) {
+  return String(str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
 function copyMaterialReport(material, healing, sensitivity, location, compatible) {
   const text = generateMaterialReportText(material, healing, sensitivity, location, compatible);
   const copyBtnText = document.getElementById('copy-report-text');
