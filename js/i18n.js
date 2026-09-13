@@ -344,7 +344,7 @@ Language: English (Reference Dictionary)
         "Borosilicate Glass": "Thermal- and chemical-resistant glass formulated with silica and boron trioxide, non-porous and body-safe for healed piercings.",
         "Cytotoxicity": "Quality of being toxic to living biological cells; measured in vitro via mammalian cell assays under ISO 10993-5.",
         "ELI": "Extra Low Interstitial: ultra-pure alloy grade with reduced oxygen, nitrogen, and iron for enhanced ductility and fracture toughness (ASTM F136).",
-        "EN 1811": "European reference test method for measuring the release of nickel from post assemblies and articles in direct contact with skin (<0.2 µg/cm²/week).",
+        "EN 1811": "European reference test method for nickel release: one week in artificial sweat at 30 °C. REACH limits: below 0.2 µg/cm²/week for posts in pierced skin, 0.5 µg/cm²/week for other articles in prolonged skin contact.",
         "EU REACH Annex XVII": "European chemical regulation restricting nickel release from body piercing posts to <0.2 µg/cm²/week.",
         "ISO 5832-1": "International standard for surgical implants - Metallic materials - Part 1: Wrought stainless steel.",
         "ISO 5832-3": "International standard for surgical implants - Metallic materials - Part 3: Wrought titanium 6-aluminium 4-vanadium alloy.",
@@ -548,18 +548,33 @@ Language: English (Reference Dictionary)
         },
         "EN_1441": {
             "code": "EN 1441",
-            "full_name": "Nickel release from post assemblies which are inserted into pierced ears and other pierced parts of the human body",
+            "full_name": "Medical devices - Risk analysis (EN 1441:1997, withdrawn; replaced by EN ISO 14971)",
             "organization": "European Committee for Standardization",
-            "material_type": "Nickel release regulation (applies to all materials)",
-            "body_piercing_use": "Regulatory requirement in EU",
-            "biocompatibility": "Limits nickel exposure to reduce allergic reactions",
-            "sterilization": "N/A - Regulatory standard",
-            "important_notes": "MANDATORY in European Union. Products must meet nickel release limits. Even \"surgical steel\" containing nickel must pass this test for EU sale.",
-            "verification_method": "Test reports showing EN 1441 compliance, EN 1811 test results",
+            "material_type": "Risk analysis procedure for medical device manufacturers. Not a material, jewellery or nickel standard.",
+            "body_piercing_use": "None directly: it applied to medical devices, not body jewellery, and it sets no nickel limit.",
+            "biocompatibility": "Not a biocompatibility test",
+            "sterilization": "Not applicable",
+            "important_notes": "EN 1441 was the European standard for risk analysis of medical devices, published in 1997 and replaced by EN ISO 14971. It is sometimes quoted on jewellery paperwork as if it were a nickel rule; it is not. Nickel release from piercing jewellery is measured with EN 1811, and the legal limits are in REACH Annex XVII entry 27.",
+            "verification_method": "If a supplier cites EN 1441 for nickel or material safety, ask for an EN 1811 nickel release test report instead.",
             "common_uses": [
-                "EU compliance",
-                "Consumer protection",
-                "Product testing"
+                "Medical device risk management (historical)",
+                "Predecessor of EN ISO 14971"
+            ]
+        },
+        "EN_1811": {
+            "code": "EN 1811",
+            "full_name": "Reference test method for release of nickel from all post assemblies which are inserted into pierced parts of the human body and articles intended to come into direct and prolonged contact with the skin",
+            "organization": "European Committee for Standardization",
+            "material_type": "Nickel release test method for any metal article that may contain nickel",
+            "body_piercing_use": "The test that shows whether piercing jewellery containing nickel meets the EU limit for posts in pierced skin: less than 0.2 µg/cm²/week.",
+            "biocompatibility": "Measures nickel release only. It is not a biocompatibility test and does not replace ISO 10993.",
+            "sterilization": "Not applicable (test method)",
+            "important_notes": "The limits come from REACH Annex XVII entry 27; EN 1811 is the reference method for measuring against them. Posts inserted into pierced ears and other pierced parts of the body must release less than 0.2 µg/cm²/week; other articles in direct and prolonged skin contact, 0.5 µg/cm²/week. Coated articles must keep within the limit for at least two years of normal use, simulated with EN 12472 before the EN 1811 test. The article sits one week in artificial sweat at 30 °C. A dimethylglyoxime (DMG) spot test is only a screening check (CEN/TR 12471), not proof of compliance. Current edition: EN 1811:2023, which replaced EN 1811:2011+A1:2015.",
+            "verification_method": "Ask for an EN 1811 test report from an accredited laboratory naming the article tested, the result in µg/cm²/week and the edition of the standard. Surgical steel contains nickel and needs one.",
+            "common_uses": [
+                "EU compliance of nickel-containing jewellery",
+                "Supplier test reports",
+                "Market surveillance testing"
             ]
         },
         "REACH": {
@@ -1307,7 +1322,7 @@ Language: English (Reference Dictionary)
             "verification_steps": [
                 "Verify material is nickel-free (titanium, niobium, etc.)",
                 "Request biocompatibility test results",
-                "Check for EN 1441 compliance if nickel present",
+                "Ask for an EN 1811 nickel release test report if the material contains nickel",
                 "Avoid plated materials regardless of claims"
             ]
         },
