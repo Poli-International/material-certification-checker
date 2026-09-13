@@ -1,85 +1,118 @@
-# Body Jewelry Material Certification Guide
+# Body Jewelry Material Certification & Verification Decoder
 
-> **Verify and understand body jewelry safety certifications like ASTM F136 Titanium and ISO standards.**
+> **Professional clinical standards reference and verification suite for body jewelry alloys, medical polymers, and biocompatibility certifications (ASTM, ISO, USP, EN).**
 
 [![License](https://img.shields.io/github/license/Poli-International/material-certification-checker)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/Poli-International/material-certification-checker)](https://github.com/Poli-International/material-certification-checker/commits/master)
 [![GitHub Stars](https://img.shields.io/github/stars/Poli-International/material-certification-checker?style=social)](https://github.com/Poli-International/material-certification-checker/stargazers)
 
-**Live Demo:** [https://poliinternational.com/tools/material-certification-checker/](https://poliinternational.com/tools/material-certification-checker/)
+**Live Application:** [https://poliinternational.com/tools/material-certification-checker/](https://poliinternational.com/tools/material-certification-checker/)
+
+---
+
+## 🌍 Multilingual Documentation
+
+This documentation is available in all 7 supported platform languages:
+
+- 🇬🇧 [English (EN)](./docs/en/README.md)
+- 🇫🇷 [Français (FR)](./docs/fr/README.md)
+- 🇩🇪 [Deutsch (DE)](./docs/de/README.md)
+- 🇮🇹 [Italiano (IT)](./docs/it/README.md)
+- 🇪🇸 [Español (ES)](./docs/es/README.md)
+- 🇵🇹 [Português (PT)](./docs/pt/README.md)
+- 🇳🇱 [Nederlands (NL)](./docs/nl/README.md)
+
+Technical Architecture documentation:
+- 🇬🇧 [English Technical Docs](./TECHNICAL_DOCUMENTATION.md) | [Docs Folder](./docs/en/TECHNICAL_DOCUMENTATION.md)
+- 🇫🇷 [Français Docs Techniques](./docs/fr/TECHNICAL_DOCUMENTATION.md)
+- 🇩🇪 [Deutsch Technische Dokumentation](./docs/de/TECHNICAL_DOCUMENTATION.md)
+- 🇮🇹 [Italiano Documentazione Tecnica](./docs/it/TECHNICAL_DOCUMENTATION.md)
+- 🇪🇸 [Español Documentación Técnica](./docs/es/TECHNICAL_DOCUMENTATION.md)
+- 🇵🇹 [Português Documentação Técnica](./docs/pt/TECHNICAL_DOCUMENTATION.md)
+- 🇳🇱 [Nederlands Technische Documentatie](./docs/nl/TECHNICAL_DOCUMENTATION.md)
 
 ---
 
 ## 🎯 Overview
 
-The Body Jewelry Material Certification Guide is a reference tool for professionals and clients to ensure any jewelry used for initial piercings or long-term wear meets implant-grade safety standards. It explains what different certifications mean and how to verify them, promoting safer body modification practices globally.
+The **Material Certification Decoder** by Poli International is a comprehensive client-side suite engineered for piercing artists, studio owners, quality control inspectors, and health authorities. It translates complex metallurgical mill test reports, regulatory chemical directives (EU REACH Entry 27), and biological testing standards into immediate, actionable clinical evaluations.
 
-**Key Use Cases:**
-
-- Verifying ASTM F136 vs. G23 Titanium
-- Understanding surgical steel compositions
-- Identifying safe organics and glass materials
-
-**Target Audience:**
-
-- Piercers and studio owners
-- Quality control departments
-- Informed clients
+Biocompatible materials validated by international implant standards include:
+- **ASTM F136 / ISO 5832-3 Titanium (Ti-6Al-4V ELI)**
+- **BioFlex® Medical PP-R Random Copolymer (USP Class VI / ISO 10993)**
+- **ASTM F138 / ISO 5832-1 Implant Stainless Steel (316LVM)**
+- **ASTM F2229 Niobium (Unalloyed)**
+- **Borosilicate Glass 3.3 (ISO 3585)**
+- **Solid 14K / 18K Biocompatible Gold**
 
 ---
 
-## ✨ Features
+## ✨ Core Features
 
-- ✅ **Certification Lookup** - Instant definitions for ISO and ASTM standards.
-- ✅ **Material Compatibility** - Detailed breakdown of implant-grade metals.
-- ✅ **Allergy Checker** - Information on nickel content and sensitivity.
-- ✅ **Responsive Design** - Works on desktop, tablet, and mobile.
-- ✅ **Free & Open Source** - MIT licensed.
+### 1. Certificate Reader & Preset Phrasing Analyzer
+- Evaluates supplier quotes, catalogue text, and mill test snippets against known clinical standards.
+- 6 one-click test phrasing presets:
+  - Valid ASTM F136 Titanium mill certificate snippet
+  - Vague commercial "G23 Titanium" marketing claim
+  - Valid ASTM F138 316LVM surgical implant stainless steel
+  - Generic non-implant "316L Surgical Steel" with nickel alert
+  - Authentic BioFlex® medical polymer (USP Class VI)
+  - Misleading generic "Acrylic / Plastic Piercing Retainer"
+- Produces a 3-tier safety status (Compliant, Caution / Conditional, Unverified / High Risk), parsed standard tags, elemental limits, and red flags.
+
+### 2. Supplier Question Sheet Generator
+- Configurable material alloy (7 material profiles) paired with clinical application (Initial piercing, Healed, Sensitive/Allergy, Oral/Mucosal, Surface/Subdermal).
+- Outputs exact technical questions to send to manufacturers, acceptable response criteria, and critical red flags.
+- Complete studio branding input with print-ready single-page layout.
+
+### 3. Claim-to-Evidence Matrix
+- Searchable, filterable matrix covering 12 common market claims across metals, polymers, and general marketing.
+- Details the exact substantiating document, what it proves, clinical significance of absence, and how to verify legitimacy.
+
+### 4. Certified Material Comparison Tool
+- Side-by-side comparison of 2 to 3 materials across composition, tensile strength, yield strength, density, thermal conductivity, biocompatibility class, sterilization parameters, and regulatory conformity.
+- Category mismatch alerts for cross-class comparisons.
+
+### 5. Dated Studio Compliance Records Vault
+- Generates receiving inspection audit certificates for supplier files.
+- Stored 100% locally in browser storage: zero server tracking, zero accounts, audit-ready PDF/print summaries.
+
+### 6. Interactive Standards Library, Compatibility Mixer & Reference Studio
+- Standards catalog (`js/library.js`) with ISO, ASTM, USP, and EU standards.
+- Material galvanic and elemental compatibility mixer (`js/mixer.js`).
+- Sterilization and handling matrix (`js/reference-studio.js`) covering steam autoclave, ultrasonic bath, dry heat, and chemical disinfection.
+
+### 7. Full Internationalization (7 Languages)
+- 100% localization parity across English, French, German, Italian, Spanish, Portuguese, and Dutch.
+- Dynamic locale switching preserving UI state and accessibility.
 
 ---
 
-## 🎬 Demo
-
-### Try It Live
-
-**👉 [Use the tool now](https://poliinternational.com/tools/material-certification-checker/)**
-
----
-
-## 🚀 Installation
-
-### Option 1: Use Online (Recommended)
-
-No installation needed! Just visit:
-**[https://poliinternational.com/tools/material-certification-checker/](https://poliinternational.com/tools/material-certification-checker/)**
+## 📱 Fully Responsive Design & Accessibility
+- **Mobile, Tablet & Desktop**: Fluid layouts from 360px smartphones to ultra-wide displays.
+- **Finger-Friendly Touch Targets**: Minimum 44×44px interactive controls across buttons, tabs, and selects.
+- **Strict Color Contrast**: Minimum 4.5:1 WCAG AA contrast ratio across both Light and Dark modes.
+- **Zero-Overflow Horizontals**: Responsive card stacks and overflow-protected tables.
+- **Print Optimization**: Single-page, ink-saving clean output with navigation stripped out automatically.
 
 ---
 
-## 🤝 Contributing
+## 🚀 Quick Start
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+### Online Usage
+Visit [https://poliinternational.com/tools/material-certification-checker/](https://poliinternational.com/tools/material-certification-checker/)
+
+### Local Development
+Clone the repository and serve static files using any local web server:
+```bash
+# Using Node / npx
+npx serve .
+
+# Or using Python
+python3 -m http.server 3000
+```
 
 ---
 
 ## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 💬 Support
-
-### Get Help
-
-- 📧 **Email**: <support@poliinternational.com>
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/Poli-International/material-certification-checker/issues)
-
----
-
-<div align="center">
-
-**Made with ❤️ by [Poli International](https://poliinternational.com)**
-
-[Website](https://poliinternational.com) • [Tools](https://poliinternational.com/tools/) • [GitHub](https://github.com/Poli-International)
-
-</div>
+MIT License. Copyright © 2026 Poli International.
