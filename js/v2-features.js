@@ -86,6 +86,9 @@
   // 1. FEATURE ONE: THE CERTIFICATE READER ENGINE
   // ═══════════════════════════════════════════════════════════
 
+  let activeReaderAnalysis = null;
+  let activeComparisonKeys = null;
+
   function analyzePhrasing(text) {
     const clean = (text || '').trim();
     const lower = clean.toLowerCase();
@@ -125,18 +128,18 @@
     if (/14k\s*gold|18k\s*gold/i.test(lower)) alloysFound.push('Solid Gold (14K/18K)');
 
     // Traceability
-    if (/heat\s*(?:no|number|#)|melt\s*(?:no|number|#)/i.test(lower)) traceabilityFound.push('Heat / Melt Lot Number cited');
-    if (/mill\s*(?:cert|test|report)|mtr\b|en\s*10204\s*3\.1/i.test(lower)) traceabilityFound.push('Mill Test Report (MTR) referenced');
-    if (/batch\s*(?:no|number|#)|lot\s*(?:no|number|#)/i.test(lower)) traceabilityFound.push('Production Batch / Lot Number cited');
+    if (/heat\s*(?:no|number|#)|melt\s*(?:no|number|#)/i.test(lower)) traceabilityFound.push(safeT('cert_reader.trace_heat_number', 'Heat / Melt Lot Number cited'));
+    if (/mill\s*(?:cert|test|report)|mtr\b|en\s*10204\s*3\.1/i.test(lower)) traceabilityFound.push(safeT('cert_reader.trace_mill_cert', 'Mill Test Report (MTR) referenced'));
+    if (/batch\s*(?:no|number|#)|lot\s*(?:no|number|#)/i.test(lower)) traceabilityFound.push(safeT('cert_reader.trace_batch_lot', 'Production Batch / Lot Number cited'));
 
     // Marketing claims
-    if (/implant\s*grade/i.test(lower)) marketingFound.push('Implant Grade (Unregulated marketing phrase)');
-    if (/surgical\s*(?:steel|grade)/i.test(lower)) marketingFound.push('Surgical Steel / Surgical Grade (Marketing phrase)');
-    if (/hypoallergenic/i.test(lower)) marketingFound.push('Hypoallergenic (Unsubstantiated marketing claim)');
-    if (/medical\s*grade/i.test(lower)) marketingFound.push('Medical Grade (Generic marketing claim)');
-    if (/nickel[\s-]free/i.test(lower)) marketingFound.push('Nickel-Free (Composition claim)');
-    if (/autoclave\s*safe|100%\s*sterilizable/i.test(lower)) marketingFound.push('Autoclave Safe (Thermal claim)');
-    if (/pure\s*titanium|solid\s*titanium/i.test(lower)) marketingFound.push('Pure Titanium (Ambiguous grade claim)');
+    if (/implant\s*grade/i.test(lower)) marketingFound.push(safeT('cert_reader.market_implant_grade', 'Implant Grade (Unregulated marketing phrase)'));
+    if (/surgical\s*(?:steel|grade)/i.test(lower)) marketingFound.push(safeT('cert_reader.market_surgical_steel', 'Surgical Steel / Surgical Grade (Marketing phrase)'));
+    if (/hypoallergenic/i.test(lower)) marketingFound.push(safeT('cert_reader.market_hypoallergenic', 'Hypoallergenic (Unsubstantiated marketing claim)'));
+    if (/medical\s*grade/i.test(lower)) marketingFound.push(safeT('cert_reader.market_medical_grade', 'Medical Grade (Generic marketing claim)'));
+    if (/nickel[\s-]free/i.test(lower)) marketingFound.push(safeT('cert_reader.market_nickel_free', 'Nickel-Free (Composition claim)'));
+    if (/autoclave\s*safe|100%\s*sterilizable/i.test(lower)) marketingFound.push(safeT('cert_reader.market_autoclave_safe', 'Autoclave Safe (Thermal claim)'));
+    if (/pure\s*titanium|solid\s*titanium/i.test(lower)) marketingFound.push(safeT('cert_reader.market_pure_titanium', 'Pure Titanium (Ambiguous grade claim)'));
 
     // Compute Evidence Tier
     let tier = 0;
@@ -144,74 +147,77 @@
     let tierBadgeClass = '';
 
     const hasSurgicalStandard = standardsFound.some(s => s.surgical);
-    const hasHeatNumber = traceabilityFound.some(t => t.includes('Heat') || t.includes('Mill'));
+    const hasHeatNumber = traceabilityFound.some(t => t.includes('Heat') || t.includes('Mill') || t.includes('Lot') || t.includes('MTR'));
 
     if (hasSurgicalStandard && hasHeatNumber) {
       tier = 3;
-      tierTitle = 'LEVEL 3: FULLY DOCUMENTED & TRACEABLE STANDARD';
+      tierTitle = safeT('cert_reader.level_3_title', 'LEVEL 3: FULLY DOCUMENTED & TRACEABLE STANDARD');
       tierBadgeClass = 'cert-reader__badge--level3';
     } else if (hasSurgicalStandard || standardsFound.length > 0) {
       tier = 2;
-      tierTitle = 'LEVEL 2: STANDARD CITED WITHOUT MELT TRACEABILITY';
+      tierTitle = safeT('cert_reader.level_2_title', 'LEVEL 2: STANDARD CITED WITHOUT MELT TRACEABILITY');
       tierBadgeClass = 'cert-reader__badge--level2';
     } else if (alloysFound.length > 0 && !alloysFound.some(a => a.includes('Acrylic'))) {
       tier = 1;
-      tierTitle = 'LEVEL 1: AMBIGUOUS SPECIFICATION / CATALOG SHORTHAND';
+      tierTitle = safeT('cert_reader.level_1_title', 'LEVEL 1: AMBIGUOUS SPECIFICATION / CATALOG SHORTHAND');
       tierBadgeClass = 'cert-reader__badge--level1';
     } else {
       tier = 0;
-      tierTitle = 'LEVEL 0: UNVERIFIED MARKETING CLAIM (ZERO TECHNICAL PROOF)';
+      tierTitle = safeT('cert_reader.level_0_title', 'LEVEL 0: UNVERIFIED MARKETING CLAIM (ZERO TECHNICAL PROOF)');
       tierBadgeClass = 'cert-reader__badge--level0';
     }
 
     // Determine What This Phrasing ESTABLISHES
     const establishes = [];
     if (standardsFound.length > 0) {
-      establishes.push(`Formally asserts compliance with published technical standards: ${standardsFound.map(s => s.code).join(', ')}.`);
+      const tmpl = safeT('cert_reader.establishes_standards', 'Formally asserts compliance with published technical standards: {standards}.');
+      establishes.push(tmpl.replace('{standards}', standardsFound.map(s => s.code).join(', ')));
     }
     if (alloysFound.length > 0) {
-      establishes.push(`Specifies a target material alloy/formulation: ${alloysFound.join(', ')}.`);
+      const tmpl = safeT('cert_reader.establishes_alloys', 'Specifies a target material alloy/formulation: {alloys}.');
+      establishes.push(tmpl.replace('{alloys}', alloysFound.join(', ')));
     }
     if (traceabilityFound.length > 0) {
-      establishes.push(`Provides traceability markers: ${traceabilityFound.join(', ')}.`);
+      const tmpl = safeT('cert_reader.establishes_traceability', 'Provides traceability markers: {markers}.');
+      establishes.push(tmpl.replace('{markers}', traceabilityFound.join(', ')));
     }
     if (establishes.length === 0) {
-      establishes.push('NONE. The text consists entirely of promotional descriptors and establishes zero technical, chemical, or biological facts.');
+      establishes.push(safeT('cert_reader.establishes_none', 'NONE. The text consists entirely of promotional descriptors and establishes zero technical, chemical, or biological facts.'));
     }
 
     // Determine What This Phrasing DOES NOT ESTABLISH (The Critical Gap)
     const criticalGaps = [];
     if (!hasHeatNumber) {
-      criticalGaps.push('Melt Lot Traceability: No heat number linking this individual piece to a specific melting batch or mill chemical analysis.');
+      criticalGaps.push(safeT('cert_reader.gap_melt_traceability', 'Melt Lot Traceability: No heat number linking this individual piece to a specific melting batch or mill chemical analysis.'));
     }
     if (!hasSurgicalStandard) {
-      criticalGaps.push('Implant Specification: Terms like "implant grade" or "surgical steel" have zero legal or metallurgical weight without ASTM/ISO standard citation.');
+      criticalGaps.push(safeT('cert_reader.gap_implant_spec', 'Implant Specification: Terms like "implant grade" or "surgical steel" have zero legal or metallurgical weight without ASTM/ISO standard citation.'));
     }
     if (lower.includes('titanium') && !lower.includes('f136') && !lower.includes('eli')) {
-      criticalGaps.push('ELI Oxygen Verification: Titanium Grade 5 (0.20% oxygen) is often sold as generic "titanium". Only ASTM F136 guarantees the Extra Low Interstitial (ELI) oxygen ceiling (≤ 0.13%).');
+      criticalGaps.push(safeT('cert_reader.gap_eli_oxygen', 'ELI Oxygen Verification: Titanium Grade 5 (0.20% oxygen) is often sold as generic "titanium". Only ASTM F136 guarantees the Extra Low Interstitial (ELI) oxygen ceiling (≤ 0.13%).'));
     }
     if (lower.includes('316l') && !lower.includes('316lvm') && !lower.includes('f138')) {
-      criticalGaps.push('Vacuum Arc Remelting (VAR): Commercial 316L is melted in open air and has higher carbon/sulfur and non-metallic inclusions than vacuum-melted ASTM F138 316LVM.');
+      criticalGaps.push(safeT('cert_reader.gap_var_remelt', 'Vacuum Arc Remelting (VAR): Commercial 316L is melted in open air and has higher carbon/sulfur and non-metallic inclusions than vacuum-melted ASTM F138 316LVM.'));
     }
-    if (marketingFound.includes('Hypoallergenic') && !standardsFound.some(s => s.code === 'ASTM F136' || s.code === 'ASTM F2229')) {
-      criticalGaps.push('Allergen Chemical Proof: "Hypoallergenic" does not disclose nickel content, plating thickness, or substrate base metals.');
+    if ((marketingFound.includes('Hypoallergenic') || lower.includes('hypoallergenic')) && !standardsFound.some(s => s.code === 'ASTM F136' || s.code === 'ASTM F2229')) {
+      criticalGaps.push(safeT('cert_reader.gap_allergen_proof', 'Allergen Chemical Proof: "Hypoallergenic" does not disclose nickel content, plating thickness, or substrate base metals.'));
     }
     if (!lower.includes('mtr') && !lower.includes('mill cert') && !lower.includes('test report')) {
-      criticalGaps.push('Documentary Physical Proof: A distributor claim or invoice label is not a Mill Test Report (MTR). True verification requires the melt mill laboratory sheet.');
+      criticalGaps.push(safeT('cert_reader.gap_doc_physical_proof', 'Documentary Physical Proof: A distributor claim or invoice label is not a Mill Test Report (MTR). True verification requires the melt mill laboratory sheet.'));
     }
 
     // Required Documentary Proof
     let requiredProof = '';
     if (lower.includes('titanium')) {
-      requiredProof = 'Original Mill Test Report (MTR) per EN 10204 3.1 showing ASTM F136 (Ti-6Al-4V ELI), Oxygen ≤ 0.13%, Iron ≤ 0.25%, and matching Heat Number stamped on packet.';
+      requiredProof = safeT('cert_reader.proof_titanium', 'Original Mill Test Report (MTR) per EN 10204 3.1 showing ASTM F136 (Ti-6Al-4V ELI), Oxygen ≤ 0.13%, Iron ≤ 0.25%, and matching Heat Number stamped on packet.');
     } else if (lower.includes('steel')) {
-      requiredProof = 'Mill Test Report citing ASTM F138 (Grade 2 Bar/Wire), 316LVM vacuum remelted, Carbon ≤ 0.030%, Sulfur ≤ 0.010%, with lot heat number.';
+      requiredProof = safeT('cert_reader.proof_steel', 'Mill Test Report citing ASTM F138 (Grade 2 Bar/Wire), 316LVM vacuum remelted, Carbon ≤ 0.030%, Sulfur ≤ 0.010%, with lot heat number.');
     } else if (lower.includes('bioflex') || lower.includes('polymer') || lower.includes('plastic')) {
-      requiredProof = 'USP Class VI biological reactivity testing certificate + ISO 10993-5 cytotoxicity report for medical-grade PP-R resin.';
+      requiredProof = safeT('cert_reader.proof_polymer', 'USP Class VI biological reactivity testing certificate + ISO 10993-5 cytotoxicity report for medical-grade PP-R resin.');
     } else if (lower.includes('niobium')) {
-      requiredProof = 'Mill Test Certificate showing ASTM F2229 unalloyed niobium (≥ 99.85% Nb) with low interstitials.';
+      requiredProof = safeT('cert_reader.proof_niobium', 'Mill Test Certificate showing ASTM F2229 unalloyed niobium (≥ 99.85% Nb) with low interstitials.');
     } else {
-      requiredProof = 'Official raw material Mill Test Report (MTR) from melting mill with chemical analysis, mechanical testing, and heat lot identifier.';
+      requiredProof = safeT('cert_reader.proof_generic', 'Official raw material Mill Test Report (MTR) from melting mill with chemical analysis, mechanical testing, and heat lot identifier.');
     }
 
     return {
@@ -261,10 +267,11 @@
           const textCol = isActive ? 'var(--color-text-on-accent)' : 'var(--color-text-primary)';
           const strokeCol = isActive ? 'var(--color-accent-bg)' : 'var(--color-border)';
           const strokeWidth = isActive ? '3' : '1.5';
+          const levelPrefix = safeT('cert_reader.diagram_level_prefix', 'LEVEL');
           return `
             <g transform="translate(${lvl.x}, 20)">
               <rect x="0" y="0" width="150" height="75" rx="8" fill="${fillCol}" stroke="${strokeCol}" stroke-width="${strokeWidth}" />
-              <text x="75" y="24" text-anchor="middle" font-size="11" font-weight="bold" fill="${textCol}">[LEVEL ${lvl.num}]</text>
+              <text x="75" y="24" text-anchor="middle" font-size="11" font-weight="bold" fill="${textCol}">[${escapeHTML(levelPrefix)} ${lvl.num}]</text>
               <text x="75" y="44" text-anchor="middle" font-size="12" font-weight="600" fill="${textCol}">${escapeHTML(lvl.title)}</text>
               <text x="75" y="62" text-anchor="middle" font-size="10" fill="${textCol}" opacity="0.8">${escapeHTML(lvl.sub)}</text>
             </g>
@@ -283,6 +290,7 @@
 
   function renderReaderResults(analysis, container) {
     if (!container) return;
+    activeReaderAnalysis = analysis;
 
     const tierClassMap = {
       0: 'cert-reader__result--tier0',
@@ -897,6 +905,7 @@ ${analysis.requiredProof}
   function renderCertifiedComparison(matKeys) {
     const resultsDiv = document.getElementById('compare-results');
     if (!resultsDiv || !window.CERTIFIED_COMPARISON_DATA) return;
+    activeComparisonKeys = matKeys;
 
     const data = window.CERTIFIED_COMPARISON_DATA;
     const selected = matKeys.map(k => ({ key: k, d: data[k] })).filter(item => Boolean(item.d));
@@ -958,7 +967,7 @@ ${analysis.requiredProof}
                 ${selected.map(item => `
                   <th scope="col" style="width: ${Math.floor(75 / selected.length)}%;">
                     <div class="comp-col-header">
-                      <strong>${escapeHTML(item.d.name)}</strong>
+                      <strong>${escapeHTML(safeT('materials.' + item.key + '.name', safeT('cert_compare.mat_' + item.key + '_name', item.d.name)))}</strong>
                       <span class="comp-col-tag">${escapeHTML(tagSpec)}</span>
                     </div>
                   </th>
@@ -974,7 +983,7 @@ ${analysis.requiredProof}
                   </th>
                   ${selected.map(item => `
                     <td class="comp-row-data">
-                      ${escapeHTML(item.d[row.prop])}
+                      ${escapeHTML(safeT('cert_compare.mat_' + item.key + '_' + row.prop, item.d[row.prop]))}
                     </td>
                   `).join('')}
                 </tr>
@@ -1155,35 +1164,35 @@ ${analysis.requiredProof}
     const detailContainer = document.getElementById('studio-record-detail');
     if (!detailContainer) return;
 
-    const badgeText = safeT('studio_record.badge', '[OFFICIAL STUDIO COMPLIANCE RECORD]');
+    const badgeText = safeT('studio_record.banner_badge', '[OFFICIAL STUDIO COMPLIANCE RECORD]');
     const sheetTitle = safeT('studio_record.sheet_title', 'Material Lot Verification Certificate');
     const recIdLabel = safeT('studio_record.record_id_label', 'Record ID:');
     const dateLabel = safeT('studio_record.date_label', 'Date:');
     const btnPrint = safeT('studio_record.btn_print', '🖨️ Print for Supplier File');
     const btnCopy = safeT('studio_record.btn_copy', '📋 Copy Summary');
     const btnDownload = safeT('studio_record.btn_download', '💾 Download (.txt)');
-    const fieldStudio = safeT('studio_record.field_studio', 'Studio Name:');
-    const fieldInspector = safeT('studio_record.field_inspector', 'Inspector / Piercer:');
-    const fieldSupplier = safeT('studio_record.field_supplier', 'Supplier / Manufacturer:');
-    const fieldLot = safeT('studio_record.field_lot', 'PO / Batch / Lot #:');
-    const headingClaim = safeT('studio_record.heading_claim_evaluated', 'Claim / Label Phrasing Evaluated:');
-    const headingStatus = safeT('studio_record.heading_evidence_status', 'Evidence Status:');
-    const headingChecklist = safeT('studio_record.heading_checklist', 'Studio Receiving Inspection Checklist:');
-    const chkMtr = safeT('studio_record.chk_mtr', 'Mill Test Report (MTR) provided by supplier');
-    const chkHeat = safeT('studio_record.chk_heat', 'Heat / Melt Lot Number matches packaging label');
-    const chkChem = safeT('studio_record.chk_chem', 'Chemical analysis verified (O ≤ 0.13% for Ti, C ≤ 0.030% for Steel)');
-    const chkThreading = safeT('studio_record.chk_threading', 'Internal threading or threadless construction (no external threads)');
-    const chkPolish = safeT('studio_record.chk_polish', 'Surface polish inspected (mirror finish, no tooling ridges)');
-    const headingDecision = safeT('studio_record.heading_decision', 'Final Studio Receiving Decision:');
-    const decInitial = safeT('studio_record.dec_initial', '[APPROVED FOR INITIAL PIERCING] Documented raw material (ASTM F136 / F138) with verified MTR & Heat #.');
-    const decHealed = safeT('studio_record.dec_healed', '[APPROVED FOR HEALED WEAR ONLY] Secondary wear on intact epithelium only.');
-    const decQuarantine = safeT('studio_record.dec_quarantine', '[QUARANTINE / ON HOLD] Missing MTR or heat number; held until supplier provides proof.');
-    const decRejected = safeT('studio_record.dec_rejected', '[REJECTED / RETURN TO VENDOR] Unsubstantiated claims, commercial scrap, or wrong alloy.');
-    const confirmText = safeT('studio_record.confirm_text', 'I confirm this material lot has been evaluated against applicable ASTM/ISO implant standards:');
-    const sigInspector = safeT('studio_record.sig_inspector', 'Inspector Signature: _________________________________________');
-    const sigDate = safeT('studio_record.sig_date', 'Date of Inspection: __________________');
-    const fileFolder = safeT('studio_record.file_folder', 'Studio Physical File Folder: [ ] Material Certs 2026');
-    const toastCopied = safeT('studio_record.toast_copied', 'Record Summary Copied!');
+    const fieldStudio = safeT('studio_record.studio_name_label', 'Studio Name:');
+    const fieldInspector = safeT('studio_record.inspector_label', 'Inspector / Piercer:');
+    const fieldSupplier = safeT('studio_record.supplier_label', 'Supplier / Manufacturer:');
+    const fieldLot = safeT('studio_record.po_label', 'PO / Batch / Lot #:');
+    const headingClaim = safeT('studio_record.claim_label', 'Claim / Label Phrasing Evaluated:');
+    const headingStatus = safeT('studio_record.evidence_status_label', 'Evidence Status:');
+    const headingChecklist = safeT('studio_record.checklist_title', 'Studio Receiving Inspection Checklist:');
+    const chkMtr = safeT('studio_record.check_mtr', 'Mill Test Report (MTR) provided by supplier');
+    const chkHeat = safeT('studio_record.check_heat', 'Heat / Melt Lot Number matches packaging label');
+    const chkChem = safeT('studio_record.check_chem', 'Chemical analysis verified (O ≤ 0.13% for Ti, C ≤ 0.030% for Steel)');
+    const chkThreading = safeT('studio_record.check_thread', 'Internal threading or threadless construction (no external threads)');
+    const chkPolish = safeT('studio_record.check_polish', 'Surface polish inspected (mirror finish, no tooling ridges)');
+    const headingDecision = safeT('studio_record.decision_title', 'Final Studio Receiving Decision:');
+    const decInitial = safeT('studio_record.decision_initial', '[APPROVED FOR INITIAL PIERCING] Documented raw material (ASTM F136 / F138) with verified MTR & Heat #.');
+    const decHealed = safeT('studio_record.decision_healed', '[APPROVED FOR HEALED WEAR ONLY] Secondary wear on intact epithelium only.');
+    const decQuarantine = safeT('studio_record.decision_quarantine', '[QUARANTINE / ON HOLD] Missing MTR or heat number; held until supplier provides proof.');
+    const decRejected = safeT('studio_record.decision_rejected', '[REJECTED / RETURN TO VENDOR] Unsubstantiated claims, commercial scrap, or wrong alloy.');
+    const confirmText = safeT('studio_record.signoff_confirm', 'I confirm this material lot has been evaluated against applicable ASTM/ISO implant standards:');
+    const sigInspector = safeT('studio_record.signoff_sig', 'Inspector Signature: _________________________________________');
+    const sigDate = safeT('studio_record.signoff_date', 'Date of Inspection: __________________');
+    const fileFolder = safeT('studio_record.signoff_folder', 'Studio Physical File Folder: [ ] Material Certs 2026');
+    const toastCopied = safeT('studio_record.toast_record_copied', 'Record Summary Copied!');
 
     detailContainer.style.display = 'block';
     detailContainer.innerHTML = `
@@ -1410,8 +1419,23 @@ Inspector: ___________________________ Date: ${record.date}
 
   // Re-render dynamic components when language changes
   window.addEventListener('languageChanged', () => {
+    // Re-render certificate reader if active
+    const inputArea = document.getElementById('product-claim');
+    const resultsContainer = document.getElementById('verify-results');
+    if (resultsContainer && (activeReaderAnalysis || (inputArea && inputArea.value.trim()))) {
+      const text = (inputArea && inputArea.value.trim()) || (activeReaderAnalysis ? activeReaderAnalysis.rawText : '');
+      if (text && resultsContainer.innerHTML.trim() !== '') {
+        const refreshed = analyzePhrasing(text);
+        renderReaderResults(refreshed, resultsContainer);
+      }
+    }
+    // Re-render certified comparison if active
+    if (activeComparisonKeys && activeComparisonKeys.length >= 2) {
+      renderCertifiedComparison(activeComparisonKeys);
+    }
     renderQuestionSheetDOM();
     renderClaimMatrixDOM(currentClaimCat, currentClaimSearch);
+    renderStudioRecordsList();
   });
 
   // Expose global methods for integration
