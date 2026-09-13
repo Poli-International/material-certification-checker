@@ -337,7 +337,7 @@
     "Borosilicate Glass": "Verre silicaté technique (ISO 3585) à très faible coefficient de dilatation thermique, surface lisse non poreuse et haute résistance chimique.",
     "Cytotoxicity": "Évaluation de la toxicité biologique sur les cellules vivantes conformément aux protocoles d'essais in vitro ISO 10993-5.",
     "ELI": "Extra Low Interstitial : pureté métallurgique garantissant des teneurs réduites en oxygène, carbone, azote et fer pour une ténacité supérieure.",
-    "EN 1811": "Méthode d'essai de référence européenne pour quantifier le taux de libération de nickel des articles insérés dans les parties percées du corps humain (<0,2 µg/cm²/semaine).",
+    "EN 1811": "Méthode d'essai européenne de référence pour la libération du nickel : une semaine dans une sueur artificielle à 30 °C. Limites REACH : moins de 0,2 µg/cm²/semaine pour les tiges dans la peau percée, 0,5 µg/cm²/semaine pour les autres articles en contact prolongé avec la peau.",
     "EU REACH Annex XVII": "Règlement européen n° 1907/2006 limitant l'usage des substances chimiques dangereuses, notamment le nickel (entrée 27), le plomb et le cadmium.",
     "ISO 5832-1": "Implants chirurgicaux : Matériaux métalliques, Partie 1 : Acier inoxydable corroyé (composition équivalente à l'ASTM F138).",
     "ISO 5832-3": "Implants chirurgicaux : Matériaux métalliques, Partie 3 : Titane corroyé allié à 6 % d'aluminium et 4 % de vanadium.",
@@ -520,18 +520,33 @@
     },
     "EN_1441": {
       "code": "EN 1441",
-      "full_name": "Nickel release from post assemblies which are inserted into pierced ears and other pierced parts of the human body",
-      "organization": "European Committee for Standardization",
-      "material_type": "Nickel release regulation (applies to all materials)",
-      "body_piercing_use": "Regulatory requirement in EU",
-      "biocompatibility": "Limits nickel exposure to reduce allergic reactions",
-      "sterilization": "N/A - Regulatory standard",
-      "important_notes": "MANDATORY in European Union. Products must meet nickel release limits. Even \"surgical steel\" containing nickel must pass this test for EU sale.",
-      "verification_method": "Test reports showing EN 1441 compliance, EN 1811 test results",
+      "full_name": "Dispositifs médicaux - Analyse des risques (EN 1441:1997, retirée ; remplacée par l'EN ISO 14971)",
+      "organization": "Comité européen de normalisation",
+      "material_type": "Procédure d'analyse des risques pour les fabricants de dispositifs médicaux. Ce n'est ni une norme de matériau, ni de bijou, ni de nickel.",
+      "body_piercing_use": "Aucun usage direct : elle visait les dispositifs médicaux, pas les bijoux de corps, et ne fixe aucune limite de nickel.",
+      "biocompatibility": "Pas un essai de biocompatibilité",
+      "sterilization": "Sans objet",
+      "important_notes": "L'EN 1441 était la norme européenne d'analyse des risques des dispositifs médicaux, publiée en 1997 et remplacée par l'EN ISO 14971. Elle est parfois citée sur des documents de bijoux comme s'il s'agissait d'une règle sur le nickel ; ce n'est pas le cas. La libération de nickel des bijoux de piercing se mesure selon l'EN 1811, et les limites légales figurent à l'annexe XVII, entrée 27, du règlement REACH.",
+      "verification_method": "Si un fournisseur cite l'EN 1441 pour le nickel ou la sécurité du matériau, demandez plutôt un rapport d'essai de libération de nickel selon l'EN 1811.",
       "common_uses": [
-        "EU compliance",
-        "Consumer protection",
-        "Product testing"
+        "Gestion des risques des dispositifs médicaux (historique)",
+        "Précurseur de l'EN ISO 14971"
+      ]
+    },
+    "EN_1811": {
+      "code": "EN 1811",
+      "full_name": "Méthode d'essai de référence pour la libération du nickel de toutes les tiges introduites dans les parties percées du corps humain et des produits destinés à entrer en contact direct et prolongé avec la peau",
+      "organization": "Comité européen de normalisation",
+      "material_type": "Méthode d'essai de libération du nickel pour tout article métallique pouvant contenir du nickel",
+      "body_piercing_use": "L'essai qui montre si un bijou de piercing contenant du nickel respecte la limite européenne pour les tiges dans la peau percée : moins de 0,2 µg/cm²/semaine.",
+      "biocompatibility": "Mesure uniquement la libération de nickel. Ce n'est pas un essai de biocompatibilité et il ne remplace pas l'ISO 10993.",
+      "sterilization": "Sans objet (méthode d'essai)",
+      "important_notes": "Les limites viennent de l'annexe XVII, entrée 27, de REACH ; l'EN 1811 est la méthode de référence pour les mesurer. Les tiges introduites dans les oreilles percées et les autres parties percées du corps doivent libérer moins de 0,2 µg/cm²/semaine ; les autres articles en contact direct et prolongé avec la peau, 0,5 µg/cm²/semaine. Les articles revêtus doivent rester sous la limite pendant au moins deux ans d'utilisation normale, simulés par l'EN 12472 avant l'essai EN 1811. L'article séjourne une semaine dans une sueur artificielle à 30 °C. Un test à la diméthylglyoxime (DMG) n'est qu'un dépistage (CEN/TR 12471), pas une preuve de conformité. Édition en vigueur : EN 1811:2023, qui remplace l'EN 1811:2011+A1:2015.",
+      "verification_method": "Demandez un rapport d'essai EN 1811 d'un laboratoire accrédité indiquant l'article testé, le résultat en µg/cm²/semaine et l'édition de la norme. L'acier chirurgical contient du nickel et en a besoin.",
+      "common_uses": [
+        "Conformité UE des bijoux contenant du nickel",
+        "Rapports d'essai fournisseurs",
+        "Contrôles de surveillance du marché"
       ]
     },
     "REACH": {
@@ -926,7 +941,7 @@
       "verification_steps": [
         "Vérifier que le matériau est certifié sans nickel (titane, niobium, etc.)",
         "Demander les rapports d'essais de biocompatibilité selon l'ISO 10993",
-        "Vérifier la conformité au seuil de libération EN 1811 si du nickel est présent",
+        "Demander un rapport d'essai de libération de nickel EN 1811 si le matériau contient du nickel",
         "Éviter tout bijou plaqué en pose initiale, quelles que soient les allégations"
       ]
     },
