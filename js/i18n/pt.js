@@ -53,7 +53,7 @@
     "optgroup_biocompatible_polymers": "Polímeros Biocompatíveis e Vidro",
     "optgroup_other": "Outros Materiais (Usar com Cautela)",
     "opt_titanium_23": "Titânio Grau 23 (Ti-6Al-4V ELI) - ASTM F136",
-    "opt_titanium_5": "Titânio Grau 5 (Ti-6Al-4V) - NÃO Recomendado",
+    "opt_titanium_5": "Titânio Grau 5 (Ti-6Al-4V)",
     "opt_steel_316lvm": "Aço Cirúrgico 316LVM - ASTM F138",
     "opt_steel_316l": "Aço Cirúrgico 316L (Não implantável)",
     "opt_niobium": "Nióbio (Puro / Ligado) - ASTM F2229",
@@ -604,7 +604,7 @@
       "red_flags": [
         "Unusually cheap \"implant grade\" titanium",
         "No mill certification provided",
-        "Listed as \"Grade 5\" or \"ISO 5832-3\" (wrong grade)",
+        "Listed as \"Grade 5\" or \"ISO 5832-3\" (a different specification from F136)",
         "Generic \"titanium\" without grade specification",
         "Supplier refuses documentation"
       ],
@@ -615,20 +615,17 @@
     },
     "titanium_grade_5": {
       "name": "Titanium Grade 5 (Ti-6Al-4V)",
-      "biocompatibility": "Good for orthopedic implants, NOT ideal for body piercing",
+      "biocompatibility": "Specified for surgical implants; most piercing guidance names its extra-low-interstitial version, ASTM F136 (Grade 23)",
       "composition": "Titanium alloy: Ti-6Al-4V (higher oxygen content than Grade 23)",
-      "verification_tips": "AVOID for body piercing. If seller claims \"implant grade titanium\" but shows ISO 5832-3 or Grade 5 certification, this is NOT the correct grade. Insist on ASTM F136 (Grade 23).",
-      "maintenance": "N/A - Not for body piercing",
+      "verification_tips": "Ask which specification the mill certificate names. ISO 5832-3 and ASTM F1472 are genuine surgical implant specifications for Ti-6Al-4V, but not F136 (Grade 23, ELI), which has the lower oxygen limit most piercing guidance names. ASTM B348 is an industrial bar specification with no implant requirements. \"Implant grade\" with no named specification proves nothing.",
+      "maintenance": "Same care as other titanium jewellery: mild soap and water",
       "common_names": [
         "Grade 5",
-        "Ti-6Al-4V",
-        "Commercial Titanium"
+        "Ti-6Al-4V"
       ],
       "suitable_for": [],
       "not_suitable_for": [
-        "initial piercings",
-        "sensitive skin",
-        "long-term body jewelry"
+        "jewellery sold as \"implant grade\" when you require ASTM F136"
       ],
       "color_options": [
         "natural grey"
@@ -640,10 +637,8 @@
       ],
       "cons": [
         "Higher oxygen content (0.20% vs 0.13%)",
-        "NOT recommended for body piercing",
-        "Can cause irritation",
         "Often misrepresented as \"implant grade\"",
-        "NOT professionally recommended"
+        "Not the grade most piercing guidance names (ASTM F136)"
       ],
       "red_flags": [
         "Grade 5 marketed as \"implant grade\"",
