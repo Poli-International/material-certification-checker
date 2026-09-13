@@ -10,7 +10,7 @@ Version: 1.0
  * Complete material database with safety ratings
  */
 
-const materialDatabase = {
+const rawMaterialDatabase = {
   // ═══════════════════════════════════════════════════════════
   // TITANIUM
   // ═══════════════════════════════════════════════════════════
@@ -225,14 +225,14 @@ const materialDatabase = {
   // GOLD
   // ═══════════════════════════════════════════════════════════
   'gold_14k': {
-    name: '14K Gold (Nickel-Free)',
+    name: '14K Gold',
     common_names: ['14 Karat Gold', '14K', '585 Gold'],
     required_certs: ['Nickel-free certification', 'Purity testing'],
     body_safe: 'good',
     safety_rating: 'conditional',
     biocompatibility: 'Good IF nickel-free',
     composition: '58.3% gold + alloys (MUST be nickel-free for body piercing)',
-    nickel_free: 'MUST verify',
+    nickel_free: 'Depends on the alloy. White gold is often alloyed with nickel. Ask for the alloy composition or an assay.',
     autoclave_safe: true,
     allergy_risk: 'low_if_nickel_free',
     suitable_for: ['healed piercings', 'initial piercings (if nickel-free)', 'long-term wear'],
@@ -267,14 +267,14 @@ const materialDatabase = {
   },
 
   'gold_18k': {
-    name: '18K Gold (Nickel-Free)',
+    name: '18K Gold',
     common_names: ['18 Karat Gold', '18K', '750 Gold'],
     required_certs: ['Nickel-free certification', 'Purity testing'],
     body_safe: 'excellent',
     safety_rating: 'safe',
     biocompatibility: 'Excellent IF nickel-free',
     composition: '75% gold + alloys (MUST be nickel-free)',
-    nickel_free: 'MUST verify',
+    nickel_free: 'Depends on the alloy. White gold is often alloyed with nickel. Ask for the alloy composition or an assay.',
     autoclave_safe: true,
     allergy_risk: 'very_low_if_nickel_free',
     suitable_for: ['initial piercings (if nickel-free)', 'healed piercings', 'sensitive skin', 'long-term wear'],
@@ -310,16 +310,16 @@ const materialDatabase = {
   // ═══════════════════════════════════════════════════════════
   // OTHER MATERIALS
   // ═══════════════════════════════════════════════════════════
-  // BIOFLEX (Medical-Grade Bioplastic)
+  // BioFlex (Medical-Grade PP-R Random Copolymer)
   // ═══════════════════════════════════════════════════════════
   'bioflex': {
     name: 'BioFlex',
-    common_names: ['BioFlex', 'Bio-Flex', 'Flexible Body Jewelry'],
+    common_names: ['BioFlex', 'Flexible Body Jewelry'],
     required_certs: ['ISO 10993 (Biocompatibility)', 'USP Class VI', 'FDA Drug Master File', 'European Pharmacopoeia 3.2.2'],
     body_safe: 'excellent',
     safety_rating: 'safe',
     biocompatibility: 'Excellent - ISO 10993 compliant, USP Class VI tested',
-    composition: 'Medical-grade modified polymer with internal lubricant for low surface friction',
+    composition: 'Medical-grade PP-R random copolymer with internal lubricant for low surface friction (monolithic injection-moulded)',
     nickel_free: true,
     autoclave_safe: true,
     allergy_risk: 'very_low',
@@ -343,10 +343,10 @@ const materialDatabase = {
     ],
     cons: [
       'More expensive than generic plastic',
-      'Requires genuine BioFlex brand for certifications',
+      'Requires genuine BioFlex(R) body jewelry brand for certifications',
       'Not as rigid as metal jewelry'
     ],
-    verification_tips: 'Request certification documentation showing ISO 10993 and USP Class VI compliance. Genuine BioFlex from Poli International comes with full compliance certificates.',
+    verification_tips: 'Request certification documentation showing ISO 10993 and USP Class VI compliance. Genuine BioFlex(R) body jewelry from Poli International comes with full compliance certificates.',
     red_flags: [
       'Generic "flexible jewelry" without certifications',
       'Seller cannot provide ISO 10993 documentation',
@@ -620,11 +620,94 @@ const materialDatabase = {
 };
 
 /**
- * Material comparison shortcuts
+ * Material comparison classification families
  */
 const materialCategories = {
   metals: ['titanium_grade_23', 'titanium_grade_5', 'surgical_steel_316lvm', 'surgical_steel_316l', 'niobium', 'gold_14k', 'gold_18k'],
+  polymers_glass: ['bioflex', 'bioplast', 'ptfe', 'glass'],
+  organics_minerals: ['stone', 'wood', 'acrylic'],
   initial_safe: ['titanium_grade_23', 'surgical_steel_316lvm', 'niobium', 'gold_18k', 'glass', 'bioflex', 'bioplast', 'ptfe'],
   healed_only: ['titanium_grade_5', 'surgical_steel_316l', 'stone', 'wood', 'acrylic'],
   nickel_free: ['titanium_grade_23', 'titanium_grade_5', 'niobium', 'glass', 'stone', 'wood', 'bioflex', 'bioplast', 'ptfe', 'acrylic']
 };
+
+const materialClassificationGroups = {
+  'metals': {
+    id: 'metals',
+    nameKey: 'comparison.category_metals',
+    defaultName: 'Metallic Materials & Alloys (ASTM / ISO Standards)',
+    materials: ['titanium_grade_23', 'titanium_grade_5', 'surgical_steel_316lvm', 'surgical_steel_316l', 'niobium', 'gold_14k', 'gold_18k']
+  },
+  'polymers_glass': {
+    id: 'polymers_glass',
+    nameKey: 'comparison.category_polymers_glass',
+    defaultName: 'Biocompatible Polymers & Glass',
+    materials: ['bioflex', 'bioplast', 'ptfe', 'glass']
+  },
+  'organics_minerals': {
+    id: 'organics_minerals',
+    nameKey: 'comparison.category_organics_minerals',
+    defaultName: 'Organics, Minerals & Plastics (Healed / Stretched Only)',
+    materials: ['stone', 'wood', 'acrylic']
+  }
+};
+
+function getMaterialCategoryKey(materialKey) {
+  if (!materialKey) return null;
+  for (const [catKey, group] of Object.entries(materialClassificationGroups)) {
+    if (group.materials.includes(materialKey)) {
+      return catKey;
+    }
+  }
+  return null;
+}
+
+// ═══════════════════════════════════════════════════════════
+// TRANSLATION RESOLUTION PROXY
+// ═══════════════════════════════════════════════════════════
+const TRANSLATABLE_MATERIAL_FIELDS = [
+  'name', 'biocompatibility', 'composition', 'verification_tips',
+  'maintenance', 'common_names', 'suitable_for', 'not_suitable_for',
+  'color_options', 'pros', 'cons', 'red_flags', 'sterilization_methods'
+];
+
+function createMaterialProxy(id, staticEntry) {
+  const entry = Object.assign({}, staticEntry);
+  TRANSLATABLE_MATERIAL_FIELDS.forEach(field => {
+    Object.defineProperty(entry, field, {
+      get() {
+        if (typeof t === 'function') {
+          const key = 'materials.' + id + '.' + field;
+          const translated = t(key);
+          if (translated && translated !== key) {
+            return translated;
+          }
+        }
+        return staticEntry[field];
+      },
+      enumerable: true,
+      configurable: true
+    });
+  });
+  return entry;
+}
+
+const materialDatabase = {};
+for (const [key, data] of Object.entries(rawMaterialDatabase)) {
+  materialDatabase[key] = createMaterialProxy(key, data);
+}
+
+if (typeof window !== 'undefined') {
+  window.materialDatabase = materialDatabase;
+  window.rawMaterialDatabase = rawMaterialDatabase;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    materialDatabase,
+    rawMaterialDatabase,
+    materialClassificationGroups,
+    getMaterialCategoryKey
+  };
+}
+
