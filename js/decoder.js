@@ -209,7 +209,7 @@ const TECHNICAL_TERMS_CATALOG = [
     letter: 'E',
     standard: 'ASTM F136',
     definition: 'High-purity metallurgical specification with strictly limited interstitial elements (oxygen ≤0.13%, carbon, nitrogen, hydrogen, iron).',
-    application: 'Dramatically improves fracture toughness and ductility in titanium alloys compared to standard industrial Grade 5.',
+    application: 'Dramatically improves fracture toughness and ductility in titanium alloys compared to standard Grade 5.',
     citation: 'ASTM F136-13 Section 6 Chemical Composition.'
   },
   {
