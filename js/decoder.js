@@ -219,9 +219,9 @@ const TECHNICAL_TERMS_CATALOG = [
     categoryName: 'European Standard',
     letter: 'E',
     standard: 'EN 1811',
-    definition: 'European reference test method for measuring the release of nickel from post assemblies and articles inserted into pierced body parts.',
-    application: 'Defines the legal threshold (<0.2 µg/cm²/week for piercings) to prevent allergic contact dermatitis under EU REACH.',
-    citation: 'CEN, EN 1811:2011+A1:2015 Nickel release reference test.'
+    definition: 'European reference test method for measuring nickel release from posts inserted into pierced parts of the body and from articles in direct and prolonged skin contact: one week in artificial sweat at 30 °C.',
+    application: 'Measures against the REACH Annex XVII entry 27 limits: below 0.2 µg/cm²/week for posts in pierced skin, 0.5 µg/cm²/week for other prolonged skin contact. The limits are in REACH; EN 1811 is the method.',
+    citation: 'CEN, EN 1811:2023 (replaced EN 1811:2011+A1:2015), nickel release reference test method.'
   },
   {
     id: 'reach-annex-xvii',
