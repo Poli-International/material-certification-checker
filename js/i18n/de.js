@@ -337,7 +337,7 @@
     "Borosilicate Glass": "Technisches Silikatglas (ISO 3585) mit extrem niedrigem Wärmeausdehnungskoeffizienten, porenfreier Oberfläche und hoher chemischer Beständigkeit.",
     "Cytotoxicity": "Biologische Toxizitätsprüfung an lebenden Zellen, durchgeführt nach standardisierten in-vitro-Prüfprotokollen gemäß ISO 10993-5.",
     "ELI": "Extra Low Interstitial: Höchste metallurgische Reinheit mit reduzierten Gehalten an Sauerstoff, Kohlenstoff, Stickstoff und Eisen für überlegene Zähigkeit.",
-    "EN 1811": "Europäische Referenzprüfmethode zur Bestimmung der Nickellässigkeit von Erzeugnissen, die in durchstochene Körperteile eingeführt werden (<0,2 µg/cm²/Woche).",
+    "EN 1811": "Europäisches Referenzprüfverfahren für die Nickelfreisetzung: eine Woche in künstlichem Schweiß bei 30 °C. REACH-Grenzwerte: unter 0,2 µg/cm²/Woche für Stäbe in durchstochener Haut, 0,5 µg/cm²/Woche für andere Artikel mit längerem Hautkontakt.",
     "EU REACH Annex XVII": "EU-Verordnung Nr. 1907/2006 zur Beschränkung gefährlicher Chemikalien, insbesondere Nickel (Eintrag 27), Blei und Cadmium.",
     "ISO 5832-1": "Chirurgische Implantate: Metallische Werkstoffe, Teil 1: Nichtrostender Stahl (stoffliche Zusammensetzung äquivalent zu ASTM F138).",
     "ISO 5832-3": "Chirurgische Implantate: Metallische Werkstoffe, Teil 3: Titan-Knetlegierung mit 6 % Aluminium und 4 % Vanadium.",
@@ -520,18 +520,33 @@
     },
     "EN_1441": {
       "code": "EN 1441",
-      "full_name": "Nickel release from post assemblies which are inserted into pierced ears and other pierced parts of the human body",
-      "organization": "European Committee for Standardization",
-      "material_type": "Nickel release regulation (applies to all materials)",
-      "body_piercing_use": "Regulatory requirement in EU",
-      "biocompatibility": "Limits nickel exposure to reduce allergic reactions",
-      "sterilization": "N/A - Regulatory standard",
-      "important_notes": "MANDATORY in European Union. Products must meet nickel release limits. Even \"surgical steel\" containing nickel must pass this test for EU sale.",
-      "verification_method": "Test reports showing EN 1441 compliance, EN 1811 test results",
+      "full_name": "Medizinprodukte - Risikoanalyse (EN 1441:1997, zurückgezogen; ersetzt durch EN ISO 14971)",
+      "organization": "Europäisches Komitee für Normung",
+      "material_type": "Verfahren zur Risikoanalyse für Hersteller von Medizinprodukten. Keine Werkstoff-, Schmuck- oder Nickelnorm.",
+      "body_piercing_use": "Keine direkte Anwendung: Sie galt für Medizinprodukte, nicht für Körperschmuck, und legt keinen Nickelgrenzwert fest.",
+      "biocompatibility": "Keine Biokompatibilitätsprüfung",
+      "sterilization": "Nicht zutreffend",
+      "important_notes": "EN 1441 war die europäische Norm zur Risikoanalyse von Medizinprodukten, 1997 veröffentlicht und durch EN ISO 14971 ersetzt. Sie wird auf Schmuckunterlagen manchmal zitiert, als wäre sie eine Nickelregel; das ist sie nicht. Die Nickelfreisetzung von Piercingschmuck wird nach EN 1811 gemessen, die gesetzlichen Grenzwerte stehen in REACH Anhang XVII, Eintrag 27.",
+      "verification_method": "Wenn ein Lieferant EN 1441 für Nickel oder Werkstoffsicherheit angibt, verlangen Sie stattdessen einen Prüfbericht zur Nickelfreisetzung nach EN 1811.",
       "common_uses": [
-        "EU compliance",
-        "Consumer protection",
-        "Product testing"
+        "Risikomanagement für Medizinprodukte (historisch)",
+        "Vorgänger von EN ISO 14971"
+      ]
+    },
+    "EN_1811": {
+      "code": "EN 1811",
+      "full_name": "Referenzprüfverfahren zur Bestimmung der Nickelfreisetzung aus sämtlichen Stäben, die in durchstochene Körperteile eingeführt werden, und Erzeugnissen, die unmittelbar und länger mit der Haut in Berührung kommen",
+      "organization": "Europäisches Komitee für Normung",
+      "material_type": "Prüfverfahren zur Nickelfreisetzung für jeden Metallartikel, der Nickel enthalten kann",
+      "body_piercing_use": "Die Prüfung, die zeigt, ob nickelhaltiger Piercingschmuck den EU-Grenzwert für Stäbe in durchstochener Haut einhält: weniger als 0,2 µg/cm²/Woche.",
+      "biocompatibility": "Misst nur die Nickelfreisetzung. Keine Biokompatibilitätsprüfung und kein Ersatz für ISO 10993.",
+      "sterilization": "Nicht zutreffend (Prüfverfahren)",
+      "important_notes": "Die Grenzwerte stammen aus REACH Anhang XVII, Eintrag 27; EN 1811 ist das Referenzverfahren, um sie zu messen. Stäbe, die in durchstochene Ohren und andere durchstochene Körperteile eingeführt werden, müssen weniger als 0,2 µg/cm²/Woche freisetzen; andere Artikel mit unmittelbarem und längerem Hautkontakt 0,5 µg/cm²/Woche. Beschichtete Artikel müssen den Grenzwert mindestens zwei Jahre normaler Verwendung einhalten, simuliert mit EN 12472 vor der Prüfung nach EN 1811. Der Artikel liegt eine Woche in künstlichem Schweiß bei 30 °C. Ein Dimethylglyoxim-Schnelltest (DMG) ist nur ein Screening (CEN/TR 12471), kein Konformitätsnachweis. Aktuelle Ausgabe: EN 1811:2023, sie ersetzt EN 1811:2011+A1:2015.",
+      "verification_method": "Verlangen Sie einen Prüfbericht nach EN 1811 von einem akkreditierten Labor mit dem geprüften Artikel, dem Ergebnis in µg/cm²/Woche und der Ausgabe der Norm. Chirurgenstahl enthält Nickel und braucht einen.",
+      "common_uses": [
+        "EU-Konformität von nickelhaltigem Schmuck",
+        "Prüfberichte von Lieferanten",
+        "Marktüberwachungsprüfungen"
       ]
     },
     "REACH": {
@@ -926,7 +941,7 @@
       "verification_steps": [
         "Sicherstellen, dass das Material nickelfrei ist (Titan, Niob, BioFlex)",
         "Biokompatibilitäts-Prüfberichte nach ISO 10993 anfordern",
-        "Konformität mit EN 1811 bezüglich der Nickellässigkeit prüfen",
+        "Prüfbericht zur Nickelfreisetzung nach EN 1811 verlangen, wenn der Werkstoff Nickel enthält",
         "Plattierte oder beschichtete Materialien unabhängig von Werbeversprechen meiden"
       ]
     },
