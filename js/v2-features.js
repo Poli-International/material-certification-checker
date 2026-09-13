@@ -103,14 +103,14 @@
     if (/astm\s*f\s*2229/i.test(lower)) standardsFound.push({ code: 'ASTM F2229', name: 'Wrought Unalloyed Niobium for Surgical Implants', surgical: true });
     if (/astm\s*f\s*1295/i.test(lower)) standardsFound.push({ code: 'ASTM F1295', name: 'Wrought Ti-6Al-7Nb for Surgical Implants', surgical: true });
     if (/iso\s*5832-1/i.test(lower)) standardsFound.push({ code: 'ISO 5832-1', name: 'Stainless Steel for Surgical Implants (316LVM equivalent)', surgical: true });
-    if (/iso\s*5832-3/i.test(lower)) standardsFound.push({ code: 'ISO 5832-3', name: 'Wrought Ti-6Al-4V (Industrial/Orthopedic - check ELI oxygen limit)', surgical: false });
+    if (/iso\s*5832-3/i.test(lower)) standardsFound.push({ code: 'ISO 5832-3', name: 'Wrought Ti-6Al-4V (surgical implant specification, not ELI - check the oxygen limit)', surgical: true });
     if (/iso\s*10993/i.test(lower)) standardsFound.push({ code: 'ISO 10993', name: 'Biological Evaluation of Medical Devices (Biocompatibility)', surgical: true });
     if (/usp\s*class\s*vi/i.test(lower)) standardsFound.push({ code: 'USP Class VI', name: 'United States Pharmacopeia Class VI Medical Polymer Test', surgical: true });
     if (/en\s*1811/i.test(lower)) standardsFound.push({ code: 'EN 1811', name: 'Reference Method for Nickel Release', surgical: true });
 
     // Alloys / Grades
     if (/ti-?6al-?4v\s*eli|grade\s*23\b/i.test(lower)) alloysFound.push('Ti-6Al-4V ELI (Titanium Grade 23 - Extra Low Interstitial)');
-    else if (/grade\s*5\b|ti-?6al-?4v(?!.*eli)/i.test(lower)) alloysFound.push('Ti-6Al-4V (Grade 5 - Standard Oxygen, Industrial/Aerospace)');
+    else if (/grade\s*5\b|ti-?6al-?4v(?!.*eli)/i.test(lower)) alloysFound.push('Ti-6Al-4V (Grade 5 - standard oxygen limit, not ELI)');
     else if (/\bg23\b/i.test(lower)) alloysFound.push('G23 (Informal shorthand - verify whether true ELI or Grade 5)');
 
     if (/316lvm/i.test(lower)) alloysFound.push('316LVM (Low Vacuum Melted Surgical Stainless Steel)');
