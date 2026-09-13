@@ -678,7 +678,9 @@ function createMaterialProxy(id, staticEntry) {
           const key = 'materials.' + id + '.' + field;
           const translated = t(key);
           if (translated && translated !== key) {
-            return translated;
+            // Some locales give a list field (suitable_for, pros...) as one sentence;
+            // callers .map() these, so a bare string crashed the material result.
+            return Array.isArray(staticEntry[field]) && !Array.isArray(translated) ? [translated] : translated;
           }
         }
         return staticEntry[field];
