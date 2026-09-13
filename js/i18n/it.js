@@ -337,7 +337,7 @@
     "Borosilicate Glass": "Vetro al silicato tecnico (ISO 3585) a bassissimo coefficiente di dilatazione termica, superficie liscia non porosa e alta resistenza chimica.",
     "Cytotoxicity": "Valutazione della tossicità biologica su cellule viventi condotta secondo i protocolli di prova in vitro ISO 10993-5.",
     "ELI": "Extra Low Interstitial: purezza metallurgica che garantisce livelli ridotti di ossigeno, carbonio, azoto e ferro per una superiore tenacità e resistenza alla frattura.",
-    "EN 1811": "Metodo di prova di riferimento europeo per quantificare il tasso di rilascio di nichel dagli articoli inseriti nelle parti perforate del corpo umano (<0,2 µg/cm²/settimana).",
+    "EN 1811": "Metodo di prova europeo di riferimento per il rilascio di nichel: una settimana in sudore artificiale a 30 °C. Limiti REACH: meno di 0,2 µg/cm²/settimana per gli elementi nella pelle perforata, 0,5 µg/cm²/settimana per gli altri articoli a contatto prolungato con la pelle.",
     "EU REACH Annex XVII": "Regolamento europeo n. 1907/2006 che limita l'uso di sostanze chimiche pericolose, in particolare nichel (voce 27), piombo e cadmio.",
     "ISO 5832-1": "Impianti chirurgici: Materiali metallici, Parte 1: Acciaio inossidabile lavorato (composizione equivalente a ASTM F138).",
     "ISO 5832-3": "Impianti chirurgici: Materiali metallici, Parte 3: Titanio lavorato legato con 6% alluminio e 4% vanadio.",
@@ -520,18 +520,33 @@
     },
     "EN_1441": {
       "code": "EN 1441",
-      "full_name": "Nickel release from post assemblies which are inserted into pierced ears and other pierced parts of the human body",
-      "organization": "European Committee for Standardization",
-      "material_type": "Nickel release regulation (applies to all materials)",
-      "body_piercing_use": "Regulatory requirement in EU",
-      "biocompatibility": "Limits nickel exposure to reduce allergic reactions",
-      "sterilization": "N/A - Regulatory standard",
-      "important_notes": "MANDATORY in European Union. Products must meet nickel release limits. Even \"surgical steel\" containing nickel must pass this test for EU sale.",
-      "verification_method": "Test reports showing EN 1441 compliance, EN 1811 test results",
+      "full_name": "Dispositivi medici - Analisi dei rischi (EN 1441:1997, ritirata; sostituita dalla EN ISO 14971)",
+      "organization": "Comitato europeo di normazione",
+      "material_type": "Procedura di analisi dei rischi per i fabbricanti di dispositivi medici. Non è una norma su materiali, gioielli o nichel.",
+      "body_piercing_use": "Nessun uso diretto: riguardava i dispositivi medici, non i gioielli per il corpo, e non fissa alcun limite di nichel.",
+      "biocompatibility": "Non è una prova di biocompatibilità",
+      "sterilization": "Non applicabile",
+      "important_notes": "La EN 1441 era la norma europea per l'analisi dei rischi dei dispositivi medici, pubblicata nel 1997 e sostituita dalla EN ISO 14971. A volte viene citata nei documenti dei gioielli come se fosse una regola sul nichel; non lo è. Il rilascio di nichel dai gioielli per piercing si misura secondo la EN 1811 e i limiti di legge sono nell'allegato XVII, voce 27, del regolamento REACH.",
+      "verification_method": "Se un fornitore cita la EN 1441 per il nichel o la sicurezza del materiale, chiedi invece un rapporto di prova sul rilascio di nichel secondo la EN 1811.",
       "common_uses": [
-        "EU compliance",
-        "Consumer protection",
-        "Product testing"
+        "Gestione del rischio dei dispositivi medici (storico)",
+        "Precursore della EN ISO 14971"
+      ]
+    },
+    "EN_1811": {
+      "code": "EN 1811",
+      "full_name": "Metodo di prova di riferimento per il rilascio di nichel da tutti gli elementi inseriti nelle parti perforate del corpo umano e dagli articoli destinati a venire a contatto diretto e prolungato con la pelle",
+      "organization": "Comitato europeo di normazione",
+      "material_type": "Metodo di prova del rilascio di nichel per qualsiasi articolo metallico che possa contenere nichel",
+      "body_piercing_use": "La prova che mostra se un gioiello per piercing contenente nichel rispetta il limite UE per gli elementi nella pelle perforata: meno di 0,2 µg/cm²/settimana.",
+      "biocompatibility": "Misura solo il rilascio di nichel. Non è una prova di biocompatibilità e non sostituisce la ISO 10993.",
+      "sterilization": "Non applicabile (metodo di prova)",
+      "important_notes": "I limiti derivano dall'allegato XVII, voce 27, del REACH; la EN 1811 è il metodo di riferimento per misurarli. Gli elementi inseriti nei lobi perforati e nelle altre parti perforate del corpo devono rilasciare meno di 0,2 µg/cm²/settimana; gli altri articoli a contatto diretto e prolungato con la pelle, 0,5 µg/cm²/settimana. Gli articoli rivestiti devono restare entro il limite per almeno due anni di uso normale, simulati con la EN 12472 prima della prova EN 1811. L'articolo resta una settimana in sudore artificiale a 30 °C. Un test rapido alla dimetilgliossima (DMG) è solo uno screening (CEN/TR 12471), non una prova di conformità. Edizione vigente: EN 1811:2023, che sostituisce la EN 1811:2011+A1:2015.",
+      "verification_method": "Chiedi un rapporto di prova EN 1811 di un laboratorio accreditato che indichi l'articolo provato, il risultato in µg/cm²/settimana e l'edizione della norma. L'acciaio chirurgico contiene nichel e ne ha bisogno.",
+      "common_uses": [
+        "Conformità UE dei gioielli contenenti nichel",
+        "Rapporti di prova dei fornitori",
+        "Controlli di sorveglianza del mercato"
       ]
     },
     "REACH": {
@@ -926,7 +941,7 @@
       "verification_steps": [
         "Verificare che il materiale sia intrinsecamente privo di nichel (titanio, niobio, BioFlex)",
         "Richiedere i risultati dei test di biocompatibilità (ISO 10993)",
-        "Verificare la conformità alla norma EN 1811 per la cessione di nichel",
+        "Chiedere un rapporto di prova sul rilascio di nichel EN 1811 se il materiale contiene nichel",
         "Evitare materiali placcati indipendentemente dalle promesse commerciali"
       ]
     },
