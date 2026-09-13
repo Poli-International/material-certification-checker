@@ -337,7 +337,7 @@
     "Borosilicate Glass": "Vidro resistente a choques térmicos e químicos formulado com sílica e trióxido de boro, não poroso e seguro para piercings cicatrizados.",
     "Cytotoxicity": "Qualidade de ser tóxico para células biológicas vivas; medida in vitro através de ensaios celulares de mamíferos segundo a norma ISO 10993-5.",
     "ELI": "Extra Low Interstitial: grau de liga ultrapuro com teores reduzidos de oxigénio, azoto e ferro para maior ductilidade e tenacidade à fratura (ASTM F136).",
-    "EN 1811": "Método de ensaio de referência europeu para medição da libertação de níquel em hastes de piercing e artigos em contacto direto com a pele (<0.2 µg/cm²/semana).",
+    "EN 1811": "Método de ensaio europeu de referência para a liberação de níquel: uma semana em suor artificial a 30 °C. Limites REACH: menos de 0,2 µg/cm²/semana para hastes em pele perfurada, 0,5 µg/cm²/semana para outros artigos em contato prolongado com a pele.",
     "EU REACH Annex XVII": "Regulamento químico europeu que restringe a libertação de níquel em hastes de piercing a <0.2 µg/cm²/semana.",
     "ISO 5832-1": "Norma internacional para implantes cirúrgicos - Materiais metálicos - Parte 1: Aço inoxidável forjado.",
     "ISO 5832-3": "Norma internacional para implantes cirúrgicos - Materiais metálicos - Parte 3: Liga forjada de titânio 6-alumínio 4-vanádio.",
@@ -522,16 +522,33 @@
     },
     "EN_1441": {
       "code": "EN 1441",
-      "full_name": "Dispositivos médicos - Análise de risco (precursora da norma ISO 14971)",
-      "organization": "European Committee for Standardization",
-      "material_type": "Estrutura analítica de gestão e mitigação de riscos",
-      "body_piercing_use": "Avaliação sistemática dos riscos associados ao design, material e acabamento da peça.",
-      "biocompatibility": "Mitiga riscos de desprendimento de partículas e arestas cortantes.",
+      "full_name": "Dispositivos médicos - Análise de riscos (EN 1441:1997, cancelada; substituída pela EN ISO 14971)",
+      "organization": "Comité Europeu de Normalização",
+      "material_type": "Procedimento de análise de riscos para fabricantes de dispositivos médicos. Não é uma norma de material, joia ou níquel.",
+      "body_piercing_use": "Nenhum uso direto: aplicava-se a dispositivos médicos, não a joias corporais, e não define nenhum limite de níquel.",
+      "biocompatibility": "Não é um ensaio de biocompatibilidade",
       "sterilization": "Não aplicável",
-      "important_notes": "Define os princípios para ponderar riscos mecânicos, químicos e biológicos para o utilizador.",
-      "verification_method": "Dossiê de análise de risco do fabricante",
+      "important_notes": "A EN 1441 era a norma europeia de análise de riscos de dispositivos médicos, publicada em 1997 e substituída pela EN ISO 14971. Às vezes é citada em documentos de joias como se fosse uma regra sobre níquel; não é. A liberação de níquel de joias de piercing é medida pela EN 1811, e os limites legais estão no anexo XVII, entrada 27, do regulamento REACH.",
+      "verification_method": "Se um fornecedor citar a EN 1441 para níquel ou segurança do material, peça em vez disso um relatório de ensaio de liberação de níquel pela EN 1811.",
       "common_uses": [
-        "Gestão de risco em dispositivos de saúde"
+        "Gestão de riscos de dispositivos médicos (histórico)",
+        "Precursora da EN ISO 14971"
+      ]
+    },
+    "EN_1811": {
+      "code": "EN 1811",
+      "full_name": "Método de ensaio de referência para a liberação de níquel de todas as hastes inseridas em partes perfuradas do corpo humano e de artigos destinados a entrar em contato direto e prolongado com a pele",
+      "organization": "Comité Europeu de Normalização",
+      "material_type": "Método de ensaio de liberação de níquel para qualquer artigo metálico que possa conter níquel",
+      "body_piercing_use": "O ensaio que mostra se uma joia de piercing com níquel cumpre o limite da UE para hastes em pele perfurada: menos de 0,2 µg/cm²/semana.",
+      "biocompatibility": "Mede apenas a liberação de níquel. Não é um ensaio de biocompatibilidade e não substitui a ISO 10993.",
+      "sterilization": "Não aplicável (método de ensaio)",
+      "important_notes": "Os limites vêm do anexo XVII, entrada 27, do REACH; a EN 1811 é o método de referência para medi-los. Hastes inseridas em orelhas perfuradas e outras partes perfuradas do corpo devem liberar menos de 0,2 µg/cm²/semana; outros artigos em contato direto e prolongado com a pele, 0,5 µg/cm²/semana. Artigos revestidos devem manter-se dentro do limite por pelo menos dois anos de uso normal, simulados com a EN 12472 antes do ensaio EN 1811. O artigo fica uma semana em suor artificial a 30 °C. Um teste rápido de dimetilglioxima (DMG) é só uma triagem (CEN/TR 12471), não prova de conformidade. Edição atual: EN 1811:2023, que substitui a EN 1811:2011+A1:2015.",
+      "verification_method": "Peça um relatório de ensaio EN 1811 de um laboratório acreditado indicando o artigo ensaiado, o resultado em µg/cm²/semana e a edição da norma. O aço cirúrgico contém níquel e precisa de um.",
+      "common_uses": [
+        "Conformidade UE de joias com níquel",
+        "Relatórios de ensaio de fornecedores",
+        "Ensaios de fiscalização do mercado"
       ]
     },
     "REACH": {
@@ -926,7 +943,7 @@
       "verification_steps": [
         "Garantir que o material é isento de níquel (titânio, nióbio, BioFlex)",
         "Solicitar relatórios de ensaios de biocompatibilidade segundo a ISO 10993",
-        "Verificar a conformidade com a norma EN 1811 quanto à taxa de libertação de níquel",
+        "Pedir um relatório de ensaio de liberação de níquel EN 1811 se o material contiver níquel",
         "Evitar materiais folheados ou banhados independentemente das promessas comerciais"
       ]
     },
