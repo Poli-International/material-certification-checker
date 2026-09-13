@@ -181,14 +181,14 @@ const rawCertificationDatabase = {
       iron_max: '0.30%',
       oxygen_max: '0.20%'
     },
-    body_piercing_use: 'NOT recommended for body piercing - Use ASTM F136 instead',
-    biocompatibility: 'Good for implants, NOT ideal for piercing',
+    body_piercing_use: 'Surgical implant specification for Ti-6Al-4V. Most piercing guidance names ASTM F136 (ELI), which has a lower oxygen limit.',
+    biocompatibility: 'Specified for surgical implants',
     sterilization: 'Autoclave safe',
     related_standards: ['ASTM F1472 (Grade 5)', 'ASTM F136 (ELI version)'],
-    common_uses: ['Orthopedic implants', 'Aerospace', 'Industrial'],
-    important_notes: 'WARNING: Grade 5 is NOT the same as Grade 23 (F136). Higher oxygen content makes it unsuitable for body piercing. Suppliers may mislead by calling it "implant grade titanium" - always verify ASTM F136, not ISO 5832-3.',
-    verification_method: 'Check certification - reject if not ASTM F136 for piercing use',
-    safety_rating: 'unsafe',
+    common_uses: ['Orthopaedic and dental implants'],
+    important_notes: 'Grade 5 (ISO 5832-3, ASTM F1472) is not the same specification as Grade 23 (ASTM F136, ELI): its oxygen limit is 0.20% against 0.13%. Both are implant specifications. The common problem is Grade 5 or industrial titanium sold as "implant grade" with no certificate at all, so ask which specification the mill certificate names.',
+    verification_method: 'Check the certificate names a specification and a heat number. If you require ASTM F136, an ISO 5832-3 certificate does not show it.',
+    safety_rating: 'conditional',
     category: 'iso'
   },
 
@@ -316,7 +316,7 @@ const rawProductClaimVerification = {
   'implant_grade_titanium': {
     claim: 'Implant Grade Titanium',
     required_certs: ['ASTM F136'],
-    not_acceptable: ['ISO 5832-3 (Grade 5)', 'ASTM F1472', 'Commercial Grade Ti'],
+    not_acceptable: ['ASTM B348 (industrial bar)', 'Commercial Grade Ti', 'A certificate naming no specification or heat number'],
     red_flags: [
       'No mill certification provided',
       'Grade 5 marketed as "implant grade"',
