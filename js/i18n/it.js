@@ -53,7 +53,7 @@
     "optgroup_biocompatible_polymers": "Polimeri biocompatibili e vetro",
     "optgroup_other": "Altri materiali (usare con cautela)",
     "opt_titanium_23": "Titanio Grado 23 (Ti-6Al-4V ELI) - ASTM F136",
-    "opt_titanium_5": "Titanio Grado 5 (Ti-6Al-4V) - NON raccomandato",
+    "opt_titanium_5": "Titanio Grado 5 (Ti-6Al-4V)",
     "opt_steel_316lvm": "Acciaio chirurgico 316LVM - ASTM F138",
     "opt_steel_316l": "Acciaio chirurgico 316L (Non da impianto)",
     "opt_niobium": "Niobio (Puro / Legato) - ASTM F2229",
@@ -465,16 +465,14 @@
       "full_name": "Implants for surgery - Metallic materials - Part 3: Wrought titanium 6-aluminum 4-vanadium alloy",
       "organization": "International Organization for Standardization",
       "material_type": "Titanium Grade 5 (Ti-6Al-4V)",
-      "body_piercing_use": "NOT recommended for body piercing - Use ASTM F136 instead",
-      "biocompatibility": "Good for implants, NOT ideal for piercing",
+      "body_piercing_use": "Surgical implant specification for Ti-6Al-4V. Most piercing guidance names ASTM F136 (ELI), which has a lower oxygen limit.",
+      "biocompatibility": "Specified for surgical implants",
       "sterilization": "Autoclave safe",
-      "important_notes": "WARNING: Grade 5 is NOT the same as Grade 23 (F136). Higher oxygen content makes it unsuitable for body piercing. Suppliers may mislead by calling it \"implant grade titanium\" - always verify ASTM F136, not ISO 5832-3.",
-      "verification_method": "Check certification - reject if not ASTM F136 for piercing use",
+      "important_notes": "Grade 5 (ISO 5832-3, ASTM F1472) is not the same specification as Grade 23 (ASTM F136, ELI): its oxygen limit is 0.20% against 0.13%. Both are implant specifications. The common problem is Grade 5 or industrial titanium sold as \"implant grade\" with no certificate at all, so ask which specification the mill certificate names.",
+      "verification_method": "Check the certificate names a specification and a heat number. If you require ASTM F136, an ISO 5832-3 certificate does not show it.",
       "common_uses": [
-        "Orthopedic implants",
-        "Aerospace",
-        "Industrial"
-      ]
+                "Orthopaedic and dental implants"
+            ]
     },
     "ISO_5832-11": {
       "code": "ISO 5832-11",
@@ -588,7 +586,7 @@
       "red_flags": [
         "Unusually cheap \"implant grade\" titanium",
         "No mill certification provided",
-        "Listed as \"Grade 5\" or \"ISO 5832-3\" (wrong grade)",
+        "Listed as \"Grade 5\" or \"ISO 5832-3\" (a different specification from F136)",
         "Generic \"titanium\" without grade specification",
         "Supplier refuses documentation"
       ],
@@ -599,20 +597,17 @@
     },
     "titanium_grade_5": {
       "name": "Titanium Grade 5 (Ti-6Al-4V)",
-      "biocompatibility": "Good for orthopedic implants, NOT ideal for body piercing",
+      "biocompatibility": "Specified for surgical implants; most piercing guidance names its extra-low-interstitial version, ASTM F136 (Grade 23)",
       "composition": "Titanium alloy: Ti-6Al-4V (higher oxygen content than Grade 23)",
-      "verification_tips": "AVOID for body piercing. If seller claims \"implant grade titanium\" but shows ISO 5832-3 or Grade 5 certification, this is NOT the correct grade. Insist on ASTM F136 (Grade 23).",
-      "maintenance": "N/A - Not for body piercing",
+      "verification_tips": "Ask which specification the mill certificate names. ISO 5832-3 and ASTM F1472 are genuine surgical implant specifications for Ti-6Al-4V, but not F136 (Grade 23, ELI), which has the lower oxygen limit most piercing guidance names. ASTM B348 is an industrial bar specification with no implant requirements. \"Implant grade\" with no named specification proves nothing.",
+      "maintenance": "Same care as other titanium jewellery: mild soap and water",
       "common_names": [
         "Grade 5",
-        "Ti-6Al-4V",
-        "Commercial Titanium"
+        "Ti-6Al-4V"
       ],
       "suitable_for": [],
       "not_suitable_for": [
-        "initial piercings",
-        "sensitive skin",
-        "long-term body jewelry"
+        "jewellery sold as \"implant grade\" when you require ASTM F136"
       ],
       "color_options": [
         "natural grey"
@@ -624,10 +619,8 @@
       ],
       "cons": [
         "Higher oxygen content (0.20% vs 0.13%)",
-        "NOT recommended for body piercing",
-        "Can cause irritation",
         "Often misrepresented as \"implant grade\"",
-        "NOT professionally recommended"
+        "Not the grade most piercing guidance names (ASTM F136)"
       ],
       "red_flags": [
         "Grade 5 marketed as \"implant grade\"",
