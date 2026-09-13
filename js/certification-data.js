@@ -263,22 +263,40 @@ const rawCertificationDatabase = {
   // ═══════════════════════════════════════════════════════════
   'EN_1441': {
     code: 'EN 1441',
-    full_name: 'Nickel release from post assemblies which are inserted into pierced ears and other pierced parts of the human body',
+    full_name: 'Medical devices - Risk analysis (EN 1441:1997, withdrawn; replaced by EN ISO 14971)',
     organization: 'European Committee for Standardization',
-    year_current: '2016',
-    material_type: 'Nickel release regulation (applies to all materials)',
+    year_current: '1997 (withdrawn, replaced by EN ISO 14971)',
+    material_type: 'Risk analysis procedure for medical device manufacturers. Not a material, jewellery or nickel standard.',
+    body_piercing_use: 'None directly: it applied to medical devices, not body jewellery, and it sets no nickel limit.',
+    biocompatibility: 'Not a biocompatibility test',
+    sterilization: 'Not applicable',
+    related_standards: ['EN ISO 14971', 'ISO 13485', 'EN 1811'],
+    common_uses: ['Medical device risk management (historical)', 'Predecessor of EN ISO 14971'],
+    important_notes: 'EN 1441 was the European standard for risk analysis of medical devices, published in 1997 and replaced by EN ISO 14971. It is sometimes quoted on jewellery paperwork as if it were a nickel rule; it is not. Nickel release from piercing jewellery is measured with EN 1811, and the legal limits are in REACH Annex XVII entry 27.',
+    verification_method: 'If a supplier cites EN 1441 for nickel or material safety, ask for an EN 1811 nickel release test report instead.',
+    safety_rating: 'conditional',
+    category: 'eu'
+  },
+
+  'EN_1811': {
+    code: 'EN 1811',
+    full_name: 'Reference test method for release of nickel from all post assemblies which are inserted into pierced parts of the human body and articles intended to come into direct and prolonged contact with the skin',
+    organization: 'European Committee for Standardization',
+    year_current: '2023 (EN 1811:2023, replacing EN 1811:2011+A1:2015)',
+    material_type: 'Nickel release test method for any metal article that may contain nickel',
     key_requirements: {
-      nickel_release_limit: '0.2 μg/cm²/week for posts',
-      nickel_release_coatings: '0.5 μg/cm²/week for coated items',
-      testing_method: 'EN 1811 (dimethylglyoxime test)'
+      post_assemblies: 'REACH Annex XVII entry 27: less than 0.2 µg/cm²/week for posts in pierced ears and other pierced parts of the body',
+      prolonged_skin_contact: 'REACH Annex XVII entry 27: 0.5 µg/cm²/week for other articles in direct and prolonged skin contact',
+      coated_articles: 'Within the limit for at least two years of normal use, simulated with EN 12472 before EN 1811',
+      testing_method: 'One week in artificial sweat at 30 °C, nickel measured by spectrometry (not the DMG spot test)'
     },
-    body_piercing_use: 'Regulatory requirement in EU',
-    biocompatibility: 'Limits nickel exposure to reduce allergic reactions',
-    sterilization: 'N/A - Regulatory standard',
-    related_standards: ['REACH Regulation', 'EN 1811', 'EU Nickel Directive'],
-    common_uses: ['EU compliance', 'Consumer protection', 'Product testing'],
-    important_notes: 'MANDATORY in European Union. Products must meet nickel release limits. Even "surgical steel" containing nickel must pass this test for EU sale.',
-    verification_method: 'Test reports showing EN 1441 compliance, EN 1811 test results',
+    body_piercing_use: 'The test that shows whether piercing jewellery containing nickel meets the EU limit for posts in pierced skin: less than 0.2 µg/cm²/week.',
+    biocompatibility: 'Measures nickel release only. It is not a biocompatibility test and does not replace ISO 10993.',
+    sterilization: 'Not applicable (test method)',
+    related_standards: ['REACH Annex XVII entry 27', 'EN 12472', 'CEN/TR 12471 (DMG spot test, screening only)'],
+    common_uses: ['EU compliance of nickel-containing jewellery', 'Supplier test reports', 'Market surveillance testing'],
+    important_notes: 'The limits come from REACH Annex XVII entry 27; EN 1811 is the reference method for measuring against them. Posts inserted into pierced ears and other pierced parts of the body must release less than 0.2 µg/cm²/week; other articles in direct and prolonged skin contact, 0.5 µg/cm²/week. Coated articles must keep within the limit for at least two years of normal use, simulated with EN 12472 before the EN 1811 test. The article sits one week in artificial sweat at 30 °C. A dimethylglyoxime (DMG) spot test is only a screening check (CEN/TR 12471), not proof of compliance. Current edition: EN 1811:2023, which replaced EN 1811:2011+A1:2015.',
+    verification_method: 'Ask for an EN 1811 test report from an accredited laboratory naming the article tested, the result in µg/cm²/week and the edition of the standard. Surgical steel contains nickel and needs one.',
     safety_rating: 'safe',
     category: 'eu'
   },
@@ -298,7 +316,7 @@ const rawCertificationDatabase = {
     body_piercing_use: 'Mandatory compliance for EU market',
     biocompatibility: 'Ensures materials are free of hazardous chemicals',
     sterilization: 'N/A',
-    related_standards: ['EN 1441', 'RoHS Directive'],
+    related_standards: ['EN 1811', 'RoHS Directive'],
     common_uses: ['EU regulatory compliance', 'Product safety'],
     important_notes: 'REACH compliance is mandatory for selling body jewelry in the EU. Ensures no toxic chemicals, restricted substances, or excessive heavy metals.',
     verification_method: 'REACH compliance certificate, SVHC (Substance of Very High Concern) declaration',
@@ -362,7 +380,7 @@ const rawProductClaimVerification = {
     verification_steps: [
       'Verify material is nickel-free (titanium, niobium, etc.)',
       'Request biocompatibility test results',
-      'Check for EN 1441 compliance if nickel present',
+      'Ask for an EN 1811 nickel release test report if the material contains nickel',
       'Avoid plated materials regardless of claims'
     ]
   },
@@ -400,7 +418,8 @@ const searchKeywords = {
   'ISO_5832-11': ['iso 5832-11', 'ti6al7nb iso'],
   'ISO_10993': ['iso 10993', 'biocompatibility', 'biological evaluation'],
   'ISO_13485': ['iso 13485', 'quality management', 'medical device qms'],
-  'EN_1441': ['en 1441', 'en1441', 'nickel release', 'nickel regulation'],
+  'EN_1441': ['en 1441', 'en1441', 'medical device risk analysis', 'iso 14971'],
+  'EN_1811': ['en 1811', 'en1811', 'nickel release', 'nickel regulation', 'nickel test', 'entry 27'],
   'REACH': ['reach', 'reach compliance', 'eu chemicals']
 };
 
