@@ -1,580 +1,818 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="robots" content="noindex, nofollow">
-    <script>
-if (window.self !== window.top) {
-    var poliRoot = document.documentElement;
-    var poliApply = function (light) {
-        poliRoot.setAttribute('data-theme', light ? 'light' : 'dark');
-        var b = document.body;
-        if (b) {
-            b.classList.toggle('dark-mode', !light);
-            b.classList.toggle('light-mode', !!light);
-        }
-    };
-    poliApply(false);
-    document.addEventListener('DOMContentLoaded', function () {
-        poliApply(poliRoot.getAttribute('data-theme') === 'light');
-    });
-    window.addEventListener('message', function (e) {
-        if (e.data && e.data.type === 'poli-theme') {
-            poliApply(!!e.data.light);
-        }
-    });
-}
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <!-- Open Graph Tags -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Body jewelry material certification guide and safety checker for verifying ASTM F136 titanium, ASTM F138 surgical steel, BioFlex, and ISO standards.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Material Certification Checker | Poli International">
-    <meta property="og:description" content="Verify jewelry safety standards and certifications. Check material compliance for body jewelry.">
-    <meta property="og:url" content="https://poliinternational.com/material-certification/">
-    <meta property="og:site_name" content="Poli International">
-    <meta property="og:image" content="https://poliinternational.com/uploads/branding/poli-international-company-logo.png">
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:description" content="Body jewelry material certification guide and safety checker for verifying ASTM F136 titanium, ASTM F138 surgical steel, BioFlex, and ISO standards.">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Material Certification Checker | Poli International">
-    <meta name="twitter:description" content="Verify jewelry safety standards and certifications. Check material compliance for body jewelry.">
-    <meta name="twitter:image" content="https://poliinternational.com/uploads/branding/poli-international-company-logo.png">
-    <meta property="og:image" content="https://poliinternational.com/uploads/branding/poli-international-company-logo.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tattoo & Piercing Material Certification Decoder & Safety Checker - Verify ASTM F138, ISO 5832, and other certifications. Ensure material safety for professional tattoo and piercing.">
-    <meta name="keywords" content="tattoo material certification, piercing material certification, ASTM F138, implant grade titanium, body jewelry material safety, piercing material standards, surgical steel certification, tattoo ink safety">
-    <title>Tattoo & Piercing Material Certification Decoder & Safety Checker | Poli International</title>
+    <meta name="twitter:description" content="Body jewelry material certification guide and safety checker for verifying ASTM F136 titanium, ASTM F138 surgical steel, BioFlex, and ISO standards.">
+    <title>Material Certification Checker | Poli International</title>
     
-    <link rel="stylesheet" href="/tools/material-certification-checker/css/style.css">
-<script type='application/ld+json'>
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Jewelry Material Certification Checker",
-  "url": "https://poliinternational.com/tools/material-certification/",
-  "description": "Check and verify body jewelry material standards",
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Any",
-  "browserRequirements": "Requires JavaScript. Requires HTML5.",
-  "citation": "ISO 10993 Biological Evaluation of Medical Devices",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "codeRepository": "https://github.com/poli-international/material-certification",
-  "author": {
-    "@type": "Organization",
-    "name": "Poli International",
-    "url": "https://poliinternational.com",
-    "sameAs": [
-      "https://github.com/poli-international"
-    ]
-  },
-  "creator": {
-    "@type": "Organization",
-    "name": "Poli International",
-    "url": "https://poliinternational.com"
-  },
-  "maintainer": {
-    "@type": "Organization",
-    "name": "Poli International",
-    "url": "https://poliinternational.com"
-  },
-  "dateModified": "2026-02-07",
-  "license": "https://opensource.org/licenses/MIT",
-  "isAccessibleForFree": true
-}
-</script>
-<script type='application/ld+json'>
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the safest material for a first piercing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Implant-grade Titanium (ASTM F136) or Niobium are considered the safest for initial healing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is 316L stainless steel nickel-free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, it contains nickel but is strictly regulated to prevent leaching in medical applications."
-      }
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+    if (window.self !== window.top) {
+        var poliRoot = document.documentElement;
+        var poliApply = function (light) {
+            poliRoot.setAttribute('data-theme', light ? 'light' : 'dark');
+            var b = document.body;
+            if (b) {
+                b.classList.toggle('dark-mode', !light);
+                b.classList.toggle('light-mode', !!light);
+            }
+        };
+        poliApply(false);
+        document.addEventListener('DOMContentLoaded', function () {
+            poliApply(poliRoot.getAttribute('data-theme') === 'light');
+        });
+        window.addEventListener('message', function (e) {
+            if (e.data && e.data.type === 'poli-theme') {
+                poliApply(!!e.data.light);
+            }
+        });
     }
-  ]
-}
-</script>
-    <link rel="stylesheet" href="/tools/material-certification-checker/css/poli-standard.css">
-
-  <script src="/js/input-guards.js"></script>
-<link rel="stylesheet" href="/tools/shared/print.css" media="print">
-  <link rel="stylesheet" href="/tools/shared/a11y.css">
-  </head>
+    </script>
+</head>
 <body class="dark-mode">
     <!-- Tool Tabs -->
-    <div class="tool-tabs" style="display:flex !important;background:#1a1a1a;border-bottom:2px solid #333;position:relative;z-index:999999;">
-        <button class="tool-tab active" data-tab="tool" style="flex:1;padding:1rem;background:#3B82F6;color:#fff;border:none;cursor:pointer;font-size:1rem;font-weight:600;">🧮 Tool</button>
-        <button class="tool-tab" data-tab="docs" style="flex:1;padding:1rem;background:#222;color:#ccc;border:none;cursor:pointer;font-size:1rem;font-weight:600;">📖 Documentation</button>
-        <button class="tool-tab" data-tab="embed" style="flex:1;padding:1rem;background:#222;color:#ccc;border:none;cursor:pointer;font-size:1rem;font-weight:600;">⚡ Embed Code</button>
-    </div>
-    
+    <nav class="tool-tabs" aria-label="Tool Navigation">
+        <button class="tool-tab active" data-tab="tool" type="button" data-i18n="tabs.tool">🧮 Tool</button>
+        <button class="tool-tab" data-tab="docs" type="button" data-i18n="tabs.docs">📖 Documentation</button>
+        <button class="tool-tab" data-tab="embed" type="button" data-i18n="tabs.embed">⚡ Embed Code</button>
+    </nav>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="site-header__container">
+            <a href="./index.html" class="site-header__logo-link">
+                <img src="./images/Poli-International-Co.webp" alt="Poli International" class="site-header__logo" width="180" height="60">
+            </a>
+            <nav class="site-nav">
+                <a href="#compliance" class="site-nav__link" data-i18n="nav.cert_reader">Certificate Reader</a>
+                <a href="#supplier-questions" class="site-nav__link" data-i18n="nav.supplier_questions">Supplier Question Sheet</a>
+                <a href="#claim-matrix" class="site-nav__link" data-i18n="nav.claim_matrix">Claim Matrix</a>
+                <a href="#comparison" class="site-nav__link" data-i18n="nav.comparison">Comparison</a>
+                <a href="#material-checker" class="site-nav__link" data-i18n="nav.safety_checker">Safety Checker</a>
+                <a href="#studio-record" class="site-nav__link" data-i18n="nav.studio_record">Studio Records</a>
+                <a href="#quick-lookup" class="site-nav__link" data-i18n="nav.quick_lookup">Lookup</a>
+                <a href="#reference" class="site-nav__link" data-i18n="nav.reference">Reference</a>
+            </nav>
+            <div class="site-header__actions">
+                <div class="lang-switcher-wrapper">
+                    <label for="languageSelect" class="sr-only" data-i18n="app.select_language">Select Language</label>
+                    <select id="languageSelect" class="lang-select" aria-label="Select Language" data-i18n-aria-label="app.select_language" data-i18n-title="app.select_language" title="Select Language">
+                        <option value="en">🇬🇧 English</option>
+                        <option value="fr">🇫🇷 Français</option>
+                        <option value="it">🇮🇹 Italiano</option>
+                        <option value="de">🇩🇪 Deutsch</option>
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="pt">🇵🇹 Português</option>
+                        <option value="nl">🇳🇱 Nederlands</option>
+                    </select>
+                </div>
+                <button type="button" id="embedBtn" class="btn btn--secondary btn--small" title="Embed this tool" data-i18n-title="nav.embed_title" data-i18n="nav.embed_btn">⚡ Embed</button>
+                <button type="button" id="darkModeToggle" class="btn btn--secondary btn--small" title="Toggle theme" aria-label="Toggle theme" data-i18n-title="app.toggle_theme" data-i18n-aria-label="app.toggle_theme">
+                    <span class="dark-mode-icon">◐</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
     <!-- Tab Content: Tool -->
     <div id="tab-tool" class="wrapper-tab-content">
-    <main class="tool-main-content">
-        <!-- Tool Title Section -->
-    
+        <section class="tool-title-section">
+            <h1 class="tool-title" data-i18n="app.title">Material Certification Checker</h1>
+            <p class="tool-subtitle" data-i18n="app.subtitle">Verify body jewelry material certifications, biocompatibility standards, and safety ratings</p>
+        </section>
 
+        <!-- Main Container -->
+        <div class="cert-decoder">
+            <main class="cert-decoder__main">
 
-    <!-- Main Container -->
-    <div class="cert-decoder">
+                <!-- Quick Certification Lookup -->
+                <section id="quick-lookup" class="cert-decoder__quick-lookup">
+                    <h2 class="cert-decoder__section-title" data-i18n="quick_lookup.title">Quick Certification Lookup</h2>
+                    <p class="cert-decoder__section-subtitle" data-i18n="quick_lookup.subtitle">
+                        Enter a certification code (ASTM F136, ASTM F138, ISO 5832-1, EN 1811, etc.) to see complete technical details
+                    </p>
 
-        <!-- Header -->
-        
+                    <div class="cert-decoder__search-container">
+                        <div class="cert-decoder__search-box">
+                            <label for="cert-search" class="visually-hidden" data-i18n="quick_lookup.search_label">Search certification code</label>
+                            <input
+                                type="text"
+                                id="cert-search"
+                                class="cert-decoder__search-input"
+                                placeholder="Enter certification code (e.g., ASTM F136, ASTM F138)"
+                                aria-label="Search certification code"
+                                data-i18n-placeholder="quick_lookup.placeholder"
+                                data-i18n-aria-label="quick_lookup.aria_label">
+                            <button type="button" id="search-button" class="cert-decoder__search-button">
+                                <span class="search-icon">🔍</span>
+                                <span class="search-text" data-i18n="quick_lookup.search_button_text">Search</span>
+                            </button>
+                        </div>
 
-        <!-- Main Content -->
-        <main class="cert-decoder__main">
+                        <!-- Search Results -->
+                        <div class="cert-decoder__search-results" id="search-results" style="display: none;">
+                            <!-- Results populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
 
-            <!-- Quick Certification Lookup -->
-            <section class="cert-decoder__quick-lookup">
-                <h2 class="cert-decoder__section-title" style="text-align: center;">Quick Certification Lookup</h2>
-                <p class="cert-decoder__section-subtitle">
-                    Enter a certification code (ASTM F138, ISO 5832-1, EN 1441, etc.) to see complete details
-                </p>
+                <!-- Material Safety Checker -->
+                <section id="material-checker" class="cert-decoder__material-checker">
+                    <h2 class="cert-decoder__section-title" data-i18n="safety_checker.title">Material Safety Checker</h2>
+                    <p class="cert-decoder__section-subtitle" data-i18n="safety_checker.subtitle">
+                        Select a material, piercing location, and healing stage to check safety ratings
+                    </p>
 
-                <div class="cert-decoder__search-container">
-                    <div class="cert-decoder__search-box">
-                        <label for="cert-search" class="visually-hidden">Search certification code</label>
-                        <input
-                            type="text"
-                            id="cert-search"
-                            class="cert-decoder__search-input"
-                            placeholder="Enter certification code (e.g., ASTM F138)"
-                            aria-label="Search certification code">
-                        <button type="button" id="search-button" class="cert-decoder__search-button">
-                            <span class="search-icon">🔍</span>
-                            <span class="search-text">Search</span>
+                    <form class="cert-decoder__material-form" id="material-form">
+                        <div class="cert-decoder__form-grid">
+
+                            <!-- Material Type -->
+                            <div class="cert-decoder__form-group">
+                                <label for="material-type" class="cert-decoder__label">
+                                    <span class="label-icon">🔬</span>
+                                    <span data-i18n="safety_checker.material_type_label">Material Type</span>
+                                </label>
+                                <select id="material-type" class="cert-decoder__select" required>
+                                    <option value="" data-i18n="safety_checker.material_select_default">Select a material to check...</option>
+                                    <optgroup label="Titanium">
+                                        <option value="titanium_grade_23" data-i18n="safety_checker.opt_titanium_23">Titanium Grade 23 (Ti-6Al-4V ELI) - ASTM F136</option>
+                                        <option value="titanium_grade_5" data-i18n="safety_checker.opt_titanium_5">Titanium Grade 5 (Ti-6Al-4V) - NOT Recommended</option>
+                                    </optgroup>
+                                    <optgroup label="Steel">
+                                        <option value="surgical_steel_316lvm" data-i18n="safety_checker.opt_steel_316lvm">Surgical Steel 316LVM - ASTM F138</option>
+                                        <option value="surgical_steel_316l" data-i18n="safety_checker.opt_steel_316l">Surgical Steel 316L (Non-implant)</option>
+                                    </optgroup>
+                                    <optgroup label="Precious Metals & Alternatives">
+                                        <option value="niobium" data-i18n="safety_checker.opt_niobium">Niobium (Pure / Alloyed) - ASTM F2229</option>
+                                        <option value="gold_14k" data-i18n="safety_checker.opt_gold_14k">14K Gold</option>
+                                        <option value="gold_18k" data-i18n="safety_checker.opt_gold_18k">18K Gold</option>
+                                    </optgroup>
+                                    <optgroup label="Biocompatible Polymers & Glass">
+                                        <option value="bioflex" data-i18n="safety_checker.opt_bioflex">BioFlex (PP-R Polymer - Medical Grade)</option>
+                                        <option value="bioplast" data-i18n="safety_checker.opt_bioplast">Bioplast (Medical Bioplastic)</option>
+                                        <option value="ptfe" data-i18n="safety_checker.opt_ptfe">PTFE (Polytetrafluoroethylene)</option>
+                                        <option value="glass" data-i18n="safety_checker.opt_glass">Borosilicate Glass</option>
+                                    </optgroup>
+                                    <optgroup label="Other Materials (Use with Caution)">
+                                        <option value="stone" data-i18n="safety_checker.opt_stone">Natural Stone (Healed Only)</option>
+                                        <option value="wood" data-i18n="safety_checker.opt_wood">Wood / Organics (Healed Only)</option>
+                                        <option value="acrylic" data-i18n="safety_checker.opt_acrylic">Acrylic / Plastic (NOT Recommended)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <!-- Piercing Location -->
+                            <div class="cert-decoder__form-group">
+                                <label for="piercing-location" class="cert-decoder__label">
+                                    <span class="label-icon">📍</span>
+                                    <span data-i18n="safety_checker.location_label">Piercing Location</span>
+                                </label>
+                                <select id="piercing-location" class="cert-decoder__select">
+                                    <option value="" data-i18n="safety_checker.location_all">All locations</option>
+                                    <option value="ear" data-i18n="safety_checker.location_ear">Ear (Lobe, Helix, Tragus, etc.)</option>
+                                    <option value="nose" data-i18n="safety_checker.location_nose">Nose / Septum</option>
+                                    <option value="lip" data-i18n="safety_checker.location_lip">Lip / Oral</option>
+                                    <option value="eyebrow" data-i18n="safety_checker.location_eyebrow">Eyebrow</option>
+                                    <option value="navel" data-i18n="safety_checker.location_navel">Navel</option>
+                                    <option value="nipple" data-i18n="safety_checker.location_nipple">Nipple</option>
+                                    <option value="genital" data-i18n="safety_checker.location_genital">Genital</option>
+                                    <option value="surface" data-i18n="safety_checker.location_surface">Surface / Dermal</option>
+                                </select>
+                            </div>
+
+                            <!-- Healing Stage -->
+                            <div class="cert-decoder__form-group">
+                                <label class="cert-decoder__label">
+                                    <span class="label-icon">🩹</span>
+                                    <span data-i18n="safety_checker.healing_label">Healing Stage</span>
+                                </label>
+                                <div class="cert-decoder__radio-group">
+                                    <label class="cert-decoder__radio-label">
+                                        <input type="radio" name="healing" value="initial" class="cert-decoder__radio" checked>
+                                        <span class="radio-text" data-i18n="safety_checker.healing_initial">Initial / Fresh</span>
+                                    </label>
+                                    <label class="cert-decoder__radio-label">
+                                        <input type="radio" name="healing" value="healed" class="cert-decoder__radio">
+                                        <span class="radio-text" data-i18n="safety_checker.healing_healed">Healed</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Sensitivity -->
+                            <div class="cert-decoder__form-group">
+                                <label class="cert-decoder__label">
+                                    <span class="label-icon">⚠️</span>
+                                    <span data-i18n="safety_checker.sensitivity_label">Skin Sensitivity</span>
+                                </label>
+                                <div class="cert-decoder__radio-group">
+                                    <label class="cert-decoder__radio-label">
+                                        <input type="radio" name="sensitivity" value="normal" class="cert-decoder__radio" checked>
+                                        <span class="radio-text" data-i18n="safety_checker.sensitivity_normal">Normal</span>
+                                    </label>
+                                    <label class="cert-decoder__radio-label">
+                                        <input type="radio" name="sensitivity" value="sensitive" class="cert-decoder__radio">
+                                        <span class="radio-text" data-i18n="safety_checker.sensitivity_sensitive">Sensitive / Nickel Allergic</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="cert-decoder__submit-button" data-i18n="safety_checker.submit_button">
+                            Check Material Safety
+                        </button>
+                    </form>
+
+                    <!-- Material Results -->
+                    <div class="cert-decoder__material-results" id="material-results" style="display: none;">
+                        <!-- Results populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Recent Checks (Session History) -->
+                <section id="recent-checks" class="cert-decoder__recent-checks">
+                    <div class="cert-decoder__recent-header">
+                        <div class="cert-decoder__recent-title-group">
+                            <span class="cert-decoder__recent-icon" aria-hidden="true">⏱️</span>
+                            <h2 class="cert-decoder__recent-title" data-i18n="recent_checks.title">Recent Checks</h2>
+                            <span class="cert-decoder__recent-count" id="recent-count" data-i18n="recent_checks.zero_items">0 items</span>
+                        </div>
+                        <button type="button" id="clear-history-btn" class="cert-decoder__clear-history-btn" title="Clear session history" data-i18n-title="recent_checks.clear_button_title" data-i18n="recent_checks.clear_button">
+                            Clear History
+                        </button>
+                    </div>
+                    <div class="cert-decoder__recent-list" id="recent-checks-list">
+                        <p class="cert-decoder__recent-empty" data-i18n="recent_checks.empty">No recent checks yet. Queries and material verifications will be tracked here.</p>
+                    </div>
+                </section>
+
+                <!-- Feature 1: Certificate Reader & Claim Analyzer -->
+                <section id="compliance" class="cert-decoder__compliance">
+                    <h2 class="cert-decoder__section-title" data-i18n="compliance.title">Certificate Reader & Claim Analyzer</h2>
+                    <p class="cert-decoder__section-subtitle" data-i18n="compliance.subtitle">
+                        Enter or paste what a supplier told you, or what is printed on the jewelry packet. Discover exactly what that phrasing establishes, what critical gaps remain, and the required documentary proof.
+                    </p>
+
+                    <div class="cert-decoder__verify-container">
+                        <!-- Presets Selector -->
+                        <div class="cert-reader__presets-wrap">
+                            <div class="cert-reader__presets-label" data-i18n="cert_reader.presets_label">Quick Test Phrasing Presets:</div>
+                            <div id="cert-reader-presets" class="cert-reader__presets-grid">
+                                <!-- Populated dynamically by js/v2-features.js -->
+                            </div>
+                        </div>
+
+                        <div class="cert-decoder__input-group" style="align-items: flex-start;">
+                            <label for="product-claim" class="cert-decoder__label" style="padding-top: 0.6rem;">
+                                <span class="label-icon">🏷️</span>
+                                <span data-i18n="compliance.label">Supplier Phrasing / Label Text</span>
+                            </label>
+                            <textarea
+                                id="product-claim"
+                                class="cert-decoder__text-input"
+                                rows="3"
+                                style="width: 100%; min-height: 80px; resize: vertical;"
+                                placeholder='e.g., "Implant Grade Titanium Barbell, 100% hypoallergenic, nickel free" or paste a mill certificate snippet'
+                                aria-label="Enter supplier phrasing or label text"
+                                data-i18n-placeholder="compliance.placeholder"
+                                data-i18n-aria-label="compliance.aria_label"></textarea>
+                            <button type="button" id="verify-button" class="cert-decoder__verify-button" data-i18n="compliance.button">
+                                Analyze Phrasing
+                            </button>
+                        </div>
+
+                        <div class="cert-decoder__verify-results" id="verify-results" style="display: none;">
+                            <!-- Results populated by js/v2-features.js -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Feature 2: Supplier Question Sheet -->
+                <section id="supplier-questions" class="cert-decoder__supplier-questions">
+                    <h2 class="cert-decoder__section-title" data-i18n="supplier_questions.title">Supplier Question Sheet Generator</h2>
+                    <p class="cert-decoder__section-subtitle" data-i18n="supplier_questions.subtitle">
+                        Given a material and an intended clinical application, produce the exact technical questions to send a supplier, along with what a satisfactory answer contains and what red flags to avoid. Printable and ready to send.
+                    </p>
+
+                    <div class="cert-decoder__verify-container" style="margin-bottom: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+                            <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
+                                <label for="supplier-mat-select" class="cert-decoder__label">
+                                    <span class="label-icon">⚙️</span>
+                                    <span data-i18n="supplier_questions.material_label">Target Material / Alloy</span>
+                                </label>
+                                <select id="supplier-mat-select" class="cert-decoder__compare-select" style="width: 100%;">
+                                    <option value="astm_f136" selected data-i18n="supplier_questions.opt_astm_f136">ASTM F136 Titanium (Ti-6Al-4V ELI)</option>
+                                    <option value="astm_f138" data-i18n="supplier_questions.opt_astm_f138">ASTM F138 Stainless Steel (316LVM)</option>
+                                    <option value="bioflex_polymer" data-i18n="supplier_questions.opt_bioflex">BioFlex® Medical Polymer (USP Class VI)</option>
+                                    <option value="niobium" data-i18n="supplier_questions.opt_niobium">ASTM F2229 Niobium (Unalloyed)</option>
+                                    <option value="borosilicate_glass" data-i18n="supplier_questions.opt_glass">Borosilicate Glass 3.3</option>
+                                    <option value="gold_solid" data-i18n="supplier_questions.opt_gold">Solid 14K / 18K Gold</option>
+                                    <option value="commercial_316l" data-i18n="supplier_questions.opt_commercial_316l">Commercial 316L / Grade 5 Titanium</option>
+                                </select>
+                            </div>
+
+                            <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
+                                <label for="supplier-use-select" class="cert-decoder__label">
+                                    <span class="label-icon">🩹</span>
+                                    <span data-i18n="supplier_questions.application_label">Intended Clinical Application</span>
+                                </label>
+                                <select id="supplier-use-select" class="cert-decoder__compare-select" style="width: 100%;">
+                                    <option value="initial_piercing" selected data-i18n="supplier_questions.app_initial">Initial Piercing (Fresh Open Wound Canal)</option>
+                                    <option value="healed_piercing" data-i18n="supplier_questions.app_healed">Healed Piercing (Intact Epithelium)</option>
+                                    <option value="sensitive_client" data-i18n="supplier_questions.app_sensitive">Sensitive Skin / Suspected Nickel Allergy</option>
+                                    <option value="oral_mucosal" data-i18n="supplier_questions.app_oral">Oral / Mucosal Piercing (Saliva & Enamel Contact)</option>
+                                    <option value="subdermal_surface" data-i18n="supplier_questions.app_subdermal">Surface Piercing / Subdermal Dermal Anchor</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                            <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
+                                <label for="supplier-studio-input" class="cert-decoder__label">
+                                    <span class="label-icon">🏢</span>
+                                    <span data-i18n="supplier_questions.studio_label">Your Studio Name</span>
+                                </label>
+                                <input type="text" id="supplier-studio-input" class="cert-decoder__text-input" placeholder="e.g. Black Lotus Body Arts" data-i18n-placeholder="supplier_questions.studio_placeholder" style="width: 100%;">
+                            </div>
+                            <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
+                                <label for="supplier-supplier-input" class="cert-decoder__label">
+                                    <span class="label-icon">🏭</span>
+                                    <span data-i18n="supplier_questions.supplier_label">Supplier Name</span>
+                                </label>
+                                <input type="text" id="supplier-supplier-input" class="cert-decoder__text-input" placeholder="e.g. Industrial Strength / Anatometal" data-i18n-placeholder="supplier_questions.supplier_placeholder" style="width: 100%;">
+                            </div>
+                            <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
+                                <label for="supplier-item-input" class="cert-decoder__label">
+                                    <span class="label-icon">📦</span>
+                                    <span data-i18n="supplier_questions.item_label">Item / PO Ref</span>
+                                </label>
+                                <input type="text" id="supplier-item-input" class="cert-decoder__text-input" placeholder="e.g. PO-2026-0819 Titanium Posts" data-i18n-placeholder="supplier_questions.item_placeholder" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="supplier-questions-output">
+                        <!-- Populated dynamically by js/v2-features.js -->
+                    </div>
+                </section>
+
+                <!-- Feature 3: Claim-to-Evidence Matrix -->
+                <section id="claim-matrix" class="cert-decoder__claim-matrix">
+                    <h2 class="cert-decoder__section-title" data-i18n="claim_matrix.title">Claim-to-Evidence Matrix</h2>
+                    <p class="cert-decoder__section-subtitle" data-i18n="claim_matrix.subtitle">
+                        For each common marketing claim, understand what document substantiates it, what that document proves, what absence means, and how to verify it.
+                    </p>
+
+                    <div class="claim-matrix__toolbar">
+                        <div class="claim-matrix__filter-pills" role="tablist" aria-label="Filter claims by category">
+                            <button type="button" class="claim-matrix__filter-pill active" data-category="All" data-i18n="claim_matrix.filter_all">All Claims</button>
+                            <button type="button" class="claim-matrix__filter-pill" data-category="Metals" data-i18n="claim_matrix.filter_metals">Metals & Alloys</button>
+                            <button type="button" class="claim-matrix__filter-pill" data-category="Polymers" data-i18n="claim_matrix.filter_polymers">Polymers & Plastics</button>
+                            <button type="button" class="claim-matrix__filter-pill" data-category="General" data-i18n="claim_matrix.filter_general">General & Marketing</button>
+                        </div>
+                        <input type="search" id="claim-matrix-search" class="claim-matrix__search-input" placeholder="🔍 Search claims or standards..." data-i18n-placeholder="claim_matrix.search_placeholder" aria-label="Search claim matrix">
+                    </div>
+
+                    <div id="claim-matrix-table-container">
+                        <!-- Populated dynamically by js/v2-features.js -->
+                    </div>
+                </section>
+
+                <!-- Feature 4: Side-by-Side Certified Material Comparison -->
+                <section id="comparison" class="cert-decoder__comparison">
+                    <h2 class="cert-decoder__section-title" data-i18n="comparison.title">Certified Material Comparison Tool</h2>
+                    <p class="cert-decoder__section-subtitle" data-i18n="comparison.subtitle">
+                        Compare 2 to 3 materials side-by-side on exact certified technical parameters under identical test standards. Objective standards comparison without arbitrary rankings.
+                    </p>
+
+                    <div class="cert-decoder__compare-selectors">
+                        <select id="compare-1" class="cert-decoder__compare-select" aria-label="First material to compare" data-i18n-aria-label="comparison.select_1_aria">
+                            <option value="" data-i18n="comparison.select_1_default">Select first material...</option>
+                        </select>
+                        <select id="compare-2" class="cert-decoder__compare-select" aria-label="Second material to compare" data-i18n-aria-label="comparison.select_2_aria">
+                            <option value="" data-i18n="comparison.select_2_default">Select second material...</option>
+                        </select>
+                        <select id="compare-3" class="cert-decoder__compare-select" aria-label="Third material to compare" data-i18n-aria-label="comparison.select_3_aria">
+                            <option value="" data-i18n="comparison.select_3_default">Select third material (optional)...</option>
+                        </select>
+                        <button type="button" id="compare-button" class="cert-decoder__compare-button" data-i18n="comparison.button">
+                            Compare Materials
                         </button>
                     </div>
 
-                    <!-- Search Results -->
-                    <div class="cert-decoder__search-results" id="search-results" style="display: none;">
-                        <!-- Results will be populated by JavaScript -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- Material Safety Checker -->
-            <section class="cert-decoder__material-checker">
-                <h2 class="cert-decoder__section-title" style="text-align: center;">Material Safety Checker</h2>
-                <p class="cert-decoder__section-subtitle">
-                    Select a material to see safety ratings, required certifications, and usage guidelines
-                </p>
-
-                <form class="cert-decoder__material-form" id="material-form">
-                    <div class="cert-decoder__form-grid">
-
-                        <!-- Material Type -->
-                        <div class="cert-decoder__form-group">
-                            <label for="material-type" class="cert-decoder__label">
-                                <span class="label-icon">🔬</span>
-                                Material Type
-                            </label>
-                            <select id="material-type" class="cert-decoder__select" required>
-                                <option value="">Select material...</option>
-                                <optgroup label="Metals">
-                                    <option value="titanium_grade_23">Titanium Grade 23 (Ti-6Al-4V ELI)</option>
-                                    <option value="titanium_grade_5">Titanium Grade 5 (Ti-6Al-4V)</option>
-                                    <option value="surgical_steel_316lvm">Surgical Steel 316LVM</option>
-                                    <option value="surgical_steel_316l">Surgical Steel 316L</option>
-                                    <option value="niobium">Niobium</option>
-                                    <option value="gold_14k">14K Gold</option>
-                                    <option value="gold_18k">18K Gold</option>
-                                </optgroup>
-                                <optgroup label="Medical-Grade Polymers">
-                                    <option value="bioflex">BioFlex (Medical-Grade)</option>
-                                    <option value="bioplast">Bioplast (Medical-Grade)</option>
-                                    <option value="ptfe">PTFE (Medical-Grade)</option>
-                                </optgroup>
-                                <optgroup label="Other Materials">
-                                    <option value="glass">Glass (Borosilicate)</option>
-                                    <option value="stone">Stone (Natural)</option>
-                                    <option value="wood">Wood/Organic</option>
-                                    <option value="acrylic">Acrylic/Plastic</option>
-                                </optgroup>
-                            </select>
-                        </div>
-
-                        <!-- Piercing Location -->
-                        <div class="cert-decoder__form-group">
-                            <label for="piercing-location" class="cert-decoder__label">
-                                <span class="label-icon">📍</span>
-                                Piercing Location
-                            </label>
-                            <select id="piercing-location" class="cert-decoder__select">
-                                <option value="">All locations</option>
-                                <option value="ear">Ear (Lobe, Helix, etc.)</option>
-                                <option value="nose">Nose</option>
-                                <option value="lip">Lip/Oral</option>
-                                <option value="eyebrow">Eyebrow</option>
-                                <option value="navel">Navel</option>
-                                <option value="nipple">Nipple</option>
-                                <option value="genital">Genital</option>
-                                <option value="surface">Surface/Dermal</option>
-                            </select>
-                        </div>
-
-                        <!-- Healing Stage -->
-                        <div class="cert-decoder__form-group">
-                            <label class="cert-decoder__label">
-                                <span class="label-icon">🩹</span>
-                                Healing Stage
-                            </label>
-                            <div class="cert-decoder__radio-group">
-                                <label class="cert-decoder__radio-label">
-                                    <input type="radio" name="healing" value="initial" class="cert-decoder__radio" checked>
-                                    <span class="radio-text">Initial/Fresh</span>
-                                </label>
-                                <label class="cert-decoder__radio-label">
-                                    <input type="radio" name="healing" value="healed" class="cert-decoder__radio">
-                                    <span class="radio-text">Healed</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Sensitivity -->
-                        <div class="cert-decoder__form-group">
-                            <label class="cert-decoder__label">
-                                <span class="label-icon">⚠️</span>
-                                Skin Sensitivity
-                            </label>
-                            <div class="cert-decoder__radio-group">
-                                <label class="cert-decoder__radio-label">
-                                    <input type="radio" name="sensitivity" value="normal" class="cert-decoder__radio" checked>
-                                    <span class="radio-text">Normal</span>
-                                </label>
-                                <label class="cert-decoder__radio-label">
-                                    <input type="radio" name="sensitivity" value="sensitive" class="cert-decoder__radio">
-                                    <span class="radio-text">Sensitive</span>
-                                </label>
-                            </div>
-                        </div>
-
+                    <div id="compare-category-notice" class="cert-decoder__compare-category-notice" style="display: none;">
+                        <!-- Category notice populated dynamically on selection -->
                     </div>
 
-                    <button type="submit" class="cert-decoder__submit-button">
-                        Check Material Safety
-                    </button>
-                </form>
+                    <div class="cert-decoder__compare-results" id="compare-results" style="display: none;">
+                        <!-- Results populated by JavaScript -->
+                    </div>
+                </section>
 
-                <!-- Material Results -->
-                <div class="cert-decoder__material-results" id="material-results" style="display: none;">
-                    <!-- Results will be populated by JavaScript -->
-                </div>
-            </section>
-
-            <!-- Compliance Verification -->
-            <section class="cert-decoder__compliance">
-                <h2 class="cert-decoder__section-title" style="text-align: center;">Compliance Verification Tool</h2>
-                <p class="cert-decoder__section-subtitle">
-                    Enter a product claim to verify what certifications are required and detect potential red flags
-                </p>
-
-                <div class="cert-decoder__verify-container">
-                    <div class="cert-decoder__input-group">
-                        <label for="product-claim" class="cert-decoder__label">
-                            <span class="label-icon">🔖</span>
-                            Product Claim
-                        </label>
-                        <input
-                            type="text"
-                            id="product-claim"
-                            class="cert-decoder__text-input"
-                            placeholder='e.g., "Implant Grade Titanium", "Surgical Steel", "Hypoallergenic"'
-                            aria-label="Enter product claim">
-                        <button type="button" id="verify-button" class="cert-decoder__verify-button">
-                            Verify Claim
-                        </button>
+                <!-- Feature 5: Dated Studio Compliance Record -->
+                <section id="studio-record" class="cert-decoder__studio-record">
+                    <div class="studio-record__header-wrap">
+                        <div>
+                            <h2 class="cert-decoder__section-title" data-i18n="studio_record.title">Studio Compliance Records</h2>
+                            <p class="cert-decoder__section-subtitle" data-i18n="studio_record.subtitle">
+                                Generate dated material receiving summaries for your studio supplier compliance files. All data is kept 100% locally in your browser, zero network transfers, zero accounts required.
+                            </p>
+                        </div>
+                        <div class="no-print" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                            <button type="button" class="btn btn--secondary btn--small" id="create-manual-record-btn" data-i18n="studio_record.btn_new_inspection">
+                                ➕ New Manual Inspection
+                            </button>
+                            <button type="button" class="btn btn--secondary btn--small" id="clear-records-btn" data-i18n="studio_record.btn_clear_records">
+                                🗑️ Clear Records
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="cert-decoder__verify-results" id="verify-results" style="display: none;">
-                        <!-- Verification results will be populated by JavaScript -->
+                    <div class="studio-record__layout">
+                        <aside class="studio-record__sidebar no-print">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <strong style="font-size: 0.85rem; text-transform: uppercase; color: var(--color-text-secondary);" data-i18n="studio_record.saved_records">Saved Studio Records</strong>
+                                <span id="studio-records-count" class="cert-tag cert-tag--trace">0 records</span>
+                            </div>
+                            <div id="studio-records-list" class="studio-record__list">
+                                <!-- Populated dynamically from localStorage -->
+                            </div>
+                        </aside>
+
+                        <main class="studio-record__main">
+                            <div id="studio-record-detail">
+                                <!-- Active or printed record detail -->
+                            </div>
+                        </main>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Material Comparison -->
-            <section class="cert-decoder__comparison">
-                <h2 class="cert-decoder__section-title" style="text-align: center;">Material Comparison Tool</h2>
-                <p class="cert-decoder__section-subtitle">
-                    Compare 2-3 materials side-by-side to see certifications, safety ratings, and best uses
-                </p>
-
-                <div class="cert-decoder__compare-selectors">
-                    <select id="compare-1" class="cert-decoder__compare-select">
-                        <option value="">Select first material...</option>
-                    </select>
-                    <select id="compare-2" class="cert-decoder__compare-select">
-                        <option value="">Select second material...</option>
-                    </select>
-                    <select id="compare-3" class="cert-decoder__compare-select">
-                        <option value="">Select third material (optional)...</option>
-                    </select>
-                    <button type="button" id="compare-button" class="cert-decoder__compare-button">
-                        Compare Materials
-                    </button>
-                </div>
-
-                <div class="cert-decoder__compare-results" id="compare-results" style="display: none;">
-                    <!-- Comparison results will be populated by JavaScript -->
-                </div>
-            </section>
-
-            <!-- Quick Reference Guide -->
-            <section class="cert-decoder__reference">
-                <div class="cert-decoder__reference-header">
-                    <h2 class="cert-decoder__section-title" style="text-align: center;">Certification Quick Reference</h2>
-                    <button type="button" id="toggle-reference" class="cert-decoder__toggle-button">
-                        <span id="toggle-text">Show Guide</span>
-                        <span id="toggle-icon">▼</span>
-                    </button>
-                </div>
-
-                <div class="cert-decoder__reference-content" id="reference-content" style="display: none;">
-                    <div class="cert-decoder__reference-grid">
-
-                        <!-- ASTM Standards -->
-                        <div class="cert-decoder__ref-category">
-                            <h3 class="cert-decoder__ref-title">ASTM Standards</h3>
-                            <div class="cert-decoder__ref-list" id="astm-list">
-                                <!-- Will be populated by JavaScript -->
+                <!-- Companion Specialized Tools -->
+                <section id="companion-tools" class="cert-decoder__companion-tools">
+                    <h2 class="cert-decoder__section-title" data-i18n="companion.title">Specialized Body Art Compliance Tools</h2>
+                    <p class="cert-decoder__section-subtitle" data-i18n="companion.subtitle">
+                        This tool specializes exclusively in material certification, standards reading, and mill test verification. For specialized quantitative calculations, ink chemistry, and clinical assessments, refer to the dedicated tools below:
+                    </p>
+                    <div class="companion-tools__grid">
+                        <div class="companion-tool__card">
+                            <div>
+                                <span class="companion-tool__domain" data-i18n="companion.tool_nickel_domain">EN 1811 Migration</span>
+                                <h3 class="companion-tool__name"><a href="https://poliinternational.com/nickel-release-calculator/" target="_top" class="companion-tool__link" data-i18n="companion.tool_nickel_name">Nickel Release Calculator</a></h3>
+                                <p class="companion-tool__desc" data-i18n="companion.tool_nickel_desc">For calculating quantitative nickel release rates (µg/cm²/week) against EU REACH Entry 27 legal thresholds.</p>
                             </div>
+                            <span class="cert-tag cert-tag--standard" data-i18n="companion.tool_nickel_badge">Quantitative Calculation Tool</span>
                         </div>
 
-                        <!-- ISO Standards -->
-                        <div class="cert-decoder__ref-category">
-                            <h3 class="cert-decoder__ref-title">ISO Standards</h3>
-                            <div class="cert-decoder__ref-list" id="iso-list">
-                                <!-- Will be populated by JavaScript -->
+                        <div class="companion-tool__card">
+                            <div>
+                                <span class="companion-tool__domain" data-i18n="companion.tool_reach_domain">Pigments & Inks</span>
+                                <h3 class="companion-tool__name"><a href="https://poliinternational.com/reach-svhc-checker/" target="_top" class="companion-tool__link" data-i18n="companion.tool_reach_name">REACH SVHC Candidate List Checker</a></h3>
+                                <p class="companion-tool__desc" data-i18n="companion.tool_reach_desc">For cross-referencing tattoo pigment chemistry, CAS numbers, and safety data sheets against ECHA SVHC substances.</p>
                             </div>
+                            <span class="cert-tag cert-tag--standard" data-i18n="companion.tool_reach_badge">Chemical Screening Tool</span>
                         </div>
 
-                        <!-- EU Standards -->
-                        <div class="cert-decoder__ref-category">
-                            <h3 class="cert-decoder__ref-title">EU Standards</h3>
-                            <div class="cert-decoder__ref-list" id="eu-list">
-                                <!-- Will be populated by JavaScript -->
+                        <div class="companion-tool__card">
+                            <div>
+                                <span class="companion-tool__domain" data-i18n="companion.tool_size_domain">Anatomical Fit & Sizing</span>
+                                <h3 class="companion-tool__name"><a href="https://poliinternational.com/jewelry-size-visualizer/" target="_top" class="companion-tool__link" data-i18n="companion.tool_size_name">Jewelry Size Visualizer</a></h3>
+                                <p class="companion-tool__desc" data-i18n="companion.tool_size_desc">For gauge conversions (AWG to mm), post lengths, disc diameters, and swelling allowance sizing charts.</p>
                             </div>
+                            <span class="cert-tag cert-tag--standard" data-i18n="companion.tool_size_badge">Anatomical Sizing Tool</span>
                         </div>
 
-                        <!-- Professional Standards -->
-                        <div class="cert-decoder__ref-category">
-                            <h3 class="cert-decoder__ref-title">Professional Standards</h3>
-                            <div class="cert-decoder__ref-list" id="app-list">
-                                <!-- Will be populated by JavaScript -->
+                        <div class="companion-tool__card">
+                            <div>
+                                <span class="companion-tool__domain" data-i18n="companion.tool_allergy_domain">Dermatological Testing</span>
+                                <h3 class="companion-tool__name"><a href="https://poliinternational.com/allergy-patch-test/" target="_top" class="companion-tool__link" data-i18n="companion.tool_allergy_name">Allergy Patch Test Guide</a></h3>
+                                <p class="companion-tool__desc" data-i18n="companion.tool_allergy_desc">For patch test documentation, metal salt panels, and clinical referral protocols for contact dermatitis.</p>
+                            </div>
+                            <span class="cert-tag cert-tag--standard" data-i18n="companion.tool_allergy_badge">Clinical Testing Reference</span>
+                        </div>
+
+                        <div class="companion-tool__card">
+                            <div>
+                                <span class="companion-tool__domain" data-i18n="companion.tool_triage_domain">Piercing Redness & Irritation</span>
+                                <h3 class="companion-tool__name"><a href="https://poliinternational.com/reaction-triage-wizard/" target="_top" class="companion-tool__link" data-i18n="companion.tool_triage_name">Reaction Triage Wizard</a></h3>
+                                <p class="companion-tool__desc" data-i18n="companion.tool_triage_desc">For differentiating mechanical piercing bumps from allergic reactions or bacterial infection.</p>
+                            </div>
+                            <span class="cert-tag cert-tag--standard" data-i18n="companion.tool_triage_badge">Triage Assessment Guide</span>
+                        </div>
+
+                        <div class="companion-tool__card">
+                            <div>
+                                <span class="companion-tool__domain" data-i18n="companion.tool_mri_domain">Radiological Safety</span>
+                                <h3 class="companion-tool__name"><a href="https://poliinternational.com/mri-safety-checker/" target="_top" class="companion-tool__link" data-i18n="companion.tool_mri_name">MRI Safety Screening (ASTM F2503)</a></h3>
+                                <p class="companion-tool__desc" data-i18n="companion.tool_mri_desc">For MR Safe, MR Conditional, and MR Unsafe screening criteria prior to diagnostic magnetic imaging.</p>
+                            </div>
+                            <span class="cert-tag cert-tag--standard" data-i18n="companion.tool_mri_badge">Radiology Screening Reference</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Reference Guide -->
+                <section id="reference" class="cert-decoder__reference">
+                    <div class="cert-decoder__reference-header">
+                        <h2 class="cert-decoder__section-title" data-i18n="reference.title">Certification Quick Reference</h2>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                            <button type="button" id="open-glossary-modal-btn" class="cert-glossary-trigger-btn" onclick="if(window.openGlossaryModal) window.openGlossaryModal();" data-i18n="glossary_overlay.trigger_button">
+                                📖 Interactive Glossary
+                            </button>
+                            <button type="button" id="toggle-reference" class="cert-decoder__toggle-button">
+                                <span id="toggle-text" data-i18n="reference.show_guide">Show Guide</span>
+                                <span id="toggle-icon">▼</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cert-decoder__reference-content" id="reference-content" style="display: none;">
+                        <div class="cert-decoder__reference-grid">
+
+                            <!-- ASTM Standards -->
+                            <div class="cert-decoder__ref-category">
+                                <h3 class="cert-decoder__ref-title" data-i18n="reference.category_astm">ASTM Standards</h3>
+                                <div class="cert-decoder__ref-list" id="astm-list">
+                                    <!-- Populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <!-- ISO Standards -->
+                            <div class="cert-decoder__ref-category">
+                                <h3 class="cert-decoder__ref-title" data-i18n="reference.category_iso">ISO Standards</h3>
+                                <div class="cert-decoder__ref-list" id="iso-list">
+                                    <!-- Populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <!-- EU Standards -->
+                            <div class="cert-decoder__ref-category">
+                                <h3 class="cert-decoder__ref-title" data-i18n="reference.category_eu">EU Standards</h3>
+                                <div class="cert-decoder__ref-list" id="eu-list">
+                                    <!-- Populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <!-- Professional Practice -->
+                            <div class="cert-decoder__ref-category">
+                                <h3 class="cert-decoder__ref-title" data-i18n="reference.category_app">Professional Practice</h3>
+                                <div class="cert-decoder__ref-list" id="app-list">
+                                    <!-- Populated by JavaScript -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Educational Resources -->
-            <section class="cert-decoder__education">
-                <h2 class="cert-decoder__section-title" style="text-align: center;">Understanding Material Certifications</h2>
+                <!-- Educational Resources -->
+                <section class="cert-decoder__education">
+                    <h2 class="cert-decoder__section-title" data-i18n="education.title">Understanding Material Certifications</h2>
 
-                <div class="cert-decoder__edu-grid">
-                    <div class="cert-decoder__edu-card">
-                        <h3 class="cert-decoder__edu-title">🏆 What Are Certifications?</h3>
-                        <p class="cert-decoder__edu-text">
-                            Material certifications are industry standards that verify the composition,
-                            purity, and properties of materials used in body jewelry. They ensure
-                            materials are safe, biocompatible, and suitable for prolonged body contact.
+                    <div class="cert-decoder__edu-grid">
+                        <div class="cert-decoder__edu-card">
+                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_mill_title">🏆 What Are Mill Certifications?</h3>
+                            <p class="cert-decoder__edu-text" data-i18n="education.card_mill_text">
+                                Mill test reports certify the chemical composition, tensile strength, and metallurgical properties
+                                of raw material lots. They provide documentary proof of compliance with ASTM or ISO standards.
+                            </p>
+                        </div>
+
+                        <div class="cert-decoder__edu-card">
+                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_verify_title">📋 How to Verify Materials</h3>
+                            <p class="cert-decoder__edu-text" data-i18n="education.card_verify_text">
+                                Always request authentic mill certifications from manufacturers. Verified suppliers provide lot-tracked
+                                test certificates detailing chemical analysis and mechanical properties.
+                            </p>
+                        </div>
+
+                        <div class="cert-decoder__edu-card">
+                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_discrepancies_title">⚠️ Common Discrepancies</h3>
+                            <p class="cert-decoder__edu-text" data-i18n="education.card_discrepancies_text">
+                                Watch for unverified marketing terms like generic "surgical steel" without ASTM F138 documentation,
+                                or "hypoallergenic" claims lacking alloy breakdown.
+                            </p>
+                        </div>
+
+                        <div class="cert-decoder__edu-card">
+                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_initial_title">✅ Initial Piercing Materials</h3>
+                            <p class="cert-decoder__edu-text" data-i18n-html="education.card_initial_text">
+                                Established professional practice specifies biocompatible materials for initial piercings:
+                                ASTM F136 titanium, ASTM F138 surgical steel, BioFlex&reg; body jewelry (PP-R), niobium, and borosilicate glass.
+                            </p>
+                        </div>
+
+                        <div class="cert-decoder__edu-card">
+                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_biocompatibility_title">🔬 Biocompatibility Testing</h3>
+                            <p class="cert-decoder__edu-text" data-i18n="education.card_biocompatibility_text">
+                                Biocompatibility is evaluated through cytotoxicity testing (ISO 10993-5), dermal sensitisation (ISO 10993-10) and USP Class VI conformity for medical-grade polymers.
+                            </p>
+                        </div>
+
+                        <div class="cert-decoder__edu-card">
+                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_sterilization_title">⚡ Sterilization Protocols</h3>
+                            <p class="cert-decoder__edu-text" data-i18n-html="education.card_sterilization_text">
+                                Initial jewelry must withstand steam autoclave sterilization (121&deg;C to 134&deg;C). Titanium, implant steel,
+                                niobium, BioFlex&reg; body jewelry, and borosilicate glass are autoclave-compatible.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Related Compliance Tools (What Comes Next) -->
+                <section class="cert-decoder__next-steps" id="next-steps-section">
+                    <div class="cert-decoder__section-header">
+                        <h2 class="cert-decoder__section-title" data-i18n="next_steps.section_title">Related Compliance Tools</h2>
+                        <p class="cert-decoder__section-subtitle" data-i18n="next_steps.section_subtitle">
+                            Further verification and compliance monitoring resources for body jewelry and tattoo studio professionals.
                         </p>
                     </div>
 
-                    <div class="cert-decoder__edu-card">
-                        <h3 class="cert-decoder__edu-title">📋 How to Verify Materials</h3>
-                        <p class="cert-decoder__edu-text">
-                            Always request <strong>mill certifications</strong> from suppliers.
-                            These documents prove the material meets specific ASTM or ISO standards.
-                            Legitimate suppliers will provide these without hesitation.
-                        </p>
+                    <div class="cert-decoder__next-steps-grid">
+                        <!-- REACH SVHC Pigment Checker -->
+                        <div class="cert-decoder__next-step-card" id="tool-reach-svhc-checker">
+                            <div class="cert-decoder__next-step-header">
+                                <h3 class="cert-decoder__next-step-title">
+                                    <a href="https://poliinternational.com/reach-svhc-checker/" target="_blank" rel="noopener" class="cert-decoder__next-step-link">
+                                        REACH SVHC Pigment Checker
+                                    </a>
+                                </h3>
+                                <span class="cert-decoder__next-step-badge cert-decoder__next-step-badge--free" data-i18n="next_steps.badge_free">Free</span>
+                            </div>
+                            <p class="cert-decoder__next-step-text" data-i18n="next_steps.checker_desc">
+                                Paste an SDS block and check tattoo ink or body jewellery ingredients against the ECHA SVHC Candidate List.
+                            </p>
+                        </div>
+
+                        <!-- REACH Monitor -->
+                        <div class="cert-decoder__next-step-card" id="tool-reach-monitor">
+                            <div class="cert-decoder__next-step-header">
+                                <h3 class="cert-decoder__next-step-title">
+                                    <a href="https://poliinternational.com/reach-monitor/" target="_top" class="cert-decoder__next-step-link">
+                                        REACH Monitor
+                                    </a>
+                                </h3>
+                                <span class="cert-decoder__next-step-badge cert-decoder__next-step-badge--paid" data-i18n="next_steps.badge_paid">Paid (from 9.50 € trial)</span>
+                            </div>
+                            <p class="cert-decoder__next-step-text" data-i18n="next_steps.monitor_desc">
+                                Email alerts across four EU regulations: REACH SVHC, Biocides, Cosmetics and Medical Devices, with a searchable ECHA Candidate List.
+                            </p>
+                        </div>
+
+                        <!-- REACH Guard -->
+                        <div class="cert-decoder__next-step-card" id="tool-reach-guard">
+                            <div class="cert-decoder__next-step-header">
+                                <h3 class="cert-decoder__next-step-title">
+                                    <a href="https://poliinternational.com/reach-monitor/pro/" target="_top" class="cert-decoder__next-step-link">
+                                        REACH Guard
+                                    </a>
+                                </h3>
+                                <span class="cert-decoder__next-step-badge cert-decoder__next-step-badge--paid" data-i18n="next_steps.badge_paid">Paid (from 9.50 € trial)</span>
+                            </div>
+                            <p class="cert-decoder__next-step-text" data-i18n="next_steps.guard_desc">
+                                Upload an SDS PDF and receive an EU 2020/2081, REACH SVHC and Nickel compliance report.
+                            </p>
+                            <div class="cert-decoder__next-step-note" data-i18n="next_steps.guard_note">
+                                REACH Guard produces a compliance report on an SDS. It is a screening report, not a certificate: read it with the same care this tool teaches.
+                            </div>
+                        </div>
                     </div>
+                </section>
 
-                    <div class="cert-decoder__edu-card">
-                        <h3 class="cert-decoder__edu-title">⚠️ Common Red Flags</h3>
-                        <p class="cert-decoder__edu-text">
-                            Watch for vague terms like "surgical steel" without ASTM F138,
-                            "hypoallergenic" without supporting docs, extremely low prices,
-                            or suppliers who refuse to provide mill certifications.
-                        </p>
-                    </div>
+                <!-- Disclaimer -->
+                <section class="cert-decoder__disclaimer">
+                    <h3 class="cert-decoder__disclaimer-title" data-i18n="disclaimer.title">⚠️ Important Disclaimer</h3>
+                    <p class="cert-decoder__disclaimer-text" data-i18n="disclaimer.text">
+                        This tool provides technical and educational reference data regarding body jewelry material specifications
+                        and safety standards (ASTM, ISO, EN). Always verify material test reports directly with certified manufacturers.
+                        This utility does not constitute medical advice or formal legal certification.
+                    </p>
+                </section>
 
-                    <div class="cert-decoder__edu-card">
-                        <h3 class="cert-decoder__edu-title">✅ Professional Recommended Materials</h3>
-                        <p class="cert-decoder__edu-text">
-                            Professional tattoo and piercing experts recommend specific
-                            materials for initial piercings: ASTM F136 titanium, ASTM F138 steel,
-                            14K/18K gold (nickel-free), niobium, and borosilicate glass.
-                        </p>
-                    </div>
-
-                    <div class="cert-decoder__edu-card">
-                        <h3 class="cert-decoder__edu-title">🔬 Biocompatibility Testing</h3>
-                        <p class="cert-decoder__edu-text">
-                            ISO 10993 series standards test materials for biological safety.
-                            This includes cytotoxicity, sensitization, and irritation tests.
-                            Look for ISO 10993 compliance in medical-grade jewelry.
-                        </p>
-                    </div>
-
-                    <div class="cert-decoder__edu-card">
-                        <h3 class="cert-decoder__edu-title">⚡ Sterilization Compatibility</h3>
-                        <p class="cert-decoder__edu-text">
-                            Body jewelry must withstand autoclave sterilization (121-134°C).
-                            Titanium, steel, niobium, and glass are autoclave-safe.
-                            Acrylic, wood, and some stones are NOT sterilizable.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Disclaimer -->
-            <section class="cert-decoder__disclaimer">
-                <h3 class="cert-decoder__disclaimer-title">⚠️ Important Disclaimer</h3>
-                <p class="cert-decoder__disclaimer-text">
-                    This tool provides general information about material certifications and safety standards.
-                    Always verify certifications directly with suppliers and certification bodies. This tool
-                    does not replace professional judgment or regulatory compliance requirements. Material
-                    safety ratings are based on industry standards (ASTM, ISO). Individual reactions
-                    may vary. When in doubt, consult with a medical professional. Certification information
-                    is updated regularly but may not reflect the most current standards. Always verify
-                    critical information with official sources.
-                </p>
-            </section>
-
-        
-
-</main>
-
-            <!-- MORE TOOLS NAVIGATION -->
-    
-
-
-        <!-- Community Feedback Section -->
-        
-
+            </main>
 
             <!-- Footer Info -->
-            <div class="cert-decoder__footer-info">
-                <p class="cert-decoder__copyright">
-                    © 2025 Poli International - Professional Tattoo & Piercing Supplies
+            <footer class="cert-decoder__footer-info">
+                <p class="cert-decoder__copyright" data-i18n-html="footer.copyright">
+                    &copy; 2026 Poli International, Professional Body Jewelry Standards
                 </p>
-                <p class="cert-decoder__legal">
-                    Material certification information provided for educational purposes.
-                    Always verify certifications with suppliers and regulatory bodies.
+                <p class="cert-decoder__legal" data-i18n="footer.legal">
+                    Material certification data provided for educational and studio reference purposes.
                 </p>
-            </div>
-        </footer>
+            </footer>
+        </div>
+    </div><!-- End tab-tool -->
 
+    <!-- Tab Content: Documentation -->
+    <div id="tab-docs" class="wrapper-tab-content doc-tab-wrapper" style="display:none;">
+        <iframe src="./documentation.html" class="doc-tab-iframe" title="Material Certification Documentation" data-i18n-title="tabs.docs_iframe_title"></iframe>
+    </div>
+
+    <!-- Tab Content: Embed -->
+    <div id="tab-embed" class="wrapper-tab-content embed-tab-wrapper" style="display:none;">
+        <div class="embed-tab-card">
+            <h2 class="embed-tab-title" data-i18n="embed_tab.title">Embed This Tool</h2>
+            <p class="embed-tab-desc" data-i18n="embed_tab.desc">Copy the snippet below to embed the Material Certification Checker directly on your website:</p>
+            <textarea id="tabEmbedTextarea" class="embed-tab-textarea" readonly>&lt;iframe src="https://poliinternational.com/tools/material-certification-checker/index.html" width="100%" height="800" frameborder="0" style="border:1px solid var(--color-border); border-radius:12px;" title="Material Certification Checker"&gt;&lt;/iframe&gt;</textarea>
+            <button type="button" id="tabEmbedCopyBtn" class="embed-tab-button" data-i18n="embed_tab.copy_btn">Copy Code</button>
+        </div>
     </div>
 
     <!-- Embed Modal -->
-    
-    </div>
-
-    <!-- JavaScript -->
-    
-    
-    
-    
-
-
-
-
-
-    </main>
     <div id="embedModal" class="modal" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" style="text-align: center;">🎁 Use This Tool FREE on Your Website!</h2>
+                <h2 class="modal-title" data-i18n="embed_modal.title">Use This Tool On Your Website</h2>
                 <span class="modal-close" id="modalClose">&times;</span>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
-                    <h3>📋 Copy Embed Code</h3>
+                    <h3 data-i18n="embed_modal.section_title">Copy Embed Code</h3>
                     <div class="code-container">
                         <textarea id="embedCode" class="embed-code-textarea" readonly></textarea>
-                        <button id="copyEmbedCode" class="btn btn--primary btn--small">📋 Copy Code</button>
+                        <button type="button" id="copyEmbedCode" class="btn btn--primary btn--small" data-i18n="embed_modal.copy_btn">Copy Code</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/tools/material-certification-checker/js/certification-data.js"></script>
-    <script src="/tools/material-certification-checker/js/material-data.js"></script>
-    <script src="/tools/material-certification-checker/js/decoder.js"></script>
-    <script src="/tools/material-certification-checker/js/feedback.js"></script>
-    <script src="/tools/material-certification-checker/js/common.js"></script>
 
-    </main>
-    </div><!-- End tab-tool -->
-
-    <!-- Tab Content: Documentation -->
-    <div id="tab-docs" class="wrapper-tab-content" style="display:none;padding:20px;">
-        <iframe src="./documentation.html" style="width:100%;height:800px;border:none;"></iframe>
-    </div>
-
-    <!-- Tab Content: Embed -->
-    <div id="tab-embed" class="wrapper-tab-content" style="display:none;padding:20px;text-align:center;">
-        <div style="background:#1a1a1a;padding:2rem;border-radius:8px;max-width:600px;margin:0 auto;">
-            <h2 style="color:#3B82F6;">Embed This Tool</h2>
-            <p style="color:#ccc;">Copy the code below:</p>
-            <textarea style="width:100%;height:100px;background:#0f0f0f;color:#10B981;border:1px solid #333;padding:1rem;" readonly>&lt;iframe src="https://poliinternational.com/tools/material-certification-checker/index.html" width="100%" height="1000" frameborder="0"&gt;&lt;/iframe&gt;</textarea>
-            <button onclick="navigator.clipboard.writeText(this.previousElementSibling.value);alert('Copied!')" style="margin-top:1rem;padding:0.75rem 1.5rem;background:#3B82F6;color:#fff;border:none;border-radius:6px;cursor:pointer;">Copy Code</button>
-        </div>
-    </div>
-
-    <script src="/tools/material-certification-checker/js/certification-data.js"></script>
-    <script src="/tools/material-certification-checker/js/material-data.js"></script>
-    <script src="/tools/material-certification-checker/js/decoder.js"></script>
-    <script src="/tools/material-certification-checker/js/common.js"></script>
-    <script>
-    // Tool Tabs Functionality - Wait for page to load
-    window.addEventListener('load', function() {
-        document.querySelectorAll('.tool-tab').forEach(function(tab) {
-            tab.addEventListener('click', function() {
-                // Update button styles
-                document.querySelectorAll('.tool-tab').forEach(function(t) {
-                    t.style.background = '#222';
-                    t.style.color = '#ccc';
-                });
-                this.style.background = '#3B82F6';
-                this.style.color = '#fff';
-                
-                // Show correct content
-                var tabName = this.getAttribute('data-tab');
-                document.querySelectorAll('.wrapper-tab-content').forEach(function(content) {
-                    content.style.display = 'none';
-                });
-                document.getElementById('tab-' + tabName).style.display = 'block';
-            });
-        });
-    });
-    </script>
-<div style="text-align:center;padding:1rem;opacity:0.6;font-size:0.8rem;font-family:sans-serif;">
-    <a href="https://poliinternational.com/tools/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Powered by Poli International</a>
-</div>
-    <div class="powered-by-footer" style="text-align: center; padding: 2rem 1rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 2rem; background: rgba(0,0,0,0.2);">
-        <a href="https://poliinternational.com/material-certification-checker/" target="_blank" rel="noopener" style="color: #3B82F6; text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+    <!-- Powered by Footer -->
+    <div class="powered-by-footer">
+        <a href="./index.html" class="powered-by-link" data-i18n="footer.powered_by">
             POWERED BY POLI INTERNATIONAL
         </a>
     </div>
+
+    <!-- Scripts -->
+    <script src="./js/i18n.js"></script>
+    <script src="./js/i18n/fr.js"></script>
+    <script src="./js/i18n/it.js"></script>
+    <script src="./js/i18n/de.js"></script>
+    <script src="./js/i18n/es.js"></script>
+    <script src="./js/i18n/pt.js"></script>
+    <script src="./js/i18n/nl.js"></script>
+    <script src="./js/library.js"></script>
+    <script src="./js/mixer.js"></script>
+    <script src="./js/reference-studio.js"></script>
+    <script src="./js/studio-vault.js"></script>
+    <script src="./js/certification-data.js"></script>
+    <script src="./js/material-data.js"></script>
+    <script src="./js/v2-data.js"></script>
+    <script src="./js/v2-features.js"></script>
+    <script src="./js/decoder.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+    // Tab Navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof window.applyI18n === 'function') {
+            window.applyI18n();
+        }
+
+        const tabs = document.querySelectorAll('.tool-tab');
+        const contents = document.querySelectorAll('.wrapper-tab-content');
+        
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                tabs.forEach(function(t) {
+                    t.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                contents.forEach(function(content) {
+                    content.style.display = 'none';
+                });
+                
+                const targetContent = document.getElementById('tab-' + targetTab);
+                if (targetContent) {
+                    targetContent.style.display = 'block';
+                }
+            });
+        });
+
+        // Tab Embed Copy Button
+        const tabCopyBtn = document.getElementById('tabEmbedCopyBtn');
+        const tabTextarea = document.getElementById('tabEmbedTextarea');
+        if (tabCopyBtn && tabTextarea) {
+            tabCopyBtn.addEventListener('click', function() {
+                tabTextarea.select();
+                navigator.clipboard.writeText(tabTextarea.value).then(function() {
+                    const orig = tabCopyBtn.textContent;
+                    tabCopyBtn.textContent = typeof window.t === 'function' ? window.t('embed_tab.copied') : '✓ Copied!';
+                    setTimeout(function() { tabCopyBtn.textContent = orig; }, 2000);
+                }).catch(function() { document.execCommand('copy'); }); // refused in an iframe: text is already selected
+            });
+        }
+    });
+    </script>
 </body>
 </html>
