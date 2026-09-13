@@ -101,12 +101,12 @@ Poli International
     },
     {
       id: 'en-1811',
-      code: 'EN 1811:2011+A1:2015',
+      code: 'EN 1811:2023',
       title: 'Reference test method for release of nickel from all post assemblies inserted into pierced parts of the human body',
       category: 'chemical',
       organization: 'CEN / European Union',
-      scope: 'Official reference method for measuring migration of nickel in synthetic sweat under EU REACH Regulation Entry 27.',
-      biocompatibility: 'Legal threshold limit 0.2 µg/cm²/week for initial piercings, 0.5 µg/cm²/week for skin contact'
+      scope: 'Reference method for measuring nickel release in artificial sweat (one week, 30 °C) against REACH Annex XVII entry 27. Replaced EN 1811:2011+A1:2015 in 2023.',
+      biocompatibility: 'REACH limits: below 0.2 µg/cm²/week for posts in pierced parts of the body (fresh or healed), 0.5 µg/cm²/week for other prolonged skin contact'
     }
   ];
 
