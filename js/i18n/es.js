@@ -1,7 +1,11 @@
+/**
+ * Internationalization Dictionary - ES
+ * Material Certification Checker
+ */
 (function() {
   'use strict';
 
-  const es = {
+  const DICTIONARY = {
   "app": {
     "title": "Verificador de Certificación de Materiales",
     "subtitle": "Herramienta técnica de evaluación y verificación para piercers profesionales y estudios de joyería corporal",
@@ -186,7 +190,9 @@
     "category_polymers_glass": "Polímeros Médicos y Vidrio",
     "category_organics_minerals": "Materiales Orgánicos y Minerales (Solo Cicatrizados)",
     "category_filter_notice": "Filtro de Categoría: {category} - Desplegables restringidos para evitar comparaciones no válidas entre categorías.",
-    "category_filter_all": "Todos los Materiales"
+    "category_filter_all": "Todos los Materiales",
+    "category_locked_title": "Categoría bloqueada:",
+    "category_locked_desc": "Las opciones 2 y 3 solo muestran materiales del mismo tipo, para no comparar materiales distintos."
   },
   "reference": {
     "title": "Normas de Certificación y Guía de Biocompatibilidad",
@@ -388,11 +394,7 @@
       "sterilization": "Autoclave de vapor a 134°C, calor seco, plasma de gas",
       "important_notes": "Debe cumplir obligatoriamente la especificación ELI (Extra Low Interstitial) con contenido reducido de oxígeno. El titanio comercial Grado 5 no es apto para primera puesta.",
       "verification_method": "Certificado de colada completo (Mill Test Report) con número de colada y composición química",
-      "common_uses": [
-        "Implantes quirúrgicos",
-        "Joyería de primera puesta",
-        "Placas y tornillos óseos"
-      ]
+      "common_uses": "Barras rectas, labrets, aros, bananas y terminales para primera puesta."
     },
     "ASTM_F138": {
       "code": "ASTM F138",
@@ -404,11 +406,7 @@
       "sterilization": "Autoclave de vapor, calor seco, radiación gamma",
       "important_notes": "Debe ser de grado implantable refundido al vacío (VAR/LVM). El acero 316L estándar no cumple los requisitos médicos de pureza e inclusiones.",
       "verification_method": "Certificado de colada con especificación ASTM F138 y número de colada",
-      "common_uses": [
-        "Clavos intramedulares",
-        "Grapas quirúrgicas",
-        "Joyería de piercing"
-      ]
+      "common_uses": "Herraduras, barras, espirales y aros para perforación inicial."
     },
     "ASTM_F1295": {
       "code": "ASTM F1295",
@@ -436,11 +434,7 @@
       "sterilization": "Autoclave de vapor a 134°C",
       "important_notes": "Metal elemental puro con reactividad tisular nula. Permite anodizado en vivos colores sin recubrimientos superficiales.",
       "verification_method": "Certificado de análisis químico del lote de niobio",
-      "common_uses": [
-        "Implantes neurológicos",
-        "Marcapasos",
-        "Joyería de piercing especializada"
-      ]
+      "common_uses": "Joyería para clientes alérgicos al níquel que prefieren el aspecto del acero."
     },
     "ASTM_F1586": {
       "code": "ASTM F1586",
@@ -512,10 +506,7 @@
       "sterilization": "No aplicable (norma de ensayos)",
       "important_notes": "Cualquier polímero médico o aleación destinado a primera puesta debe poseer ensayos favorables según ISO 10993-5 (Grado 0).",
       "verification_method": "Informes de ensayos biológicos certificados emitidos por laboratorios GLP/ISO 17025",
-      "common_uses": [
-        "Acreditación de implantes médicos",
-        "Certificación biológica de polímeros para joyería"
-      ]
+      "common_uses": "Certificación de biomateriales, polímeros, metales y cerámicas."
     },
     "ISO_13485": {
       "code": "ISO 13485",
@@ -527,10 +518,7 @@
       "sterilization": "Validación de procesos de esterilización",
       "important_notes": "Un fabricante certificado bajo ISO 13485 asegura trazabilidad documental de cada lote y control estricto de materias primas.",
       "verification_method": "Certificado de auditoría de sistema emitido por organismo notificado",
-      "common_uses": [
-        "Fabricación de dispositivos médicos",
-        "Producción de joyería corporal médica"
-      ]
+      "common_uses": "Producción de joyería corporal estéril, agujas e instrumental de estudio."
     },
     "EN_1441": {
       "code": "EN 1441",
@@ -564,59 +552,59 @@
   },
   "materials": {
     "titanium_grade_23": {
-      "name": "Titanium Grade 23 (Ti-6Al-4V ELI)",
-      "biocompatibility": "Excellent - ISO 10993 compliant",
-      "composition": "Titanium alloy: Ti-6Al-4V with extra low interstitials",
-      "verification_tips": "Always request mill certification showing ASTM F136. Verify it says \"Grade 23\" or \"Ti-6Al-4V ELI\" - NOT \"Grade 5\".",
-      "maintenance": "Easy - wash with mild soap and water. Anodized colors are permanent but can fade with friction.",
+      "name": "Titanio Grado 23 (Ti-6Al-4V ELI)",
+      "biocompatibility": "Excelente - conforme a ISO 10993",
+      "composition": "Aleación de titanio: Ti-6Al-4V con niveles extra bajos de intersticiales (ELI)",
+      "verification_tips": "Exija siempre el certificado de colada (MTR) que demuestre ASTM F136. Compruebe que indique 'Grado 23' o 'Ti-6Al-4V ELI', NUNCA 'Grado 5'.",
+      "maintenance": "Fácil - lavar con agua tibia y jabón neutro. Los colores anodizados son duraderos pero pueden desgastarse por fricción.",
       "common_names": [
-        "Implant Grade Titanium",
+        "Titanio de grado implante",
         "ASTM F136",
-        "Grade 23",
+        "Grado 23",
         "Ti-6Al-4V ELI"
       ],
       "suitable_for": [
-        "initial piercings",
-        "healed piercings",
-        "sensitive skin",
-        "all body areas",
-        "long-term wear"
+        "Primeras puestas",
+        "Piercings cicatrizados",
+        "Pieles sensibles",
+        "Todas las zonas del cuerpo",
+        "Uso prolongado"
       ],
       "not_suitable_for": [],
       "color_options": [
-        "natural grey",
-        "anodized colors (gold, blue, purple, etc.)"
+        "Gris natural",
+        "Colores anodizados (dorado, azul, morado, etc.)"
       ],
       "pros": [
-        "Hypoallergenic and nickel-free",
-        "Lightweight and comfortable",
-        "Strong and durable",
-        "Can be anodized for color",
-        "Excellent biocompatibility",
-        "Industry gold standard"
+        "Hipoalergénico y sin níquel",
+        "Ligero y muy cómodo",
+        "Resistente y duradero",
+        "Anodizable en diversos colores",
+        "Excelente biocompatibilidad",
+        "Estándar de oro en la industria"
       ],
       "cons": [
-        "Cannot be soldered (requires specialized welding)",
-        "Limited to certain designs",
-        "Slightly higher cost than steel",
-        "Anodized colors can fade over time"
+        "No se puede soldar convencionalmente (requiere soldadura especializada)",
+        "Limitado a ciertos diseños",
+        "Coste ligeramente superior al acero",
+        "Los colores anodizados pueden atenuarse con el tiempo"
       ],
       "red_flags": [
-        "Unusually cheap \"implant grade\" titanium",
-        "No mill certification provided",
+        "Titanio 'de grado implante' anormalmente barato",
+        "Sin certificado de colada disponible",
         "Listed as \"Grade 5\" or \"ISO 5832-3\" (a different specification from F136)",
-        "Generic \"titanium\" without grade specification",
-        "Supplier refuses documentation"
+        "'Titanio' genérico sin especificación de grado",
+        "El proveedor rehúsa entregar documentación"
       ],
       "sterilization_methods": [
         "Autoclave",
-        "Chemical sterilization"
+        "Esterilización química"
       ]
     },
     "titanium_grade_5": {
-      "name": "Titanium Grade 5 (Ti-6Al-4V)",
+      "name": "Titanio Grado 5 (Ti-6Al-4V)",
       "biocompatibility": "Specified for surgical implants; most piercing guidance names its extra-low-interstitial version, ASTM F136 (Grade 23)",
-      "composition": "Titanium alloy: Ti-6Al-4V (higher oxygen content than Grade 23)",
+      "composition": "Aleación de titanio: Ti-6Al-4V (mayor contenido de oxígeno que el Grado 23)",
       "verification_tips": "Ask which specification the mill certificate names. ISO 5832-3 and ASTM F1472 are genuine surgical implant specifications for Ti-6Al-4V, but not F136 (Grade 23, ELI), which has the lower oxygen limit most piercing guidance names. ASTM B348 is an industrial bar specification with no implant requirements. \"Implant grade\" with no named specification proves nothing.",
       "maintenance": "Same care as other titanium jewellery: mild soap and water",
       "common_names": [
@@ -628,12 +616,12 @@
         "jewellery sold as \"implant grade\" when you require ASTM F136"
       ],
       "color_options": [
-        "natural grey"
+        "Gris natural"
       ],
       "pros": [
-        "Stronger than Grade 23",
-        "Less expensive",
-        "Nickel-free"
+        "Más resistente que el Grado 23",
+        "Más económico",
+        "Sin níquel"
       ],
       "cons": [
         "Higher oxygen content (0.20% vs 0.13%)",
@@ -641,105 +629,105 @@
         "Not the grade most piercing guidance names (ASTM F136)"
       ],
       "red_flags": [
-        "Grade 5 marketed as \"implant grade\"",
-        "Seller shows ISO 5832-3 instead of ASTM F136",
-        "Very cheap \"titanium\" jewelry",
-        "Misleading marketing language"
+        "Grado 5 comercializado como 'grado implante'",
+        "El vendedor muestra ISO 5832-3 en vez de ASTM F136",
+        "Joyería de 'titanio' sumamente barata",
+        "Afirmaciones comerciales engañosas"
       ],
       "sterilization_methods": [
         "Autoclave"
       ]
     },
     "surgical_steel_316lvm": {
-      "name": "Surgical Steel 316LVM",
-      "biocompatibility": "Good - Contains nickel (13-15%)",
-      "composition": "316L stainless steel with vacuum melting (LVM) for higher purity",
-      "verification_tips": "Must be ASTM F138 certified. Regular \"316L\" or generic \"surgical steel\" is NOT sufficient. Request mill certification showing F138 compliance and \"LVM\" designation.",
-      "maintenance": "Clean regularly. Can tarnish slightly. Polish with jewelry cloth.",
+      "name": "Acero Quirúrgico 316LVM",
+      "biocompatibility": "Buena - Contiene níquel (13-15%)",
+      "composition": "Acero inoxidable 316L refundido al vacío (LVM) para máxima pureza",
+      "verification_tips": "Debe estar certificado bajo ASTM F138. El acero '316L' convencional o el 'acero quirúrgico' genérico NO es suficiente. Solicite el certificado de colada con norma F138 y designación 'LVM'.",
+      "maintenance": "Limpiar periódicamente. Puede deslustrarse ligeramente. Pulir con paño de joyería.",
       "common_names": [
         "ASTM F138",
         "316LVM",
-        "Implant Grade Steel",
-        "Surgical Stainless Steel"
+        "Acero de grado implante",
+        "Acero inoxidable quirúrgico"
       ],
       "suitable_for": [
-        "healed piercings",
-        "short-term wear"
+        "Piercings cicatrizados",
+        "Uso a corto plazo"
       ],
       "not_suitable_for": [
-        "known nickel allergy",
-        "very sensitive skin"
+        "Alergia confirmada al níquel",
+        "Pieles altamente reactivas"
       ],
       "color_options": [
-        "silver/polished",
-        "black (PVD coating)"
+        "Plateado pulido",
+        "Negro (recubrimiento PVD)"
       ],
       "pros": [
-        "Affordable",
-        "Widely available",
-        "Strong and durable",
-        "High polish achievable",
-        "Can be autoclaved"
+        "Económico",
+        "Ampliamente disponible",
+        "Fuerte y resistente",
+        "Permite pulido espejo de alta calidad",
+        "Autoclavable"
       ],
       "cons": [
-        "Contains 13-15% nickel",
-        "Can cause allergic reactions",
-        "Heavier than titanium",
-        "Not ideal for initial piercings",
-        "EU restrictions on nickel release"
+        "Contiene 13-15% de níquel",
+        "Puede inducir reacciones alérgicas",
+        "Más pesado que el titanio",
+        "No recomendado para primeras puestas",
+        "Sujeto a restricciones europeas de liberación de níquel"
       ],
       "red_flags": [
-        "Just says \"surgical steel\" without ASTM F138",
-        "Listed as \"316L\" (without LVM)",
-        "304 stainless steel (completely wrong)",
-        "No certification available",
-        "Seller cannot explain difference between 316L and 316LVM"
+        "Solo indica 'acero quirúrgico' sin mencionar ASTM F138",
+        "Catalogado como '316L' (sin LVM)",
+        "Acero 304 (totalmente inadecuado)",
+        "Sin certificado disponible",
+        "El vendedor no distingue entre 316L y 316LVM"
       ],
       "sterilization_methods": [
         "Autoclave",
-        "Chemical sterilization"
+        "Esterilización química"
       ]
     },
     "surgical_steel_316l": {
-      "name": "Surgical Steel 316L (Non-implant)",
-      "biocompatibility": "Fair - Contains nickel, lower purity than 316LVM",
-      "composition": "316L stainless steel (NOT implant grade)",
-      "verification_tips": "This is NOT the same as ASTM F138. If seller claims \"surgical steel\" but cannot provide F138 certification, it is likely this lower grade.",
-      "maintenance": "Clean regularly. Can tarnish and corrode.",
+      "name": "Acero Quirúrgico 316L (No implantable)",
+      "biocompatibility": "Aceptable - Contiene níquel, menor pureza que el 316LVM",
+      "composition": "Acero inoxidable 316L (NO es de grado implante)",
+      "verification_tips": "NO es lo mismo que ASTM F138. Si el vendedor afirma 'acero quirúrgico' pero no puede certificar F138, con total seguridad se trata de este grado inferior comercial.",
+      "maintenance": "Limpiar con frecuencia. Puede deslustrarse y corroerse.",
       "common_names": [
         "316L",
-        "Stainless Steel",
-        "Surgical Steel"
+        "Acero inoxidable",
+        "Acero quirúrgico comercial"
       ],
       "suitable_for": [
-        "healed piercings (non-sensitive)",
-        "fashion jewelry"
+        "Piercings cicatrizados (piel no reactiva)",
+        "Bisutería y moda"
       ],
       "not_suitable_for": [
-        "initial piercings",
-        "sensitive skin",
-        "nickel allergy",
-        "long-term wear"
+        "Primeras puestas",
+        "Piel sensible",
+        "Alergia al níquel",
+        "Uso continuo prolongado"
       ],
       "color_options": [
-        "silver"
+        "Plateado"
       ],
       "pros": [
-        "Very affordable",
-        "Widely available"
+        "Muy económico",
+        "Muy fácil de encontrar"
       ],
       "cons": [
-        "NOT implant grade",
-        "Higher impurities than 316LVM",
-        "Higher nickel release",
-        "Can cause irritation",
-        "Not professionally recommended"
+        "NO es grado implante",
+        "Mayor nivel de impurezas que el 316LVM",
+        "Mayor tasa de liberación de níquel",
+        "Puede causar dermatitis e irritación",
+        "Desaconsejado en estudios profesionales"
       ],
       "red_flags": [
-        "Marketed as \"surgical steel\" without ASTM F138",
-        "Very cheap pricing",
-        "No certification provided",
-        "Seller claims \"all surgical steel is the same\""
+        "Vendido como 'acero quirúrgico' sin norma ASTM F138",
+        "Precios excesivamente bajos",
+        "Ausencia absoluta de certificados",
+        "El vendedor alega que 'todo el acero quirúrgico es idéntico'"
       ],
       "sterilization_methods": [
         "Autoclave"
@@ -986,7 +974,57 @@
     "tag_trace": "[TRAZABILIDAD]",
     "tag_market": "[MARKETING]",
     "tag_established": "[DEMOSTRADO]",
-    "tag_critical_gap": "[BRECHA CRÍTICA]"
+    "tag_critical_gap": "[BRECHA CRÍTICA]",
+    "level_0_title": "NIVEL 0: AFIRMACIÓN COMERCIAL NO VERIFICADA (CERO PRUEBA TÉCNICA)",
+    "level_1_title": "NIVEL 1: ESPECIFICACIÓN AMBIGUA / DENOMINACIÓN DE CATÁLOGO",
+    "level_2_title": "NIVEL 2: NORMA CITADA SIN TRAZABILIDAD DE COLADA",
+    "level_3_title": "NIVEL 3: NORMA PLENAMENTE DOCUMENTADA Y TRAZABLE",
+    "level_0_desc": "Afirmaciones publicitarias, descripciones de catálogo y términos llamativos sin norma metalúrgica específica ni número de colada.",
+    "level_1_desc": "Menciona una aleación o grado reconocido (ej. Ti-6Al-4V, 316LVM) pero omite la norma quirúrgica aplicable y el certificado de acería.",
+    "level_2_desc": "Cita formalmente una norma publicada para implantes (ej. ASTM F136, ISO 5832-1) pero carece de un número de colada (MTR) que vincule la pieza al lote fundido.",
+    "level_3_desc": "Estándar de excelencia: Certificado de acería completo (EN 10204 3.1) con composición química exacta, propiedades mecánicas y número de colada coincidente.",
+    "diagram_level_prefix": "NIVEL",
+    "diagram_level_0_title": "Afirmación Comercial",
+    "diagram_level_0_sub": "Sin normas, sin n° colada",
+    "diagram_level_1_title": "Sigla de Catálogo",
+    "diagram_level_1_sub": "Nombre genérico de grado",
+    "diagram_level_2_title": "Norma Citada",
+    "diagram_level_2_sub": "ASTM/ISO, falta n° colada",
+    "diagram_level_3_title": "Certificado MTR",
+    "diagram_level_3_sub": "ASTM + N° colada + Química",
+    "tier_analyzed_pointer": "NIVEL DEL TEXTO ANALIZADO",
+    "market_implant_grade": "Grado Implante (Término comercial no regulado)",
+    "market_surgical_steel": "Acero Quirúrgico (Frase meramente publicitaria)",
+    "market_hypoallergenic": "Hipoalergénico (Afirmación comercial no demostrada)",
+    "market_medical_grade": "Grado Médico (Reivindicación comercial genérica)",
+    "market_nickel_free": "Sin Níquel (Reivindicación de composición)",
+    "market_autoclave_safe": "Apto para Autoclave (Afirmación térmica)",
+    "market_pure_titanium": "Titanio Puro (Designación de grado ambigua)",
+    "trace_heat_number": "Número de colada / Heat Number citado",
+    "trace_batch_lot": "Número de lote de producción citado",
+    "establishes_standards": "Afirma formalmente el cumplimiento de normas técnicas publicadas: {standards}.",
+    "establishes_alloys": "Especifica una aleación o formulación química del material: {alloys}.",
+    "establishes_traceability": "Aporta identificadores de trazabilidad: {markers}.",
+    "establishes_none": "NINGUNO. El texto se compone exclusivamente de adjetivos promocionales y no acredita ningún dato técnico, químico ni biológico.",
+    "gap_melt_traceability": "Trazabilidad de Colada: Carece de número de colada que vincule esta pieza con un lote de fundición o análisis químico de acería específico.",
+    "gap_implant_spec": "Especificación de Implante: Expresiones como «grado implante» o «acero quirúrgico» carecen de valor legal o metalúrgico sin citar normas ASTM/ISO.",
+    "gap_eli_oxygen": "Verificación de Oxígeno ELI: El titanio Grado 5 (0,20% oxígeno) suele comercializarse como «titanio» genérico. Solo la norma ASTM F136 garantiza el límite de elementos intersticiales extra bajos (ELI ≤ 0,13%).",
+    "gap_var_remelt": "Refundición por Arco al Vacío (VAR): El 316L comercial se funde al aire y presenta mayores niveles de carbono/azufre e inclusiones no metálicas que el ASTM F138 316LVM refundido al vacío.",
+    "gap_allergen_proof": "Prueba Química de Alérgenos: La palabra «hipoalergénico» no detalla el contenido real de níquel, el grosor del chapado ni los metales base del sustrato.",
+    "gap_doc_physical_proof": "Prueba Documental Física: Una afirmación del distribuidor o una factura no equivale a un certificado de colada (MTR). La verificación verídica requiere el informe del laboratorio de acería.",
+    "proof_titanium": "Certificado de colada original (MTR) según EN 10204 3.1 que acredite ASTM F136 (Ti-6Al-4V ELI), Oxígeno ≤ 0,13%, Hierro ≤ 0,25%, con número de colada grabado en el empaque.",
+    "proof_steel": "Certificado de colada con norma ASTM F138 (Barras/Alambres Grado 2), 316LVM refundido al vacío, Carbono ≤ 0,030%, Azufre ≤ 0,010%, con número de lote de colada.",
+    "proof_polymer": "Certificado de reactividad biológica USP Clase VI + informe de citotoxicidad ISO 10993-5 para resina PP-R de grado médico.",
+    "proof_niobium": "Certificado de acería que demuestre niobio sin alear ASTM F2229 (≥ 99,85% Nb) con bajos niveles intersticiales.",
+    "proof_generic": "Certificado oficial de colada (MTR) emitido por la acería con análisis químico, ensayos mecánicos e identificador de lote de fusión.",
+    "copy_summary_title": "VERIFICADOR DE CERTIFICACIONES DE MATERIALES - ANÁLISIS DEL TEXTO",
+    "copy_summary_date": "Fecha:",
+    "copy_summary_phrasing": "Texto evaluado:",
+    "copy_summary_tier": "Nivel de evidencia:",
+    "copy_summary_establishes": "LO QUE ESTE TEXTO DEMUESTRA REALMENTE:",
+    "copy_summary_gaps": "LO QUE ESTE TEXTO NO DEMUESTRA (LA CARENCIA CRÍTICA):",
+    "copy_summary_proof": "DOCUMENTO DE PRUEBA FÍSICA EXIGIDO:",
+    "trace_mill_cert": "Certificado de fábrica (MTR) citado"
   },
   "supplier_questions": {
     "title": "Generador de cuestionarios para proveedores",
@@ -1139,7 +1177,10 @@
     "q_commercial_316l_0_unsat": "Presentar el 316L comercial o titanio Grado 5 como \"grado implante\" sin aval documental ASTM F136/F138.",
     "q_commercial_316l_1_q": "¿En caso de comercializarse para piercing, restringe el proveedor su uso a perforaciones consolidadas y no al piercing inicial?",
     "q_commercial_316l_1_sat": "Pauta clara reconociendo que los metales comerciales no están recomendados por los estándares profesionales para canales de heridas abiertas.",
-    "q_commercial_316l_1_unsat": "Aconsejar metales de uso industrial para heridas abiertas recientes."
+    "q_commercial_316l_1_unsat": "Aconsejar metales de uso industrial para heridas abiertas recientes.",
+    "q_astm_f136_4_q": "¿Todas las barras con rosca cuentan con rosca interna o diseño sin rosca a presión (sin roscas macho expuestas en la zona de contacto con la piel)?",
+    "q_astm_f136_4_sat": "Confirmación de que ninguna rosca externa entra en contacto con la fístula tisular; todas las barras son lisas con roscado hembra interior o pasador a presión.",
+    "q_astm_f136_4_unsat": "Roscado externo en la barra de contacto que lacera el canal de cicatrización durante la colocación."
   },
   "claim_matrix": {
     "title": "Matriz de afirmaciones y evidencias",
@@ -1208,8 +1249,8 @@
     "item_pure_titanium_action": "Aclare si es ASTM F67 (titanio puro no aleado) o ASTM F136 (aleación Ti-6Al-4V ELI). Ambos son seguros si están certificados."
   },
   "studio_record": {
-    "banner_badge": "[REGISTRO OFICIAL DE CUMPLIMIENTO DEL ESTUDIO]",
-    "sheet_title": "Certificado de Verificación de Lote de Material",
+    "banner_badge": "[REGISTRO DE RECEPCIÓN DEL ESTUDIO]",
+    "sheet_title": "Registro de recepción de lote de material",
     "record_id_label": "ID del Registro:",
     "date_label": "Fecha:",
     "btn_print": "🖨️ Imprimir para Archivo de Proveedores",
@@ -1236,7 +1277,12 @@
     "signoff_sig": "Firma del Inspector: _________________________________________",
     "signoff_date": "Fecha de Inspección: __________________",
     "signoff_folder": "Carpeta Física del Estudio: [ ] Certificados de Materiales 2026",
-    "toast_record_copied": "¡Registro copiado!"
+    "toast_record_copied": "¡Registro copiado!",
+    "title": "Registros del estudio",
+    "subtitle": "Guarda registros fechados de recepción de materiales para tu archivo de proveedores. Todo se queda en este navegador: sin cuenta, no se envía nada.",
+    "btn_new_inspection": "➕ Nuevo registro de recepción",
+    "btn_clear_records": "🗑️ Borrar registros",
+    "saved_records": "Registros guardados"
   },
   "companion": {
     "title": "Herramientas especializadas de cumplimiento para arte corporal",
@@ -1323,24 +1369,53 @@
     "select_hint": "Seleccione al menos 2 materiales para comparar sus especificaciones técnicas certificadas.",
     "banner_badge": "[COMPARATIVA DE NORMAS CERTIFICADAS]",
     "title": "Especificaciones Certificadas Frente a Frente",
-    "subtitle": "Compara parámetros técnicos certificados bajo estándares de ensayo idénticos. Sin clasificaciones subjetivas ni etiquetas de mejor/peor.",
-    "btn_print": "🖨️ Imprimir Comparativa",
+    "subtitle": "Compara parámetros técnicos certificados bajo estándares idénticos de ensayo. Sin clasificaciones subjetivas ni etiquetas de mejor/peor.",
+    "btn_print": "🖨️ Imprimir Comparación",
     "col_parameter": "Parámetro Normativo Técnico",
     "tag_spec": "[ESPECIFICACIÓN]",
-    "row_governing_standard": "Norma de Implante Reguladora",
-    "row_certified_composition": "Composición Química Certificada",
+    "row_governing_standard": "Norma de Implante de Referencia",
+    "row_certified_composition": "Especificación Química Certificada",
     "row_melting_process": "Método de Fusión y Procesamiento",
     "row_biocompatibility": "Ensayo de Biocompatibilidad Certificado",
     "row_autoclave": "Tolerancia Térmica en Autoclave de Vapor",
     "row_traceability": "Unidad Obligatoria de Trazabilidad",
     "row_surface_finish": "Especificación de Acabado Superficial",
-    "row_tissue_boundary": "Contacto Validado con Tejido Corporal"
+    "row_tissue_boundary": "Contacto Tisular Validado",
+    "notice_min_two": "Seleccione al menos 2 materiales para comparar sus especificaciones técnicas certificadas.",
+    "badge": "[COMPARACIÓN DE NORMAS CERTIFICADAS]",
+    "th_parameter": "Parámetro Técnico Normativo",
+    "tag_specification": "[ESPECIFICACIÓN]",
+    "footer_note": "Nota Metodológica: Las especificaciones reflejan las ediciones vigentes de ASTM F136, ASTM F138, ASTM F2229, ISO 10993 y USP Clase VI. En los estudios de perforación, los protocolos exigen la verificación independiente del certificado de acería (MTR) coincidente con el número de colada.",
+    "row_biocompatibility_standard": "Prueba de Biocompatibilidad Certificada",
+    "row_autoclave_thermal_limit": "Tolerancia Térmica en Autoclave de Vapor",
+    "row_traceability_unit": "Unidad de Trazabilidad Exigida",
+    "row_surface_finish_spec": "Especificación de Acabado Superficial",
+    "mat_titanium_grade_23_biocompatibility_standard": "Cumple con ISO 10993 de citotoxicidad y sensibilización; no inmunogénico",
+    "mat_titanium_grade_23_tissue_boundary": "Canal tisular subdérmico, punción inicial de herida, contacto óseo/mucoso",
+    "mat_titanium_grade_5_biocompatibility_standard": "El mayor oxígeno intersticial genera reactividad celular aumentada en heridas recientes",
+    "mat_titanium_grade_5_tissue_boundary": "Aplicaciones industriales y aeroespaciales; hardware ortopédico (no apto para fístula de piercing recién hecho)",
+    "mat_surgical_steel_316lvm_biocompatibility_standard": "Supera ISO 10993; contiene 13-15% de níquel metalúrgico (alérgeno potencial para personas sensibilizadas)",
+    "mat_surgical_steel_316lvm_tissue_boundary": "Implante quirúrgico, canal tisular cicatrizado, perforación inicial (en personas no alérgicas al níquel)",
+    "mat_surgical_steel_316l_biocompatibility_standard": "Su mayor proporción de microinclusiones eleva la susceptibilidad a la corrosión por picaduras en fluidos corporales",
+    "mat_surgical_steel_316l_tissue_boundary": "Ferretería náutica, equipamiento alimentario, joyería externa sobre piel sana cicatrizada",
+    "mat_bioflex_biocompatibility_standard": "Certificado USP Clase VI en reactividad in vivo e ISO 10993-5 citotoxicidad in vitro grado 0",
+    "mat_bioflex_tissue_boundary": "Canal de herida inicial, piercings orales, conductos tisulares flexibles, resonancia magnética",
+    "mat_niobium_biocompatibility_standard": "Supera ISO 10993; sumamente biocompatible, 100% sin níquel, no reactivo",
+    "mat_niobium_tissue_boundary": "Fístula de piercing inicial, tejidos sensibles, piercings subdérmicos y cicatrizados",
+    "mat_glass_biocompatibility_standard": "Completamente inerte desde el punto de vista químico; elución iónica nula en soluciones fisiológicas",
+    "mat_glass_tissue_boundary": "Canal de piercing inicial, fístulas en dilatación, piercings cicatrizados a largo plazo",
+    "mat_gold_14k_biocompatibility_standard": "Biocompatible si se comprueba libre de níquel y cadmio al 100%; resistencia a la corrosión de metales nobles",
+    "mat_gold_14k_tissue_boundary": "Primera puesta (si es macizo y verificado sin níquel), fístulas cicatrizadas",
+    "mat_acrylic_biocompatibility_standard": "NO certificado para implantes quirúrgicos ni contacto con heridas abiertas; microporoso; libera monómeros",
+    "mat_acrylic_tissue_boundary": "Lóbulos cicatrizados e intactos ÚNICAMENTE durante breves periodos; terminantemente prohibido en heridas recientes"
+  },
+  "common": {
+    "close": "Cerrar",
+    "done": "Listo"
   }
 };
 
-  if (typeof window !== 'undefined' && window.i18n && window.i18n.register) {
-    window.i18n.register('es', es);
-  } else if (typeof module !== 'undefined' && module.exports) {
-    module.exports = es;
+  if (typeof window !== 'undefined' && window.i18n) {
+    window.i18n.registerLocale('es', DICTIONARY);
   }
 })();
