@@ -11,6 +11,8 @@ Language: English (Reference Dictionary)
 
   const I18N_DICTIONARY = {
     en: {
+      "common": {
+          "done": "Done", "close": "Close" },
     "app": {
         "header_badge": "Professional Piercing & Studio Tool",
         "title": "Material Certification Checker",
@@ -177,6 +179,8 @@ Language: English (Reference Dictionary)
         "generic_tip_5_text": "Rely on verified ASTM F136 titanium or ASTM F138 steel."
     },
     "comparison": {
+        "category_locked_desc": "Choices 2 and 3 only list materials of the same kind, so unlike materials are not compared.",
+        "category_locked_title": "Category locked:",
         "title": "Material Comparison Tool",
         "subtitle": "Compare 2 to 3 materials side-by-side to review biocompatibility, standards, and recommended applications",
         "select_1_aria": "First material to compare",
@@ -1334,6 +1338,7 @@ Language: English (Reference Dictionary)
         "guard_note": "REACH Guard produces a compliance report on an SDS. It is a screening report, not a certificate: read it with the same care this tool teaches."
     },
     "cert_reader": {
+        "trace_mill_cert": "Mill Test Report (MTR) referenced",
         "presets_label": "Quick Test Phrasing Presets:",
         "evidence_hierarchy_title": "The Evidence Hierarchy: Marketing Phrase vs. Mill Certificate",
         "parsed_terminology_title": "🏷️ Parsed Terminology in Phrasing",
@@ -1351,7 +1356,56 @@ Language: English (Reference Dictionary)
         "tag_trace": "[TRACE]",
         "tag_market": "[MARKETING]",
         "tag_established": "[ESTABLISHED]",
-        "tag_critical_gap": "[CRITICAL GAP]"
+        "tag_critical_gap": "[CRITICAL GAP]",
+        "level_0_title": "LEVEL 0: UNVERIFIED MARKETING CLAIM (ZERO TECHNICAL PROOF)",
+        "level_1_title": "LEVEL 1: AMBIGUOUS SPECIFICATION / CATALOG SHORTHAND",
+        "level_2_title": "LEVEL 2: STANDARD CITED WITHOUT MELT TRACEABILITY",
+        "level_3_title": "LEVEL 3: FULLY DOCUMENTED & TRACEABLE STANDARD",
+        "level_0_desc": "Marketing claims, catalog descriptions, and generic buzzwords without specific metallurgical standard or heat lot number.",
+        "level_1_desc": "Mentions a recognized alloy or grade shorthand (e.g., Ti-6Al-4V, 316LVM) but omits the governing surgical standard and melt certificate.",
+        "level_2_desc": "Formally cites a published implant standard (e.g., ASTM F136, ISO 5832-1) but lacks an individual Mill Test Report (MTR) heat number linking the physical piece to the melt batch.",
+        "level_3_desc": "Gold standard: Complete Mill Test Report (EN 10204 3.1) stating exact chemical composition, mechanical properties, and matching heat lot identifier.",
+        "diagram_level_prefix": "LEVEL",
+        "diagram_level_0_title": "Marketing Claim",
+        "diagram_level_0_sub": "No standards, no heat #",
+        "diagram_level_1_title": "Catalog Shorthand",
+        "diagram_level_1_sub": "Generic grade name",
+        "diagram_level_2_title": "Standard Cited",
+        "diagram_level_2_sub": "ASTM/ISO, missing heat #",
+        "diagram_level_3_title": "Certified MTR",
+        "diagram_level_3_sub": "ASTM + Heat # + Chemistry",
+        "tier_analyzed_pointer": "ANALYZED PHRASING TIER",
+        "market_implant_grade": "Implant Grade (Unregulated marketing phrase)",
+        "market_surgical_steel": "Surgical Steel / Surgical Grade (Marketing phrase)",
+        "market_hypoallergenic": "Hypoallergenic (Unsubstantiated marketing claim)",
+        "market_medical_grade": "Medical Grade (Generic marketing claim)",
+        "market_nickel_free": "Nickel-Free (Composition claim)",
+        "market_autoclave_safe": "Autoclave Safe (Thermal claim)",
+        "market_pure_titanium": "Pure Titanium (Ambiguous grade claim)",
+        "trace_heat_number": "Heat / Melt Number cited",
+        "trace_batch_lot": "Production Batch / Lot Number cited",
+        "establishes_standards": "Formally asserts compliance with published technical standards: {standards}.",
+        "establishes_alloys": "Specifies a target material alloy/formulation: {alloys}.",
+        "establishes_traceability": "Provides traceability markers: {markers}.",
+        "establishes_none": "NONE. The text consists entirely of promotional descriptors and establishes zero technical, chemical, or biological facts.",
+        "gap_melt_traceability": "Melt Lot Traceability: No heat number linking this individual piece to a specific melting batch or mill chemical analysis.",
+        "gap_implant_spec": "Implant Specification: Terms like \"implant grade\" or \"surgical steel\" have zero legal or metallurgical weight without ASTM/ISO standard citation.",
+        "gap_eli_oxygen": "ELI Oxygen Verification: Titanium Grade 5 (0.20% oxygen) is often sold as generic \"titanium\". Only ASTM F136 guarantees the Extra Low Interstitial (ELI) oxygen ceiling (≤ 0.13%).",
+        "gap_var_remelt": "Vacuum Arc Remelting (VAR): Commercial 316L is melted in open air and has higher carbon/sulfur and non-metallic inclusions than vacuum-melted ASTM F138 316LVM.",
+        "gap_allergen_proof": "Allergen Chemical Proof: \"Hypoallergenic\" does not disclose nickel content, plating thickness, or substrate base metals.",
+        "gap_doc_physical_proof": "Documentary Physical Proof: A distributor claim or invoice label is not a Mill Test Report (MTR). True verification requires the melt mill laboratory sheet.",
+        "proof_titanium": "Original Mill Test Report (MTR) per EN 10204 3.1 showing ASTM F136 (Ti-6Al-4V ELI), Oxygen ≤ 0.13%, Iron ≤ 0.25%, and matching Heat Number stamped on packet.",
+        "proof_steel": "Mill Test Report citing ASTM F138 (Grade 2 Bar/Wire), 316LVM vacuum remelted, Carbon ≤ 0.030%, Sulfur ≤ 0.010%, with lot heat number.",
+        "proof_polymer": "USP Class VI biological reactivity testing certificate + ISO 10993-5 cytotoxicity report for medical-grade PP-R resin.",
+        "proof_niobium": "Mill Test Certificate showing ASTM F2229 unalloyed niobium (≥ 99.85% Nb) with low interstitials.",
+        "proof_generic": "Official raw material Mill Test Report (MTR) from melting mill with chemical analysis, mechanical testing, and heat lot identifier.",
+        "copy_summary_title": "MATERIAL CERTIFICATION CHECKER - PHRASING ANALYSIS",
+        "copy_summary_date": "Date:",
+        "copy_summary_phrasing": "Analyzed Phrasing:",
+        "copy_summary_tier": "Evidence Tier:",
+        "copy_summary_establishes": "WHAT THIS PHRASING ESTABLISHES:",
+        "copy_summary_gaps": "WHAT THIS PHRASING DOES NOT ESTABLISH (THE GAP):",
+        "copy_summary_proof": "REQUIRED DOCUMENTARY PROOF:"
     },
     "supplier_questions": {
         "title": "Supplier Question Sheet Generator",
@@ -1504,7 +1558,10 @@ Language: English (Reference Dictionary)
         "q_commercial_316l_0_unsat": "Misrepresenting commercial 316L or Grade 5 as \"implant grade\" without ASTM F136/F138 documentation.",
         "q_commercial_316l_1_q": "If sold for body piercing, does the supplier restrict its recommended use to fully healed fistulas rather than initial piercings?",
         "q_commercial_316l_1_sat": "Clear guideline acknowledging commercial materials are not recommended by professional standards for initial wound channels.",
-        "q_commercial_316l_1_unsat": "Recommending commercial-grade metals for fresh open wounds."
+        "q_commercial_316l_1_unsat": "Recommending commercial-grade metals for fresh open wounds.",
+        "q_astm_f136_4_q": "Are all threaded posts designed with internal threading or threadless press-fit construction (no exposed external male threads on the wearable shaft)?",
+        "q_astm_f136_4_sat": "Affirmation that no external threads pass through the tissue fistula; all wearable shafts are smooth with internal female tapping or threadless pins.",
+        "q_astm_f136_4_unsat": "External threading on the wearable post that lacerates the healing wound canal during insertion."
     },
     "claim_matrix": {
         "title": "Claim-to-Evidence Matrix",
@@ -1573,8 +1630,13 @@ Language: English (Reference Dictionary)
         "item_pure_titanium_action": "Clarify whether the item is ASTM F67 (unalloyed CP titanium) or ASTM F136 (Ti-6Al-4V ELI). Both are body-safe when certified."
     },
     "studio_record": {
-        "banner_badge": "[OFFICIAL STUDIO COMPLIANCE RECORD]",
-        "sheet_title": "Material Lot Verification Certificate",
+        "saved_records": "Saved Studio Records",
+        "btn_clear_records": "🗑️ Clear Records",
+        "btn_new_inspection": "➕ New Receiving Record",
+        "subtitle": "Keep dated material receiving records for your supplier file. Everything stays in this browser: no account, nothing sent.",
+        "title": "Studio Records",
+        "banner_badge": "[STUDIO RECEIVING RECORD]",
+        "sheet_title": "Material Lot Receiving Record",
         "record_id_label": "Record ID:",
         "date_label": "Date:",
         "btn_print": "🖨️ Print for Supplier File",
@@ -1699,7 +1761,34 @@ Language: English (Reference Dictionary)
         "row_autoclave": "Steam Autoclave Thermal Tolerance",
         "row_traceability": "Required Traceability Unit",
         "row_surface_finish": "Surface Finish Specification",
-        "row_tissue_boundary": "Validated Tissue Boundary Contact"
+        "row_tissue_boundary": "Validated Tissue Boundary Contact",
+        "notice_min_two": "Please select at least 2 materials to compare their certified technical specifications.",
+        "badge": "[CERTIFIED STANDARDS COMPARISON]",
+        "th_parameter": "Technical Standard Parameter",
+        "tag_specification": "[SPECIFICATION]",
+        "footer_note": "Methodology Note: Specifications cited reflect current published revisions of ASTM F136, ASTM F138, ASTM F2229, ISO 10993, and USP Class VI. In body art studios, receiving protocols require independent verification of the manufacturer's Mill Test Report (MTR) matching the packaging heat number.",
+        "row_biocompatibility_standard": "Biocompatibility Test Certified",
+        "row_autoclave_thermal_limit": "Steam Autoclave Thermal Tolerance",
+        "row_traceability_unit": "Required Traceability Unit",
+        "row_surface_finish_spec": "Surface Finish Specification",
+        "mat_titanium_grade_23_biocompatibility_standard": "Meets ISO 10993 cytotoxicity and sensitization; non-immunogenic",
+        "mat_titanium_grade_23_tissue_boundary": "Subdermal tissue canal, initial puncture wound, bone/mucosal contact",
+        "mat_titanium_grade_5_biocompatibility_standard": "Higher interstitial oxygen causes increased cellular reactivity in fresh wound canals",
+        "mat_titanium_grade_5_tissue_boundary": "Industrial & aerospace applications; orthopedic hardware (not fresh piercing fistula)",
+        "mat_surgical_steel_316lvm_biocompatibility_standard": "Passes ISO 10993; contains 13-15% metallurgical nickel (potential allergen for nickel-sensitized individuals)",
+        "mat_surgical_steel_316lvm_tissue_boundary": "Surgical implant, healed piercing tissue canal, initial piercing (for non-nickel-sensitized individuals)",
+        "mat_surgical_steel_316l_biocompatibility_standard": "Higher micro-inclusion content increases susceptibility to localized pitting corrosion in body fluids",
+        "mat_surgical_steel_316l_tissue_boundary": "Marine hardware, food equipment, exterior jewelry on intact healed skin",
+        "mat_bioflex_biocompatibility_standard": "Certified USP Class VI in vivo reactivity and ISO 10993-5 in vitro cytotoxicity grade 0",
+        "mat_bioflex_tissue_boundary": "Initial wound canal, oral piercings, flexible tissue canals, MRI procedures",
+        "mat_niobium_biocompatibility_standard": "Passes ISO 10993; highly biocompatible, 100% nickel-free, non-reactive",
+        "mat_niobium_tissue_boundary": "Initial piercing fistula, sensitive tissue, subdermal and healed body piercings",
+        "mat_glass_biocompatibility_standard": "Chemically completely inert; zero ion elution in physiological solutions",
+        "mat_glass_tissue_boundary": "Initial piercing canal, stretching fistulas, long-term healed piercings",
+        "mat_gold_14k_biocompatibility_standard": "Biocompatible when verified 100% nickel-free and cadmium-free; noble metal corrosion resistance",
+        "mat_gold_14k_tissue_boundary": "Initial piercing (if solid and verified nickel-free), healed piercing fistulas",
+        "mat_acrylic_biocompatibility_standard": "NOT certified for surgical implant or open wound contact; micro-porous; leaches monomers",
+        "mat_acrylic_tissue_boundary": "Healed, intact lobes ONLY for short durations; strictly forbidden in fresh wounds"
     }
 }
   };
