@@ -1350,6 +1350,13 @@
       "guard_note": "REACH Guard สร้างรายงานการปฏิบัติตามข้อกำหนดจาก SDS เป็นรายงานคัดกรอง ไม่ใช่ใบรับรอง อ่านด้วยความระมัดระวังเช่นเดียวกับที่เครื่องมือนี้สอน"
     },
     "cert_reader": {
+      "preset_implant_titanium_claim_name": "ข้ออ้างทางการตลาด: 'Implant Grade Titanium'",
+      "preset_surgical_steel_claim_name": "ข้ออ้างทางการตลาด: '316L Surgical Steel'",
+      "preset_f136_full_cert_name": "MTR ที่มีเอกสารยืนยัน: ASTM F136 + เลขที่หลอม",
+      "preset_f138_full_cert_name": "MTR ที่มีเอกสารยืนยัน: ASTM F138 (316LVM)",
+      "preset_ambiguous_g23_name": "ตัวย่อที่คลุมเครือ: 'Titanium G23'",
+      "preset_grade5_aerospace_name": "ไม่ใช่ F136: 'Grade 5 Titanium (Ti-6Al-4V)'",
+      "preset_acrylic_plastic_name": "ไม่สามารถฝังได้: 'Acrylic Taper'",
       "trace_mill_cert": "อ้างอิงรายงานการทดสอบจากโรงงาน (MTR)",
       "presets_label": "ค่าตั้งล่วงหน้าสำหรับวลีทดสอบอย่างรวดเร็ว:",
       "evidence_hierarchy_title": "ลำดับชั้นของหลักฐาน: วลีทางการตลาด เทียบกับใบรับรองจากโรงงาน",
@@ -1420,6 +1427,8 @@
       "copy_summary_proof": "หลักฐานเอกสารที่ต้องการ:"
     },
     "supplier_questions": {
+      "use_initial_piercing_name": "การเจาะครั้งแรก (ทางเดินแผลเปิดใหม่)",
+      "mat_astm_f136_name": "ไทเทเนียมเกรด 23 (ASTM F136 / Ti-6Al-4V ELI)",
       "title": "ตัวสร้างแผ่นคำถามถึงซัพพลายเออร์",
       "subtitle": "เมื่อกำหนดวัสดุและการใช้งานทางคลินิกที่ตั้งใจไว้ ระบบจะสร้างคำถามทางเทคนิคที่แน่นอนเพื่อส่งให้ซัพพลายเออร์ พร้อมเนื้อหาของคำตอบที่น่าพอใจและสัญญาณเตือนที่ควรหลีกเลี่ยง พิมพ์และส่งได้ทันที",
       "material_label": "วัสดุเป้าหมาย / โลหะผสม",
