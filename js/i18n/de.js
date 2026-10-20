@@ -553,7 +553,7 @@
       "code": "REACH Compliance",
       "full_name": "Registration, Evaluation, Authorisation and Restriction of Chemicals",
       "organization": "European Chemicals Agency",
-      "material_type": "Chemical safety regulation",
+      "material_type": "Chemikaliensicherheitsvorschrift",
       "body_piercing_use": "Mandatory compliance for EU market",
       "biocompatibility": "Ensures materials are free of hazardous chemicals",
       "sterilization": "N/A",
@@ -972,6 +972,13 @@
     "guard_note": "REACH Guard erstellt einen Konformitätsbericht zu einem Sicherheitsdatenblatt. Es ist ein Prüfbericht, kein Zertifikat: Lesen Sie ihn mit derselben Sorgfalt, die dieses Werkzeug vermittelt."
   },
   "cert_reader": {
+    "preset_implant_titanium_claim_name": "Marketingbehauptung: 'Implant Grade Titanium'",
+    "preset_surgical_steel_claim_name": "Marketingbehauptung: '316L Surgical Steel'",
+    "preset_f136_full_cert_name": "Dokumentiertes Werkszeugnis (MTR): ASTM F136 + Schmelznr.",
+    "preset_f138_full_cert_name": "Dokumentiertes Werkszeugnis (MTR): ASTM F138 (316LVM)",
+    "preset_ambiguous_g23_name": "Mehrdeutige Kurzbezeichnung: 'Titanium G23'",
+    "preset_grade5_aerospace_name": "Nicht F136: 'Grade 5 Titanium (Ti-6Al-4V)'",
+    "preset_acrylic_plastic_name": "Nicht implantierbar: 'Acrylic Taper'",
     "presets_label": "Schnelltest-Formulierungs-Presets:",
     "evidence_hierarchy_title": "Die Evidenzhierarchie: Marketingaussage vs. Werkszeugnis",
     "parsed_terminology_title": "🏷️ Erkannte Terminologie im Wortlaut",
@@ -1042,6 +1049,8 @@
     "trace_mill_cert": "Werksprüfzeugnis (MTR) genannt"
   },
   "supplier_questions": {
+    "use_initial_piercing_name": "Ersteinsatz (frischer offener Wundkanal)",
+    "mat_astm_f136_name": "Titan Grad 23 (ASTM F136 / Ti-6Al-4V ELI)",
     "title": "Generator für Lieferanten-Fragebögen",
     "subtitle": "Erstellen Sie für ein bestimmtes Material und eine klinische Anwendung die exakten technischen Fragen an Lieferanten, die Kriterien für zufriedenstellende Antworten und zu vermeidende Warnsignale. Druckbereit und sofort versandfähig.",
     "material_label": "Zielmaterial / Legierung",
