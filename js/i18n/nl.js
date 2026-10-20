@@ -974,6 +974,13 @@
     "guard_note": "REACH Guard maakt een conformiteitsrapport van een VIB. Het is een screeningsrapport, geen certificaat: lees het met dezelfde zorg die dit hulpmiddel leert."
   },
   "cert_reader": {
+    "preset_implant_titanium_claim_name": "Marketingclaim: 'Implant Grade Titanium'",
+    "preset_surgical_steel_claim_name": "Marketingclaim: '316L Surgical Steel'",
+    "preset_f136_full_cert_name": "Gedocumenteerd MTR: ASTM F136 + smeltnr.",
+    "preset_f138_full_cert_name": "Gedocumenteerd MTR: ASTM F138 (316LVM)",
+    "preset_ambiguous_g23_name": "Ambigue afkorting: 'Titanium G23'",
+    "preset_grade5_aerospace_name": "Niet F136: 'Grade 5 Titanium (Ti-6Al-4V)'",
+    "preset_acrylic_plastic_name": "Niet implanteerbaar: 'Acrylic Taper'",
     "presets_label": "Sneltest-formuleringspresets:",
     "evidence_hierarchy_title": "De Bewijshiërarchie: Marketingclaim vs. Fabriekskeuringsrapport",
     "parsed_terminology_title": "🏷️ Geanalyseerde Terminologie in de Formulering",
@@ -1044,6 +1051,8 @@
     "trace_mill_cert": "Walscertificaat (MTR) vermeld"
   },
   "supplier_questions": {
+    "use_initial_piercing_name": "Eerste piercing (vers open wondkanaal)",
+    "mat_astm_f136_name": "Titanium Graad 23 (ASTM F136 / Ti-6Al-4V ELI)",
     "title": "Generator voor leveranciersvragenlijsten",
     "subtitle": "Genereer voor een specifiek materiaal en een klinische toepassing de exacte technische vragen voor een leverancier, wat een bevredigend antwoord inhoudt en welke waarschuwingssignalen te vermijden. Afdrukbaar en direct verzendklaar.",
     "material_label": "Doelmateriaal / Legering",
