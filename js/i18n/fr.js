@@ -79,7 +79,7 @@
     "location_navel": "Nombril",
     "location_nipple": "Téton",
     "location_genital": "Génital",
-    "location_surface": "Surface / Dermal",
+    "location_surface": "Surface / Dermique",
     "healing_label": "Stade de cicatrisation",
     "healing_initial": "Initial / Récent",
     "healing_healed": "Cicatrisé",
@@ -553,7 +553,7 @@
       "code": "REACH Compliance",
       "full_name": "Registration, Evaluation, Authorisation and Restriction of Chemicals",
       "organization": "European Chemicals Agency",
-      "material_type": "Chemical safety regulation",
+      "material_type": "Réglementation de sécurité chimique",
       "body_piercing_use": "Mandatory compliance for EU market",
       "biocompatibility": "Ensures materials are free of hazardous chemicals",
       "sterilization": "N/A",
@@ -972,6 +972,13 @@
     "guard_note": "REACH Guard produit un rapport de conformité sur une FDS. C'est un rapport de contrôle, pas un certificat : lisez-le avec la même rigueur que cet outil enseigne."
   },
   "cert_reader": {
+    "preset_implant_titanium_claim_name": "Allégation commerciale : 'Implant Grade Titanium'",
+    "preset_surgical_steel_claim_name": "Allégation commerciale : '316L Surgical Steel'",
+    "preset_f136_full_cert_name": "MTR documenté : ASTM F136 + n° de coulée",
+    "preset_f138_full_cert_name": "MTR documenté : ASTM F138 (316LVM)",
+    "preset_ambiguous_g23_name": "Abréviation ambiguë : 'Titanium G23'",
+    "preset_grade5_aerospace_name": "Pas F136 : 'Grade 5 Titanium (Ti-6Al-4V)'",
+    "preset_acrylic_plastic_name": "Non implantable : 'Acrylic Taper'",
     "presets_label": "Préréglages de formulations de test rapide :",
     "evidence_hierarchy_title": "La Hiérarchie des Preuves : Allégation Commerciale vs. Certificat de Coulée",
     "parsed_terminology_title": "🏷️ Terminologie Analysée dans la Formulation",
@@ -1042,6 +1049,8 @@
     "trace_mill_cert": "Certificat matière (MTR) mentionné"
   },
   "supplier_questions": {
+    "use_initial_piercing_name": "Piercing initial (canal de plaie ouverte fraîche)",
+    "mat_astm_f136_name": "Titane Grade 23 (ASTM F136 / Ti-6Al-4V ELI)",
     "title": "Générateur de fiche de questions fournisseur",
     "subtitle": "Pour un matériau et une application clinique donnés, produisez les questions techniques exactes à envoyer à un fournisseur, les éléments indispensables d'une réponse satisfaisante et les signaux d'alerte à éviter. Prêt à imprimer et à envoyer.",
     "material_label": "Matériau / Alliage cible",
