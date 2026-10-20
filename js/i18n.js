@@ -1353,6 +1353,13 @@ Language: English (Reference Dictionary)
         "guard_note": "REACH Guard produces a compliance report on an SDS. It is a screening report, not a certificate: read it with the same care this tool teaches."
     },
     "cert_reader": {
+        "preset_implant_titanium_claim_name": "Marketing Claim: 'Implant Grade Titanium'",
+        "preset_surgical_steel_claim_name": "Marketing Claim: '316L Surgical Steel'",
+        "preset_f136_full_cert_name": "Documented MTR: ASTM F136 + Heat #",
+        "preset_f138_full_cert_name": "Documented MTR: ASTM F138 (316LVM)",
+        "preset_ambiguous_g23_name": "Ambiguous Shorthand: 'Titanium G23'",
+        "preset_grade5_aerospace_name": "Not F136: 'Grade 5 Titanium (Ti-6Al-4V)'",
+        "preset_acrylic_plastic_name": "Non-Implantable: 'Acrylic Taper'",
         "trace_mill_cert": "Mill Test Report (MTR) referenced",
         "presets_label": "Quick Test Phrasing Presets:",
         "evidence_hierarchy_title": "The Evidence Hierarchy: Marketing Phrase vs. Mill Certificate",
@@ -1423,6 +1430,8 @@ Language: English (Reference Dictionary)
         "copy_summary_proof": "REQUIRED DOCUMENTARY PROOF:"
     },
     "supplier_questions": {
+        "use_initial_piercing_name": "Initial Piercing (Fresh Wound Canal)",
+        "mat_astm_f136_name": "Titanium Grade 23 (ASTM F136 / Ti-6Al-4V ELI)",
         "title": "Supplier Question Sheet Generator",
         "subtitle": "Given a material and an intended clinical application, produce the exact technical questions to send a supplier, along with what a satisfactory answer contains and what red flags to avoid. Printable and ready to send.",
         "material_label": "Target Material / Alloy",
