@@ -974,6 +974,13 @@
     "guard_note": "O REACH Guard produz um relatório de conformidade sobre uma FDS. É um relatório de triagem, não um certificado: leia-o com o mesmo cuidado que esta ferramenta ensina."
   },
   "cert_reader": {
+    "preset_implant_titanium_claim_name": "Alegação comercial: 'Implant Grade Titanium'",
+    "preset_surgical_steel_claim_name": "Alegação comercial: '316L Surgical Steel'",
+    "preset_f136_full_cert_name": "MTR documentado: ASTM F136 + n.º de corrida",
+    "preset_f138_full_cert_name": "MTR documentado: ASTM F138 (316LVM)",
+    "preset_ambiguous_g23_name": "Abreviatura ambígua: 'Titanium G23'",
+    "preset_grade5_aerospace_name": "Não F136: 'Grade 5 Titanium (Ti-6Al-4V)'",
+    "preset_acrylic_plastic_name": "Não implantável: 'Acrylic Taper'",
     "presets_label": "Predefinições de formulação para teste rápido:",
     "evidence_hierarchy_title": "A Hierarquia de Evidências: Alegação Comercial vs. Certificado de Corrida",
     "parsed_terminology_title": "🏷️ Terminologia Identificada na Declaração",
@@ -1044,6 +1051,8 @@
     "trace_mill_cert": "Certificado de usina (MTR) citado"
   },
   "supplier_questions": {
+    "use_initial_piercing_name": "Piercing inicial (canal de ferida aberta recente)",
+    "mat_astm_f136_name": "Titânio Grau 23 (ASTM F136 / Ti-6Al-4V ELI)",
     "title": "Gerador de questionário para fornecedores",
     "subtitle": "Dado um material e uma aplicação clínica prevista, gere as perguntas técnicas exatas para enviar a um fornecedor, os elementos de uma resposta satisfatória e os sinais de alerta a evitar. Imprimível e pronto a enviar.",
     "material_label": "Material / Liga de destino",
