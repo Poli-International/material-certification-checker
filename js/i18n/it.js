@@ -553,7 +553,7 @@
       "code": "REACH Compliance",
       "full_name": "Registration, Evaluation, Authorisation and Restriction of Chemicals",
       "organization": "European Chemicals Agency",
-      "material_type": "Chemical safety regulation",
+      "material_type": "Normativa di sicurezza chimica",
       "body_piercing_use": "Mandatory compliance for EU market",
       "biocompatibility": "Ensures materials are free of hazardous chemicals",
       "sterilization": "N/A",
@@ -972,6 +972,13 @@
     "guard_note": "REACH Guard produce un rapporto di conformità su una SDS. È un rapporto di screening, non un certificato: leggilo con la stessa attenzione che insegna questo strumento."
   },
   "cert_reader": {
+    "preset_implant_titanium_claim_name": "Dichiarazione marketing: 'Implant Grade Titanium'",
+    "preset_surgical_steel_claim_name": "Dichiarazione marketing: '316L Surgical Steel'",
+    "preset_f136_full_cert_name": "MTR documentato: ASTM F136 + n. di colata",
+    "preset_f138_full_cert_name": "MTR documentato: ASTM F138 (316LVM)",
+    "preset_ambiguous_g23_name": "Abbreviazione ambigua: 'Titanium G23'",
+    "preset_grade5_aerospace_name": "Non F136: 'Grade 5 Titanium (Ti-6Al-4V)'",
+    "preset_acrylic_plastic_name": "Non impiantabile: 'Acrylic Taper'",
     "presets_label": "Preimpostazioni di formulazione per test rapido:",
     "evidence_hierarchy_title": "La Gerarchia delle Prove: Frase Commerciale vs. Certificato di Fabbrica",
     "parsed_terminology_title": "🏷️ Terminologia Identificata nella Dicitura",
@@ -1042,6 +1049,8 @@
     "trace_mill_cert": "Certificato di collaudo (MTR) citato"
   },
   "supplier_questions": {
+    "use_initial_piercing_name": "Piercing iniziale (canale di ferita fresca aperta)",
+    "mat_astm_f136_name": "Titanio Grado 23 (ASTM F136 / Ti-6Al-4V ELI)",
     "title": "Generatore di scheda domande per fornitori",
     "subtitle": "Dato un materiale e un'applicazione clinica prevista, genera le domande tecniche esatte da inviare a un fornitore, gli elementi di una risposta soddisfacente e i segnali di allarme da evitare. Stampabile e pronta all'invio.",
     "material_label": "Materiale / Lega di riferimento",
