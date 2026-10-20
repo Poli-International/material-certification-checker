@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head><meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentazione Material Certification Checker | Poli International</title>
+    <meta name="description" content="Guida completa all'uso del Material Certification Checker">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        :root {
+            --bg-body: #0f0f0f;
+            --bg-section: #1a1a1a;
+            --bg-card: #222222;
+            --bg-table-header: #2a2a2a;
+            --color-text-main: #ffffff;
+            --color-text-muted: #cccccc;
+            --color-text-dim: #888888;
+            --color-primary: #3B82F6;
+            --color-secondary: #8B5CF6;
+            --color-accent: #10B981;
+            --color-button: #669eff;
+            --color-border: #333333;
+        }
+        body {
+            background: var(--bg-body) !important;
+            color: var(--color-text-main) !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body.in-iframe .doc-hero h1 { display: none !important; }
+        body.in-iframe .doc-hero { padding: 2rem 2rem !important; margin-bottom: 1rem !important; }
+        * {
+            box-sizing: border-box;
+        }
+        .entry-content {
+            max-width: 900px !important;
+            margin: 0 auto !important;
+            padding: 2rem 1rem !important;
+        }
+        .doc-hero {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)) !important;
+            padding: 4rem 2rem !important;
+            text-align: center !important;
+            margin: -2rem -1rem 3rem !important;
+            border-radius: 0 !important;
+        }
+        .doc-hero h1 {
+            font-size: 2.5rem !important;
+            color: var(--color-text-main) !important;
+            margin: 0 0 1rem 0 !important;
+            font-weight: 700 !important;
+        }
+        .doc-hero p {
+            font-size: 1.25rem !important;
+            color: #E0E7FF !important;
+            margin: 0 !important;
+        }
+        .doc-section {
+            margin: 3rem 0 !important;
+            padding: 2rem !important;
+            background: var(--bg-section) !important;
+            border-radius: 0.75rem !important;
+            border-left: 4px solid var(--color-primary) !important;
+        }
+        .doc-section--cta {
+            text-align: center !important;
+            border-left: none !important;
+            background: linear-gradient(135deg, #111111, #222222) !important;
+        }
+        .doc-section h2 {
+            color: var(--color-primary) !important;
+            font-size: 2rem !important;
+            margin: 0 0 1.5rem 0 !important;
+            font-weight: 600 !important;
+        }
+        .doc-section h3 {
+            color: var(--color-secondary) !important;
+            font-size: 1.5rem !important;
+            margin: 2rem 0 1rem 0 !important;
+            font-weight: 600 !important;
+        }
+        .doc-section h3.accent-title {
+            color: var(--color-accent) !important;
+        }
+        .doc-section p {
+            color: var(--color-text-muted) !important;
+            line-height: 1.8 !important;
+            margin-bottom: 1rem !important;
+            font-size: 1.05rem !important;
+        }
+        .doc-section ul {
+            margin: 1rem 0 !important;
+            padding-left: 0 !important;
+            list-style: none !important;
+        }
+        .doc-section ul li {
+            padding: 0.75rem 0 0.75rem 2rem !important;
+            position: relative !important;
+            color: var(--color-text-muted) !important;
+            line-height: 1.6 !important;
+        }
+        .doc-section ul li:before {
+            content: "✓" !important;
+            position: absolute !important;
+            left: 0 !important;
+            color: var(--color-accent) !important;
+            font-weight: bold !important;
+            font-size: 1.2rem !important;
+        }
+        .doc-section a {
+            color: var(--color-primary) !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+            transition: color 0.2s !important;
+        }
+        .doc-section a:hover {
+            color: var(--color-secondary) !important;
+            text-decoration: underline !important;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #1E3A8A, #4C1D95) !important;
+            padding: 1.5rem !important;
+            border-radius: 0.5rem !important;
+            margin: 2rem 0 !important;
+            border-left: 4px solid var(--color-accent) !important;
+        }
+        .highlight-box p {
+            color: #E0E7FF !important;
+            margin-bottom: 0 !important;
+        }
+        .back-link {
+            display: inline-block !important;
+            padding: 0.75rem 1.5rem !important;
+            background: var(--color-primary) !important;
+            color: var(--color-text-main) !important;
+            text-decoration: none !important;
+            border-radius: 0.5rem !important;
+            font-weight: 600 !important;
+            margin-top: 2rem !important;
+        }
+        .back-link:hover {
+            background: var(--color-secondary) !important;
+        }
+        .cta-btn {
+            padding: 1rem 2.5rem !important;
+            text-decoration: none !important;
+            border-radius: 0.5rem !important;
+            background: var(--color-button) !important;
+            color: var(--color-text-main) !important;
+            font-weight: 800 !important;
+            font-size: 1.1rem !important;
+            border: none !important;
+            display: inline-block !important;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        .doc-footer-note {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            border-top: 1px solid var(--color-border);
+            opacity: 0.8;
+        }
+        .doc-footer-note p {
+            font-size: 0.95rem;
+            color: var(--color-text-dim);
+            line-height: 1.6;
+        }
+        .doc-footer-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--color-border);
+        }
+        th {
+            background: var(--bg-table-header);
+            color: var(--color-primary);
+        }
+        td {
+            color: var(--color-text-muted);
+        }
+        code {
+            background: var(--bg-table-header);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--color-accent);
+        }
+    </style>
+</head>
+<body>
+<nav class="doc-langs" aria-label="Lingua della documentazione" style="display:flex;flex-wrap:wrap;gap:6px 14px;max-width:900px;margin:12px auto 0;padding:0 16px;font-size:14px;"><a lang="en" href="documentation.html">English</a><a lang="fr" href="documentation-fr.html">Français</a><a lang="de" href="documentation-de.html">Deutsch</a><span lang="it">Italiano</span><a lang="es" href="documentation-es.html">Español</a><a lang="nl" href="documentation-nl.html">Nederlands</a><a lang="pt" href="documentation-pt.html">Português</a><a lang="th" href="documentation-th.html">ไทย</a></nav>
+<script>
+if (window.self !== window.top) {
+    document.body.classList.add('in-iframe');
+}
+</script>
+
+<div class="entry-content">
+    <div class="doc-hero">
+        <h1>Documentazione Material Certification Checker</h1>
+        <p>Guida completa alla biocompatibilità dei gioielli per il corpo, alle certificazioni di fabbrica e agli standard ASTM/ISO</p>
+    </div>
+
+    <div class="doc-section">
+        <h2>Panoramica</h2>
+        <p>
+            Il <strong>Material Certification Checker</strong> è uno strumento di riferimento e validazione indispensabile per piercer professionisti, titolari di studio e acquirenti di gioielli. Fornisce una verifica immediata degli standard dei materiali, delle specifiche di biocompatibilità e dei criteri di documentazione dei fornitori.
+        </p>
+        <p>
+            Con il rapido afflusso di importazioni non verificate nel settore del body art, è fondamentale verificare l'autenticità delle certificazioni di fabbrica e comprendere gli standard di biocompatibilità (ASTM F136, ASTM F138, ISO 5832, ISO 10993) per la sicurezza dei clienti e per prevenire reazioni avverse dei tessuti.
+        </p>
+    </div>
+
+    <div class="doc-section">
+        <h2>Principali standard trattati</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Standard</th>
+                    <th>Materiale / Ambito</th>
+                    <th>Requisito principale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>ASTM F136</code></td>
+                    <td>Titanio Ti-6Al-4V ELI</td>
+                    <td>Lega di grado implantare per impianti chirurgici</td>
+                </tr>
+                <tr>
+                    <td><code>ASTM F138</code></td>
+                    <td>Acciaio chirurgico 316LVM</td>
+                    <td>Barra/filo di acciaio inossidabile fuso sotto vuoto di grado implantare</td>
+                </tr>
+                <tr>
+                    <td><code>ASTM F1295</code></td>
+                    <td>Titanio Ti-6Al-7Nb</td>
+                    <td>Titanio per impianti legato al niobio</td>
+                </tr>
+                <tr>
+                    <td><code>ASTM F67</code></td>
+                    <td>Titanio non legato (CP)</td>
+                    <td>Titanio commercialmente puro, gradi da 1 a 4</td>
+                </tr>
+                <tr>
+                    <td><code>ISO 5832-1</code></td>
+                    <td>Acciaio inossidabile lavorato</td>
+                    <td>Specifica internazionale per acciaio inossidabile da impianto</td>
+                </tr>
+                <tr>
+                    <td><code>ISO 5832-3</code></td>
+                    <td>Lega Ti-6Al-4V lavorata</td>
+                    <td>Titanio internazionale per impianti chirurgici</td>
+                </tr>
+                <tr>
+                    <td><code>ISO 10993</code></td>
+                    <td>Valutazione biologica</td>
+                    <td>Serie completa di test di biocompatibilità</td>
+                </tr>
+                <tr>
+                    <td><code>EN 1811</code></td>
+                    <td>Riferimento per il rilascio di nichel</td>
+                    <td>Standard europeo per i limiti di rilascio del nichel</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="doc-section">
+        <h2>Matrice di sicurezza dei materiali</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Materiale</th>
+                    <th>Valutazione di sicurezza</th>
+                    <th>Senza nichel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Titanio grado 23 (ASTM F136)</td>
+                    <td>Eccellente</td>
+                    <td>Sì</td>
+                </tr>
+                <tr>
+                    <td>Gioielli per il corpo BioFlex&reg; (PP-R)</td>
+                    <td>Eccellente</td>
+                    <td>Sì</td>
+                </tr>
+                <tr>
+                    <td>Acciaio chirurgico 316LVM (ASTM F138)</td>
+                    <td>Molto buono</td>
+                    <td>Basso contenuto di nichel (fuso sotto vuoto)</td>
+                </tr>
+                <tr>
+                    <td>Niobio (ASTM B392)</td>
+                    <td>Eccellente</td>
+                    <td>Sì</td>
+                </tr>
+                <tr>
+                    <td>Oro massiccio 14K / 18K</td>
+                    <td>Molto buono</td>
+                    <td>dipende dalla lega (deve essere senza nichel)</td>
+                </tr>
+                <tr>
+                    <td>Vetro borosilicato</td>
+                    <td>Eccellente</td>
+                    <td>Sì</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="doc-section">
+        <h2>Casi d'uso pratici</h2>
+        <div class="use-case">
+            <h3 class="accent-title">Per i titolari di studio</h3>
+            <p>Standardizza i protocolli tecnici e la verifica dei fornitori del tuo studio per garantire coerenza tra tutti i piercer e i residenti.</p>
+        </div>
+        <div class="use-case">
+            <h3 class="accent-title">Per gli apprendisti</h3>
+            <p>Usa questo strumento come quadro didattico per comprendere il rapporto critico tra metallurgia, biocompatibilità e sicurezza delle procedure.</p>
+        </div>
+    </div>
+
+    <div class="doc-section">
+        <h2>Domande frequenti</h2>
+        <div class="faq-item">
+            <p><strong>Che cosa significa «grado implantare»?</strong></p>
+            <p>Significa che il materiale è stato fabbricato, testato e certificato per l'impianto chirurgico nel corpo umano (ad esempio titanio ASTM F136, acciaio ASTM F138).</p>
+        </div>
+        <div class="faq-item">
+            <p><strong>L'acciaio 316L è sicuro per i piercing iniziali?</strong></p>
+            <p>Il 316L generico è di grado chirurgico, ma non necessariamente di grado implantare. L'acciaio di grado implantare deve essere conforme alle specifiche di fusione sotto vuoto ASTM F138 (316LVM).</p>
+        </div>
+        <div class="faq-item">
+            <p><strong>Posso usare l'argento sterling in un piercing nuovo?</strong></p>
+            <p>Mai. L'argento si ossida a contatto con i fluidi corporei, il che può causare una colorazione permanente della pelle (argiria) e irritazione.</p>
+        </div>
+        <div class="faq-item">
+            <p><strong>L'oro è sicuro per la guarigione?</strong></p>
+            <p>Solo se si tratta di oro massiccio 14K o 18K certificato senza nichel. I gioielli placcati in oro o in vermeil non devono mai essere usati per i piercing iniziali.</p>
+        </div>
+        <div class="faq-item">
+            <p><strong>Che cosa sono i gioielli per il corpo BioFlex&reg;?</strong></p>
+            <p>I gioielli per il corpo BioFlex&reg; sono realizzati in copolimero random PP-R. La resina è conforme a USP Class VI e BioFlex&reg; è stato testato secondo la ISO 10993-6. Sono flessibili e sterilizzabili a vapore.</p>
+        </div>
+    </div>
+
+    <!-- Interactive Glossary Section -->
+    <div class="doc-section" id="interactive-glossary-section">
+        <h2>Glossario interattivo degli standard (A–Z)</h2>
+        <p>
+            Esplora il nostro completo riferimento interattivo con le definizioni esatte degli standard ASTM, ISO ed europei, la terminologia metallurgica e i protocolli di biocompatibilità per i gioielli per il corpo. Filtra per lettera dell'alfabeto, famiglia di standard oppure cerca direttamente i termini tecnici.
+        </p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <button type="button" id="doc-open-glossary-btn" class="doc-glossary-btn" onclick="if(window.openGlossaryModal) window.openGlossaryModal(); else window.location.href='./index.html#reference';">
+                📖 Glossario delle norme
+            </button>
+        </div>
+    </div>
+
+    <div class="doc-section doc-section--cta">
+        <h2>Hai bisogno di assistenza tecnica?</h2>
+        <p>Se riscontri problemi con questo strumento o hai bisogno di assistenza per un'integrazione personalizzata, il nostro team di ingegneri è a disposizione.</p>
+        <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; align-items: center;">
+            <a href="/contact-us/" class="cta-btn">Contattaci</a>
+        </div>
+    </div>
+
+    <div class="doc-footer-note">
+        <p>
+            Standard tecnici forniti da <br/>
+            <a href="./index.html" class="doc-footer-link">Poli International Engineering</a>
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 4rem;">
+        <a href="./index.html" class="back-link">&larr; Vai allo strumento</a>
+    </div>
+</div>
+
+<script src="./js/i18n.js"></script>
+<script src="./js/i18n/fr.js"></script>
+<script src="./js/i18n/it.js"></script>
+<script src="./js/i18n/de.js"></script>
+<script src="./js/i18n/es.js"></script>
+<script src="./js/i18n/pt.js"></script>
+<script src="./js/i18n/nl.js"></script>
+<script src="./js/material-data.js"></script>
+<script src="./js/decoder.js"></script>
+</body>
+</html>
