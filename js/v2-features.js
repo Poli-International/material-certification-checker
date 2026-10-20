@@ -456,6 +456,18 @@ ${analysis.requiredProof}
     }
   }
 
+  // Preset buttons are built at render time so their labels follow the language.
+  function renderCertPresets() {
+    const presetsContainer = document.getElementById('cert-reader-presets');
+    if (!presetsContainer || !window.CERT_READER_PRESETS) return;
+    presetsContainer.innerHTML = window.CERT_READER_PRESETS.map(p => `
+      <button type="button" class="cert-reader__preset-btn" data-preset-id="${escapeHTML(p.id)}">
+        <span class="preset-tag">[${escapeHTML(p.tag)}]</span>
+        <span class="preset-name">${escapeHTML(safeT(`cert_reader.preset_${p.id}_name`, p.name))}</span>
+      </button>
+    `).join('');
+  }
+
   function initCertificateReader() {
     const inputArea = document.getElementById('product-claim');
     const verifyBtn = document.getElementById('verify-button');
@@ -466,12 +478,7 @@ ${analysis.requiredProof}
 
     // Populate Presets if container exists
     if (presetsContainer && window.CERT_READER_PRESETS) {
-      presetsContainer.innerHTML = window.CERT_READER_PRESETS.map(p => `
-        <button type="button" class="cert-reader__preset-btn" data-preset-id="${escapeHTML(p.id)}">
-          <span class="preset-tag">[${escapeHTML(p.tag)}]</span>
-          <span class="preset-name">${escapeHTML(p.name)}</span>
-        </button>
-      `).join('');
+      renderCertPresets();
 
       presetsContainer.addEventListener('click', (e) => {
         const btn = e.target.closest('.cert-reader__preset-btn');
@@ -1419,6 +1426,7 @@ Inspector: ___________________________ Date: ${record.date}
 
   // Re-render dynamic components when language changes
   window.addEventListener('languageChanged', () => {
+    renderCertPresets();
     // Re-render certificate reader if active
     const inputArea = document.getElementById('product-claim');
     const resultsContainer = document.getElementById('verify-results');
