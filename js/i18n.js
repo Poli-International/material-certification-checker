@@ -1812,7 +1812,7 @@ Language: English (Reference Dictionary)
   try {
     if (typeof localStorage !== 'undefined') {
       const savedLang = localStorage.getItem('poli_language') || localStorage.getItem('locale') || localStorage.getItem('lang');
-      if (savedLang && (savedLang === 'en' || savedLang === 'fr' || savedLang === 'it' || savedLang === 'de' || savedLang === 'es' || savedLang === 'pt' || savedLang === 'nl')) {
+      if (savedLang && (savedLang === 'en' || savedLang === 'fr' || savedLang === 'it' || savedLang === 'de' || savedLang === 'es' || savedLang === 'pt' || savedLang === 'nl' || savedLang === 'th')) {
         currentLocale = savedLang;
       }
     }
