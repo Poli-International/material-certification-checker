@@ -2338,6 +2338,15 @@ function renderGlossaryCards() {
 // ═══════════════════════════════════════════════════════════
 
 window.addEventListener('languageChanged', function() {
+  // The glossary modal is built once, in the language at page load; rebuild it so its labels follow the switch.
+  const oldGlossary = document.getElementById('standards-glossary-modal');
+  if (oldGlossary) {
+    const wasOpen = oldGlossary.style.display === 'flex';
+    oldGlossary.remove();
+    createGlossaryModalDOM();
+    const rebuilt = document.getElementById('standards-glossary-modal');
+    if (rebuilt && wasOpen) { rebuilt.style.display = 'flex'; renderGlossaryCards(); }
+  }
   // Re-populate dynamic UI dropdowns and lists
   populateComparisonDropdowns();
   populateReferenceLists();
