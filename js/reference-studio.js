@@ -121,19 +121,19 @@ Poli International
             <div class="reference-studio__matrix-grid">
               <div class="matrix-item">
                 <span class="matrix-label">${escapeHTML(tr('reference_studio.autoclave_tolerance'))}</span>
-                <span class="matrix-val">⚡ ${escapeHTML(profile.autoclave)}</span>
+                <span class="matrix-val"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-bolt></use></svg> ${escapeHTML(profile.autoclave)}</span>
               </div>
               <div class="matrix-item">
                 <span class="matrix-label">${escapeHTML(tr('reference_studio.ultrasonic_clean'))}</span>
-                <span class="matrix-val">🫧 ${escapeHTML(profile.ultrasonic)}</span>
+                <span class="matrix-val"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-drop></use></svg> ${escapeHTML(profile.ultrasonic)}</span>
               </div>
               <div class="matrix-item">
                 <span class="matrix-label">${escapeHTML(tr('reference_studio.dry_heat'))}</span>
-                <span class="matrix-val">🔥 ${escapeHTML(profile.dryHeat)}</span>
+                <span class="matrix-val"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-flame></use></svg> ${escapeHTML(profile.dryHeat)}</span>
               </div>
               <div class="matrix-item">
                 <span class="matrix-label">${escapeHTML(tr('reference_studio.chemical_disinfection'))}</span>
-                <span class="matrix-val">🧴 ${escapeHTML(profile.chemicalDisinfection)}</span>
+                <span class="matrix-val"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-gloves></use></svg> ${escapeHTML(profile.chemicalDisinfection)}</span>
               </div>
             </div>
 
