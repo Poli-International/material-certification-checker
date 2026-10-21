@@ -63,7 +63,7 @@
     .preview-iframe {width: 100%; height: 800px; border: 1px solid var(--color-border); border-radius: 8px;}
     .features {list-style: none; margin: 1rem 0;}
     .features li {padding-left: 1.5rem; margin-bottom: 0.5rem; position: relative; color: var(--color-text-sub);}
-    .features li:before {content: "✓"; position: absolute; left: 0; color: var(--color-accent-green); font-weight: bold;}
+    .features li:before {content: ""; position: absolute; left: 0; color: var(--color-accent-green); font-weight: bold;}
     .note {background-color: var(--bg-accent-yellow); border-left: 4px solid var(--color-accent-yellow); padding: 1rem; margin: 1rem 0; border-radius: 4px;}
     .note strong, .note p {color: var(--color-accent-yellow); margin-bottom: 0;}
     .footer {margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border); text-align: center; color: var(--color-text-sub); font-size: 0.9rem;}
@@ -76,7 +76,7 @@
   </style>
 </head>
 <body>
-  <button id="dark-toggle" aria-label="Toggle theme">🌙</button>
+  <button id="dark-toggle" aria-label="Toggle theme"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-moon></use></svg></button>
   <div class="container">
     <h1>Embed the Material Certification Checker</h1>
 
@@ -171,13 +171,13 @@
 
       if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
-        toggle.textContent = '☀️';
+        toggle.innerHTML = '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-sun></use></svg>';
       }
 
       toggle.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
         const isDark = document.body.classList.contains('dark-mode');
-        toggle.textContent = isDark ? '☀️' : '🌙';
+        toggle.innerHTML = isDark ? '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-sun></use></svg>' : '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-moon></use></svg>';
         localStorage.setItem('embed-theme', isDark ? 'dark' : 'light');
       });
     })();
@@ -188,7 +188,7 @@
 
       navigator.clipboard.writeText(textToCopy).then(() => {
         const originalText = button.textContent;
-        button.textContent = '✓ Copied!';
+        button.textContent = 'Copied!';
         button.classList.add('copied');
 
         setTimeout(() => {
