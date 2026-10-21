@@ -1304,6 +1304,8 @@
     "toast_record_copied": "Registro copiato!",
     "title": "Registri dello studio",
     "subtitle": "Conserva registrazioni datate del materiale ricevuto per il fascicolo fornitori. Tutto resta in questo browser: nessun account, nulla viene inviato.",
+    "prompt_claim": "Inserisci la formulazione del fornitore o la descrizione del materiale da esaminare:",
+    "confirm_clear": "Cancellare tutti i registri locali di conformità dello studio da questo browser? L'operazione non può essere annullata.",
     "btn_new_inspection": "➕ Nuova registrazione di ricevimento",
     "btn_clear_records": "🗑️ Cancella registri",
     "saved_records": "Registri salvati"
