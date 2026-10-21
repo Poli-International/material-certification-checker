@@ -198,7 +198,7 @@ Poli International
                 <h4 class="standards-library__card-title">${escapeHTML(std.title)}</h4>
                 <p class="standards-library__card-scope">${escapeHTML(std.scope)}</p>
                 <div class="standards-library__card-bio">
-                  <span class="bio-icon">🧪</span>
+                  <span class="bio-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-flask></use></svg></span>
                   <span>${escapeHTML(std.biocompatibility)}</span>
                 </div>
               </div>
