@@ -1306,6 +1306,8 @@
     "toast_record_copied": "Dossier gekopieerd!",
     "title": "Studioregistraties",
     "subtitle": "Bewaar gedateerde ontvangstregistraties van materiaal voor je leveranciersdossier. Alles blijft in deze browser: geen account, er wordt niets verzonden.",
+    "prompt_claim": "Voer de formulering van de leverancier of de materiaalbeschrijving in om te controleren:",
+    "confirm_clear": "Alle lokale nalevingsregistraties van de studio uit deze browser wissen? Dit kan niet ongedaan worden gemaakt.",
     "btn_new_inspection": "➕ Nieuwe ontvangstregistratie",
     "btn_clear_records": "🗑️ Registraties wissen",
     "saved_records": "Opgeslagen registraties"
