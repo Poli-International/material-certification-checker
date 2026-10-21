@@ -1304,6 +1304,8 @@
     "toast_record_copied": "Datensatz kopiert!",
     "title": "Studio-Aufzeichnungen",
     "subtitle": "Führen Sie datierte Wareneingangsprotokolle für Ihre Lieferantenakte. Alles bleibt in diesem Browser: kein Konto, nichts wird gesendet.",
+    "prompt_claim": "Geben Sie die Formulierung des Lieferanten oder die Materialbeschreibung zur Prüfung ein:",
+    "confirm_clear": "Alle lokalen Compliance-Aufzeichnungen des Studios aus diesem Browser löschen? Dies kann nicht rückgängig gemacht werden.",
     "btn_new_inspection": "➕ Neues Eingangsprotokoll",
     "btn_clear_records": "🗑️ Aufzeichnungen löschen",
     "saved_records": "Gespeicherte Aufzeichnungen"
