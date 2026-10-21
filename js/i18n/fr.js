@@ -1304,6 +1304,8 @@
     "toast_record_copied": "Registre copié !",
     "title": "Registres du studio",
     "subtitle": "Conservez des fiches de réception de matériaux datées pour votre dossier fournisseur. Tout reste dans ce navigateur : aucun compte, rien n'est envoyé.",
+    "prompt_claim": "Saisissez la formulation du fournisseur ou la description du matériau à examiner :",
+    "confirm_clear": "Effacer tous les enregistrements locaux de conformité du studio de ce navigateur ? Cette action est irréversible.",
     "btn_new_inspection": "➕ Nouvelle fiche de réception",
     "btn_clear_records": "🗑️ Effacer les registres",
     "saved_records": "Registres enregistrés"
