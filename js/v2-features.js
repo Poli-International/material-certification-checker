@@ -1389,7 +1389,7 @@ Inspector: ___________________________ Date: ${record.date}
 
     if (createNewBtn) {
       createNewBtn.addEventListener('click', () => {
-        const manualClaim = prompt('Enter the supplier phrasing or material description to inspect:', 'ASTM F136 Titanium Barbell Lot #48291');
+        const manualClaim = prompt(safeT('studio_record.prompt_claim', 'Enter the supplier phrasing or material description to inspect:'), 'ASTM F136 Titanium Barbell Lot #48291');
         if (manualClaim) {
           const analysis = analyzePhrasing(manualClaim);
           createStudioRecordFromAnalysis(analysis);
@@ -1399,7 +1399,7 @@ Inspector: ___________________________ Date: ${record.date}
 
     if (clearAllBtn) {
       clearAllBtn.addEventListener('click', () => {
-        if (confirm('Clear all local studio compliance records from this browser? This cannot be undone.')) {
+        if (confirm(safeT('studio_record.confirm_clear', 'Clear all local studio compliance records from this browser? This cannot be undone.'))) {
           saveStudioRecords([]);
           renderStudioRecordsList();
           const detail = document.getElementById('studio-record-detail');
