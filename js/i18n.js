@@ -1653,6 +1653,8 @@ Language: English (Reference Dictionary)
         "item_pure_titanium_absence": "Often used misleadingly by suppliers who do not know the difference between unalloyed CP titanium (ASTM F67) and alloyed titanium (ASTM F136 Ti-6Al-4V ELI). Pure titanium is softer and rarely used for threaded posts.",
         "item_pure_titanium_action": "Clarify whether the item is ASTM F67 (unalloyed CP titanium) or ASTM F136 (Ti-6Al-4V ELI). Both are body-safe when certified."
     },
+    "prompt_claim": "Enter the supplier phrasing or material description to inspect:",
+    "confirm_clear": "Clear all local studio compliance records from this browser? This cannot be undone.",
     "studio_record": {
         "saved_records": "Saved Studio Records",
         "btn_clear_records": "🗑️ Clear Records",
