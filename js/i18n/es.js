@@ -1306,6 +1306,8 @@
     "toast_record_copied": "¡Registro copiado!",
     "title": "Registros del estudio",
     "subtitle": "Guarda registros fechados de recepción de materiales para tu archivo de proveedores. Todo se queda en este navegador: sin cuenta, no se envía nada.",
+    "prompt_claim": "Introduce la formulación del proveedor o la descripción del material que se va a examinar:",
+    "confirm_clear": "¿Borrar todos los registros locales de cumplimiento del estudio de este navegador? Esta acción no se puede deshacer.",
     "btn_new_inspection": "➕ Nuevo registro de recepción",
     "btn_clear_records": "🗑️ Borrar registros",
     "saved_records": "Registros guardados"
