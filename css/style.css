@@ -933,7 +933,7 @@ body {
 }
 
 .cert-decoder__detail-list li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   left: 0;
   color: var(--color-safe);
@@ -1031,7 +1031,7 @@ body {
 }
 
 .cert-decoder__red-flag-list li::before {
-  content: '⚠️';
+  content: '';
   position: absolute;
   left: 0;
 }
