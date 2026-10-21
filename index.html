@@ -40,9 +40,9 @@
 <body class="dark-mode">
     <!-- Tool Tabs -->
     <nav class="tool-tabs" aria-label="Tool Navigation">
-        <button class="tool-tab active" data-tab="tool" type="button" data-i18n="tabs.tool">🧮 Tool</button>
-        <button class="tool-tab" data-tab="docs" type="button" data-i18n="tabs.docs">📖 Documentation</button>
-        <button class="tool-tab" data-tab="embed" type="button" data-i18n="tabs.embed">⚡ Embed Code</button>
+        <button class="tool-tab active" data-tab="tool" type="button"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-calc></use></svg><span data-i18n="tabs.tool" style="color:inherit">Tool</span></button>
+        <button class="tool-tab" data-tab="docs" type="button"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-book></use></svg><span data-i18n="tabs.docs" style="color:inherit">Documentation</span></button>
+        <button class="tool-tab" data-tab="embed" type="button"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-bolt></use></svg><span data-i18n="tabs.embed" style="color:inherit">Embed Code</span></button>
     </nav>
 
     <!-- Site Header -->
@@ -65,17 +65,17 @@
                 <div class="lang-switcher-wrapper">
                     <label for="languageSelect" class="sr-only" data-i18n="app.select_language">Select Language</label>
                     <select id="languageSelect" class="lang-select" aria-label="Select Language" data-i18n-aria-label="app.select_language" data-i18n-title="app.select_language" title="Select Language">
-                        <option value="en">🇬🇧 English</option>
-                        <option value="fr">🇫🇷 Français</option>
-                        <option value="it">🇮🇹 Italiano</option>
-                        <option value="de">🇩🇪 Deutsch</option>
-                        <option value="es">🇪🇸 Español</option>
-                        <option value="pt">🇵🇹 Português</option>
-                        <option value="nl">🇳🇱 Nederlands</option>
-                        <option value="th">🇹🇭 ไทย</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="it">Italiano</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="pt">Português</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="th">ไทย</option>
                     </select>
                 </div>
-                <button type="button" id="embedBtn" class="btn btn--secondary btn--small" title="Embed this tool" data-i18n-title="nav.embed_title" data-i18n="nav.embed_btn">⚡ Embed</button>
+                <button type="button" id="embedBtn" class="btn btn--secondary btn--small" title="Embed this tool" data-i18n-title="nav.embed_title"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-bolt></use></svg><span data-i18n="nav.embed_btn" style="color:inherit">Embed</span></button>
                 <button type="button" id="darkModeToggle" class="btn btn--secondary btn--small" title="Toggle theme" aria-label="Toggle theme" data-i18n-title="app.toggle_theme" data-i18n-aria-label="app.toggle_theme">
                     <span class="dark-mode-icon">◐</span>
                 </button>
@@ -113,7 +113,7 @@
                                 data-i18n-placeholder="quick_lookup.placeholder"
                                 data-i18n-aria-label="quick_lookup.aria_label">
                             <button type="button" id="search-button" class="cert-decoder__search-button">
-                                <span class="search-icon">🔍</span>
+                                <span class="search-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-search></use></svg></span>
                                 <span class="search-text" data-i18n="quick_lookup.search_button_text">Search</span>
                             </button>
                         </div>
@@ -138,7 +138,7 @@
                             <!-- Material Type -->
                             <div class="cert-decoder__form-group">
                                 <label for="material-type" class="cert-decoder__label">
-                                    <span class="label-icon">🔬</span>
+                                    <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-flask></use></svg></span>
                                     <span data-i18n="safety_checker.material_type_label">Material Type</span>
                                 </label>
                                 <select id="material-type" class="cert-decoder__select" required>
@@ -173,7 +173,7 @@
                             <!-- Piercing Location -->
                             <div class="cert-decoder__form-group">
                                 <label for="piercing-location" class="cert-decoder__label">
-                                    <span class="label-icon">📍</span>
+                                    <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-pin></use></svg></span>
                                     <span data-i18n="safety_checker.location_label">Piercing Location</span>
                                 </label>
                                 <select id="piercing-location" class="cert-decoder__select">
@@ -192,7 +192,7 @@
                             <!-- Healing Stage -->
                             <div class="cert-decoder__form-group">
                                 <label class="cert-decoder__label">
-                                    <span class="label-icon">🩹</span>
+                                    <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-bandage></use></svg></span>
                                     <span data-i18n="safety_checker.healing_label">Healing Stage</span>
                                 </label>
                                 <div class="cert-decoder__radio-group">
@@ -210,7 +210,7 @@
                             <!-- Sensitivity -->
                             <div class="cert-decoder__form-group">
                                 <label class="cert-decoder__label">
-                                    <span class="label-icon">⚠️</span>
+                                    <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-warn></use></svg></span>
                                     <span data-i18n="safety_checker.sensitivity_label">Skin Sensitivity</span>
                                 </label>
                                 <div class="cert-decoder__radio-group">
@@ -242,7 +242,7 @@
                 <section id="recent-checks" class="cert-decoder__recent-checks">
                     <div class="cert-decoder__recent-header">
                         <div class="cert-decoder__recent-title-group">
-                            <span class="cert-decoder__recent-icon" aria-hidden="true">⏱️</span>
+                            <span class="cert-decoder__recent-icon" aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-clock></use></svg></span>
                             <h2 class="cert-decoder__recent-title" data-i18n="recent_checks.title">Recent Checks</h2>
                             <span class="cert-decoder__recent-count" id="recent-count" data-i18n="recent_checks.zero_items">0 items</span>
                         </div>
@@ -273,7 +273,7 @@
 
                         <div class="cert-decoder__input-group" style="align-items: flex-start;">
                             <label for="product-claim" class="cert-decoder__label" style="padding-top: 0.6rem;">
-                                <span class="label-icon">🏷️</span>
+                                <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-tag></use></svg></span>
                                 <span data-i18n="compliance.label">Supplier Phrasing / Label Text</span>
                             </label>
                             <textarea
@@ -307,7 +307,7 @@
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
                             <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
                                 <label for="supplier-mat-select" class="cert-decoder__label">
-                                    <span class="label-icon">⚙️</span>
+                                    <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-gear></use></svg></span>
                                     <span data-i18n="supplier_questions.material_label">Target Material / Alloy</span>
                                 </label>
                                 <select id="supplier-mat-select" class="cert-decoder__compare-select" style="width: 100%;">
@@ -323,7 +323,7 @@
 
                             <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
                                 <label for="supplier-use-select" class="cert-decoder__label">
-                                    <span class="label-icon">🩹</span>
+                                    <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-bandage></use></svg></span>
                                     <span data-i18n="supplier_questions.application_label">Intended Clinical Application</span>
                                 </label>
                                 <select id="supplier-use-select" class="cert-decoder__compare-select" style="width: 100%;">
@@ -339,21 +339,21 @@
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
                             <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
                                 <label for="supplier-studio-input" class="cert-decoder__label">
-                                    <span class="label-icon">🏢</span>
+                                    <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-building></use></svg></span>
                                     <span data-i18n="supplier_questions.studio_label">Your Studio Name</span>
                                 </label>
                                 <input type="text" id="supplier-studio-input" class="cert-decoder__text-input" placeholder="e.g. Black Lotus Body Arts" data-i18n-placeholder="supplier_questions.studio_placeholder" style="width: 100%;">
                             </div>
                             <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
                                 <label for="supplier-supplier-input" class="cert-decoder__label">
-                                    <span class="label-icon">🏭</span>
+                                    <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-building></use></svg></span>
                                     <span data-i18n="supplier_questions.supplier_label">Supplier Name</span>
                                 </label>
                                 <input type="text" id="supplier-supplier-input" class="cert-decoder__text-input" placeholder="e.g. Industrial Strength / Anatometal" data-i18n-placeholder="supplier_questions.supplier_placeholder" style="width: 100%;">
                             </div>
                             <div class="cert-decoder__input-group" style="flex-direction: column; align-items: flex-start;">
                                 <label for="supplier-item-input" class="cert-decoder__label">
-                                    <span class="label-icon">📦</span>
+                                    <span class="label-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-box></use></svg></span>
                                     <span data-i18n="supplier_questions.item_label">Item / PO Ref</span>
                                 </label>
                                 <input type="text" id="supplier-item-input" class="cert-decoder__text-input" placeholder="e.g. PO-2026-0819 Titanium Posts" data-i18n-placeholder="supplier_questions.item_placeholder" style="width: 100%;">
@@ -380,7 +380,7 @@
                             <button type="button" class="claim-matrix__filter-pill" data-category="Polymers" data-i18n="claim_matrix.filter_polymers">Polymers & Plastics</button>
                             <button type="button" class="claim-matrix__filter-pill" data-category="General" data-i18n="claim_matrix.filter_general">General & Marketing</button>
                         </div>
-                        <input type="search" id="claim-matrix-search" class="claim-matrix__search-input" placeholder="🔍 Search claims or standards..." data-i18n-placeholder="claim_matrix.search_placeholder" aria-label="Search claim matrix">
+                        <input type="search" id="claim-matrix-search" class="claim-matrix__search-input" placeholder="Search claims or standards..." data-i18n-placeholder="claim_matrix.search_placeholder" aria-label="Search claim matrix">
                     </div>
 
                     <div id="claim-matrix-table-container">
@@ -429,11 +429,11 @@
                             </p>
                         </div>
                         <div class="no-print" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-                            <button type="button" class="btn btn--secondary btn--small" id="create-manual-record-btn" data-i18n="studio_record.btn_new_inspection">
-                                ➕ New Manual Inspection
+                            <button type="button" class="btn btn--secondary btn--small" id="create-manual-record-btn">
+                                <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-plus></use></svg><span data-i18n="studio_record.btn_new_inspection" style="color:inherit">New Manual Inspection</span>
                             </button>
-                            <button type="button" class="btn btn--secondary btn--small" id="clear-records-btn" data-i18n="studio_record.btn_clear_records">
-                                🗑️ Clear Records
+                            <button type="button" class="btn btn--secondary btn--small" id="clear-records-btn">
+                                <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-trash></use></svg><span data-i18n="studio_record.btn_clear_records" style="color:inherit">Clear Records</span>
                             </button>
                         </div>
                     </div>
@@ -525,8 +525,8 @@
                     <div class="cert-decoder__reference-header">
                         <h2 class="cert-decoder__section-title" data-i18n="reference.title">Certification Quick Reference</h2>
                         <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-                            <button type="button" id="open-glossary-modal-btn" class="cert-glossary-trigger-btn" onclick="if(window.openGlossaryModal) window.openGlossaryModal();" data-i18n="glossary_overlay.trigger_button">
-                                📖 Interactive Glossary
+                            <button type="button" id="open-glossary-modal-btn" class="cert-glossary-trigger-btn" onclick="if(window.openGlossaryModal) window.openGlossaryModal();">
+                                <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-book></use></svg><span data-i18n="glossary_overlay.trigger_button" style="color:inherit">Interactive Glossary</span>
                             </button>
                             <button type="button" id="toggle-reference" class="cert-decoder__toggle-button">
                                 <span id="toggle-text" data-i18n="reference.show_guide">Show Guide</span>
@@ -579,7 +579,7 @@
 
                     <div class="cert-decoder__edu-grid">
                         <div class="cert-decoder__edu-card">
-                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_mill_title">🏆 What Are Mill Certifications?</h3>
+                            <h3 class="cert-decoder__edu-title"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-star></use></svg><span data-i18n="education.card_mill_title" style="color:inherit">What Are Mill Certifications?</span></h3>
                             <p class="cert-decoder__edu-text" data-i18n="education.card_mill_text">
                                 Mill test reports certify the chemical composition, tensile strength, and metallurgical properties
                                 of raw material lots. They provide documentary proof of compliance with ASTM or ISO standards.
@@ -587,7 +587,7 @@
                         </div>
 
                         <div class="cert-decoder__edu-card">
-                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_verify_title">📋 How to Verify Materials</h3>
+                            <h3 class="cert-decoder__edu-title"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-clipboard></use></svg><span data-i18n="education.card_verify_title" style="color:inherit">How to Verify Materials</span></h3>
                             <p class="cert-decoder__edu-text" data-i18n="education.card_verify_text">
                                 Always request authentic mill certifications from manufacturers. Verified suppliers provide lot-tracked
                                 test certificates detailing chemical analysis and mechanical properties.
@@ -595,7 +595,7 @@
                         </div>
 
                         <div class="cert-decoder__edu-card">
-                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_discrepancies_title">⚠️ Common Discrepancies</h3>
+                            <h3 class="cert-decoder__edu-title"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-warn></use></svg><span data-i18n="education.card_discrepancies_title" style="color:inherit">Common Discrepancies</span></h3>
                             <p class="cert-decoder__edu-text" data-i18n="education.card_discrepancies_text">
                                 Watch for unverified marketing terms like generic "surgical steel" without ASTM F138 documentation,
                                 or "hypoallergenic" claims lacking alloy breakdown.
@@ -603,7 +603,7 @@
                         </div>
 
                         <div class="cert-decoder__edu-card">
-                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_initial_title">✅ Initial Piercing Materials</h3>
+                            <h3 class="cert-decoder__edu-title"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-check></use></svg><span data-i18n="education.card_initial_title" style="color:inherit">Initial Piercing Materials</span></h3>
                             <p class="cert-decoder__edu-text" data-i18n-html="education.card_initial_text">
                                 Established professional practice specifies biocompatible materials for initial piercings:
                                 ASTM F136 titanium, ASTM F138 surgical steel, BioFlex&reg; body jewelry (PP-R), niobium, and borosilicate glass.
@@ -611,14 +611,14 @@
                         </div>
 
                         <div class="cert-decoder__edu-card">
-                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_biocompatibility_title">🔬 Biocompatibility Testing</h3>
+                            <h3 class="cert-decoder__edu-title"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-flask></use></svg><span data-i18n="education.card_biocompatibility_title" style="color:inherit">Biocompatibility Testing</span></h3>
                             <p class="cert-decoder__edu-text" data-i18n="education.card_biocompatibility_text">
                                 Biocompatibility is evaluated through cytotoxicity testing (ISO 10993-5), dermal sensitisation (ISO 10993-10) and USP Class VI conformity for medical-grade polymers.
                             </p>
                         </div>
 
                         <div class="cert-decoder__edu-card">
-                            <h3 class="cert-decoder__edu-title" data-i18n="education.card_sterilization_title">⚡ Sterilization Protocols</h3>
+                            <h3 class="cert-decoder__edu-title"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-bolt></use></svg><span data-i18n="education.card_sterilization_title" style="color:inherit">Sterilization Protocols</span></h3>
                             <p class="cert-decoder__edu-text" data-i18n-html="education.card_sterilization_text">
                                 Initial jewelry must withstand steam autoclave sterilization (121&deg;C to 134&deg;C). Titanium, implant steel,
                                 niobium, BioFlex&reg; body jewelry, and borosilicate glass are autoclave-compatible.
@@ -689,7 +689,7 @@
 
                 <!-- Disclaimer -->
                 <section class="cert-decoder__disclaimer">
-                    <h3 class="cert-decoder__disclaimer-title" data-i18n="disclaimer.title">⚠️ Important Disclaimer</h3>
+                    <h3 class="cert-decoder__disclaimer-title"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-warn></use></svg><span data-i18n="disclaimer.title" style="color:inherit">Important Disclaimer</span></h3>
                     <p class="cert-decoder__disclaimer-text" data-i18n="disclaimer.text">
                         This tool provides technical and educational reference data regarding body jewelry material specifications
                         and safety standards (ASTM, ISO, EN). Always verify material test reports directly with certified manufacturers.
@@ -809,7 +809,7 @@
                 tabTextarea.select();
                 navigator.clipboard.writeText(tabTextarea.value).then(function() {
                     const orig = tabCopyBtn.textContent;
-                    tabCopyBtn.textContent = typeof window.t === 'function' ? window.t('embed_tab.copied') : '✓ Copied!';
+                    tabCopyBtn.textContent = typeof window.t === 'function' ? window.t('embed_tab.copied') : 'Copied!';
                     setTimeout(function() { tabCopyBtn.textContent = orig; }, 2000);
                 }).catch(function() { document.execCommand('copy'); }); // refused in an iframe: text is already selected
             });
