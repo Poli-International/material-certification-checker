@@ -114,7 +114,7 @@ Poli International
               ${escapeHTML(tr('studio_vault.view_record'))}
             </button>
             <button type="button" class="btn btn--secondary btn--small delete-rec-btn" data-id="${escapeHTML(rec.id)}" title="${escapeHTML(tr('studio_vault.delete_record'))}">
-              🗑️
+              <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-trash></use></svg>
             </button>
           </div>
         </div>
