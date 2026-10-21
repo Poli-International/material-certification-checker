@@ -34,7 +34,7 @@
     const originalText = buttonEl ? buttonEl.innerHTML : '';
     const finalize = () => {
       if (buttonEl) {
-        buttonEl.innerHTML = `✓ ${escapeHTML(successMsg || 'Copied!')}`;
+        buttonEl.innerHTML = `${escapeHTML(successMsg || 'Copied!')}`;
         buttonEl.classList.add('btn--copied');
         setTimeout(() => {
           buttonEl.innerHTML = originalText;
@@ -299,16 +299,16 @@
       3: 'cert-reader__result--tier3'
     };
 
-    const copyBtnText = safeT('cert_reader.btn_copy_analysis', '📋 Copy Analysis');
-    const saveRecText = safeT('cert_reader.btn_save_record', '📁 Save to Studio Record');
+    const copyBtnText = safeT('cert_reader.btn_copy_analysis', 'Copy Analysis');
+    const saveRecText = safeT('cert_reader.btn_save_record', 'Save to Studio Record');
     const diagramTitle = safeT('cert_reader.evidence_hierarchy_title', 'The Evidence Hierarchy: Marketing Phrase vs. Mill Certificate');
-    const parsedTermTitle = safeT('cert_reader.parsed_terminology_title', '🏷️ Parsed Terminology in Phrasing');
+    const parsedTermTitle = safeT('cert_reader.parsed_terminology_title', 'Parsed Terminology in Phrasing');
     const establishesTitle = safeT('cert_reader.what_establishes_title', 'What This Phrasing Actually Establishes');
     const gapsTitle = safeT('cert_reader.what_gaps_title', 'What This Phrasing Does NOT Establish (The Critical Gap)');
     const docTitle = safeT('cert_reader.substantiating_doc_title', 'What Document Substantiates This Claim:');
     const docNote = safeT('cert_reader.substantiating_doc_note', 'Remember: A real Mill Test Report (MTR) comes from the raw metal melt mill, lists exact chemical element percentages, mechanical tensile/yield figures, and specifies the exact Heat Lot Number corresponding to the jewelry packaging.');
     const needVerifyText = safeT('cert_reader.need_verify_cta', 'Need to verify this with your supplier?');
-    const genQuestionsText = safeT('cert_reader.btn_generate_questions', '✉️ Generate Supplier Question Sheet for this Claim →');
+    const genQuestionsText = safeT('cert_reader.btn_generate_questions', 'Generate Supplier Question Sheet for this Claim →');
     const toastCopied = safeT('cert_reader.toast_analysis_copied', 'Analysis Copied!');
 
     const tagStandard = safeT('cert_reader.tag_standard', '[STANDARD]');
@@ -323,7 +323,7 @@
       <div class="cert-reader__card ${tierClassMap[analysis.tier] || ''}">
         <div class="cert-reader__header">
           <div class="cert-reader__tier-badge ${analysis.tierBadgeClass}">
-            <span class="cert-reader__tier-icon" aria-hidden="true">${analysis.tier === 3 ? '✓' : analysis.tier === 0 ? '⚠️' : 'ℹ️'}</span>
+            <span class="cert-reader__tier-icon" aria-hidden="true">${analysis.tier === 3 ? '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-check></use></svg>' : analysis.tier === 0 ? '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-warn></use></svg>' : '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-info></use></svg>'}</span>
             <span class="cert-reader__tier-text">${escapeHTML(analysis.tierTitle)}</span>
           </div>
           <div class="cert-reader__actions-top no-print">
@@ -359,7 +359,7 @@
         <div class="cert-reader__gap-columns">
           <div class="cert-reader__col cert-reader__col--establishes">
             <h4 class="cert-reader__col-title">
-              <span class="cert-reader__col-icon" aria-hidden="true">✓</span>
+              <span class="cert-reader__col-icon" aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-check></use></svg></span>
               ${escapeHTML(establishesTitle)}
             </h4>
             <ul class="cert-reader__list">
@@ -369,7 +369,7 @@
 
           <div class="cert-reader__col cert-reader__col--gaps">
             <h4 class="cert-reader__col-title">
-              <span class="cert-reader__col-icon" aria-hidden="true">⚠️</span>
+              <span class="cert-reader__col-icon" aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-warn></use></svg></span>
               ${escapeHTML(gapsTitle)}
             </h4>
             <ul class="cert-reader__list">
@@ -381,7 +381,7 @@
         <!-- Required Document Proof -->
         <div class="cert-reader__proof-box">
           <div class="cert-reader__proof-header">
-            <span class="cert-reader__proof-icon" aria-hidden="true">📜</span>
+            <span class="cert-reader__proof-icon" aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-consent></use></svg></span>
             <strong class="cert-reader__proof-title">${escapeHTML(docTitle)}</strong>
           </div>
           <p class="cert-reader__proof-text">${escapeHTML(analysis.requiredProof)}</p>
@@ -549,7 +549,7 @@ ${analysis.requiredProof}
     lines.push(safeT('supplier_questions.txt_mandatory', 'MANDATORY STUDIO PURCHASE CRITERIA:'));
     use.critical_requirements.forEach((cr, idx) => {
       const localizedCr = safeT(`supplier_questions.use_${useKey}_req_${idx}`, cr);
-      lines.push(`  [✓] ${localizedCr}`);
+      lines.push(`  [] ${localizedCr}`);
     });
     lines.push('');
     lines.push(safeT('supplier_questions.txt_questions_heading', 'TECHNICAL QUESTIONS REQUIRED FOR PURCHASE APPROVAL:'));
@@ -605,9 +605,9 @@ ${analysis.requiredProof}
     const badgeText = safeT('supplier_questions.sheet_badge', '[STUDIO COMPLIANCE INQUIRY]');
     const sheetTitle = safeT('supplier_questions.sheet_title', 'Technical Material Verification Sheet');
     const sheetSubtitle = safeT('supplier_questions.sheet_subtitle', 'Ready to send directly to your supplier before ordering. Printable.');
-    const btnCopy = safeT('supplier_questions.btn_copy', '📋 Copy for Email');
-    const btnPrint = safeT('supplier_questions.btn_print', '🖨️ Print Sheet');
-    const btnDownload = safeT('supplier_questions.btn_download', '💾 Download (.txt)');
+    const btnCopy = safeT('supplier_questions.btn_copy', 'Copy for Email');
+    const btnPrint = safeT('supplier_questions.btn_print', 'Print Sheet');
+    const btnDownload = safeT('supplier_questions.btn_download', 'Download (.txt)');
     const fieldDate = safeT('supplier_questions.field_date', 'Date:');
     const fieldStudio = safeT('supplier_questions.field_studio', 'Studio:');
     const defaultStudio = safeT('supplier_questions.default_studio', 'Professional Body Studio');
@@ -617,9 +617,9 @@ ${analysis.requiredProof}
     const defaultItem = safeT('supplier_questions.default_item', 'Body Jewelry Inquiry');
     const fieldMaterial = safeT('supplier_questions.field_material', 'Evaluated Material:');
     const fieldUse = safeT('supplier_questions.field_use', 'Intended Use:');
-    const secTissueTitle = safeT('supplier_questions.sec_tissue_title', '📍 Tissue Boundary & Clinical Application Context');
+    const secTissueTitle = safeT('supplier_questions.sec_tissue_title', 'Tissue Boundary & Clinical Application Context');
     const secCriteriaTitle = safeT('supplier_questions.sec_criteria_title', 'Mandatory Studio Receiving Criteria:');
-    const secQuestionsTitle = safeT('supplier_questions.sec_questions_title', '❓ Exact Technical Questions to Send Supplier');
+    const secQuestionsTitle = safeT('supplier_questions.sec_questions_title', 'Exact Technical Questions to Send Supplier');
     const labelSatisfactory = safeT('supplier_questions.label_satisfactory', '[SATISFACTORY ANSWER]:');
     const labelUnsatisfactory = safeT('supplier_questions.label_unsatisfactory', '[UNSATISFACTORY / RED FLAG]:');
     const sigReviewer = safeT('supplier_questions.sig_reviewer', 'Authorized Studio Reviewer: ___________________________________');
@@ -676,7 +676,7 @@ ${analysis.requiredProof}
             <ul>
               ${use.critical_requirements.map((cr, idx) => {
                 const localizedCr = safeT(`supplier_questions.use_${useKey}_req_${idx}`, cr);
-                return `<li><span class="check-icon">[✓]</span> ${escapeHTML(localizedCr)}</li>`;
+                return `<li><span class="check-icon">[]</span> ${escapeHTML(localizedCr)}</li>`;
               }).join('')}
             </ul>
           </div>
@@ -930,20 +930,20 @@ ${analysis.requiredProof}
     }
 
     const rows = [
-      { label: safeT('cert_compare.row_governing_standard', 'Governing Implant Standard'), prop: 'governing_standard', icon: '📜' },
-      { label: safeT('cert_compare.row_certified_composition', 'Certified Chemical Specification'), prop: 'certified_composition', icon: '🔬' },
-      { label: safeT('cert_compare.row_melting_process', 'Melting & Processing Method'), prop: 'melting_process', icon: '⚙️' },
-      { label: safeT('cert_compare.row_biocompatibility_standard', 'Biocompatibility Test Certified'), prop: 'biocompatibility_standard', icon: '🧪' },
-      { label: safeT('cert_compare.row_autoclave_thermal_limit', 'Steam Autoclave Thermal Tolerance'), prop: 'autoclave_thermal_limit', icon: '⚡' },
-      { label: safeT('cert_compare.row_traceability_unit', 'Required Traceability Unit'), prop: 'traceability_unit', icon: '🏷️' },
-      { label: safeT('cert_compare.row_surface_finish_spec', 'Surface Finish Specification'), prop: 'surface_finish_spec', icon: '✨' },
-      { label: safeT('cert_compare.row_tissue_boundary', 'Validated Tissue Boundary Contact'), prop: 'tissue_boundary', icon: '🩹' }
+      { label: safeT('cert_compare.row_governing_standard', 'Governing Implant Standard'), prop: 'governing_standard', icon: '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-consent></use></svg>' },
+      { label: safeT('cert_compare.row_certified_composition', 'Certified Chemical Specification'), prop: 'certified_composition', icon: '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-flask></use></svg>' },
+      { label: safeT('cert_compare.row_melting_process', 'Melting & Processing Method'), prop: 'melting_process', icon: '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-gear></use></svg>' },
+      { label: safeT('cert_compare.row_biocompatibility_standard', 'Biocompatibility Test Certified'), prop: 'biocompatibility_standard', icon: '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-flask></use></svg>' },
+      { label: safeT('cert_compare.row_autoclave_thermal_limit', 'Steam Autoclave Thermal Tolerance'), prop: 'autoclave_thermal_limit', icon: '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-bolt></use></svg>' },
+      { label: safeT('cert_compare.row_traceability_unit', 'Required Traceability Unit'), prop: 'traceability_unit', icon: '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-tag></use></svg>' },
+      { label: safeT('cert_compare.row_surface_finish_spec', 'Surface Finish Specification'), prop: 'surface_finish_spec', icon: '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-spark></use></svg>' },
+      { label: safeT('cert_compare.row_tissue_boundary', 'Validated Tissue Boundary Contact'), prop: 'tissue_boundary', icon: '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-bandage></use></svg>' }
     ];
 
     const badgeText = safeT('cert_compare.badge', '[CERTIFIED STANDARDS COMPARISON]');
     const titleText = safeT('cert_compare.title', 'Side-by-Side Certified Specifications');
     const subtitleText = safeT('cert_compare.subtitle', 'Compares certified technical parameters under identical test standards. No subjective rankings or best/worst labels.');
-    const btnPrint = safeT('cert_compare.btn_print', '🖨️ Print Comparison');
+    const btnPrint = safeT('cert_compare.btn_print', 'Print Comparison');
     const thParam = safeT('cert_compare.th_parameter', 'Technical Standard Parameter');
     const tagSpec = safeT('cert_compare.tag_specification', '[SPECIFICATION]');
     const footerNote = safeT('cert_compare.footer_note', 'Methodology Note: Specifications cited reflect current published revisions of ASTM F136, ASTM F138, ASTM F2229, ISO 10993, and USP Class VI. In body art studios, receiving protocols require independent verification of the manufacturer\'s Mill Test Report (MTR) matching the packaging heat number.');
@@ -1141,7 +1141,7 @@ ${analysis.requiredProof}
         </div>
         <div class="studio-record__item-actions no-print">
           <button type="button" class="btn btn--secondary btn--small view-rec-btn" data-id="${escapeHTML(rec.id)}">${escapeHTML(viewTxt)}</button>
-          <button type="button" class="btn btn--secondary btn--small delete-rec-btn" data-id="${escapeHTML(rec.id)}" title="${escapeHTML(delTxt)}">🗑️</button>
+          <button type="button" class="btn btn--secondary btn--small delete-rec-btn" data-id="${escapeHTML(rec.id)}" title="${escapeHTML(delTxt)}"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-trash></use></svg></button>
         </div>
       </div>
     `).join('');
@@ -1175,9 +1175,9 @@ ${analysis.requiredProof}
     const sheetTitle = safeT('studio_record.sheet_title', 'Material Lot Verification Certificate');
     const recIdLabel = safeT('studio_record.record_id_label', 'Record ID:');
     const dateLabel = safeT('studio_record.date_label', 'Date:');
-    const btnPrint = safeT('studio_record.btn_print', '🖨️ Print for Supplier File');
-    const btnCopy = safeT('studio_record.btn_copy', '📋 Copy Summary');
-    const btnDownload = safeT('studio_record.btn_download', '💾 Download (.txt)');
+    const btnPrint = safeT('studio_record.btn_print', 'Print for Supplier File');
+    const btnCopy = safeT('studio_record.btn_copy', 'Copy Summary');
+    const btnDownload = safeT('studio_record.btn_download', 'Download (.txt)');
     const fieldStudio = safeT('studio_record.studio_name_label', 'Studio Name:');
     const fieldInspector = safeT('studio_record.inspector_label', 'Inspector / Piercer:');
     const fieldSupplier = safeT('studio_record.supplier_label', 'Supplier / Manufacturer:');
