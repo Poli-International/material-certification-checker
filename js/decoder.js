@@ -383,7 +383,7 @@ function renderTermWithTooltip(term, displayText) {
   const definition = TECHNICAL_TERMS_GLOSSARY[term] || t('glossary.' + term);
   const label = displayText || term;
   if (!definition || definition === 'glossary.' + term) return label;
-  return `<span class="cert-tooltip-wrap" tabindex="0" aria-label="${label}: ${definition}"><span class="cert-tooltip-term">${label}</span><span class="cert-tooltip-icon">ℹ</span><span class="cert-tooltip-box" role="tooltip"><strong>${term}</strong>${definition}</span></span>`;
+  return `<span class="cert-tooltip-wrap" tabindex="0" aria-label="${label}: ${definition}"><span class="cert-tooltip-term">${label}</span><span class="cert-tooltip-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-info></use></svg></span><span class="cert-tooltip-box" role="tooltip"><strong>${term}</strong>${definition}</span></span>`;
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -614,7 +614,7 @@ function displayCertificationResult(cert, container) {
   container.innerHTML = `
     <div class="cert-decoder__action-bar">
       <button type="button" class="cert-decoder__action-btn cert-decoder__action-btn--print" onclick="window.print()" title="${t('safety_checker.print_result_title_search')}">
-        <span aria-hidden="true">🖨️</span> ${t('safety_checker.print_result')}
+        <span aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-print></use></svg></span> ${t('safety_checker.print_result')}
       </button>
     </div>
 
@@ -750,7 +750,7 @@ function getInitialPiercingStatusHTML(material) {
   if (isPass) {
     return `
       <div class="cert-decoder__piercing-status cert-decoder__piercing-status--pass" role="status">
-        <div class="cert-decoder__piercing-status-icon" aria-hidden="true">✅</div>
+        <div class="cert-decoder__piercing-status-icon" aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-check></use></svg></div>
         <div class="cert-decoder__piercing-status-content">
           <div class="cert-decoder__piercing-status-title">${t('safety_checker.initial_pass_title')}</div>
           <div class="cert-decoder__piercing-status-desc">${t('safety_checker.initial_pass_desc')}</div>
@@ -761,7 +761,7 @@ function getInitialPiercingStatusHTML(material) {
 
   return `
     <div class="cert-decoder__piercing-status cert-decoder__piercing-status--fail" role="status">
-      <div class="cert-decoder__piercing-status-icon" aria-hidden="true">⚠️</div>
+      <div class="cert-decoder__piercing-status-icon" aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-warn></use></svg></div>
       <div class="cert-decoder__piercing-status-content">
         <div class="cert-decoder__piercing-status-title">${t('safety_checker.initial_fail_title')}</div>
         <div class="cert-decoder__piercing-status-desc">${t('safety_checker.initial_fail_desc')}</div>
@@ -810,16 +810,16 @@ function displayMaterialResult(material, healing, sensitivity, location, trackHi
   resultsDiv.innerHTML = `
     <div class="cert-decoder__action-bar">
       <button type="button" class="cert-decoder__action-btn cert-decoder__action-btn--print" onclick="window.print()" title="${t('safety_checker.print_result_title_material')}">
-        <span aria-hidden="true">🖨️</span> ${t('safety_checker.print_result')}
+        <span aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-print></use></svg></span> ${t('safety_checker.print_result')}
       </button>
       <button type="button" class="cert-decoder__action-btn cert-decoder__action-btn--pdf" id="export-material-pdf-btn" title="${t('safety_checker.export_pdf_title')}">
-        <span aria-hidden="true">📄</span> ${t('safety_checker.export_pdf')}
+        <span aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-doc></use></svg></span> ${t('safety_checker.export_pdf')}
       </button>
       <button type="button" class="cert-decoder__action-btn" id="copy-material-report-btn" title="${t('safety_checker.copy_report_title')}">
-        <span aria-hidden="true">📋</span> <span id="copy-report-text">${t('safety_checker.copy_report')}</span>
+        <span aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-clipboard></use></svg></span> <span id="copy-report-text">${t('safety_checker.copy_report')}</span>
       </button>
       <button type="button" class="cert-decoder__action-btn cert-decoder__action-btn--primary" id="export-material-report-btn" title="${t('safety_checker.export_report_title')}">
-        <span aria-hidden="true">📥</span> ${t('safety_checker.export_report')}
+        <span aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-download></use></svg></span> ${t('safety_checker.export_report')}
       </button>
     </div>
 
@@ -1697,7 +1697,7 @@ function handleCompare1Change() {
     noticeBox.style.display = 'block';
     noticeBox.innerHTML = `
       <div class="compare-notice-badge">
-        <span class="compare-notice-icon">🔒</span>
+        <span class="compare-notice-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-lock></use></svg></span>
         <span>
           <strong>${t('comparison.category_locked_title') || 'Category Locked:'}</strong>
           ${group.title} - ${t('comparison.category_locked_desc') || 'Selections 2 & 3 are filtered to matching classification materials to prevent invalid cross-category comparisons.'}
@@ -2059,20 +2059,20 @@ function createGlossaryModalDOM() {
     <div class="glossary-modal__dialog">
       <div class="glossary-modal__header">
         <div class="glossary-modal__title-wrap">
-          <span class="glossary-modal__icon">📖</span>
+          <span class="glossary-modal__icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-book></use></svg></span>
           <div>
             <h2 class="glossary-modal__title">${t('glossary.modal_title') || 'Interactive Standards Glossary (A–Z)'}</h2>
             <p class="glossary-modal__subtitle">${t('glossary.modal_subtitle') || 'Technical Metallurgy & Biocompatibility Reference (ASTM, ISO, REACH & EN 1811)'}</p>
           </div>
         </div>
-        <button type="button" class="glossary-modal__close-btn" id="glossary-modal-close" aria-label="${t('common.close') || 'Close'}">✕</button>
+        <button type="button" class="glossary-modal__close-btn" id="glossary-modal-close" aria-label="${t('common.close') || 'Close'}"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-x></use></svg></button>
       </div>
 
       <div class="glossary-modal__controls">
         <div class="glossary-modal__search-bar">
-          <span class="glossary-modal__search-icon">🔍</span>
+          <span class="glossary-modal__search-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-search></use></svg></span>
           <input type="search" id="glossary-search-input" class="glossary-modal__search-input" placeholder="${t('glossary.search_placeholder') || 'Search ASTM standards, ISO specs, metallurgy terms...'}" autocomplete="off" />
-          <button type="button" id="glossary-search-clear" class="glossary-modal__search-clear" style="display: none;">✕</button>
+          <button type="button" id="glossary-search-clear" class="glossary-modal__search-clear" style="display: none;"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-x></use></svg></button>
         </div>
 
         <div class="glossary-modal__category-tabs" id="glossary-category-tabs">
@@ -2260,7 +2260,7 @@ function renderGlossaryCards() {
   if (filtered.length === 0) {
     grid.innerHTML = `
       <div class="glossary-empty-state">
-        <span style="font-size: 2rem;">🔍</span>
+        <span style="font-size: 2rem;"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-search></use></svg></span>
         <h4 style="font-size: 1.1rem; font-weight: bold; margin: 0.5rem 0; color: var(--color-accent-yellow);">${t('glossary.empty_title')}</h4>
         <p style="color: var(--color-text-secondary); font-size: 0.85rem;">${t('glossary.empty_desc')}</p>
       </div>
@@ -2325,7 +2325,7 @@ function renderGlossaryCards() {
 
         ${item.citation ? `
         <div class="glossary-card__citation">
-          <span class="glossary-card__citation-icon">📌</span> ${item.citation}
+          <span class="glossary-card__citation-icon"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-pin></use></svg></span> ${item.citation}
         </div>
         ` : ''}
       </div>
