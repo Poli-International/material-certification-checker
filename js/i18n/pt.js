@@ -1306,6 +1306,8 @@
     "toast_record_copied": "Registo copiado!",
     "title": "Registros do estúdio",
     "subtitle": "Mantenha registros datados de recebimento de materiais no arquivo de fornecedores. Tudo fica neste navegador: sem conta, nada é enviado.",
+    "prompt_claim": "Introduza a formulação do fornecedor ou a descrição do material a examinar:",
+    "confirm_clear": "Apagar todos os registos locais de conformidade do estúdio deste navegador? Esta ação não pode ser anulada.",
     "btn_new_inspection": "➕ Novo registro de recebimento",
     "btn_clear_records": "🗑️ Limpar registros",
     "saved_records": "Registros salvos"
