@@ -1372,9 +1372,9 @@ function copyMaterialReport(material, healing, sensitivity, location, compatible
 
   const done = () => {
     if (copyBtnText) {
-      const orig = copyBtnText.textContent;
+      const orig = copyBtnText.innerHTML;
       copyBtnText.textContent = t('safety_checker.copied');
-      setTimeout(() => { copyBtnText.textContent = orig; }, 2500);
+      setTimeout(() => { copyBtnText.innerHTML = orig; }, 2500);
     }
   };
   const legacyCopy = () => {
