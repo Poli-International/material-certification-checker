@@ -6,6 +6,11 @@
   'use strict';
 
   const DICTIONARY = {
+    "a11y": {
+      "tool_navigation": "การนำทางของเครื่องมือ",
+      "filter_claims_by_category": "กรองคำกล่าวอ้างตามหมวดหมู่",
+      "search_claim_matrix": "ค้นหาในตารางคำกล่าวอ้าง"
+    },
     "common": {
       "done": "เสร็จสิ้น",
       "close": "ปิด"
