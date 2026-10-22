@@ -187,12 +187,12 @@
       const textToCopy = codeElement.textContent;
 
       navigator.clipboard.writeText(textToCopy).then(() => {
-        const originalText = button.textContent;
+        const originalText = button.innerHTML;
         button.textContent = 'Copied!';
         button.classList.add('copied');
 
         setTimeout(() => {
-          button.textContent = originalText;
+          button.innerHTML = originalText;
           button.classList.remove('copied');
         }, 2000);
       }).catch(err => {
