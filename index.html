@@ -808,9 +808,9 @@
             tabCopyBtn.addEventListener('click', function() {
                 tabTextarea.select();
                 navigator.clipboard.writeText(tabTextarea.value).then(function() {
-                    const orig = tabCopyBtn.textContent;
+                    const orig = tabCopyBtn.innerHTML;
                     tabCopyBtn.textContent = typeof window.t === 'function' ? window.t('embed_tab.copied') : 'Copied!';
-                    setTimeout(function() { tabCopyBtn.textContent = orig; }, 2000);
+                    setTimeout(function() { tabCopyBtn.innerHTML = orig; }, 2000);
                 }).catch(function() { document.execCommand('copy'); }); // refused in an iframe: text is already selected
             });
         }
