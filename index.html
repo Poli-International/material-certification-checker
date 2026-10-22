@@ -39,7 +39,7 @@
 </head>
 <body class="dark-mode">
     <!-- Tool Tabs -->
-    <nav class="tool-tabs" aria-label="Tool Navigation">
+    <nav class="tool-tabs" aria-label="Tool Navigation" data-i18n-aria-label="a11y.tool_navigation">
         <button class="tool-tab active" data-tab="tool" type="button"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-calc></use></svg><span data-i18n="tabs.tool" style="color:inherit">Tool</span></button>
         <button class="tool-tab" data-tab="docs" type="button"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-book></use></svg><span data-i18n="tabs.docs" style="color:inherit">Documentation</span></button>
         <button class="tool-tab" data-tab="embed" type="button"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none;margin-inline-end:.35em><use href=../shared/icons.svg#i-bolt></use></svg><span data-i18n="tabs.embed" style="color:inherit">Embed Code</span></button>
@@ -374,13 +374,13 @@
                     </p>
 
                     <div class="claim-matrix__toolbar">
-                        <div class="claim-matrix__filter-pills" role="tablist" aria-label="Filter claims by category">
+                        <div class="claim-matrix__filter-pills" role="tablist" aria-label="Filter claims by category" data-i18n-aria-label="a11y.filter_claims_by_category">
                             <button type="button" class="claim-matrix__filter-pill active" data-category="All" data-i18n="claim_matrix.filter_all">All Claims</button>
                             <button type="button" class="claim-matrix__filter-pill" data-category="Metals" data-i18n="claim_matrix.filter_metals">Metals & Alloys</button>
                             <button type="button" class="claim-matrix__filter-pill" data-category="Polymers" data-i18n="claim_matrix.filter_polymers">Polymers & Plastics</button>
                             <button type="button" class="claim-matrix__filter-pill" data-category="General" data-i18n="claim_matrix.filter_general">General & Marketing</button>
                         </div>
-                        <input type="search" id="claim-matrix-search" class="claim-matrix__search-input" placeholder="Search claims or standards..." data-i18n-placeholder="claim_matrix.search_placeholder" aria-label="Search claim matrix">
+                        <input type="search" id="claim-matrix-search" class="claim-matrix__search-input" placeholder="Search claims or standards..." data-i18n-placeholder="claim_matrix.search_placeholder" aria-label="Search claim matrix" data-i18n-aria-label="a11y.search_claim_matrix">
                     </div>
 
                     <div id="claim-matrix-table-container">
