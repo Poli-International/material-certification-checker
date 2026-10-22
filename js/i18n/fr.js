@@ -68,8 +68,8 @@
     "opt_niobium": "Niobium (Pur / Allié) - ASTM F2229",
     "opt_gold_14k": "Or 14 carats",
     "opt_gold_18k": "Or 18 carats (Sans nickel)",
-    "opt_bioflex": "BioFlex (Polymère PP-R - Grade médical)",
-    "opt_bioplast": "Bioplast (Bioplastique médical)",
+    "opt_bioflex": "BioFlex® body jewelry (PP-R de qualité médicale)",
+    "opt_bioplast": "Bioplast (PP-R souple)",
     "opt_ptfe": "PTFE (Polytétrafluoroéthylène)",
     "opt_glass": "Verre borosilicate",
     "opt_stone": "Pierre naturelle (Cicatrisé uniquement)",
@@ -337,8 +337,8 @@
     "ASTM F1472": "Spécification standard pour l'alliage corroyé de titane-6aluminium-4vanadium pour implants chirurgicaux (Grade 5 standard).",
     "Autoclave Safe": "Capacité d'un matériau à supporter la stérilisation à la vapeur d'eau sous pression (121 °C à 134 °C) sans altération.",
     "Biocompatibility": "Capacité d'un matériau à remplir sa fonction sans déclencher de toxicité cellulaire ni de réponse inflammatoire délétère.",
-    "BioFlex® body jewelry": "Copolymère statistique de polypropylène (PP-R) de grade médical pour dispositifs biocompatibles et piercings ; exempt de phtalates et autoclavable.",
-    "Bioplast": "Nom commercial pour un polymère biocompatible souple certifié pour un contact corporel de longue durée et conforme aux exigences d'évaluation biologique.",
+    "BioFlex® body jewelry": "Bijoux de corps en copolymère statistique PP-R de qualité médicale, créés par Patrick Poli. La résine satisfait à l'USP Classe VI et à la Ph. Eur. 3.2.2, et le matériau est certifié conforme aux essais biologiques ISO 10993. Fabriqués d'une seule pièce, sans jointure ni partie collée.",
+    "Bioplast": "Bijoux de corps souples fabriqués à partir de la même matière de base que BioFlex® body jewelry (copolymère statistique PP-R), dans une autre qualité.",
     "Borosilicate Glass": "Verre silicaté technique (ISO 3585) à très faible coefficient de dilatation thermique, surface lisse non poreuse et haute résistance chimique.",
     "Cytotoxicity": "Évaluation de la toxicité biologique sur les cellules vivantes conformément aux protocoles d'essais in vitro ISO 10993-5.",
     "ELI": "Extra Low Interstitial : pureté métallurgique garantissant des teneurs réduites en oxygène, carbone, azote et fer pour une ténacité supérieure.",
@@ -351,7 +351,7 @@
     "Nickel-Free": "Une allégation commerciale. Littéralement, cela signifie que l'alliage ne contient aucun nickel. Ce terme est souvent utilisé de manière approximative pour désigner des alliages conformes à la limite de libération de nickel de l'UE, ce qui est différent. Demandez ce qui est visé et exigez le document justificatif.",
     "Niobium": "Élément métallique pur (numéro atomique 41) hautement biocompatible, totalement exempt de nickel, ductile et apte à l'anodisation décorative.",
     "Passivation": "Traitement chimique par immersion acide créant une couche superficielle d'oxyde transparente et chimiquement inerte empêchant la corrosion.",
-    "PP-R Copolymer": "Copolymère statistique de polypropylène employé pour la fabrication des bijoux de corps BioFlex®, biocompatible et autoclavable.",
+    "PP-R Copolymer": "Copolymère statistique de polypropylène : thermoplastique souple, d'excellente résistance chimique, stérilisable à la vapeur. Le matériau de BioFlex® body jewelry.",
     "PTFE": "Fluoropolymère synthétique hydrophobe à coefficient de friction exceptionnellement bas et grande inertie chimique ; usiné sous forme de barres ou tubes.",
     "Tensile Strength": "Contrainte maximale de traction qu'un matériau peut supporter avant rupture mécanique.",
     "USP Class VI": "Protocole d'essais in vivo de la pharmacopée américaine (toxicité systémique, intracutanée et implantation) pour polymères plastiques de qualité médicale.",
@@ -799,34 +799,107 @@
       "sterilization_methods": "Autoclave à la vapeur"
     },
     "bioflex": {
-      "name": "BioFlex (Polymère médical PP-R)",
-      "biocompatibility": "Excellente (Copolymère PP-R médical biocompatible)",
-      "composition": "Copolymère statistique de polypropylène médical (PP-R) moulé par injection en une pièce monobloc.",
-      "verification_tips": "Vérifier la marque officielle BioFlex® body jewelry par Patrick Poli.",
-      "maintenance": "Nettoyage à l'eau tiède savonneuse ou solution saline. Ne pas utiliser d'alcool pur.",
-      "common_names": "BioFlex, PP-R médical",
-      "suitable_for": "Piercings initiaux, piercings de grossesse, retainers médicaux/IRM, interventions chirurgicales",
-      "not_suitable_for": "Piercings oraux en cas de tic de mastication sévère",
-      "color_options": "Transparent / translucide, teintes variées teintées dans la masse",
-      "pros": "Extrêmement souple, biocompatibilité certifiée, indétectable aux rayons X / IRM, 100 % sans métal, autoclavable",
-      "cons": "Ne doit pas être confondu avec les plastiques bas de gamme ou le PTFE usiné",
-      "red_flags": "Copies génériques sans certification de résine médicale",
-      "sterilization_methods": "Autoclave à la vapeur (jusqu'à 134 °C), oxyde d'éthylène"
+      "name": "BioFlex® body jewelry",
+      "biocompatibility": "Excellente : résine conforme USP Classe VI et Ph. Eur. 3.2.2 ; matériau certifié conforme aux essais biologiques ISO 10993",
+      "composition": "Copolymère statistique PP-R de qualité médicale avec lubrifiant interne pour un faible frottement de surface ; fabriqué d'une seule pièce, sans jointure ni partie collée, même avec une pierre",
+      "verification_tips": "Demander les documents de conformité (USP Classe VI, Ph. Eur. 3.2.2, essais biologiques ISO 10993). Les fiches de conformité BioFlex® body jewelry sont téléchargeables : poliinternational.com/downloads/BioFlex-Compliance-Data-Sheets.pdf",
+      "maintenance": "Autoclavable. Nettoyer à l'eau et au savon doux. Remplacer en cas de dommage ou de décoloration.",
+      "common_names": [
+        "BioFlex® body jewelry",
+        "Bijoux de corps souples"
+      ],
+      "suitable_for": [
+        "piercings initiaux",
+        "piercings cicatrisés",
+        "piercings oraux",
+        "retainers de grossesse",
+        "peaux sensibles",
+        "retainers",
+        "IRM et radio : sans métal, non magnétique (prévenir le personnel de radiologie)"
+      ],
+      "not_suitable_for": [],
+      "color_options": [
+        "transparent (haute transparence)",
+        "couleurs variées"
+      ],
+      "pros": [
+        "Résine conforme USP Classe VI et Ph. Eur. 3.2.2",
+        "Certifié conforme aux essais biologiques ISO 10993",
+        "Un FDA Drug Master File existe pour le matériau",
+        "Stérilisable à l'autoclave, à l'oxyde d'éthylène ou par stérilisation chimique",
+        "Souple : suit le ventre qui s'arrondit sans tirer",
+        "Bien plus doux pour les dents et les gencives que le métal",
+        "Sans métal et non magnétique",
+        "Excellente résistance chimique",
+        "Peut être coupé à la longueur",
+        "Haute transparence",
+        "Fabriqué d'une seule pièce, sans jointure ni partie collée"
+      ],
+      "cons": [
+        "Plus cher qu'un plastique générique",
+        "Les certificats couvrent uniquement les vrais BioFlex® body jewelry",
+        "Moins rigide qu'un bijou en métal"
+      ],
+      "red_flags": [
+        "« Bijoux souples » génériques sans certificats",
+        "Le vendeur ne peut pas fournir les documents de conformité",
+        "Copies « BioFlex » étrangement bon marché",
+        "Étiqueté « style BioFlex » au lieu de vrais BioFlex® body jewelry"
+      ],
+      "sterilization_methods": [
+        "Autoclave (vapeur)",
+        "Oxyde d'éthylène",
+        "Stérilisation chimique"
+      ]
     },
     "bioplast": {
-      "name": "Bioplast (Biopolymère médical)",
-      "biocompatibility": "Bonne (Biopolymère souple de qualité médicale)",
-      "composition": "Polymère plastique souple conforme aux directives de dispositifs médicaux.",
-      "verification_tips": "Vérifier l'emballage d'origine du fabricant.",
-      "maintenance": "Nettoyage au sérum physiologique.",
-      "common_names": "Bioplast",
-      "suitable_for": "Piercings cicatrisés, retainers temporaires, zones soumises à mouvements",
-      "not_suitable_for": "Contact prolongé avec solvants agressifs ou alcool à 90°",
-      "color_options": "Transparent et couleurs variées",
-      "pros": "Souplesse, confort tissulaire, invisible aux examens radiologiques",
-      "cons": "Durée de vie plus courte que les métaux nobles",
-      "red_flags": "Matériau jauni ou durci avec le temps",
-      "sterilization_methods": "Autoclave à la vapeur (selon préconisations fabricant)"
+      "name": "Bioplast",
+      "biocompatibility": "Même matière de base que BioFlex® body jewelry, dans une autre qualité ; conforme à la Ph. Eur. 3.2.2",
+      "composition": "Copolymère statistique PP-R, d'une autre qualité que BioFlex® body jewelry (même matière de base)",
+      "verification_tips": "Demander au fabricant ses documents de conformité. Bioplast est une autre qualité que BioFlex® body jewelry (translucide plutôt que très transparent).",
+      "maintenance": "Autoclavable. Nettoyer à l'eau et au savon doux. Remplacer en cas de dommage ou de décoloration.",
+      "common_names": [
+        "Bioplast",
+        "Bio-plast",
+        "Bijoux de corps souples"
+      ],
+      "suitable_for": [
+        "piercings initiaux",
+        "piercings cicatrisés",
+        "retainers de grossesse",
+        "peaux sensibles",
+        "retainers",
+        "IRM et radio : sans métal, non magnétique (prévenir le personnel de radiologie)"
+      ],
+      "not_suitable_for": [],
+      "color_options": [
+        "translucide",
+        "couleurs variées"
+      ],
+      "pros": [
+        "Conforme à la Ph. Eur. 3.2.2",
+        "Un FDA Drug Master File existe pour le matériau",
+        "Stérilisable à l'autoclave, à l'oxyde d'éthylène ou par stérilisation chimique",
+        "Souple et confortable",
+        "Sans métal et non magnétique",
+        "Excellente résistance chimique",
+        "Peut être coupé à la longueur"
+      ],
+      "cons": [
+        "Translucide (moins transparent que BioFlex® body jewelry)",
+        "Plus cher qu'un plastique générique",
+        "Moins rigide qu'un bijou en métal"
+      ],
+      "red_flags": [
+        "« Bijoux souples » génériques sans certificats",
+        "Le vendeur ne peut pas fournir les documents de conformité",
+        "Étiqueté « style Bioplast » au lieu du vrai Bioplast"
+      ],
+      "sterilization_methods": [
+        "Autoclave (vapeur)",
+        "Oxyde d'éthylène",
+        "Stérilisation chimique"
+      ]
     },
     "ptfe": {
       "name": "PTFE médical (ASTM F754)",
@@ -840,7 +913,7 @@
       "color_options": "Blanc opaque / blanc laiteux",
       "pros": "Inertie chimique totale, anti-adhérent, totalement flexible, autoclavable",
       "cons": "Doit être fileté à la main ou clipsé, aspect opaque",
-      "red_flags": "Confusion commerciale avec le BioFlex (le PTFE est usiné, le BioFlex est moulé en PP-R)",
+      "red_flags": "Confusion commerciale avec le BioFlex (le PTFE est usiné, le BioFlex® est en PP-R, d'une seule pièce)",
       "sterilization_methods": "Autoclave à la vapeur (121 °C à 134 °C), oxyde d'éthylène"
     },
     "glass": {
@@ -1061,7 +1134,7 @@
     "material_label": "Matériau / Alliage cible",
     "opt_astm_f136": "Titane ASTM F136 (Ti-6Al-4V ELI)",
     "opt_astm_f138": "Acier inoxydable ASTM F138 (316LVM)",
-    "opt_bioflex": "Polymère médical BioFlex® (USP Classe VI)",
+    "opt_bioflex": "BioFlex® body jewelry (PP-R ; résine USP Classe VI)",
     "opt_niobium": "Niobium ASTM F2229 (non allié)",
     "opt_glass": "Verre borosilicate 3.3",
     "opt_gold": "Or massif 14K/18K",
@@ -1130,7 +1203,7 @@
     "use_sensitive_client_req_3": "Vérification d'outils d'usinage propres et sans contamination croisée",
     "use_oral_mucosal_context": "Exposition constante à la salive, variations de pH, enzymes buccales et contact dentaire continu. Risque d'abrasion et d'érosion de l'émail dentaire.",
     "use_oral_mucosal_req_0": "Haute résistance à la corrosion en milieu buccal humide, chaud et acide",
-    "use_oral_mucosal_req_1": "Options de polymère biocompatible (BioFlex®) pour réduire l'usure de l'émail dentaire",
+    "use_oral_mucosal_req_1": "Polymère souple (BioFlex® body jewelry), bien plus doux pour les dents et les gencives que le métal",
     "use_oral_mucosal_req_2": "Zéro lixiviation de plastifiants ou monomères dans la cavité buccale",
     "use_oral_mucosal_req_3": "Stérilité par autoclave avant insertion initiale",
     "use_subdermal_surface_context": "Implant sous-cutané permanent dont la base d'ancrage repose dans le tissu sous-cutané. Contraintes de cisaillement mécanique et exigences d'adhésion cellulaire maximales.",
@@ -1246,7 +1319,7 @@
     "item_hypoallergenic_proves": "Prouve que les allergènes de contact connus (nickel, cobalt, chrome) sont totalement absents ou immobilisés sous les seuils de sensibilisation biologique.",
     "item_hypoallergenic_absence": "L'absence de preuve montre que le mot n'a aucune valeur juridique, médicale ou métallurgique. N'importe quel fournisseur peut apposer ce mot sur des articles contenant 20 % de nickel libre ou des métaux toxiques sans enfreindre la législation commerciale courante.",
     "item_hypoallergenic_action": "Écartez totalement le terme \"hypoallergénique\". Examinez la nuance métallurgique précise et le rapport d'analyse de laboratoire indépendant.",
-    "item_medical_grade_polymer_claim": "Polymère Qualité Médicale / BioFlex / Plastique",
+    "item_medical_grade_polymer_claim": "Polymère Qualité Médicale / BioFlex® / Plastique",
     "item_medical_grade_polymer_doc": "Certificat de réactivité biologique USP Classe VI et essai de cytotoxicité ISO 10993-5",
     "item_medical_grade_polymer_proves": "Atteste de la biocompatibilité in vivo à 121°C et d'une cytotoxicité in vitro nulle pour une résine PP-R médicale, sans plastifiants phtalates ni pigments de métaux lourds.",
     "item_medical_grade_polymer_absence": "L'absence de preuve signifie que le plastique est de l'acrylique industriel (PMMA), du PTFE commercial, du PVC ou de la résine d'artisanat. Ces matières se dégradent à la chaleur corporelle, relarguent des monomères résiduels et ne supportent pas l'autoclave.",
@@ -1429,8 +1502,8 @@
     "mat_surgical_steel_316lvm_tissue_boundary": "Implant chirurgical, canal tissulaire cicatrisé, piercing initial (chez personnes non allergiques au nickel)",
     "mat_surgical_steel_316l_biocompatibility_standard": "Teneur élevée en micro-inclusions augmentant la sensibilité à la corrosion par piqûres dans les fluides biologiques",
     "mat_surgical_steel_316l_tissue_boundary": "Quincaillerie marine, matériel agroalimentaire, bijoux extérieurs sur peau saine cicatrisée",
-    "mat_bioflex_biocompatibility_standard": "Certifié USP Classe VI pour la réactivité in vivo et ISO 10993-5 cytotoxicité in vitro grade 0",
-    "mat_bioflex_tissue_boundary": "Canal de plaie initiale, piercings oraux, canaux tissulaires flexibles, examens IRM",
+    "mat_bioflex_biocompatibility_standard": "Résine conforme USP Classe VI et Ph. Eur. 3.2.2 ; certifiée conforme aux essais biologiques ISO 10993",
+    "mat_bioflex_tissue_boundary": "Piercings initiaux, piercings oraux, canaux tissulaires souples ; sans métal, non magnétique (pour une IRM ou une radio, prévenir le personnel de radiologie)",
     "mat_niobium_biocompatibility_standard": "Réussit l'ISO 10993 ; hautement biocompatible, 100% sans nickel, non réactif",
     "mat_niobium_tissue_boundary": "Fistule de piercing initial, tissus sensibles, piercings sous-cutanés et cicatrisés",
     "mat_glass_biocompatibility_standard": "Chimiquement totalement inerte ; aucune libération ionique dans les solutions physiologiques",
