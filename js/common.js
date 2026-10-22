@@ -116,14 +116,14 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const input = form.querySelector('input');
             const btn = form.querySelector('button');
-            const originalText = btn.textContent;
+            const originalText = btn.innerHTML;
             
             btn.textContent = typeof window.t === 'function' ? window.t('email.subscribed') : 'Subscribed!';
             btn.disabled = true;
             input.value = '';
             
             setTimeout(() => {
-                btn.textContent = originalText;
+                btn.innerHTML = originalText;
                 btn.disabled = false;
             }, 3000);
         });
