@@ -6,6 +6,11 @@
   'use strict';
 
   const DICTIONARY = {
+  "a11y": {
+    "tool_navigation": "Navegación de la herramienta",
+    "filter_claims_by_category": "Filtrar las declaraciones por categoría",
+    "search_claim_matrix": "Buscar en la matriz de declaraciones"
+  },
   "app": {
     "title": "Verificador de Certificación de Materiales",
     "subtitle": "Herramienta técnica de evaluación y verificación para piercers profesionales y estudios de joyería corporal",
