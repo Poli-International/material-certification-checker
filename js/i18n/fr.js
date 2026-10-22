@@ -6,6 +6,11 @@
   'use strict';
 
   const DICTIONARY = {
+  "a11y": {
+    "tool_navigation": "Navigation de l'outil",
+    "filter_claims_by_category": "Filtrer les mentions par catégorie",
+    "search_claim_matrix": "Rechercher dans la matrice des mentions"
+  },
   "app": {
     "title": "Vérificateur de certification des matériaux",
     "subtitle": "Vérifiez les certifications des matériaux pour bijoux de corps, les normes de biocompatibilité et les indices de sécurité",
