@@ -11,6 +11,11 @@ Language: English (Reference Dictionary)
 
   const I18N_DICTIONARY = {
     en: {
+      "a11y": {
+        "tool_navigation": "Tool Navigation",
+        "filter_claims_by_category": "Filter claims by category",
+        "search_claim_matrix": "Search claim matrix"
+      },
       "common": {
           "done": "Done", "close": "Close" },
     "app": {
