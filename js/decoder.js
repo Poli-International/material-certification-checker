@@ -163,10 +163,10 @@ const TECHNICAL_TERMS_CATALOG = [
     category: 'polymer',
     categoryName: 'Polymers & Glass',
     letter: 'B',
-    standard: 'ISO 10993 / USP Class VI',
-    definition: 'Medical-grade PP-R (polypropylene random copolymer) created by Patrick Poli; monolithic injection-moulded biocompatible polymer compliant with ISO 10993 and USP Class VI.',
-    application: 'Highly flexible, steam-sterilizable, non-reactive polymer ideal for initial piercings, oral piercings, pregnancy retainers, and medical procedures.',
-    citation: 'Poli International, ISO 10993 & USP Class VI Certified Monolithic PP-R.'
+    standard: 'USP Class VI / Ph. Eur. 3.2.2 / ISO 10993',
+    definition: 'Medical-grade PP-R random copolymer body jewelry created by Patrick Poli. The resin holds USP Class VI and meets Ph. Eur. 3.2.2, and the material is certified as passing the ISO 10993 biological tests. Made in one piece, with no joints or glued parts.',
+    application: 'Flexible; sterilisable by autoclave, ethylene oxide or chemical sterilisation. Suits initial piercings and pregnancy retainers, and is much gentler on teeth and gums than metal in oral piercings. Contains no metal and is not magnetic: for MRI and X-ray, always tell the radiology staff and follow their decision.',
+    citation: 'BioFlex® Compliance Data Sheet PI-CDS-2026-001 (poliinternational.com/downloads/BioFlex-Compliance-Data-Sheets.pdf).'
   },
   {
     id: 'bioplast',
@@ -175,9 +175,9 @@ const TECHNICAL_TERMS_CATALOG = [
     categoryName: 'Polymers & Glass',
     letter: 'B',
     standard: 'ISO 10993',
-    definition: 'Medical-grade modified synthetic polymer used for flexible piercing jewelry and retainers.',
-    application: 'Flexible retainer material suitable for initial piercings and temporary wear during imaging.',
-    citation: 'Bioplast Biocompatibility Testing Suite.'
+    definition: 'Flexible body jewelry made from the same source material as BioFlex® body jewelry (PP-R random copolymer), in a different grade.',
+    application: 'Flexible retainers and body jewelry.',
+    citation: 'Manufacturer documentation.'
   },
   {
     id: 'borosilicate-glass',
@@ -286,7 +286,7 @@ const TECHNICAL_TERMS_CATALOG = [
     letter: 'N',
     standard: 'EN 1811',
     definition: 'Type IV delayed cell-mediated hypersensitivity reaction triggered by nickel ions penetrating epidermal and dermal tissue.',
-    application: 'The most common contact allergy in body piercing; prevented by using certified nickel-free materials (titanium, BioFlex®, niobium, glass).',
+    application: 'The most common contact allergy in body piercing; avoided by choosing nickel-free materials (titanium, BioFlex® body jewelry, niobium, glass).',
     citation: 'Clinical Dermatology & Contact Dermatitis Reference.'
   },
   {
@@ -317,10 +317,10 @@ const TECHNICAL_TERMS_CATALOG = [
     category: 'polymer',
     categoryName: 'Polymers & Glass',
     letter: 'P',
-    standard: 'ISO 10993 / USP VI',
-    definition: 'Monolithic medical-grade thermoplastic polymer resin engineered for biocompatibility, chemical stability, and autoclave resistance.',
-    application: 'The authentic monolithic material formulation of genuine BioFlex® body jewelry.',
-    citation: 'Medical Polymer Science Technical Data.'
+    standard: 'USP Class VI / Ph. Eur. 3.2.2',
+    definition: 'Polypropylene random copolymer: a flexible thermoplastic with excellent chemical resistance that can be steam sterilised.',
+    application: 'The material of BioFlex® body jewelry.',
+    citation: 'BioFlex® Compliance Data Sheet PI-CDS-2026-001.'
   },
   {
     id: 'ptfe',
@@ -352,7 +352,7 @@ const TECHNICAL_TERMS_CATALOG = [
     letter: 'U',
     standard: 'USP <88>',
     definition: 'United States Pharmacopeia testing protocol evaluating plastics and polymers for systemic toxicity, intracutaneous reactivity, and muscle implantation.',
-    application: 'The highest medical grade certification for biocompatible polymers including PP-R (BioFlex®).',
+    application: 'Biological reactivity tests for polymers used in medical devices; the resin of BioFlex® body jewelry holds USP Class VI.',
     citation: 'USP-NF Chapter <88> Biological Reactivity Tests, In Vivo.'
   },
   {
