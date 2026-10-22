@@ -6,6 +6,11 @@
   'use strict';
 
   const DICTIONARY = {
+  "a11y": {
+    "tool_navigation": "Navigatie van de tool",
+    "filter_claims_by_category": "Claims filteren op categorie",
+    "search_claim_matrix": "Zoeken in de claimmatrix"
+  },
   "app": {
     "title": "Materiaalcertificatie Verificator",
     "subtitle": "Technisch evaluatie- en verificatie-instrument voor professionele piercers en body jewelry studio's",
