@@ -6,6 +6,11 @@
   'use strict';
 
   const DICTIONARY = {
+  "a11y": {
+    "tool_navigation": "Werkzeugnavigation",
+    "filter_claims_by_category": "Angaben nach Kategorie filtern",
+    "search_claim_matrix": "Angabenmatrix durchsuchen"
+  },
   "app": {
     "title": "Materialzertifizierungs-Prüfer",
     "subtitle": "Überprüfen Sie Materialzertifizierungen für Körperschmuck, Biokompatibilitätsstandards und Sicherheitsbewertungen",
