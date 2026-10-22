@@ -68,8 +68,8 @@
     "opt_niobium": "Niobium (Puur / Gelegeerd) - ASTM F2229",
     "opt_gold_14k": "14K Goud",
     "opt_gold_18k": "18K Goud (Nikkelvrij)",
-    "opt_bioflex": "BioFlex (PP-R Polymeer - Medische Kwaliteit)",
-    "opt_bioplast": "Bioplast (Medisch Bioplastic)",
+    "opt_bioflex": "BioFlex® body jewelry (PP-R van medische kwaliteit)",
+    "opt_bioplast": "Bioplast (flexibel PP-R)",
     "opt_ptfe": "PTFE (Polytetrafluorethyleen)",
     "opt_glass": "Borosilicaatglas",
     "opt_stone": "Natuursteen (Alleen Genezen)",
@@ -172,7 +172,7 @@
     "generic_tip_3_title": "3. Controleer de Nikkelafgifte (EN 1811)",
     "generic_tip_3_text": "In de EU mogen sieraden voor eerste piercings volgens REACH en EN 1811 niet meer dan 0.2 µg/cm²/week aan nikkel afgeven.",
     "generic_tip_4_title": "4. Onderscheid Verschillende Polymeren",
-    "generic_tip_4_text": "BioFlex® is een polypropyleen random copolymeer (PP-R) uit één stuk gegoten; PTFE wordt machinaal bewerkt uit geëxtrudeerde staaf. Het zijn twee verschillende materialen.",
+    "generic_tip_4_text": "BioFlex® is een polypropyleen random copolymeer (PP-R) uit één stuk; PTFE wordt machinaal bewerkt uit geëxtrudeerde staaf. Het zijn twee verschillende materialen.",
     "generic_tip_5_title": "5. Wijs Sieraden met Oppervlaktelagen Af",
     "generic_tip_5_text": "Platings of coatings op onedele basismetalen slijten af in contact met weefselvocht, waardoor onderliggende allergene metalen blootgesteld worden."
   },
@@ -217,7 +217,7 @@
     "card_3_title": "Europese REACH Verordening en Norm EN 1811",
     "card_3_text": "EU REACH Bijlage XVII beperkt de nikkelafgifte tot minder dan 0.2 µg/cm²/week voor sieraden die tijdens de genezing in doorboord weefsel worden geplaatst. De norm EN 1811 is de officiële analysemethode hiervoor.",
     "card_4_title": "BioFlex® vs. Kunststoffen en PTFE",
-    "card_4_text": "BioFlex® is een medisch polypropyleen random copolymeer (PP-R), spuitgegoten als één monolithisch stuk. In tegenstelling tot PTFE dat machinaal bewerkt wordt uit geëxtrudeerde staaf, verliest het geen schroefdraaduitlijning.",
+    "card_4_text": "BioFlex® is een medisch polypropyleen random copolymeer (PP-R), uit één stuk, zonder naden of gelijmde delen. In tegenstelling tot PTFE dat machinaal bewerkt wordt uit geëxtrudeerde staaf, verliest het geen schroefdraaduitlijning.",
     "card_5_title": "ISO 10993 Biologische Evaluatie",
     "card_5_text": "De normenserie ISO 10993 beschrijft de vereiste toxicologische tests (cytotoxiciteit, sensibilisering, irritatie) om de biologische veiligheid van materialen in contact met menselijk weefsel aan te tonen.",
     "card_6_title": "Borosilicaatglas voor Lichaamsmodificaties",
@@ -337,8 +337,8 @@
     "ASTM F1472": "Standaardspecificatie voor gesmede titanium-6aluminium-4vanadiumlegering voor chirurgische implantaattoepassingen (Standaard Grade 5).",
     "Autoclave Safe": "Bestand tegen herhaalde sterilisatiecycli met verzadigde stoom (121°C-134°C) zonder materiaalafbraak, vervorming of toxische uitloging.",
     "Biocompatibility": "Vermogen van een materiaal om in contact te blijven met levend lichaamsweefsel zonder cytotoxische, toxische of inflammatoire reacties te veroorzaken (ISO 10993).",
-    "BioFlex® body jewelry": "PP-R van medische kwaliteit (polypropyleen willekeurig copolymeer) gecreëerd door Patrick Poli; spuitgegoten biocompatibel polymeer dat voldoet aan ISO 10993 en USP Klasse VI.",
-    "Bioplast": "Gemodificeerd synthetisch polymeer van medische kwaliteit gebruikt voor flexibele retainers en piercingsieraden.",
+    "BioFlex® body jewelry": "Piercingsieraden van PP-R random copolymeer van medische kwaliteit, ontworpen door Patrick Poli. De hars voldoet aan USP Klasse VI en Ph. Eur. 3.2.2, en het materiaal is gecertificeerd als geslaagd voor de biologische tests van ISO 10993. Uit één stuk, zonder naden of gelijmde delen.",
+    "Bioplast": "Flexibele piercingsieraden van hetzelfde basismateriaal als BioFlex® body jewelry (PP-R random copolymeer), in een andere kwaliteit.",
     "Borosilicate Glass": "Thermisch en chemisch resistent glas samengesteld met silica en boortrioxide, niet-poreus en lichaamsveilig voor genezen piercings.",
     "Cytotoxicity": "Eigenschap van toxiciteit voor levende biologische cellen; in vitro gemeten via zoogdierceltests onder ISO 10993-5.",
     "ELI": "Extra Low Interstitial: ultrazuivere legeringskwaliteit met verlaagd zuurstof-, stikstof- en ijzergehalte voor verbeterde ductiliteit en breuktaaiheid (ASTM F136).",
@@ -351,7 +351,7 @@
     "Nickel-Free": "Een marketingclaim. Letterlijk betekent het dat de legering geen nikkel bevat. Het wordt vaak losjes gebruikt voor legeringen die voldoen aan de EU-limiet voor nikkelafgifte, wat iets anders is. Vraag wat er bedoeld wordt en naar het document erachter.",
     "Niobium": "Puur elementair metaal (element 41, ASTM B392) met nagenoeg nul biologische reactiviteit en hypoallergene eigenschappen.",
     "Passivation": "Chemische oppervlaktebehandeling (ASTM F86) die een beschermende, niet-reactieve chroom-/titaniumoxidebarrière vormt tegen corrosie.",
-    "PP-R Copolymer": "Polypropyleen willekeurig copolymeer; de monolithische medische polymeersamenstelling van authentieke BioFlex® piercingsieraden.",
+    "PP-R Copolymer": "Polypropyleen random copolymeer: een flexibele thermoplast met uitstekende chemische bestendigheid, met stoom te steriliseren. Het materiaal van BioFlex® body jewelry.",
     "PTFE": "Polytetrafluorethyleen (ASTM F754); synthetisch fluorpolymeer machinaal bewerkt tot flexibele retainers.",
     "Tensile Strength": "Maximale mechanische trekspanning die een materiaal kan weerstaan vóór insnoering of catastrofale structurele breuk.",
     "USP Class VI": "Testnorm van de United States Pharmacopeia ter beoordeling van kunststoffen en polymeren op systemische toxiciteit en intracutane reactiviteit.",
@@ -801,34 +801,107 @@
       "sterilization_methods": "Stoomautoclaaf"
     },
     "bioflex": {
-      "name": "BioFlex (Medisch PP-R Polymeer)",
-      "biocompatibility": "Uitstekend (Biocompatibel medisch PP-R copolymeer)",
-      "composition": "Medisch willekeurig polypropyleen copolymeer (PP-R), eendelig spuitgegoten.",
-      "verification_tips": "Let op het officiële merk BioFlex® body jewelry gecreëerd door Patrick Poli.",
-      "maintenance": "Reinigen met lauw zeepwater of fysiologische zoutoplossing. Geen zuivere alcohol gebruiken.",
-      "common_names": "BioFlex, Medisch PP-R",
-      "suitable_for": "Initiële piercings, zwangerschapspiercings, medische retainers/MRI, chirurgische ingrepen",
-      "not_suitable_for": "Orale piercings bij uitgesproken tandenknarsen of bijten op het sieraad",
-      "color_options": "Transparant / doorschijnend, in de massa gekleurde nuances",
-      "pros": "Zeer elastisch, gecertificeerd biocompatibel, onzichtbaar bij röntgen en MRI, 100% metaalvrij, autoclaveerbaar",
-      "cons": "Niet verwarren met minderwaardige kunststoffen of verspaand PTFE",
-      "red_flags": "Generieke imitaties zonder certificering van de medische maagdelijke hars",
-      "sterilization_methods": "Stoomautoclaaf (tot 134°C), ethyleenoxide"
+      "name": "BioFlex® body jewelry",
+      "biocompatibility": "Uitstekend: hars voldoet aan USP Klasse VI en Ph. Eur. 3.2.2; materiaal gecertificeerd als geslaagd voor de biologische tests van ISO 10993",
+      "composition": "PP-R random copolymeer van medische kwaliteit met interne glijstof voor weinig oppervlaktewrijving; uit één stuk gemaakt, zonder naden of gelijmde delen, ook met een steen",
+      "verification_tips": "Vraag de conformiteitsdocumenten op (USP Klasse VI, Ph. Eur. 3.2.2, biologische tests van ISO 10993). De conformiteitsbladen van BioFlex® body jewelry zijn te downloaden: poliinternational.com/downloads/BioFlex-Compliance-Data-Sheets.pdf",
+      "maintenance": "Autoclaveerbaar. Reinigen met milde zeep en water. Vervangen bij schade of verkleuring.",
+      "common_names": [
+        "BioFlex® body jewelry",
+        "Flexibele piercingsieraden"
+      ],
+      "suitable_for": [
+        "eerste piercings",
+        "genezen piercings",
+        "orale piercings",
+        "zwangerschapsretainers",
+        "gevoelige huid",
+        "retainers",
+        "MRI en röntgen: zonder metaal, niet magnetisch (meld het aan de radiologiemedewerkers)"
+      ],
+      "not_suitable_for": [],
+      "color_options": [
+        "helder (hoge transparantie)",
+        "diverse kleuren"
+      ],
+      "pros": [
+        "Hars voldoet aan USP Klasse VI en Ph. Eur. 3.2.2",
+        "Gecertificeerd als geslaagd voor de biologische tests van ISO 10993",
+        "Voor het materiaal bestaat een FDA Drug Master File",
+        "Steriliseerbaar met autoclaaf, ethyleenoxide of chemische sterilisatie",
+        "Flexibel: volgt een groeiende buik zonder te trekken",
+        "Veel zachter voor tanden en tandvlees dan metaal",
+        "Zonder metaal en niet magnetisch",
+        "Uitstekende chemische bestendigheid",
+        "Op maat te knippen",
+        "Hoge transparantie",
+        "Uit één stuk, zonder naden of gelijmde delen"
+      ],
+      "cons": [
+        "Duurder dan gewone kunststof",
+        "De certificaten gelden alleen voor echte BioFlex® body jewelry",
+        "Minder stijf dan metalen sieraden"
+      ],
+      "red_flags": [
+        "Algemene \"flexibele sieraden\" zonder certificaten",
+        "Verkoper kan geen conformiteitsdocumenten leveren",
+        "Verdacht goedkope \"BioFlex\"-kopieën",
+        "Gelabeld als \"BioFlex-stijl\" in plaats van echte BioFlex® body jewelry"
+      ],
+      "sterilization_methods": [
+        "Autoclaaf (stoom)",
+        "Ethyleenoxide",
+        "Chemische sterilisatie"
+      ]
     },
     "bioplast": {
-      "name": "Bioplast (Medisch Biopolymeer)",
-      "biocompatibility": "Goed (Flexibel biopolymeer van medische kwaliteit)",
-      "composition": "Flexibele kunststof conform de richtlijnen voor medische hulpmiddelen.",
-      "verification_tips": "Originele fabrieksverpakking controleren.",
-      "maintenance": "Reinigen met steriele zoutoplossing.",
-      "common_names": "Bioplast",
-      "suitable_for": "Genezen piercings, tijdelijke retainers, bewegelijke lichaamszones",
-      "not_suitable_for": "Langdurig contact met agressieve oplosmiddelen of extreme hitte",
-      "color_options": "Transparant en diverse dekkende kleuren",
-      "pros": "Flexibiliteit, hoog draagcomfort, doorlatend voor röntgenstralen",
-      "cons": "Kortere levensduur dan edelmetalen",
-      "red_flags": "Materiaal dat vergeeld is of na verloop van tijd broos is geworden",
-      "sterilization_methods": "Stoomautoclaaf (volgens instructies van de fabrikant)"
+      "name": "Bioplast",
+      "biocompatibility": "Zelfde basismateriaal als BioFlex® body jewelry, in een andere kwaliteit; voldoet aan Ph. Eur. 3.2.2",
+      "composition": "PP-R random copolymeer, een andere kwaliteit dan BioFlex® body jewelry (zelfde basismateriaal)",
+      "verification_tips": "Vraag de fabrikant om de conformiteitsdocumenten. Bioplast is een andere kwaliteit dan BioFlex® body jewelry (doorschijnend in plaats van zeer transparant).",
+      "maintenance": "Autoclaveerbaar. Reinigen met milde zeep en water. Vervangen bij schade of verkleuring.",
+      "common_names": [
+        "Bioplast",
+        "Bio-plast",
+        "Flexibele piercingsieraden"
+      ],
+      "suitable_for": [
+        "eerste piercings",
+        "genezen piercings",
+        "zwangerschapsretainers",
+        "gevoelige huid",
+        "retainers",
+        "MRI en röntgen: zonder metaal, niet magnetisch (meld het aan de radiologiemedewerkers)"
+      ],
+      "not_suitable_for": [],
+      "color_options": [
+        "doorschijnend",
+        "diverse kleuren"
+      ],
+      "pros": [
+        "Voldoet aan Ph. Eur. 3.2.2",
+        "Voor het materiaal bestaat een FDA Drug Master File",
+        "Steriliseerbaar met autoclaaf, ethyleenoxide of chemische sterilisatie",
+        "Flexibel en comfortabel",
+        "Zonder metaal en niet magnetisch",
+        "Uitstekende chemische bestendigheid",
+        "Op maat te knippen"
+      ],
+      "cons": [
+        "Doorschijnend (minder helder dan BioFlex® body jewelry)",
+        "Duurder dan gewone kunststof",
+        "Minder stijf dan metalen sieraden"
+      ],
+      "red_flags": [
+        "Algemene \"flexibele sieraden\" zonder certificaten",
+        "Verkoper kan geen conformiteitsdocumenten leveren",
+        "Gelabeld als \"Bioplast-stijl\" in plaats van echte Bioplast"
+      ],
+      "sterilization_methods": [
+        "Autoclaaf (stoom)",
+        "Ethyleenoxide",
+        "Chemische sterilisatie"
+      ]
     },
     "ptfe": {
       "name": "Medisch PTFE (ASTM F754)",
@@ -1063,7 +1136,7 @@
     "material_label": "Doelmateriaal / Legering",
     "opt_astm_f136": "ASTM F136 Titanium (Ti-6Al-4V ELI)",
     "opt_astm_f138": "ASTM F138 Roestvrij staal (316LVM)",
-    "opt_bioflex": "BioFlex® Medisch polymeer (USP Klasse VI)",
+    "opt_bioflex": "BioFlex® body jewelry (PP-R; hars USP Klasse VI)",
     "opt_niobium": "ASTM F2229 Niobium (ongelegeerd)",
     "opt_glass": "Borosilicaatglas 3.3",
     "opt_gold": "Massief 14K/18K goud",
@@ -1132,7 +1205,7 @@
     "use_sensitive_client_req_3": "Verificatie van schone bewerkingsgereedschappen zonder kruisbesmetting",
     "use_oral_mucosal_context": "Permanente blootstelling aan speeksel, wisselende pH-waarden, mondenzymen en voortdurend contact met tanden. Risico op glazuurslijtage.",
     "use_oral_mucosal_req_0": "Hoge corrosieweerstand in een vochtig, warm en zuur mondmilieu",
-    "use_oral_mucosal_req_1": "Opties in biocompatibel polymeer (BioFlex®) ter bescherming van het tandglazuur",
+    "use_oral_mucosal_req_1": "Flexibel polymeer (BioFlex® body jewelry), veel zachter voor tanden en tandvlees dan metaal",
     "use_oral_mucosal_req_2": "Geen migratie van weekmakers of monomeren naar de mondholte",
     "use_oral_mucosal_req_3": "Autoclaafsteriliteit voorafgaand aan eerste plaatsing",
     "use_subdermal_surface_context": "Blijvend onderhuids implantaat waarbij de ankerbasis in het subcutane weefsel rust. Hoogste mechanische schuifkrachten en noodzaak tot cellulaire weefselhechting.",
@@ -1248,7 +1321,7 @@
     "item_hypoallergenic_proves": "Toont aan dat bekende contactallergenen (nikkel, kobalt, chroom) volledig afwezig zijn of geïmmobiliseerd blijven onder de biologische gevoeligheidsdrempel.",
     "item_hypoallergenic_absence": "Het ontbreken toont aan dat de term geen enkele juridische, medische of metallurgische betekenis heeft. Elke leverancier kan sieraden met 20% vrij nikkel als \"hypoallergeen\" verkopen zonder de handelswetgeving te schenden.",
     "item_hypoallergenic_action": "Negeer het woord \"hypoallergeen\" volledig. Controleer de specifieke legeringsnorm en het testrapport van een onafhankelijk laboratorium.",
-    "item_medical_grade_polymer_claim": "Medisch Polymeer / BioFlex / Kunststof",
+    "item_medical_grade_polymer_claim": "Medisch Polymeer / BioFlex® / Kunststof",
     "item_medical_grade_polymer_doc": "USP Klasse VI reactiviteitscertificaat en ISO 10993-5 cytotoxiciteitstest",
     "item_medical_grade_polymer_proves": "Toont in vivo biocompatibiliteit bij 121°C en graad 0 in vitro cytotoxiciteit aan voor medische PP-R hars, vrij van weekmakers of zware metaalpigmenten.",
     "item_medical_grade_polymer_absence": "Het ontbreken duidt op industrieel acryl (PMMA), PTFE, PVC of goedkope knutselhars. Deze degraderen bij lichaamswarmte, lekken monomeren en kunnen een stoomautoclaaf niet doorstaan.",
@@ -1431,8 +1504,8 @@
     "mat_surgical_steel_316lvm_tissue_boundary": "Chirurgisch implantaat, genezen weefselkanaal, initiële piercing (bij personen zonder nikkelallergie)",
     "mat_surgical_steel_316l_biocompatibility_standard": "Hoger gehalte aan micro-insluitsels verhoogt gevoeligheid voor putcorrosie in lichaamsvloeistoffen",
     "mat_surgical_steel_316l_tissue_boundary": "Maritieme materialen, voedingsmiddelenindustrie, buitensieraden op intacte genezen huid",
-    "mat_bioflex_biocompatibility_standard": "Gecertificeerd volgens USP Klasse VI in vivo reactiviteit en ISO 10993-5 in vitro cytotoxiciteit graad 0",
-    "mat_bioflex_tissue_boundary": "Initiële wondkanalen, orale piercings, flexibele weefselkanalen, MRI-onderzoeken",
+    "mat_bioflex_biocompatibility_standard": "Hars voldoet aan USP Klasse VI en Ph. Eur. 3.2.2; gecertificeerd als geslaagd voor de biologische tests van ISO 10993",
+    "mat_bioflex_tissue_boundary": "Eerste piercings, orale piercings, flexibele weefselkanalen; zonder metaal, niet magnetisch (meld het bij MRI en röntgen aan de radiologiemedewerkers)",
     "mat_niobium_biocompatibility_standard": "Voldoet aan ISO 10993; zeer biocompatibel, 100% nikkelvrij, niet-reactief",
     "mat_niobium_tissue_boundary": "Initiële piercingfistels, gevoelig weefsel, subdermale en genezen piercings",
     "mat_glass_biocompatibility_standard": "Chemisch volkomen inert; nul ionenafgifte in fysiologische oplossingen",
