@@ -97,7 +97,7 @@ Poli International
       category: 'polymers',
       organization: 'USP',
       scope: 'Stringent in vivo biocompatibility standard for medical polymers including systemic injection, intracutaneous reactivity, and implantation.',
-      biocompatibility: 'Gold standard medical grade certification for BioFlex and implant fluoropolymers'
+      biocompatibility: 'Biological reactivity tests for polymers used in medical devices; the BioFlex® body jewelry resin holds USP Class VI'
     },
     {
       id: 'en-1811',
