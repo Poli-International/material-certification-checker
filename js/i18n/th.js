@@ -72,8 +72,8 @@
       "opt_niobium": "ไนโอเบียม (บริสุทธิ์ / โลหะผสม) - ASTM F2229",
       "opt_gold_14k": "ทองคำ 14K",
       "opt_gold_18k": "ทองคำ 18K",
-      "opt_bioflex": "BioFlex (PP-R Polymer - Medical Grade)",
-      "opt_bioplast": "Bioplast (พลาสติกชีวภาพทางการแพทย์)",
+      "opt_bioflex": "BioFlex® body jewelry (PP-R เกรดการแพทย์)",
+      "opt_bioplast": "Bioplast (PP-R แบบยืดหยุ่น)",
       "opt_ptfe": "PTFE (Polytetrafluoroethylene)",
       "opt_glass": "แก้วโบโรซิลิเกต",
       "opt_stone": "หินธรรมชาติ (เฉพาะเมื่อหายแล้ว)",
@@ -341,8 +341,8 @@
       "ASTM F1472": "ข้อกำหนดมาตรฐานสำหรับโลหะผสมไทเทเนียม-6อลูมิเนียม-4วาเนเดียมที่ขึ้นรูปแล้ว สำหรับการใช้งานฝังในร่างกายทางการผ่าตัด (เกรดมาตรฐาน 5)",
       "Autoclave Safe": "สามารถผ่านรอบการฆ่าเชื้อด้วยไอน้ำอิ่มตัว (121°C–134°C) ซ้ำได้โดยวัสดุไม่เสื่อมสภาพ ไม่บิดเบี้ยว และไม่ปล่อยสารพิษออกมา",
       "Biocompatibility": "ความสามารถของวัสดุในการสัมผัสกับเนื้อเยื่อที่มีชีวิตโดยไม่ก่อให้เกิดการตอบสนองที่เป็นพิษต่อเซลล์ เป็นพิษ หรือการอักเสบ (ISO 10993)",
-      "BioFlex® body jewelry": "Medical-grade PP-R (polypropylene random copolymer) created by Patrick Poli; injection-moulded biocompatible polymer complying with ISO 10993 and USP Class VI.",
-      "Bioplast": "พอลิเมอร์สังเคราะห์ดัดแปลงระดับการแพทย์ ใช้ทำรีเทนเนอร์เครื่องประดับเจาะร่างกายแบบยืดหยุ่นและเครื่องประดับเจาะ",
+      "BioFlex® body jewelry": "เครื่องประดับเจาะร่างกายจากโคพอลิเมอร์แบบสุ่ม PP-R เกรดการแพทย์ สร้างสรรค์โดย Patrick Poli เรซินผ่าน USP Class VI และ Ph. Eur. 3.2.2 และวัสดุได้รับการรับรองว่าผ่านการทดสอบทางชีวภาพตาม ISO 10993 ผลิตเป็นชิ้นเดียว ไม่มีรอยต่อหรือส่วนที่ใช้กาว",
+      "Bioplast": "เครื่องประดับเจาะร่างกายแบบยืดหยุ่นที่ผลิตจากวัตถุดิบเดียวกับ BioFlex® body jewelry (โคพอลิเมอร์แบบสุ่ม PP-R) แต่เป็นเกรดต่างกัน",
       "Borosilicate Glass": "แก้วที่ทนความร้อนและสารเคมี ผลิตจากซิลิกาและโบรอนไตรออกไซด์ ไม่มีรูพรุน และปลอดภัยต่อร่างกายสำหรับการเจาะที่หายแล้ว",
       "Cytotoxicity": "คุณสมบัติที่เป็นพิษต่อเซลล์ชีวภาพที่มีชีวิต วัดในหลอดทดลองด้วยการทดสอบเซลล์สัตว์เลี้ยงลูกด้วยนมตาม ISO 10993-5",
       "ELI": "Extra Low Interstitial: เกรดโลหะผสมบริสุทธิ์พิเศษที่มีออกซิเจน ไนโตรเจน และเหล็กต่ำ เพื่อเพิ่มความเหนียวและความต้านทานการแตกหัก (ASTM F136)",
@@ -355,7 +355,7 @@
       "Nickel-Free": "คำอ้างทางการตลาด ตามตัวอักษรหมายถึงโลหะผสมที่ไม่มีนิกเกิล มักใช้อย่างหลวมๆ กับโลหะผสมที่ผ่านขีดจำกัดการปล่อยนิกเกิลของ EU ซึ่งเป็นคนละเรื่องกัน ให้ถามว่าหมายถึงอย่างไร และขอเอกสารที่รองรับข้อนั้น",
       "Niobium": "โลหะธาตุบริสุทธิ์ (ธาตุเลขอะตอม 41, ASTM B392) มีปฏิกิริยาทางชีวภาพแทบเป็นศูนย์และมีคุณสมบัติลดการแพ้",
       "Passivation": "การปรับผิวด้วยสารเคมี (ASTM F86) ที่สร้างชั้นออกไซด์ของโครเมียม/ไทเทเนียมที่ป้องกันการกัดกร่อนและไม่ทำปฏิกิริยา",
-      "PP-R Copolymer": "Polypropylene random copolymer; the monolithic medical polymer composition of genuine BioFlex® body jewelry.",
+      "PP-R Copolymer": "โคพอลิเมอร์แบบสุ่มของพอลิโพรพิลีน เทอร์โมพลาสติกที่ยืดหยุ่น ทนสารเคมีได้ดีเยี่ยม และฆ่าเชื้อด้วยไอน้ำได้ เป็นวัสดุของ BioFlex® body jewelry",
       "PTFE": "Polytetrafluoroethylene (ASTM F754) คือฟลูออโรพอลิเมอร์สังเคราะห์ที่ขึ้นรูปเป็นรีเทนเนอร์ยืดหยุ่น",
       "Tensile Strength": "ความเค้นดึงทางกลสูงสุดที่วัสดุทนได้ก่อนคอคอดหรือการพังทลายของโครงสร้างอย่างรุนแรง",
       "USP Class VI": "มาตรฐานการทดสอบของ United States Pharmacopeia ที่ประเมินพลาสติกและพอลิเมอร์ในเรื่องความเป็นพิษทั่วร่างกายและปฏิกิริยาผ่านผิวหนังชั้นใน",
@@ -927,64 +927,65 @@
         ]
       },
       "bioflex": {
-        "name": "BioFlex",
-        "biocompatibility": "Excellent - ISO 10993 compliant, USP Class VI tested",
-        "composition": "Medical-grade PP-R random copolymer with internal lubricant for low surface friction (monolithic injection-moulded)",
-        "verification_tips": "Request certification documentation showing ISO 10993 and USP Class VI compliance. Genuine BioFlex(R) body jewelry from Poli International comes with full compliance certificates.",
-        "maintenance": "Can be autoclaved. Clean with mild soap and water. Replace if damaged or discolored.",
+        "name": "BioFlex® body jewelry",
+        "biocompatibility": "ดีเยี่ยม: เรซินผ่าน USP Class VI และ Ph. Eur. 3.2.2 และวัสดุได้รับการรับรองว่าผ่านการทดสอบทางชีวภาพตาม ISO 10993",
+        "composition": "โคพอลิเมอร์แบบสุ่ม PP-R เกรดการแพทย์ มีสารหล่อลื่นภายในช่วยลดแรงเสียดทานที่ผิว ผลิตเป็นชิ้นเดียว ไม่มีรอยต่อหรือส่วนที่ใช้กาว แม้มีอัญมณี",
+        "verification_tips": "ขอเอกสารรับรองมาตรฐาน (USP Class VI, Ph. Eur. 3.2.2, การทดสอบทางชีวภาพ ISO 10993) ดาวน์โหลดเอกสารข้อมูลการรับรองของ BioFlex® body jewelry ได้ที่: poliinternational.com/downloads/BioFlex-Compliance-Data-Sheets.pdf",
+        "maintenance": "นำเข้าออโตเคลฟได้ ทำความสะอาดด้วยสบู่อ่อนและน้ำ เปลี่ยนใหม่หากชำรุดหรือสีเปลี่ยน",
         "common_names": [
-          "BioFlex",
-          "Flexible Body Jewelry"
+          "BioFlex® body jewelry",
+          "เครื่องประดับเจาะร่างกายแบบยืดหยุ่น"
         ],
         "suitable_for": [
-          "initial piercings",
-          "healed piercings",
-          "pregnancy",
-          "medical procedures (MRI, X-ray)",
-          "sensitive skin",
-          "retainers"
+          "การเจาะครั้งแรก",
+          "รูเจาะที่หายแล้ว",
+          "การเจาะในช่องปาก",
+          "รีเทนเนอร์ระหว่างตั้งครรภ์",
+          "ผิวแพ้ง่าย",
+          "รีเทนเนอร์",
+          "MRI และเอกซเรย์: ไม่มีโลหะ ไม่เป็นแม่เหล็ก (แจ้งเจ้าหน้าที่รังสีวิทยา)"
         ],
         "not_suitable_for": [],
         "color_options": [
-          "clear (high transparency)",
-          "various colors"
+          "ใส (โปร่งใสสูง)",
+          "หลากสี"
         ],
         "pros": [
-          "ISO 10993 biocompatible",
-          "USP Class VI tested",
-          "FDA Drug Master File assigned",
-          "Can be steam sterilized (autoclave)",
-          "Ethylene oxide sterilizable",
-          "Flexible and comfortable",
-          "MRI/X-ray safe",
-          "Excellent chemical resistance",
-          "Good for pregnancy",
-          "Can be cut to size",
-          "High transparency"
+          "เรซินผ่าน USP Class VI และ Ph. Eur. 3.2.2",
+          "ได้รับการรับรองว่าผ่านการทดสอบทางชีวภาพตาม ISO 10993",
+          "มี FDA Drug Master File สำหรับวัสดุนี้",
+          "ฆ่าเชื้อได้ด้วยออโตเคลฟ เอทิลีนออกไซด์ หรือสารเคมี",
+          "ยืดหยุ่น: ขยายตามหน้าท้องที่โตขึ้นโดยไม่ดึงรั้ง",
+          "ถนอมฟันและเหงือกมากกว่าโลหะมาก",
+          "ไม่มีโลหะและไม่เป็นแม่เหล็ก",
+          "ทนสารเคมีได้ดีเยี่ยม",
+          "ตัดให้ได้ขนาดได้",
+          "โปร่งใสสูง",
+          "ผลิตเป็นชิ้นเดียว ไม่มีรอยต่อหรือส่วนที่ใช้กาว"
         ],
         "cons": [
-          "More expensive than generic plastic",
-          "Requires genuine BioFlex(R) body jewelry brand for certifications",
-          "Not as rigid as metal jewelry"
+          "ราคาสูงกว่าพลาสติกทั่วไป",
+          "ใบรับรองครอบคลุมเฉพาะ BioFlex® body jewelry ของแท้",
+          "แข็งน้อยกว่าเครื่องประดับโลหะ"
         ],
         "red_flags": [
-          "Generic \"flexible jewelry\" without certifications",
-          "Seller cannot provide ISO 10993 documentation",
-          "Suspiciously cheap \"BioFlex\" knock-offs",
-          "Labeled \"BioFlex-style\" instead of genuine BioFlex"
+          "\"เครื่องประดับแบบยืดหยุ่น\" ทั่วไปที่ไม่มีใบรับรอง",
+          "ผู้ขายไม่สามารถให้เอกสารรับรองได้",
+          "ของเลียนแบบ \"BioFlex\" ราคาถูกผิดปกติ",
+          "ติดป้ายว่า \"สไตล์ BioFlex\" แทน BioFlex® body jewelry ของแท้"
         ],
         "sterilization_methods": [
-          "Autoclave (steam)",
-          "Ethylene oxide",
-          "Chemical sterilization"
+          "ออโตเคลฟ (ไอน้ำ)",
+          "เอทิลีนออกไซด์",
+          "การฆ่าเชื้อด้วยสารเคมี"
         ]
       },
       "bioplast": {
         "name": "Bioplast",
-        "biocompatibility": "ยอดเยี่ยม - เป็นไปตาม ISO 10993 ทดสอบ USP Class VI แล้ว",
-        "composition": "Medical-grade modified polymer (different grade from BioFlex, same source material)",
-        "verification_tips": "Request certification documentation showing ISO 10993 and USP Class VI compliance. Genuine Bioplast comes with full compliance certificates. Note: Bioplast is a different grade than BioFlex (translucent vs high transparency).",
-        "maintenance": "นึ่งฆ่าเชื้อได้ ทำความสะอาดด้วยสบู่อ่อนและน้ำ เปลี่ยนใหม่หากเสียหายหรือเปลี่ยนสี",
+        "biocompatibility": "วัตถุดิบเดียวกับ BioFlex® body jewelry แต่เป็นเกรดต่างกัน เป็นไปตาม Ph. Eur. 3.2.2",
+        "composition": "โคพอลิเมอร์แบบสุ่ม PP-R คนละเกรดกับ BioFlex® body jewelry (วัตถุดิบเดียวกัน)",
+        "verification_tips": "ขอเอกสารรับรองมาตรฐานจากผู้ผลิต Bioplast เป็นคนละเกรดกับ BioFlex® body jewelry (โปร่งแสง ไม่ใสมากเท่า)",
+        "maintenance": "นำเข้าออโตเคลฟได้ ทำความสะอาดด้วยสบู่อ่อนและน้ำ เปลี่ยนใหม่หากชำรุดหรือสีเปลี่ยน",
         "common_names": [
           "Bioplast",
           "Bio-plast",
@@ -992,11 +993,11 @@
         ],
         "suitable_for": [
           "การเจาะครั้งแรก",
-          "การเจาะที่หายแล้ว",
-          "การตั้งครรภ์",
-          "หัตถการทางการแพทย์ (MRI, X-ray)",
-          "ผิวที่บอบบาง",
-          "รีเทนเนอร์"
+          "รูเจาะที่หายแล้ว",
+          "รีเทนเนอร์ระหว่างตั้งครรภ์",
+          "ผิวแพ้ง่าย",
+          "รีเทนเนอร์",
+          "MRI และเอกซเรย์: ไม่มีโลหะ ไม่เป็นแม่เหล็ก (แจ้งเจ้าหน้าที่รังสีวิทยา)"
         ],
         "not_suitable_for": [],
         "color_options": [
@@ -1004,31 +1005,26 @@
           "หลากสี"
         ],
         "pros": [
-          "เข้ากันได้ทางชีวภาพตาม ISO 10993",
-          "ทดสอบ USP Class VI แล้ว",
-          "ได้รับการกำหนด FDA Drug Master File",
-          "นึ่งฆ่าเชื้อด้วยไอน้ำได้ (หม้อนึ่งความดันไอ)",
-          "ฆ่าเชื้อด้วยเอทิลีนออกไซด์ได้",
+          "เป็นไปตาม Ph. Eur. 3.2.2",
+          "มี FDA Drug Master File สำหรับวัสดุนี้",
+          "ฆ่าเชื้อได้ด้วยออโตเคลฟ เอทิลีนออกไซด์ หรือสารเคมี",
           "ยืดหยุ่นและสวมใส่สบาย",
-          "ปลอดภัยกับ MRI / X-ray",
-          "ทนต่อสารเคมีได้ดีเยี่ยม",
-          "เหมาะสำหรับการตั้งครรภ์",
-          "ตัดให้ได้ขนาดที่ต้องการได้"
+          "ไม่มีโลหะและไม่เป็นแม่เหล็ก",
+          "ทนสารเคมีได้ดีเยี่ยม",
+          "ตัดให้ได้ขนาดได้"
         ],
         "cons": [
-          "Translucent (not as clear as BioFlex)",
-          "ราคาแพงกว่าพลาสติกทั่วไป",
-          "ต้องใช้ยี่ห้อ Bioplast แท้เพื่อให้มีใบรับรอง",
-          "ไม่แข็งเท่าเครื่องประดับโลหะ"
+          "โปร่งแสง (ใสน้อยกว่า BioFlex® body jewelry)",
+          "ราคาสูงกว่าพลาสติกทั่วไป",
+          "แข็งน้อยกว่าเครื่องประดับโลหะ"
         ],
         "red_flags": [
-          "\"เครื่องประดับยืดหยุ่น\" ทั่วไปที่ไม่มีใบรับรอง",
-          "ผู้ขายไม่สามารถให้เอกสาร ISO 10993 ได้",
-          "\"Bioplast\" ลอกเลียนราคาถูกผิดปกติ",
-          "ติดป้าย \"Bioplast-style\" แทน Bioplast แท้"
+          "\"เครื่องประดับแบบยืดหยุ่น\" ทั่วไปที่ไม่มีใบรับรอง",
+          "ผู้ขายไม่สามารถให้เอกสารรับรองได้",
+          "ติดป้ายว่า \"สไตล์ Bioplast\" แทน Bioplast ของแท้"
         ],
         "sterilization_methods": [
-          "หม้อนึ่งความดันไอ (ไอน้ำ)",
+          "ออโตเคลฟ (ไอน้ำ)",
           "เอทิลีนออกไซด์",
           "การฆ่าเชื้อด้วยสารเคมี"
         ]
@@ -1439,7 +1435,7 @@
       "material_label": "วัสดุเป้าหมาย / โลหะผสม",
       "opt_astm_f136": "ไทเทเนียม ASTM F136 (Ti-6Al-4V ELI)",
       "opt_astm_f138": "สแตนเลส ASTM F138 (316LVM)",
-      "opt_bioflex": "BioFlex® Medical Polymer (USP Class VI)",
+      "opt_bioflex": "BioFlex® body jewelry (PP-R; เรซิน USP Class VI)",
       "opt_niobium": "ไนโอเบียม ASTM F2229 (ไม่มีโลหะผสม)",
       "opt_glass": "แก้วโบโรซิลิเกต 3.3",
       "opt_gold": "ทองคำตัน 14K/18K",
@@ -1508,7 +1504,7 @@
       "use_sensitive_client_req_3": "ยืนยันว่าเครื่องมือการผลิตสะอาดและไม่มีการปนเปื้อนข้าม",
       "use_oral_mucosal_context": "สัมผัสน้ำลายอย่างต่อเนื่อง ค่า pH ที่เปลี่ยนแปลง เอนไซม์ในช่องปาก และการสัมผัสฟันอย่างต่อเนื่อง มีความเสี่ยงต่อการขัดสีและกัดกร่อนเคลือบฟัน",
       "use_oral_mucosal_req_0": "ทนต่อการกัดกร่อนสูงในสภาพแวดล้อมช่องปากที่ชื้น อุ่น และเป็นกรด",
-      "use_oral_mucosal_req_1": "Biocompatible polymer options (BioFlex®) to reduce dental enamel wear",
+      "use_oral_mucosal_req_1": "พอลิเมอร์แบบยืดหยุ่น (BioFlex® body jewelry) ถนอมฟันและเหงือกมากกว่าโลหะมาก",
       "use_oral_mucosal_req_2": "ไม่มีการละลายของสารทำให้อ่อนตัวหรือโมโนเมอร์เข้าสู่ช่องปาก",
       "use_oral_mucosal_req_3": "ปลอดเชื้อด้วยหม้อนึ่งความดันไอก่อนการใส่ครั้งแรก",
       "use_subdermal_surface_context": "การฝังใต้ผิวหนังถาวรที่ฐานสมอยู่ในเนื้อเยื่อใต้ผิวหนัง มีแรงเฉือนทางกลและความต้องการการยึดเกาะของเซลล์สูงที่สุด",
@@ -1624,7 +1620,7 @@
       "item_hypoallergenic_proves": "รองรับว่าสารก่อภูมิแพ้จากการสัมผัสที่ทราบแล้ว (นิกเกิล โคบอลต์ โครเมียม) ไม่มีอยู่เลย หรือถูกตรึงให้อยู่ต่ำกว่าเกณฑ์การไวต่อสารทางชีวภาพ",
       "item_hypoallergenic_absence": "การไม่มีหมายความว่าคำนี้ไม่มีความหมายทางกฎหมาย การแพทย์ หรือโลหะวิทยาเลย ผู้จัดจำหน่ายรายใดก็พิมพ์คำว่า \"hypoallergenic\" บนรายการที่มีนิกเกิลอิสระ 20% หรือโลหะพื้นฐานที่เป็นพิษได้ โดยไม่ผิดกฎหมายการติดฉลากเชิงพาณิชย์ในเขตอำนาจส่วนใหญ่",
       "item_hypoallergenic_action": "ตัดคำว่า \"hypoallergenic\" ออกทั้งหมด ตรวจสอบข้อกำหนดโลหะผสมเฉพาะและผลการวิเคราะห์จากห้องปฏิบัติการอิสระ",
-      "item_medical_grade_polymer_claim": "Medical Grade Polymer / BioFlex / Plastic",
+      "item_medical_grade_polymer_claim": "Medical Grade Polymer / BioFlex® / Plastic",
       "item_medical_grade_polymer_doc": "USP Class VI biological reactivity certificate + ISO 10993-5 cytotoxicity test",
       "item_medical_grade_polymer_proves": "Substantiates in vivo biocompatibility at 121°C and in vitro zero-cytotoxicity for medical-grade PP-R resin, with zero phthalate plasticizers or heavy metal pigments.",
       "item_medical_grade_polymer_absence": "Absence means the plastic is industrial acrylic (PMMA), commercial PTFE, PVC, or cheap craft resin. These degrade under body warmth, leach monomer residues or plasticizers, and cannot survive steam autoclave cycles.",
@@ -1807,8 +1803,8 @@
       "mat_surgical_steel_316lvm_tissue_boundary": "อุปกรณ์ฝังในร่างกายทางการผ่าตัด ทางเดินเนื้อเยื่อของการเจาะที่หายแล้ว การเจาะครั้งแรก (สำหรับผู้ที่ไม่ไวต่อนิกเกิล)",
       "mat_surgical_steel_316l_biocompatibility_standard": "ปริมาณสิ่งเจือปนขนาดเล็กที่สูงขึ้นเพิ่มความไวต่อการกัดกร่อนแบบหลุมเฉพาะที่ในของเหลวในร่างกาย",
       "mat_surgical_steel_316l_tissue_boundary": "อุปกรณ์ทางทะเล อุปกรณ์อาหาร เครื่องประดับภายนอกบนผิวที่หายสนิทแล้ว",
-      "mat_bioflex_biocompatibility_standard": "Certified USP Class VI in vivo reactivity and ISO 10993-5 in vitro cytotoxicity grade 0",
-      "mat_bioflex_tissue_boundary": "Initial wound canal, oral piercings, flexible tissue canals, MRI procedures",
+      "mat_bioflex_biocompatibility_standard": "เรซินผ่าน USP Class VI และ Ph. Eur. 3.2.2 ได้รับการรับรองว่าผ่านการทดสอบทางชีวภาพตาม ISO 10993",
+      "mat_bioflex_tissue_boundary": "การเจาะครั้งแรก การเจาะในช่องปาก ช่องเนื้อเยื่อที่ยืดหยุ่น ไม่มีโลหะและไม่เป็นแม่เหล็ก (หากทำ MRI หรือเอกซเรย์ ให้แจ้งเจ้าหน้าที่รังสีวิทยา)",
       "mat_niobium_biocompatibility_standard": "ผ่าน ISO 10993 เข้ากันได้ทางชีวภาพสูง ปลอดนิกเกิล 100% ไม่ทำปฏิกิริยา",
       "mat_niobium_tissue_boundary": "ทางเดินแผลเจาะครั้งแรก เนื้อเยื่อที่บอบบาง การเจาะร่างกายใต้ผิวหนังและที่หายแล้ว",
       "mat_glass_biocompatibility_standard": "เฉื่อยทางเคมีอย่างสมบูรณ์ ไม่มีการชะละลายของไอออนในสารละลายทางสรีรวิทยา",
