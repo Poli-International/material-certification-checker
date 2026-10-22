@@ -308,97 +308,55 @@ const rawMaterialDatabase = {
   // ═══════════════════════════════════════════════════════════
   // OTHER MATERIALS
   // ═══════════════════════════════════════════════════════════
-  // BioFlex (Medical-Grade PP-R Random Copolymer)
+  // BioFlex® body jewelry (medical-grade PP-R random copolymer)
   // ═══════════════════════════════════════════════════════════
   'bioflex': {
-    name: 'BioFlex',
-    common_names: ['BioFlex', 'Flexible Body Jewelry'],
-    required_certs: ['ISO 10993 (Biocompatibility)', 'USP Class VI', 'FDA Drug Master File', 'European Pharmacopoeia 3.2.2'],
+    name: "BioFlex® body jewelry",
+    common_names: ["BioFlex® body jewelry", "Flexible body jewelry"],
+    required_certs: ["USP Class VI (resin)", "Ph. Eur. 3.2.2", "ISO 10993 biological tests"],
     body_safe: 'excellent',
     safety_rating: 'safe',
-    biocompatibility: 'Excellent - ISO 10993 compliant, USP Class VI tested',
-    composition: 'Medical-grade PP-R random copolymer with internal lubricant for low surface friction (monolithic injection-moulded)',
+    biocompatibility: "Excellent: resin holds USP Class VI and meets Ph. Eur. 3.2.2; certified as passing the ISO 10993 biological tests",
+    composition: "Medical-grade PP-R random copolymer with an internal lubricant for low surface friction; made in one piece, with no joints or glued parts, even with a jewel",
     nickel_free: true,
     autoclave_safe: true,
     allergy_risk: 'very_low',
-    suitable_for: ['initial piercings', 'healed piercings', 'pregnancy', 'medical procedures (MRI, X-ray)', 'sensitive skin', 'retainers'],
+    suitable_for: ["initial piercings", "healed piercings", "oral piercings", "pregnancy retainers", "sensitive skin", "retainers", "MRI and X-ray: no metal, not magnetic (tell the radiology staff)"],
     not_suitable_for: [],
     healing_stage: ['initial', 'healed'],
-    color_options: ['clear (high transparency)', 'various colors'],
+    color_options: ["clear (high transparency)", "various colors"],
     cost_rating: 'moderate',
-    pros: [
-      'ISO 10993 biocompatible',
-      'USP Class VI tested',
-      'FDA Drug Master File assigned',
-      'Can be steam sterilized (autoclave)',
-      'Ethylene oxide sterilizable',
-      'Flexible and comfortable',
-      'MRI/X-ray safe',
-      'Excellent chemical resistance',
-      'Good for pregnancy',
-      'Can be cut to size',
-      'High transparency'
-    ],
-    cons: [
-      'More expensive than generic plastic',
-      'Requires genuine BioFlex(R) body jewelry brand for certifications',
-      'Not as rigid as metal jewelry'
-    ],
-    verification_tips: 'Request certification documentation showing ISO 10993 and USP Class VI compliance. Genuine BioFlex(R) body jewelry from Poli International comes with full compliance certificates.',
-    red_flags: [
-      'Generic "flexible jewelry" without certifications',
-      'Seller cannot provide ISO 10993 documentation',
-      'Suspiciously cheap "BioFlex" knock-offs',
-      'Labeled "BioFlex-style" instead of genuine BioFlex'
-    ],
+    pros: ["Resin holds USP Class VI; meets Ph. Eur. 3.2.2", "Certified as passing the ISO 10993 biological tests", "An FDA Drug Master File exists for the material", "Sterilisable by autoclave, ethylene oxide or chemical sterilisation", "Flexible: follows a growing belly without pulling", "Much gentler on teeth and gums than metal", "Contains no metal and is not magnetic", "Excellent chemical resistance", "Can be cut to size", "High transparency", "Made in one piece, with no joints or glued parts"],
+    cons: ["More expensive than generic plastic", "The certificates cover genuine BioFlex® body jewelry only", "Not as rigid as metal jewelry"],
+    verification_tips: "Ask for the compliance documents (USP Class VI, Ph. Eur. 3.2.2, ISO 10993 biological tests). The BioFlex® body jewelry Compliance Data Sheets can be downloaded: poliinternational.com/downloads/BioFlex-Compliance-Data-Sheets.pdf",
+    red_flags: ["Generic \"flexible jewelry\" without certificates", "Seller cannot provide the compliance documents", "Suspiciously cheap \"BioFlex\" copies", "Labeled \"BioFlex-style\" instead of genuine BioFlex® body jewelry"],
     maintenance: 'Can be autoclaved. Clean with mild soap and water. Replace if damaged or discolored.',
     sterilization_methods: ['Autoclave (steam)', 'Ethylene oxide', 'Chemical sterilization']
   },
 
   // ═══════════════════════════════════════════════════════════
-  // BIOPLAST (Medical-Grade Bioplastic)
+  // BIOPLAST (PP-R, same source material as BioFlex®, different grade)
   // ═══════════════════════════════════════════════════════════
   'bioplast': {
-    name: 'Bioplast',
-    common_names: ['Bioplast', 'Bio-plast', 'Flexible Body Jewelry'],
-    required_certs: ['ISO 10993 (Biocompatibility)', 'USP Class VI', 'FDA Drug Master File', 'European Pharmacopoeia 3.2.2'],
+    name: "Bioplast",
+    common_names: ["Bioplast", "Bio-plast", "Flexible body jewelry"],
+    required_certs: ["Ph. Eur. 3.2.2", "Manufacturer compliance documents"],
     body_safe: 'excellent',
     safety_rating: 'safe',
-    biocompatibility: 'Excellent - ISO 10993 compliant, USP Class VI tested',
-    composition: 'Medical-grade modified polymer (different grade from BioFlex, same source material)',
+    biocompatibility: "Same source material as BioFlex® body jewelry, in a different grade; follows Ph. Eur. 3.2.2",
+    composition: "PP-R random copolymer, a different grade from BioFlex® body jewelry (same source material)",
     nickel_free: true,
     autoclave_safe: true,
     allergy_risk: 'very_low',
-    suitable_for: ['initial piercings', 'healed piercings', 'pregnancy', 'medical procedures (MRI, X-ray)', 'sensitive skin', 'retainers'],
+    suitable_for: ["initial piercings", "healed piercings", "pregnancy retainers", "sensitive skin", "retainers", "MRI and X-ray: no metal, not magnetic (tell the radiology staff)"],
     not_suitable_for: [],
     healing_stage: ['initial', 'healed'],
-    color_options: ['translucent', 'various colors'],
+    color_options: ["translucent", "various colors"],
     cost_rating: 'moderate',
-    pros: [
-      'ISO 10993 biocompatible',
-      'USP Class VI tested',
-      'FDA Drug Master File assigned',
-      'Can be steam sterilized (autoclave)',
-      'Ethylene oxide sterilizable',
-      'Flexible and comfortable',
-      'MRI/X-ray safe',
-      'Excellent chemical resistance',
-      'Good for pregnancy',
-      'Can be cut to size'
-    ],
-    cons: [
-      'Translucent (not as clear as BioFlex)',
-      'More expensive than generic plastic',
-      'Requires genuine Bioplast brand for certifications',
-      'Not as rigid as metal jewelry'
-    ],
-    verification_tips: 'Request certification documentation showing ISO 10993 and USP Class VI compliance. Genuine Bioplast comes with full compliance certificates. Note: Bioplast is a different grade than BioFlex (translucent vs high transparency).',
-    red_flags: [
-      'Generic "flexible jewelry" without certifications',
-      'Seller cannot provide ISO 10993 documentation',
-      'Suspiciously cheap "Bioplast" knock-offs',
-      'Labeled "Bioplast-style" instead of genuine Bioplast'
-    ],
+    pros: ["Follows Ph. Eur. 3.2.2", "An FDA Drug Master File exists for the material", "Sterilisable by autoclave, ethylene oxide or chemical sterilisation", "Flexible and comfortable", "Contains no metal and is not magnetic", "Excellent chemical resistance", "Can be cut to size"],
+    cons: ["Translucent (not as clear as BioFlex® body jewelry)", "More expensive than generic plastic", "Not as rigid as metal jewelry"],
+    verification_tips: "Ask the manufacturer for its compliance documents. Bioplast is a different grade from BioFlex® body jewelry (translucent rather than highly transparent).",
+    red_flags: ["Generic \"flexible jewelry\" without certificates", "Seller cannot provide the compliance documents", "Labeled \"Bioplast-style\" instead of genuine Bioplast"],
     maintenance: 'Can be autoclaved. Clean with mild soap and water. Replace if damaged or discolored.',
     sterilization_methods: ['Autoclave (steam)', 'Ethylene oxide', 'Chemical sterilization']
   },
