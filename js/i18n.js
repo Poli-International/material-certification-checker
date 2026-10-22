@@ -75,8 +75,8 @@ Language: English (Reference Dictionary)
         "opt_niobium": "Niobium (Pure / Alloyed) - ASTM F2229",
         "opt_gold_14k": "14K Gold",
         "opt_gold_18k": "18K Gold",
-        "opt_bioflex": "BioFlex (PP-R Polymer - Medical Grade)",
-        "opt_bioplast": "Bioplast (Medical Bioplastic)",
+        "opt_bioflex": "BioFlex® body jewelry (medical-grade PP-R)",
+        "opt_bioplast": "Bioplast (flexible PP-R)",
         "opt_ptfe": "PTFE (Polytetrafluoroethylene)",
         "opt_glass": "Borosilicate Glass",
         "opt_stone": "Natural Stone (Healed Only)",
@@ -344,8 +344,8 @@ Language: English (Reference Dictionary)
         "ASTM F1472": "Standard Specification for Wrought Titanium-6Aluminum-4Vanadium Alloy for Surgical Implant Applications (Standard Grade 5).",
         "Autoclave Safe": "Capable of repeated saturated steam sterilization cycles (121°C–134°C) without material degradation, distortion, or toxic leeching.",
         "Biocompatibility": "Ability of a material to reside in contact with living body tissue without causing cytotoxic, toxic, or inflammatory responses (ISO 10993).",
-        "BioFlex® body jewelry": "Medical-grade PP-R (polypropylene random copolymer) created by Patrick Poli; injection-moulded biocompatible polymer complying with ISO 10993 and USP Class VI.",
-        "Bioplast": "Medical-grade modified synthetic polymer used for flexible body jewelry retainers and piercing jewelry.",
+        "BioFlex® body jewelry": "Medical-grade PP-R random copolymer body jewelry created by Patrick Poli. The resin holds USP Class VI and meets Ph. Eur. 3.2.2, and the material is certified as passing the ISO 10993 biological tests. Made in one piece, with no joints or glued parts.",
+        "Bioplast": "Flexible body jewelry made from the same source material as BioFlex® body jewelry (PP-R random copolymer), in a different grade.",
         "Borosilicate Glass": "Thermal- and chemical-resistant glass formulated with silica and boron trioxide, non-porous and body-safe for healed piercings.",
         "Cytotoxicity": "Quality of being toxic to living biological cells; measured in vitro via mammalian cell assays under ISO 10993-5.",
         "ELI": "Extra Low Interstitial: ultra-pure alloy grade with reduced oxygen, nitrogen, and iron for enhanced ductility and fracture toughness (ASTM F136).",
@@ -358,7 +358,7 @@ Language: English (Reference Dictionary)
         "Nickel-Free": "A marketing claim. Literally it means the alloy contains no nickel. It is often used loosely for alloys that pass the EU nickel release limit, which is a different thing. Ask which is meant, and for the document behind it.",
         "Niobium": "Pure elemental metal (element 41, ASTM B392) with virtually zero biological reactivity and hypoallergenic properties.",
         "Passivation": "Chemical surface treatment (ASTM F86) forming a protective, non-reactive chromium/titanium oxide barrier against corrosion.",
-        "PP-R Copolymer": "Polypropylene random copolymer; the monolithic medical polymer composition of genuine BioFlex® body jewelry.",
+        "PP-R Copolymer": "Polypropylene random copolymer: a flexible thermoplastic with excellent chemical resistance that can be steam sterilised. The material of BioFlex® body jewelry.",
         "PTFE": "Polytetrafluoroethylene (ASTM F754); synthetic fluoropolymer machined into flexible retainers.",
         "Tensile Strength": "Maximum mechanical stretching stress a material can withstand before necking or catastrophic structural failure.",
         "USP Class VI": "United States Pharmacopeia testing standard evaluating plastics and polymers for systemic toxicity and intracutaneous reactivity.",
@@ -930,111 +930,107 @@ Language: English (Reference Dictionary)
             ]
         },
         "bioflex": {
-            "name": "BioFlex",
-            "biocompatibility": "Excellent - ISO 10993 compliant, USP Class VI tested",
-            "composition": "Medical-grade PP-R random copolymer with internal lubricant for low surface friction (monolithic injection-moulded)",
-            "verification_tips": "Request certification documentation showing ISO 10993 and USP Class VI compliance. Genuine BioFlex(R) body jewelry from Poli International comes with full compliance certificates.",
-            "maintenance": "Can be autoclaved. Clean with mild soap and water. Replace if damaged or discolored.",
-            "common_names": [
-                "BioFlex",
-                "Flexible Body Jewelry"
-            ],
-            "suitable_for": [
-                "initial piercings",
-                "healed piercings",
-                "pregnancy",
-                "medical procedures (MRI, X-ray)",
-                "sensitive skin",
-                "retainers"
-            ],
-            "not_suitable_for": [],
-            "color_options": [
-                "clear (high transparency)",
-                "various colors"
-            ],
-            "pros": [
-                "ISO 10993 biocompatible",
-                "USP Class VI tested",
-                "FDA Drug Master File assigned",
-                "Can be steam sterilized (autoclave)",
-                "Ethylene oxide sterilizable",
-                "Flexible and comfortable",
-                "MRI/X-ray safe",
-                "Excellent chemical resistance",
-                "Good for pregnancy",
-                "Can be cut to size",
-                "High transparency"
-            ],
-            "cons": [
-                "More expensive than generic plastic",
-                "Requires genuine BioFlex(R) body jewelry brand for certifications",
-                "Not as rigid as metal jewelry"
-            ],
-            "red_flags": [
-                "Generic \"flexible jewelry\" without certifications",
-                "Seller cannot provide ISO 10993 documentation",
-                "Suspiciously cheap \"BioFlex\" knock-offs",
-                "Labeled \"BioFlex-style\" instead of genuine BioFlex"
-            ],
-            "sterilization_methods": [
-                "Autoclave (steam)",
-                "Ethylene oxide",
-                "Chemical sterilization"
-            ]
+          "name": "BioFlex® body jewelry",
+          "biocompatibility": "Excellent: resin holds USP Class VI and meets Ph. Eur. 3.2.2; certified as passing the ISO 10993 biological tests",
+          "composition": "Medical-grade PP-R random copolymer with an internal lubricant for low surface friction; made in one piece, with no joints or glued parts, even with a jewel",
+          "verification_tips": "Ask for the compliance documents (USP Class VI, Ph. Eur. 3.2.2, ISO 10993 biological tests). The BioFlex® body jewelry Compliance Data Sheets can be downloaded: poliinternational.com/downloads/BioFlex-Compliance-Data-Sheets.pdf",
+          "maintenance": "Can be autoclaved. Clean with mild soap and water. Replace if damaged or discolored.",
+          "common_names": [
+            "BioFlex® body jewelry",
+            "Flexible body jewelry"
+          ],
+          "suitable_for": [
+            "initial piercings",
+            "healed piercings",
+            "oral piercings",
+            "pregnancy retainers",
+            "sensitive skin",
+            "retainers",
+            "MRI and X-ray: no metal, not magnetic (tell the radiology staff)"
+          ],
+          "not_suitable_for": [],
+          "color_options": [
+            "clear (high transparency)",
+            "various colors"
+          ],
+          "pros": [
+            "Resin holds USP Class VI; meets Ph. Eur. 3.2.2",
+            "Certified as passing the ISO 10993 biological tests",
+            "An FDA Drug Master File exists for the material",
+            "Sterilisable by autoclave, ethylene oxide or chemical sterilisation",
+            "Flexible: follows a growing belly without pulling",
+            "Much gentler on teeth and gums than metal",
+            "Contains no metal and is not magnetic",
+            "Excellent chemical resistance",
+            "Can be cut to size",
+            "High transparency",
+            "Made in one piece, with no joints or glued parts"
+          ],
+          "cons": [
+            "More expensive than generic plastic",
+            "The certificates cover genuine BioFlex® body jewelry only",
+            "Not as rigid as metal jewelry"
+          ],
+          "red_flags": [
+            "Generic \"flexible jewelry\" without certificates",
+            "Seller cannot provide the compliance documents",
+            "Suspiciously cheap \"BioFlex\" copies",
+            "Labeled \"BioFlex-style\" instead of genuine BioFlex® body jewelry"
+          ],
+          "sterilization_methods": [
+            "Autoclave (steam)",
+            "Ethylene oxide",
+            "Chemical sterilization"
+          ]
         },
         "bioplast": {
-            "name": "Bioplast",
-            "biocompatibility": "Excellent - ISO 10993 compliant, USP Class VI tested",
-            "composition": "Medical-grade modified polymer (different grade from BioFlex, same source material)",
-            "verification_tips": "Request certification documentation showing ISO 10993 and USP Class VI compliance. Genuine Bioplast comes with full compliance certificates. Note: Bioplast is a different grade than BioFlex (translucent vs high transparency).",
-            "maintenance": "Can be autoclaved. Clean with mild soap and water. Replace if damaged or discolored.",
-            "common_names": [
-                "Bioplast",
-                "Bio-plast",
-                "Flexible Body Jewelry"
-            ],
-            "suitable_for": [
-                "initial piercings",
-                "healed piercings",
-                "pregnancy",
-                "medical procedures (MRI, X-ray)",
-                "sensitive skin",
-                "retainers"
-            ],
-            "not_suitable_for": [],
-            "color_options": [
-                "translucent",
-                "various colors"
-            ],
-            "pros": [
-                "ISO 10993 biocompatible",
-                "USP Class VI tested",
-                "FDA Drug Master File assigned",
-                "Can be steam sterilized (autoclave)",
-                "Ethylene oxide sterilizable",
-                "Flexible and comfortable",
-                "MRI/X-ray safe",
-                "Excellent chemical resistance",
-                "Good for pregnancy",
-                "Can be cut to size"
-            ],
-            "cons": [
-                "Translucent (not as clear as BioFlex)",
-                "More expensive than generic plastic",
-                "Requires genuine Bioplast brand for certifications",
-                "Not as rigid as metal jewelry"
-            ],
-            "red_flags": [
-                "Generic \"flexible jewelry\" without certifications",
-                "Seller cannot provide ISO 10993 documentation",
-                "Suspiciously cheap \"Bioplast\" knock-offs",
-                "Labeled \"Bioplast-style\" instead of genuine Bioplast"
-            ],
-            "sterilization_methods": [
-                "Autoclave (steam)",
-                "Ethylene oxide",
-                "Chemical sterilization"
-            ]
+          "name": "Bioplast",
+          "biocompatibility": "Same source material as BioFlex® body jewelry, in a different grade; follows Ph. Eur. 3.2.2",
+          "composition": "PP-R random copolymer, a different grade from BioFlex® body jewelry (same source material)",
+          "verification_tips": "Ask the manufacturer for its compliance documents. Bioplast is a different grade from BioFlex® body jewelry (translucent rather than highly transparent).",
+          "maintenance": "Can be autoclaved. Clean with mild soap and water. Replace if damaged or discolored.",
+          "common_names": [
+            "Bioplast",
+            "Bio-plast",
+            "Flexible body jewelry"
+          ],
+          "suitable_for": [
+            "initial piercings",
+            "healed piercings",
+            "pregnancy retainers",
+            "sensitive skin",
+            "retainers",
+            "MRI and X-ray: no metal, not magnetic (tell the radiology staff)"
+          ],
+          "not_suitable_for": [],
+          "color_options": [
+            "translucent",
+            "various colors"
+          ],
+          "pros": [
+            "Follows Ph. Eur. 3.2.2",
+            "An FDA Drug Master File exists for the material",
+            "Sterilisable by autoclave, ethylene oxide or chemical sterilisation",
+            "Flexible and comfortable",
+            "Contains no metal and is not magnetic",
+            "Excellent chemical resistance",
+            "Can be cut to size"
+          ],
+          "cons": [
+            "Translucent (not as clear as BioFlex® body jewelry)",
+            "More expensive than generic plastic",
+            "Not as rigid as metal jewelry"
+          ],
+          "red_flags": [
+            "Generic \"flexible jewelry\" without certificates",
+            "Seller cannot provide the compliance documents",
+            "Labeled \"Bioplast-style\" instead of genuine Bioplast"
+          ],
+          "sterilization_methods": [
+            "Autoclave (steam)",
+            "Ethylene oxide",
+            "Chemical sterilization"
+          ]
         },
         "ptfe": {
             "name": "PTFE (Polytetrafluoroethylene)",
@@ -1442,7 +1438,7 @@ Language: English (Reference Dictionary)
         "material_label": "Target Material / Alloy",
         "opt_astm_f136": "ASTM F136 Titanium (Ti-6Al-4V ELI)",
         "opt_astm_f138": "ASTM F138 Stainless Steel (316LVM)",
-        "opt_bioflex": "BioFlex® Medical Polymer (USP Class VI)",
+        "opt_bioflex": "BioFlex® body jewelry (PP-R; USP Class VI resin)",
         "opt_niobium": "ASTM F2229 Niobium (Unalloyed)",
         "opt_glass": "Borosilicate Glass 3.3",
         "opt_gold": "Solid 14K/18K Gold",
@@ -1511,7 +1507,7 @@ Language: English (Reference Dictionary)
         "use_sensitive_client_req_3": "Verification of clean uncross-contaminated manufacturing tools",
         "use_oral_mucosal_context": "Constant exposure to saliva, fluctuating pH, oral enzymes, and continuous dental contact. Abrasion and erosion risk to tooth enamel.",
         "use_oral_mucosal_req_0": "High corrosion resistance in moist, warm, acidic oral environment",
-        "use_oral_mucosal_req_1": "Biocompatible polymer options (BioFlex®) to reduce dental enamel wear",
+        "use_oral_mucosal_req_1": "Flexible polymer (BioFlex® body jewelry), much gentler on teeth and gums than metal",
         "use_oral_mucosal_req_2": "Zero leaching of plasticizers or monomers into oral cavity",
         "use_oral_mucosal_req_3": "Autoclave sterility prior to initial insertion",
         "use_subdermal_surface_context": "Permanent subdermal implant where anchor base resides within subcutaneous tissue. Highest mechanical shear stress and cellular adhesion requirement.",
@@ -1627,7 +1623,7 @@ Language: English (Reference Dictionary)
         "item_hypoallergenic_proves": "Substantiates that known contact allergens (nickel, cobalt, chromium) are either completely absent or immobilized below biological sensitization thresholds.",
         "item_hypoallergenic_absence": "Absence means the word has zero legal, medical, or metallurgical meaning. Any supplier can print \"hypoallergenic\" on items containing 20% free nickel or toxic base metals without violating commercial labeling laws in most jurisdictions.",
         "item_hypoallergenic_action": "Discard the word \"hypoallergenic\" entirely. Inspect the specific alloy specification and independent laboratory assay.",
-        "item_medical_grade_polymer_claim": "Medical Grade Polymer / BioFlex / Plastic",
+        "item_medical_grade_polymer_claim": "Medical Grade Polymer / BioFlex® / Plastic",
         "item_medical_grade_polymer_doc": "USP Class VI biological reactivity certificate + ISO 10993-5 cytotoxicity test",
         "item_medical_grade_polymer_proves": "Substantiates in vivo biocompatibility at 121°C and in vitro zero-cytotoxicity for medical-grade PP-R resin, with zero phthalate plasticizers or heavy metal pigments.",
         "item_medical_grade_polymer_absence": "Absence means the plastic is industrial acrylic (PMMA), commercial PTFE, PVC, or cheap craft resin. These degrade under body warmth, leach monomer residues or plasticizers, and cannot survive steam autoclave cycles.",
@@ -1810,8 +1806,8 @@ Language: English (Reference Dictionary)
         "mat_surgical_steel_316lvm_tissue_boundary": "Surgical implant, healed piercing tissue canal, initial piercing (for non-nickel-sensitized individuals)",
         "mat_surgical_steel_316l_biocompatibility_standard": "Higher micro-inclusion content increases susceptibility to localized pitting corrosion in body fluids",
         "mat_surgical_steel_316l_tissue_boundary": "Marine hardware, food equipment, exterior jewelry on intact healed skin",
-        "mat_bioflex_biocompatibility_standard": "Certified USP Class VI in vivo reactivity and ISO 10993-5 in vitro cytotoxicity grade 0",
-        "mat_bioflex_tissue_boundary": "Initial wound canal, oral piercings, flexible tissue canals, MRI procedures",
+        "mat_bioflex_biocompatibility_standard": "Resin holds USP Class VI and meets Ph. Eur. 3.2.2; certified as passing the ISO 10993 biological tests",
+        "mat_bioflex_tissue_boundary": "Initial piercings, oral piercings, flexible tissue canals; no metal, not magnetic (for MRI and X-ray, tell the radiology staff)",
         "mat_niobium_biocompatibility_standard": "Passes ISO 10993; highly biocompatible, 100% nickel-free, non-reactive",
         "mat_niobium_tissue_boundary": "Initial piercing fistula, sensitive tissue, subdermal and healed body piercings",
         "mat_glass_biocompatibility_standard": "Chemically completely inert; zero ion elution in physiological solutions",
