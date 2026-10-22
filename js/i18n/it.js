@@ -6,6 +6,11 @@
   'use strict';
 
   const DICTIONARY = {
+  "a11y": {
+    "tool_navigation": "Navigazione dello strumento",
+    "filter_claims_by_category": "Filtra le dichiarazioni per categoria",
+    "search_claim_matrix": "Cerca nella matrice delle dichiarazioni"
+  },
   "app": {
     "title": "Verificatore delle certificazioni dei materiali",
     "subtitle": "Verifica le certificazioni dei materiali per gioielli da piercing, gli standard di biocompatibilità e gli indici di sicurezza",
