@@ -43,7 +43,7 @@ const CERT_READER_PRESETS = [
     name: 'Polymer Claim: BioFlex® USP Class VI',
     tag: 'Medical Polymer',
     tier: 2,
-    text: "BioFlex® body jewelry medical polymer shaft. Tested according to USP Class VI biological reactivity and ISO 10993-5 in vitro cytotoxicity. Steam autoclave safe to 121°C."
+    text: "BioFlex® body jewelry shaft, medical-grade PP-R. Resin holds USP Class VI; material certified as passing the ISO 10993 biological tests. Steam autoclave safe to 121°C."
   },
   {
     id: 'ambiguous_g23',
@@ -274,7 +274,7 @@ const SUPPLIER_QUESTIONS_CONFIG = {
       tissue_context: 'Constant exposure to saliva, fluctuating pH, oral enzymes, and continuous dental contact. Abrasion and erosion risk to tooth enamel.',
       critical_requirements: [
         'High corrosion resistance in moist, warm, acidic oral environment',
-        'Biocompatible polymer options (BioFlex®) to reduce dental enamel wear',
+        'Flexible polymer (BioFlex® body jewelry), much gentler on teeth and gums than metal',
         'Zero leaching of plasticizers or monomers into oral cavity',
         'Autoclave sterility prior to initial insertion'
       ]
@@ -326,7 +326,7 @@ const CLAIM_MATRIX_DATA = [
   },
   {
     id: 'medical_grade_polymer',
-    claim: 'Medical Grade Polymer / BioFlex / Plastic',
+    claim: 'Medical Grade Polymer / BioFlex® / Plastic',
     category: 'Polymers',
     required_document: 'USP Class VI biological reactivity certificate + ISO 10993-5 cytotoxicity test',
     what_it_proves: 'Substantiates in vivo biocompatibility at 121°C and in vitro zero-cytotoxicity for medical-grade PP-R resin, with zero phthalate plasticizers or heavy metal pigments.',
@@ -432,15 +432,15 @@ const CERTIFIED_COMPARISON_DATA = {
     tissue_boundary: 'Marine hardware, food equipment, exterior jewelry on intact healed skin'
   },
   bioflex: {
-    name: 'BioFlex® Body Jewelry Medical Polymer',
-    governing_standard: 'USP Class VI Biological Reactivity / ISO 10993 / Medical Grade PP-R',
-    certified_composition: 'High-purity medical-grade polypropylene random copolymer (PP-R); zero phthalates, zero BPA, zero heavy metals',
-    melting_process: 'Medical-grade cleanroom extrusion & injection molding',
-    biocompatibility_standard: 'Certified USP Class VI in vivo reactivity and ISO 10993-5 in vitro cytotoxicity grade 0',
+    name: 'BioFlex® body jewelry (medical-grade PP-R)',
+    governing_standard: 'USP Class VI (resin) / Ph. Eur. 3.2.2 / ISO 10993 biological tests',
+    certified_composition: 'Medical-grade polypropylene random copolymer (PP-R); contains no metal',
+    melting_process: 'Made in one piece, with no joints or glued parts, even with a jewel',
+    biocompatibility_standard: 'Resin holds USP Class VI and meets Ph. Eur. 3.2.2; certified as passing the ISO 10993 biological tests',
     autoclave_thermal_limit: 'Validated steam autoclave safe up to 121°C (250°F) for 20 minutes',
     traceability_unit: 'Raw medical resin manufacturer lot certificate & production batch',
-    surface_finish_spec: 'Extruded high-gloss hydrophobic low-friction surface finish',
-    tissue_boundary: 'Initial wound canal, oral piercings, flexible tissue canals, MRI procedures'
+    surface_finish_spec: 'High-gloss, low-friction surface (internal lubricant)',
+    tissue_boundary: 'Initial piercings, oral piercings, flexible tissue canals; no metal, not magnetic (for MRI and X-ray, tell the radiology staff)'
   },
   niobium: {
     name: 'Niobium (ASTM F2229 / Pure Element 41)',
