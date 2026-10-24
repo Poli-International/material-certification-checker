@@ -744,10 +744,33 @@ function handleMaterialCheck(e) {
   }
 }
 
-function getInitialPiercingStatusHTML(material) {
-  const isPass = Boolean(material.healing_stage && material.healing_stage.includes('initial') && material.safety_rating === 'safe');
+// 'conditional' = accepted for fresh piercings only under a stated condition (nickel-free gold, no nickel allergy...)
+function getInitialStatus(material) {
+  const stages = material.healing_stage || [];
+  if (stages.includes('initial') && material.safety_rating === 'safe') return 'pass';
+  return stages.some(s => s.startsWith('initial')) ? 'conditional' : 'fail';
+}
 
-  if (isPass) {
+function initialStatusText(status, prefix) {
+  return t(prefix + (status === 'pass' ? 'initial_pass' : status === 'conditional' ? 'initial_conditional' : 'initial_fail'));
+}
+
+function getInitialPiercingStatusHTML(material) {
+  const status = getInitialStatus(material);
+
+  if (status === 'conditional') {
+    return `
+      <div class="cert-decoder__piercing-status cert-decoder__piercing-status--conditional" role="status">
+        <div class="cert-decoder__piercing-status-icon" aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-warn></use></svg></div>
+        <div class="cert-decoder__piercing-status-content">
+          <div class="cert-decoder__piercing-status-title">${t('safety_checker.initial_conditional_title')}</div>
+          <div class="cert-decoder__piercing-status-desc">${t('safety_checker.initial_conditional_desc')}</div>
+        </div>
+      </div>
+    `;
+  }
+
+  if (status === 'pass') {
     return `
       <div class="cert-decoder__piercing-status cert-decoder__piercing-status--pass" role="status">
         <div class="cert-decoder__piercing-status-icon" aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-check></use></svg></div>
@@ -784,7 +807,8 @@ function displayMaterialResult(material, healing, sensitivity, location, trackHi
   const compatible = checkCompatibility(material, healing, sensitivity);
   const safetyBadge = getSafetyBadgeHTML(material.safety_rating);
   const piercingStatus = getInitialPiercingStatusHTML(material);
-  const isInitialPass = Boolean(material.healing_stage && material.healing_stage.includes('initial') && material.safety_rating === 'safe');
+  const initialStatus = getInitialStatus(material);
+  const isInitialPass = initialStatus === 'pass';
 
   // Find material key if not provided
   let foundKey = materialKey;
@@ -803,7 +827,7 @@ function displayMaterialResult(material, healing, sensitivity, location, trackHi
       key: foundKey,
       title: material.name,
       safetyRating: material.safety_rating,
-      initialPass: isInitialPass
+      initialPass: isInitialPass ? true : (initialStatus === 'fail' ? false : undefined)
     });
   }
 
@@ -941,7 +965,8 @@ function displayMaterialResult(material, healing, sensitivity, location, trackHi
 }
 
 function generateMaterialReportText(material, healing, sensitivity, location, compatible) {
-  const isInitialPass = Boolean(material.healing_stage && material.healing_stage.includes('initial') && material.safety_rating === 'safe');
+  const initialStatus = getInitialStatus(material);
+  const isInitialPass = initialStatus === 'pass';
   const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
 
   return `================================================================================
@@ -952,7 +977,7 @@ ${t('report.standard_ref')}
 
 ${t('report.material')} ${material.name}
 ${t('report.safety_rating')} ${material.safety_rating.toUpperCase()}
-${t('report.initial_status')} ${isInitialPass ? t('report.initial_pass') : t('report.initial_fail')}
+${t('report.initial_status')} ${initialStatusText(initialStatus, 'report.')}
 
 --------------------------------------------------------------------------------
 ${t('report.section_tech')}
@@ -1009,7 +1034,8 @@ function exportMaterialPDF(material, healing, sensitivity, location, compatible)
 }
 
 function generateAndDownloadPDFBlob(material, healing, sensitivity, location, compatible) {
-  const isInitialPass = Boolean(material.healing_stage && material.healing_stage.includes('initial') && material.safety_rating === 'safe');
+  const initialStatus = getInitialStatus(material);
+  const isInitialPass = initialStatus === 'pass';
   const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
   const escapePdfText = (str) => {
     return String(str || '')
@@ -1024,7 +1050,7 @@ function generateAndDownloadPDFBlob(material, healing, sensitivity, location, co
     { text: `Report Timestamp: ${timestamp}`, font: 'F1', size: 8, x: 50, y: 752 },
     { text: '------------------------------------------------------------------------------------------------------------------------', font: 'F1', size: 8, x: 50, y: 742 },
     { text: `VERIFIED MATERIAL: ${material.name}`, font: 'F2', size: 12, x: 50, y: 724 },
-    { text: `Safety Classification: ${material.safety_rating.toUpperCase()} | Initial Piercing Suitable: ${isInitialPass ? 'VERIFIED (PASS)' : 'NON-COMPLIANT (FAIL)'}`, font: 'F2', size: 9, x: 50, y: 708 },
+    { text: `Safety Classification: ${material.safety_rating.toUpperCase()} | Initial Piercing Suitable: ${isInitialPass ? 'PASS' : initialStatus === 'conditional' ? 'CONDITIONAL (see notes)' : 'NOT RECOMMENDED (FAIL)'}`, font: 'F2', size: 9, x: 50, y: 708 },
     { text: `Biocompatibility Index: ${material.biocompatibility}`, font: 'F1', size: 9, x: 50, y: 692 },
     { text: `Nickel Release Status: ${typeof material.nickel_free === 'string' ? material.nickel_free : (material.nickel_free ? 'Nickel-Free (Compliant with EU REACH Annex XVII / EN 1811)' : 'Contains Nickel (Sensitizing Risk)')}`, font: 'F1', size: 9, x: 50, y: 678 },
     { text: `Autoclave Sterilization: ${material.autoclave_safe ? 'Safe (121C - 134C Saturated Steam)' : 'NOT AUTOCLAVE SAFE'}`, font: 'F1', size: 9, x: 50, y: 664 },
@@ -1123,7 +1149,8 @@ function generateAndDownloadPDFBlob(material, healing, sensitivity, location, co
 }
 
 function printMaterialPDFReport(material, healing, sensitivity, location, compatible) {
-  const isInitialPass = Boolean(material.healing_stage && material.healing_stage.includes('initial') && material.safety_rating === 'safe');
+  const initialStatus = getInitialStatus(material);
+  const isInitialPass = initialStatus === 'pass';
   const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
 
   const printIframe = document.createElement('iframe');
@@ -1201,7 +1228,7 @@ function printMaterialPDFReport(material, healing, sensitivity, location, compat
           font-size: 11px;
           font-weight: bold;
           text-transform: uppercase;
-          background: ${isInitialPass ? '#059669' : '#dc2626'};
+          background: ${isInitialPass ? '#059669' : initialStatus === 'conditional' ? '#b45309' : '#dc2626'};
           color: #ffffff;
         }
         .pdf-grid {
@@ -1288,7 +1315,7 @@ function printMaterialPDFReport(material, healing, sensitivity, location, compat
           </div>
         </div>
         <div class="pdf-status-pill">
-          ${isInitialPass ? t('report.initial_pass') : t('report.initial_fail')}
+          ${initialStatusText(initialStatus, 'report.')}
         </div>
       </div>
 
