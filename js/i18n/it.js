@@ -65,7 +65,7 @@
     "opt_titanium_5": "Titanio Grado 5 (Ti-6Al-4V)",
     "opt_steel_316lvm": "Acciaio chirurgico 316LVM - ASTM F138",
     "opt_steel_316l": "Acciaio chirurgico 316L (Non da impianto)",
-    "opt_niobium": "Niobio (Puro / Legato) - ASTM F2229",
+    "opt_niobium": "Niobio (Puro / Legato) - ASTM B392",
     "opt_gold_14k": "Oro 14K",
     "opt_gold_18k": "Oro 18K (Senza nichel)",
     "opt_bioflex": "BioFlex® body jewelry (PP-R di grado medico)",
@@ -93,10 +93,10 @@
     "sensitivity_sensitive": "Sensibile / Allergico al nichel",
     "submit_button": "Verifica sicurezza del materiale",
     "alert_select_material": "Seleziona un tipo di materiale.",
-    "initial_pass_title": "CONFORME: Approvato per piercing iniziali",
-    "initial_pass_desc": "Soddisfa i criteri di biocompatibilità stabiliti (ASTM/ISO) per l'inserimento diretto in tessuti freschi non guariti.",
+    "initial_pass_title": "IDONEO - Adatto per Piercing Iniziali",
+    "initial_pass_desc": "Adatto per un piercing fresco una volta verificati i documenti. La nostra valutazione, basata sulle linee guida per i gioielli iniziali dell'APP e sui certificati del materiale (pratica industriale, non una legge).",
     "initial_fail_title": "NON CONFORME: Non raccomandato per piercing iniziali",
-    "initial_fail_desc": "Non soddisfa gli standard di sicurezza per il piercing iniziale; adatto solo a tessuti completamente guariti.",
+    "initial_fail_desc": "Solo piercing guariti o non raccomandato del tutto. La nostra valutazione, basata sulle linee guida per i gioielli iniziali dell'APP (pratica industriale, non una legge).",
     "warning_not_initial": "Questo materiale NON è raccomandato per piercing iniziali o recenti.",
     "warning_sensitive": "Questo materiale potrebbe non essere adatto a pelli sensibili.",
     "warning_nickel": "Questo materiale contiene nichel, che può causare reazioni allergiche in soggetti sensibilizzati.",
@@ -133,7 +133,9 @@
     "how_to_verify_title": "Metodi di verifica",
     "related_standards_title": "Norme correlate",
     "allergy_risk_title": "Profilo di rischio allergico",
-    "required_certs_title": "Certificazioni richieste"
+    "required_certs_title": "Certificazioni richieste",
+    "initial_conditional_title": "CONDIZIONALE - Piercing Iniziali Solo se la Condizione è Soddisfatta",
+    "initial_conditional_desc": "Accettato per piercing freschi solo a una condizione: oro pieno privo di nichel e cadmio, assenza di allergia al nichel per l'acciaio ASTM F138, specifica per impianti dichiarata (ISO 5832-3) per il titanio Grado 5. Leggi le note sotto."
   },
   "recent_checks": {
     "title": "Verifiche recenti",
@@ -283,7 +285,7 @@
     "material": "MATERIALE:",
     "safety_rating": "LIVELLO DI SICUREZZA:",
     "initial_status": "STATO PER PIERCING INIZIALE:",
-    "initial_pass": "CONFORME: Approvato per il piercing iniziale",
+    "initial_pass": "IDONEO - Adatto per Piercing Iniziale",
     "initial_fail": "NON CONFORME: Non raccomandato per il piercing iniziale",
     "section_tech": "SPECIFICHE TECNICHE E MISURAZIONI:",
     "biocompatibility": "- Biocompatibilità:",
@@ -306,7 +308,8 @@
     "section_disclaimer": "AVVISO DI ESCLUSIONE DI RESPONSABILITÀ PER GLI STUDI:",
     "disclaimer_1": "Dati tecnici di riferimento forniti per la verifica professionale in studio.",
     "disclaimer_2": "Verifica sempre i certificati di colata del produttore per controllare la conformità del lotto.",
-    "disclaimer_3": "I dati rimangono archiviati localmente nel tuo studio e non vengono mai trasmessi a server terzi."
+    "disclaimer_3": "I dati rimangono archiviati localmente nel tuo studio e non vengono mai trasmessi a server terzi.",
+    "initial_conditional": "CONDIZIONALE - Piercing Iniziale Solo se la Condizione è Soddisfatta"
   },
   "glossary": {
     "modal_title": "Glossario interattivo degli standard (A–Z)",
@@ -431,29 +434,30 @@
     },
     "ASTM_F2229": {
       "code": "ASTM F2229",
-      "full_name": "Specifica standard per barre e fili in acciaio inossidabile austenitico senza nichel per impianti chirurgici",
+      "full_name": "Specifica Standard per Barre e Fili in Lega di Acciaio Inossidabile a Basso Contenuto di Nichel, Deformati a Caldo, Rafforzati con Azoto, 23Manganese-21Cromo-1Molibdeno per Impianti Chirurgici (UNS S29108)",
       "organization": "ASTM International",
-      "material_type": "Acciaio inossidabile senza nichel rinforzato con azoto",
-      "body_piercing_use": "Alternativa priva di nichel ad alta resistenza per piercing iniziale in soggetti allergici.",
-      "biocompatibility": "Contenuto residuo di nichel inferiore allo 0,05%, biocompatibilità convalidata.",
+      "material_type": "Acciaio inossidabile a basso contenuto di nichel (non niobio)",
+      "body_piercing_use": "Raro nei gioielli per il corpo",
+      "biocompatibility": "Specifica per impianti chirurgici",
       "sterilization": "Compatibile con autoclave a 121 °C e 134 °C.",
-      "important_notes": "Offre una resistenza meccanica superiore rispetto ai classici acciai inossidabili austenitici.",
+      "important_notes": "Un acciaio inossidabile, non niobio. Un certificato di niobio che cita la norma ASTM F2229 indica la specifica sbagliata: chiedi al fornitore il perché.",
       "verification_method": "Certificato di analisi chimica che attesta il contenuto di azoto e l'assenza di nichel.",
-      "common_uses": "Gioielli per clienti allergici al nichel che preferiscono l'estetica dell'acciaio."
+      "common_uses": [
+        "Impianti chirurgici"
+      ]
     },
     "ASTM_F1586": {
       "code": "ASTM F1586",
-      "full_name": "Standard Specification for Wrought Niobium Alloy for Surgical Implant Applications",
+      "full_name": "Specifica Standard per Barre in Lega di Acciaio Inossidabile a 21Cromo-10Nichel-3Manganese-2.5Molibdeno Deformate a Caldo e Rafforzate con Azoto per Impianti Chirurgici (UNS S31675)",
       "organization": "ASTM International",
-      "material_type": "Niobium Alloy (Nb-1Zr)",
-      "body_piercing_use": "Good - Slightly stronger than pure niobium",
-      "biocompatibility": "Excellent",
+      "material_type": "Acciaio inossidabile rafforzato con azoto, circa 10% di nichel (non niobio)",
+      "body_piercing_use": "Raro nei gioielli per il corpo; contiene nichel",
+      "biocompatibility": "Specifica per impianti chirurgici; contiene nichel",
       "sterilization": "Autoclave safe",
-      "important_notes": "Niobium-zirconium alloy - stronger than pure niobium while maintaining biocompatibility.",
+      "important_notes": "Un acciaio inossidabile che contiene nichel, non una lega di niobio. Un certificato di niobio che cita la norma ASTM F1586 indica la specifica sbagliata.",
       "verification_method": "Mill certification required",
       "common_uses": [
-        "Body jewelry",
-        "Surgical implants"
+        "Impianti chirurgici"
       ]
     },
     "ISO_5832-1": {
@@ -568,6 +572,21 @@
         "EU regulatory compliance",
         "Product safety"
       ]
+    },
+    "ASTM_B392": {
+      "code": "ASTM B392",
+      "full_name": "Specifica Standard per Barre, Tondini e Fili di Niobio e Leghe di Niobio",
+      "organization": "ASTM International",
+      "material_type": "Niobio, non legato o con 1% di zirconio",
+      "body_piercing_use": "Buono - privo di nichel, adatto per pelli sensibili",
+      "biocompatibility": "Privo di nichel; a lungo utilizzato nei piercing per il corpo",
+      "sterilization": "Sicuro in autoclave",
+      "important_notes": "Una specifica industriale: il niobio non ha una designazione di grado per impianti (APP). L'APP elenca comunque il niobio per i piercing iniziali. Più morbido del titanio; può essere anodizzato.",
+      "verification_method": "Certificato di mulino che menziona ASTM B392 e il grado di niobio",
+      "common_uses": [
+        "Gioielli per il corpo",
+        "Gioielli per dilatazioni"
+      ]
     }
   },
   "materials": {
@@ -612,7 +631,7 @@
       "red_flags": [
         "Titanio 'grado implantare' sospettosamente economico",
         "Nessun certificato di colata fornito",
-        "Listed as \"Grade 5\" or \"ISO 5832-3\" (a different specification from F136)",
+        "Indicato come \"Grado 5\" senza alcuna specifica per impianti menzionata (ISO 5832-3 o ASTM F1472)",
         "'Titanio' generico senza specifica di grado",
         "Il fornitore rifiuta di mostrare la documentazione"
       ],
@@ -625,13 +644,16 @@
       "name": "Titanio Grado 5 (Ti-6Al-4V)",
       "biocompatibility": "Specified for surgical implants; most piercing guidance names its extra-low-interstitial version, ASTM F136 (Grade 23)",
       "composition": "Lega di titanio: Ti-6Al-4V (contenuto di ossigeno più elevato rispetto al Grado 23)",
-      "verification_tips": "Ask which specification the mill certificate names. ISO 5832-3 and ASTM F1472 are genuine surgical implant specifications for Ti-6Al-4V, but not F136 (Grade 23, ELI), which has the lower oxygen limit most piercing guidance names. ASTM B348 is an industrial bar specification with no implant requirements. \"Implant grade\" with no named specification proves nothing.",
+      "verification_tips": "Chiedi quale specifica è indicata nel certificato di mulino. La norma ISO 5832-3 è presente nell'elenco dell'APP per i gioielli iniziali, così come la ASTM F136 (Grado 23, ELI), che ha il limite di ossigeno inferiore. La ASTM F1472 è anch'essa una specifica per impianti chirurgici. La ASTM B348 è una specifica per barre industriali senza requisiti per impianti. \"Grado per impianti\" senza una specifica indicata non dimostra nulla.",
       "maintenance": "Same care as other titanium jewellery: mild soap and water",
       "common_names": [
         "Grade 5",
         "Ti-6Al-4V"
       ],
-      "suitable_for": [],
+      "suitable_for": [
+        "piercing iniziali, se il certificato menziona la norma ISO 5832-3 (nell'elenco APP)",
+        "piercing guariti"
+      ],
       "not_suitable_for": [
         "jewellery sold as \"implant grade\" when you require ASTM F136"
       ],
@@ -650,7 +672,7 @@
       ],
       "red_flags": [
         "Grado 5 commercializzato come 'grado implantare'",
-        "Il venditore esibisce ISO 5832-3 anziché ASTM F136",
+        "Nessuna specifica per impianti indicata sul certificato (la ASTM B348 è per barre industriali)",
         "Gioielli in 'titanio' a prezzi stracciati",
         "Descrizioni commerciali fuorvianti"
       ],
@@ -671,8 +693,8 @@
         "Acciaio chirurgico inossidabile"
       ],
       "suitable_for": [
-        "Piercing guariti",
-        "Utilizzo a breve termine"
+        "piercing iniziali (nessuna allergia al nichel; la ASTM F138 è nell'elenco APP)",
+        "piercing guariti"
       ],
       "not_suitable_for": [
         "Allergia nota al nichel",
@@ -693,7 +715,7 @@
         "Contiene 13-15% di nichel",
         "Può scatenare reazioni allergiche",
         "Più pesante del titanio",
-        "Non ideale per piercing iniziale",
+        "Non per clienti con allergia al nichel",
         "Soggetto a restrizioni europee sul rilascio di nichel"
       ],
       "red_flags": [
@@ -757,7 +779,7 @@
       "name": "Niobio puro (Nb 99,9%)",
       "biocompatibility": "Eccellente (Elemento metallico puro al 100% inerte)",
       "composition": "Niobio elementare puro al 99,9% (ASTM B392). 100% privo di nichel.",
-      "verification_tips": "Verificare la purezza al 99,9% sulla scheda tecnica del produttore.",
+      "verification_tips": "Richiedi un certificato di mulino che citi la norma ASTM B392 e il grado di niobio. Il niobio non ha una specifica di grado per impianti (APP). Un certificato di niobio che cita ASTM F2229 o F1586 è errato: si tratta di specifiche per impianti in acciaio inossidabile.",
       "maintenance": "Pulizia delicata con soluzione salina.",
       "common_names": "Niobio, Nb puro",
       "suitable_for": "Piercing iniziali, orecchie, naso, setto, pelli altamente sensibili o allergiche",
@@ -787,7 +809,7 @@
       "name": "Oro massiccio 18K",
       "biocompatibility": "Eccellente (Oro puro al 75% privo di nichel)",
       "composition": "75,0% di oro puro. Pregiata lega nobile biocompatibile priva di nichel.",
-      "verification_tips": "Punzone legale (750) e certificato di lega garantita priva di nichel.",
+      "verification_tips": "Come per il 14K: verifica che sia pieno (non placcato o riempito) e privo di nichel e cadmio. L'APP accetta 14K e superiori per i piercing iniziali; l'oro superiore a 18K è troppo morbido per i gioielli da corpo.",
       "maintenance": "Pulizia delicata non abrasiva.",
       "common_names": "Oro 18 carati, Oro 750",
       "suitable_for": "Piercing iniziali e guariti di alta gioielleria",
@@ -920,7 +942,7 @@
       "name": "Vetro borosilicato (Pyrex 3.3)",
       "biocompatibility": "Eccellente (Vetro al silicato inerte non poroso ISO 3585)",
       "composition": "Silice e triossido di boro ad elevata purezza termica e chimica.",
-      "verification_tips": "Verificare la superficie perfettamente liscia e l'assenza di microfratture o bolle interne.",
+      "verification_tips": "Verifica che il vetro sia senza piombo: quarzo fuso, borosilicato o sodico-calcico (tutti e tre sono nell'elenco APP). Controlla la presenza di crepe o sbeccature prima dell'uso.",
       "maintenance": "Pulizia con acqua e sapone o disinfettante delicato.",
       "common_names": "Pyrex, Vetro borosilicato, Vetro medico",
       "suitable_for": "Piercing iniziali, dilatazioni (stretching), retainer, soggetti poliallergici",
@@ -1111,11 +1133,12 @@
     "gap_eli_oxygen": "Verifica dell'Ossigeno ELI: Il titanio Grado 5 (0,20% ossigeno) viene spesso spacciato come generico \"titanio\". Solo la norma ASTM F136 garantisce il limite ridotto di elementi interstiziali (ELI ≤ 0,13%).",
     "gap_var_remelt": "Rifusione ad Arco sotto Vuoto (VAR): Il 316L commerciale viene fuso all'aria e presenta livelli più elevati di carbonio/zolfo e inclusioni non metalliche rispetto all'ASTM F138 316LVM rifuso sotto vuoto.",
     "gap_allergen_proof": "Prova Chimica Allergeni: La dicitura \"ipoallergenico\" non documenta il tenore di nichel, lo spessore della placcatura o la composizione del substrato metallico.",
+    "gap_niobium_wrong_spec": "Specifica errata: ASTM F2229 e F1586 sono specifiche per impianti in acciaio inossidabile, non per il niobio. Il niobio è fornito secondo ASTM B392; chiedi al fornitore perché il certificato cita una norma per l'acciaio.",
     "gap_doc_physical_proof": "Prova Documentale Fisica: Una dichiarazione del distributore o un'etichetta di fattura non costituiscono un Mill Test Report (MTR). La verifica reale esige il certificato di colata di laboratorio dell'acciaieria.",
     "proof_titanium": "Certificato di colata originale (MTR) a norma EN 10204 3.1 che dimostri ASTM F136 (Ti-6Al-4V ELI), Ossigeno ≤ 0,13%, Ferro ≤ 0,25% e numero di colata corrispondente stampato sulla confezione.",
     "proof_steel": "Certificato di colata con specifica ASTM F138 (Barre/Fili Grado 2), 316LVM rifuso sotto vuoto, Carbonio ≤ 0,030%, Zolfo ≤ 0,010%, con relativo numero di colata.",
     "proof_polymer": "Certificato di reattività biologica USP Classe VI + rapporto di citotossicità ISO 10993-5 per resina PP-R per uso medicale.",
-    "proof_niobium": "Certificato d'acciaieria attestante niobio puro non legato ASTM F2229 (≥ 99,85% Nb) a bassi livelli interstiziali.",
+    "proof_niobium": "Certificato di mulino che menziona ASTM B392 e il grado di niobio, con un numero di lotto (il niobio non ha una specifica di grado per impianti).",
     "proof_generic": "Certificato ufficiale di colata delle materie prime (MTR) rilasciato dall'acciaieria con analisi chimica completa, prove meccaniche e identificativo di colata.",
     "copy_summary_title": "VERIFICATORE CERTIFICAZIONI MATERIALI - ANALISI DELLA DICHIARAZIONE",
     "copy_summary_date": "Data:",
@@ -1135,7 +1158,7 @@
     "opt_astm_f136": "Titanio ASTM F136 (Ti-6Al-4V ELI)",
     "opt_astm_f138": "Acciaio inossidabile ASTM F138 (316LVM)",
     "opt_bioflex": "BioFlex® body jewelry (PP-R; resina USP Classe VI)",
-    "opt_niobium": "Niobio ASTM F2229 (non legato)",
+    "opt_niobium": "ASTM B392 Niobio (Non legato)",
     "opt_glass": "Vetro borosilicato 3.3",
     "opt_gold": "Oro massiccio 14K/18K",
     "opt_commercial_316l": "316L commerciale / Titanio Grado 5",
@@ -1197,7 +1220,7 @@
     "use_healed_piercing_req_2": "Finitura meccanica sicura priva di bordi taglienti",
     "use_healed_piercing_req_3": "Composizione chimica inerte e stabile",
     "use_sensitive_client_context": "Cliente con ipersensibilità accertata a nichel, cromo o impurità di leghe generiche. Esige materiali con rigorosa assenza di nichel per prevenire dermatiti da contatto.",
-    "use_sensitive_client_req_0": "Zero nichel: Titanio ASTM F136, Niobio ASTM F2229 o PP-R USP Classe VI",
+    "use_sensitive_client_req_0": "Privo di nichel: titanio ASTM F136, niobio (ASTM B392) o USP Class VI PP-R",
     "use_sensitive_client_req_1": "Evitare qualsiasi acciaio 316L/316LVM (contiene il 13-15% di nichel legato)",
     "use_sensitive_client_req_2": "Evitare l'oro bianco a meno che non sia legato unicamente con palladio",
     "use_sensitive_client_req_3": "Verifica di utensili di lavorazione puliti e non contaminati",
@@ -1245,10 +1268,10 @@
     "q_bioflex_polymer_2_sat": "Chiara validazione per cicli in autoclave a vapore (es. 121°C per 20 minuti) senza degradazione termica o rilascio di vapori tossici.",
     "q_bioflex_polymer_2_unsat": "\"Non autoclavare\", o plastiche che fondono o si deformano a temperature da autoclave (come acrilico commerciale o PVC).",
     "q_bioflex_polymer_3_q": "Il polimero è formulato senza plastificanti (come gli ftalati), bisfenolo A (BPA) e coloranti a base di metalli pesanti?",
-    "q_bioflex_polymer_3_sat": "Scheda di sicurezza della formulazione con conferma della totale assenza di ftalati, BPA e stabilizzanti tossici.",
+    "q_bioflex_polymer_3_sat": "Dichiarazione di formulazione che conferma che non sono stati aggiunti ftalati, BPA o stabilizzanti tossici.",
     "q_bioflex_polymer_3_unsat": "Vinile/PVC flessibile contenente plastificanti migranti o masterbatch colorati non verificati.",
-    "q_niobium_0_q": "Potete fornire un certificato di colata che confermi la conformità del niobio non legato a ASTM F2229 (o Nb puro ≥ 99,9%)?",
-    "q_niobium_0_sat": "Certificato con saggio in niobio puro (minimo dal 99,85% al 99,9% di Nb) e bassi elementi interstiziali (Ta ≤ 0,3%, O ≤ 0,04%).",
+    "q_niobium_0_q": "Puoi fornire un Mill Test Report che citi ASTM B392 e il grado di niobio, con un numero di lotto?",
+    "q_niobium_0_sat": "MTR che menziona ASTM B392 e il grado di niobio, con l'analisi chimica e un numero di lotto.",
     "q_niobium_0_unsat": "Metalli vili placcati o leghe con composizione sconosciuta.",
     "q_niobium_1_q": "L'articolo è interamente in niobio massiccio, privo di placcature superficiali o anime in metallo vile?",
     "q_niobium_1_sat": "Attestazione di fabbricazione in niobio lavorato massiccio al 100% su tutta la sezione.",
@@ -1258,7 +1281,7 @@
     "q_niobium_2_unsat": "Vernice a smalto, lacche o coloranti per immersione chimica.",
     "q_borosilicate_glass_0_q": "Potete certificare che il gioiello è realizzato in vetro borosilicato massiccio privo di piombo (Borosilicato 3.3 secondo ISO 3585)?",
     "q_borosilicate_glass_0_sat": "Dichiarazione del produttore a conferma della composizione in vetro borosilicato 3.3 massiccio, esente da piombo, arsenico e cadmio.",
-    "q_borosilicate_glass_0_unsat": "Vetro comune sodocalcico, cristallo al piombo o vetro decorato con smalto superficiale.",
+    "q_borosilicate_glass_0_unsat": "Cristallo al piombo, vetro di composizione sconosciuta o vetro con vernice smaltata superficiale.",
     "q_borosilicate_glass_1_q": "Il pezzo finito è stato sottoposto a completa ricottura in forno per eliminare le tensioni termiche interne?",
     "q_borosilicate_glass_1_sat": "Verifica con polariscopio che attesti l'assenza di birifrangenza e microfratture residue dopo il ciclo di ricottura.",
     "q_borosilicate_glass_1_unsat": "Vetro lavorato a fiamma non ricotto suscettibile a rottura spontanea da shock termico.",
@@ -1305,7 +1328,7 @@
     "cat_general": "Generale",
     "empty_msg": "Nessuna dichiarazione corrisponde al filtro di ricerca. Prova a cancellare la parola chiave.",
     "item_implant_grade_titanium_claim": "Titanio Grado Impianto (Implant Grade)",
-    "item_implant_grade_titanium_doc": "Certificato di colata (MTR / EN 10204 Tipo 3.1) che cita ASTM F136 o ISO 5832-3 ELI",
+    "item_implant_grade_titanium_doc": "Mill Test Report (MTR / EN 10204 Tipo 3.1) che cita ASTM F136 o ISO 5832-3",
     "item_implant_grade_titanium_proves": "Comprova lega lavorata Ti-6Al-4V ELI (Extra Low Interstitial) con massimo 0,13% di ossigeno, proprietà meccaniche certificate e numero di colata univoco.",
     "item_implant_grade_titanium_absence": "L'assenza dimostra che il termine è un mero slogan pubblicitario. La lega può essere titanio industriale Grado 5 (0,20% ossigeno) o materiale da riciclo impuro. Nessun dato certifica la biocompatibilità.",
     "item_implant_grade_titanium_action": "Richiedere il certificato di colata. Verificare \"ASTM F136\", \"ELI\", ossigeno ≤ 0,13% e numero di colata coincidente con il lotto.",
@@ -1321,7 +1344,7 @@
     "item_hypoallergenic_action": "Ignorare il termine \"ipoallergenico\". Esaminare la specifica esatta della lega e il rapporto di prova di un laboratorio indipendente.",
     "item_medical_grade_polymer_claim": "Polimero Grado Medico / BioFlex® / Plastica",
     "item_medical_grade_polymer_doc": "Certificato di reattività biologica USP Classe VI e test di citotossicità ISO 10993-5",
-    "item_medical_grade_polymer_proves": "Comprova biocompatibilità in vivo a 121°C e citotossicità in vitro pari a zero per resina PP-R medicale, senza ftalati o pigmenti tossici.",
+    "item_medical_grade_polymer_proves": "Mostra che la resina ha superato i test sugli animali USP Class VI (iniezione sistemica, intracutanea, impianto) e il test di citotossicità ISO 10993-5. Di per sé non dimostra l'assenza di plastificanti o metalli di pigmentazione: richiedi la dichiarazione di formulazione.",
     "item_medical_grade_polymer_absence": "L'assenza indica acrilico industriale (PMMA), PTFE commerciale, PVC o resina comune. Si degradano con il calore corporeo, rilasciano monomeri e non resistono all'autoclave.",
     "item_medical_grade_polymer_action": "Richiedere conformità USP Classe VI e test di citotossicità ISO 10993-5 documentati. Verificare la compatibilità con autoclave.",
     "item_nickel_free_claim": "Senza Nichel",
@@ -1489,7 +1512,7 @@
     "badge": "[CONFRONTO NORME CERTIFICATE]",
     "th_parameter": "Parametro Tecnico Normato",
     "tag_specification": "[SPECIFICA]",
-    "footer_note": "Nota Metodologica: Le specifiche citate riflettono le attuali edizioni di ASTM F136, ASTM F138, ASTM F2229, ISO 10993 e USP Classe VI. Negli studi di piercing, i protocolli di accettazione richiedono la verifica indipendente del Mill Test Report (MTR) corrispondente al numero di colata sulla confezione.",
+    "footer_note": "Nota Metodologica: Le specifiche citate riflettono le attuali edizioni di ASTM F136, ASTM F138, ASTM B392, ISO 10993 e USP Classe VI. Negli studi di piercing, i protocolli di accettazione richiedono la verifica indipendente del Mill Test Report (MTR) corrispondente al numero di colata sulla confezione.",
     "row_biocompatibility_standard": "Prove di Biocompatibilità Certificate",
     "row_autoclave_thermal_limit": "Tolleranza Termica in Autoclave a Vapore",
     "row_traceability_unit": "Unità di Tracciabilità Richiesta",
@@ -1504,11 +1527,11 @@
     "mat_surgical_steel_316l_tissue_boundary": "Carpenteria navale, impianti alimentari, bigiotteria esterna su cute integra guarita",
     "mat_bioflex_biocompatibility_standard": "Resina conforme a USP Classe VI e Ph. Eur. 3.2.2; certificata come conforme ai test biologici ISO 10993",
     "mat_bioflex_tissue_boundary": "Piercing iniziali, piercing orali, canali tissutali flessibili; senza metallo, non magnetico (per risonanza magnetica e raggi X, avvisare il personale di radiologia)",
-    "mat_niobium_biocompatibility_standard": "Supera ISO 10993; altamente biocompatibile, 100% privo di nichel, non reattivo",
+    "mat_niobium_biocompatibility_standard": "Privo di nichel; a lungo utilizzato nei piercing per il corpo e presente nell'elenco APP per i piercing iniziali",
     "mat_niobium_tissue_boundary": "Fistola da piercing iniziale, tessuti sensibili, piercing sottocutanei e guariti",
-    "mat_glass_biocompatibility_standard": "Chimicamente del tutto inerte; rilascio ionico nullo in soluzioni fisiologiche",
+    "mat_glass_biocompatibility_standard": "Altamente resistente agli attacchi chimici; rilascio di ioni molto basso nei fluidi corporei",
     "mat_glass_tissue_boundary": "Canale di piercing iniziale, fistole in dilatazione, piercing guariti a lungo termine",
-    "mat_gold_14k_biocompatibility_standard": "Biocompatibile se accertato 100% senza nichel e cadmio; resistenza alla corrosione da metalli nobili",
+    "mat_gold_14k_biocompatibility_standard": "Biocompatibile quando verificato privo di nichel e cadmio; resistenza alla corrosione da metalli nobili",
     "mat_gold_14k_tissue_boundary": "Piercing iniziale (se massiccio e privo di nichel), fistole di piercing guarite",
     "mat_acrylic_biocompatibility_standard": "NON certificato per impianti chirurgici o contatto con ferite aperte; microporoso; rilascia monomeri",
     "mat_acrylic_tissue_boundary": "Lobi guariti e intatti SOLO per brevi periodi; rigorosamente vietato nelle ferite fresche"
