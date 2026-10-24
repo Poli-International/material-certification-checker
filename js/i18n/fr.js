@@ -1356,7 +1356,7 @@
     "item_autoclave_safe_doc": "Validation d'essais en cycles thermiques (rapport de stérilisation à la vapeur ISO 17665)",
     "item_autoclave_safe_proves": "Prouve que la pièce résiste à la vapeur saturée entre 121°C et 134°C sans se déformer, fondre, se décomposer, émettre de vapeurs toxiques ni altérer son poli.",
     "item_autoclave_safe_absence": "L'absence de validation fait courir le risque que l'objet fonde dans la cuve, endommage la pompe à vide de l'autoclave ou contamine les autres bijoux d'un dépôt toxique.",
-    "item_autoclave_safe_action": "Vérifiez la température admissible selon le fabricant : 134°C pour titane/acier/verre ; 121°C pour le BioFlex. Ne jamais autoclaver d'acrylique ou de gemmes collées.",
+    "item_autoclave_safe_action": "Vérifiez la température admissible selon le fabricant : 134°C pour titane/acier/verre ; 121–134°C pour le BioFlex (cycles vapeur standard). Ne jamais autoclaver d'acrylique ou de gemmes collées.",
     "item_biocompatible_iso10993_claim": "Biocompatible / Testé ISO 10993",
     "item_biocompatible_iso10993_doc": "Rapport d'essai accrédité citant nommément les parties ISO 10993-5 et ISO 10993-10",
     "item_biocompatible_iso10993_proves": "Confirme que des cultures cellulaires vivantes exposées au matériau n'ont subi aucune lyse (cytotoxicité grade 0) et qu'aucun signe d'irritation ou sensibilisation n'a été relevé.",
