@@ -65,7 +65,7 @@
     "opt_titanium_5": "Titan Grad 5 (Ti-6Al-4V)",
     "opt_steel_316lvm": "Chirurgenstahl 316LVM - ASTM F138",
     "opt_steel_316l": "Chirurgenstahl 316L (Nicht für Implantate)",
-    "opt_niobium": "Niob (Rein / Legiert) - ASTM F2229",
+    "opt_niobium": "Niob (rein / legiert) - ASTM B392",
     "opt_gold_14k": "14K Gold",
     "opt_gold_18k": "18K Gold (Nickelfrei)",
     "opt_bioflex": "BioFlex® body jewelry (PP-R in medizinischer Qualität)",
@@ -93,10 +93,10 @@
     "sensitivity_sensitive": "Empfindlich / Nickelallergie",
     "submit_button": "Materialsicherheit prüfen",
     "alert_select_material": "Bitte wählen Sie eine Materialart aus.",
-    "initial_pass_title": "BESTANDEN: Zugelassen für Erstpiercings",
-    "initial_pass_desc": "Erfüllt die etablierten Biokompatibilitätskriterien (ASTM/ISO) für den direkten Einsatz in frischem, nicht verheiltem Gewebe.",
+    "initial_pass_title": "BESTANDEN - Geeignet für Erstpiercings",
+    "initial_pass_desc": "Geeignet für ein frisches Piercing, sobald die Dokumente überprüft sind. Unsere Bewertung basiert auf den Empfehlungen der APP für Erstschmuck und den eigenen Zertifikaten des Materials (Branchenpraxis, kein Gesetz).",
     "initial_fail_title": "NICHT BESTANDEN: Nicht empfohlen für Erstpiercings",
-    "initial_fail_desc": "Erfüllt nicht die Sicherheitsstandards für Erstpiercings; nur für vollständig abgeheiltes Gewebe geeignet.",
+    "initial_fail_desc": "Nur verheilte Piercings oder überhaupt nicht empfohlen. Unsere Bewertung basiert auf den Empfehlungen der APP für Erstschmuck (Branchenpraxis, kein Gesetz).",
     "warning_not_initial": "Dieses Material wird für frische Erstpiercings NICHT empfohlen.",
     "warning_sensitive": "Dieses Material ist möglicherweise nicht für empfindliche Haut geeignet.",
     "warning_nickel": "Dieses Material enthält Nickel, das bei sensibilisierten Personen allergische Reaktionen auslösen kann.",
@@ -133,7 +133,9 @@
     "how_to_verify_title": "Verifizierungsmethoden",
     "related_standards_title": "Relevante Normen",
     "allergy_risk_title": "Allergierisikoprofil",
-    "required_certs_title": "Erforderliche Zertifizierungen"
+    "required_certs_title": "Erforderliche Zertifizierungen",
+    "initial_conditional_title": "BEDINGT - Erstpiercings nur, wenn die Bedingung erfüllt ist",
+    "initial_conditional_desc": "Für frische Piercings nur unter einer Bedingung akzeptiert: massives Gold, das nickel- und cadmiumfrei ist, keine Nickelallergie bei Stahl nach ASTM F138, eine genannte Implantatspezifikation (ISO 5832-3) bei Titan Grad 5. Lesen Sie die Hinweise unten."
   },
   "recent_checks": {
     "title": "Letzte Prüfungen",
@@ -283,7 +285,7 @@
     "material": "MATERIAL:",
     "safety_rating": "SICHERHEITSBEWERTUNG:",
     "initial_status": "STATUS FÜR ERSTPIERCING:",
-    "initial_pass": "BESTANDEN: Zugelassen für Erstpiercings",
+    "initial_pass": "BESTANDEN - Geeignet für Erstpiercing",
     "initial_fail": "NICHT BESTANDEN: Nicht empfohlen für Erstpiercings",
     "section_tech": "TECHNISCHE SPEZIFIKATIONEN & MESSWERTE:",
     "biocompatibility": "- Biokompatibilität:",
@@ -306,7 +308,8 @@
     "section_disclaimer": "HAFTUNGSAUSSCHLUSS FÜR STUDIOS:",
     "disclaimer_1": "Technische Referenzdaten zur professionellen Überprüfung im Studio.",
     "disclaimer_2": "Prüfen Sie stets die Werksprüfzeugnisse des Herstellers auf Chargenkonformität.",
-    "disclaimer_3": "Daten verbleiben lokal in Ihrem Studio und werden niemals an externe Server übertragen."
+    "disclaimer_3": "Daten verbleiben lokal in Ihrem Studio und werden niemals an externe Server übertragen.",
+    "initial_conditional": "BEDINGT - Erstpiercing nur, wenn die Bedingung erfüllt ist"
   },
   "glossary": {
     "modal_title": "Interaktives Normen-Glossar (A–Z)",
@@ -431,29 +434,30 @@
     },
     "ASTM_F2229": {
       "code": "ASTM F2229",
-      "full_name": "Standardspezifikation für Stangen und Drähte aus stickstofflegiertem, nickelfreiem austenitischem Edelstahl für chirurgische Implantate",
+      "full_name": "Standardspezifikation für gewalzte, stickstoffangereicherte 23Mangan-21Chrom-1Molybdän-Edelstahl-Legierungsstäbe und -drähte für chirurgische Implantate (UNS S29108)",
       "organization": "ASTM International",
-      "material_type": "Nickelfreier, stickstoffverstärkter Edelstahl",
-      "body_piercing_use": "Hochfeste nickelfreie Alternative für den Ersteinsatz bei hochgradig sensibilisierten Personen.",
-      "biocompatibility": "Restnickelgehalt unter 0,05 %, geprüfte Biokompatibilität.",
+      "material_type": "Nickelarmer Edelstahl (kein Niob)",
+      "body_piercing_use": "Selten in Körperschmuck",
+      "biocompatibility": "Spezifikation für chirurgische Implantate",
       "sterilization": "Autoklavierbar bei 121 °C und 134 °C.",
-      "important_notes": "Bietet eine höhere mechanische Festigkeit als herkömmliche austenitische Edelstähle.",
+      "important_notes": "Ein Edelstahl, kein Niob. Ein Niob-Zertifikat, das ASTM F2229 nennt, benennt die falsche Spezifikation: Fragen Sie den Lieferanten nach dem Grund.",
       "verification_method": "Chemischer Analysebericht mit Bestätigung des Stickstoffgehalts und Fehlens von Nickel.",
-      "common_uses": "Schmuck für nickelallergische Kunden, die die Optik und Schwere von Stahl bevorzugen."
+      "common_uses": [
+        "Chirurgische Implantate"
+      ]
     },
     "ASTM_F1586": {
       "code": "ASTM F1586",
-      "full_name": "Standard Specification for Wrought Niobium Alloy for Surgical Implant Applications",
+      "full_name": "Standardspezifikation für gewalzte, stickstoffangereicherte 21Chrom-10Nickel-3Mangan-2.5Molybdän-Edelstahl-Legierungsstäbe für chirurgische Implantate (UNS S31675)",
       "organization": "ASTM International",
-      "material_type": "Niobium Alloy (Nb-1Zr)",
-      "body_piercing_use": "Good - Slightly stronger than pure niobium",
-      "biocompatibility": "Excellent",
+      "material_type": "Stickstoffangereicherter Edelstahl, ca. 10 % Nickel (kein Niob)",
+      "body_piercing_use": "Selten in Körperschmuck; enthält Nickel",
+      "biocompatibility": "Spezifikation für chirurgische Implantate; enthält Nickel",
       "sterilization": "Autoclave safe",
-      "important_notes": "Niobium-zirconium alloy - stronger than pure niobium while maintaining biocompatibility.",
+      "important_notes": "Ein Edelstahl, der Nickel enthält, keine Niob-Legierung. Ein Niob-Zertifikat, das ASTM F1586 nennt, benennt die falsche Spezifikation.",
       "verification_method": "Mill certification required",
       "common_uses": [
-        "Body jewelry",
-        "Surgical implants"
+        "Chirurgische Implantate"
       ]
     },
     "ISO_5832-1": {
@@ -568,6 +572,21 @@
         "EU regulatory compliance",
         "Product safety"
       ]
+    },
+    "ASTM_B392": {
+      "code": "ASTM B392",
+      "full_name": "Standardspezifikation für Niob- und Nioblegierungs-Stäbe, -Stangen und -Drähte",
+      "organization": "ASTM International",
+      "material_type": "Niob, unlegiert oder mit 1 % Zirconium",
+      "body_piercing_use": "Gut - nickelfrei, für empfindliche Haut geeignet",
+      "biocompatibility": "Nickelfrei; seit langem im Piercing verwendet",
+      "sterilization": "Autoklavsicher",
+      "important_notes": "Eine Industriespezifikation: Für Niob gibt es keine Implantatqualitäts-Bezeichnung (APP). Die APP führt Niob dennoch für Erstpiercings auf. Weicher als Titan; kann eloxiert werden.",
+      "verification_method": "Werkszeugnis mit Nennung von ASTM B392 und der Niob-Güte",
+      "common_uses": [
+        "Körperschmuck",
+        "Dehnschmuck"
+      ]
     }
   },
   "materials": {
@@ -612,7 +631,7 @@
       "red_flags": [
         "Verdächtig billiges 'Implantat-Titan'",
         "Kein Werksprüfzeugnis vorhanden",
-        "Listed as \"Grade 5\" or \"ISO 5832-3\" (a different specification from F136)",
+        "Aufgeführt als „Grad 5“ ohne namentliche Nennung einer Implantatspezifikation (ISO 5832-3 oder ASTM F1472)",
         "Generisches 'Titan' ohne Güteklassenangabe",
         "Lieferant verweigert Dokumentation"
       ],
@@ -625,13 +644,16 @@
       "name": "Titan Grad 5 (Ti-6Al-4V)",
       "biocompatibility": "Specified for surgical implants; most piercing guidance names its extra-low-interstitial version, ASTM F136 (Grade 23)",
       "composition": "Titanlegierung: Ti-6Al-4V (höherer Sauerstoffgehalt als Grad 23)",
-      "verification_tips": "Ask which specification the mill certificate names. ISO 5832-3 and ASTM F1472 are genuine surgical implant specifications for Ti-6Al-4V, but not F136 (Grade 23, ELI), which has the lower oxygen limit most piercing guidance names. ASTM B348 is an industrial bar specification with no implant requirements. \"Implant grade\" with no named specification proves nothing.",
+      "verification_tips": "Fragen Sie, welche Spezifikation im Werkszeugnis genannt wird. ISO 5832-3 steht auf der APP-Liste für Erstschmuck, ebenso wie ASTM F136 (Grad 23, ELI), das den niedrigeren Sauerstoffgrenzwert aufweist. ASTM F1472 ist ebenfalls eine Spezifikation für chirurgische Implantate. ASTM B348 ist eine industrielle Stangenspezifikation ohne Implantatanforderungen. „Implantatqualität“ ohne genannte Spezifikation beweist gar nichts.",
       "maintenance": "Same care as other titanium jewellery: mild soap and water",
       "common_names": [
         "Grade 5",
         "Ti-6Al-4V"
       ],
-      "suitable_for": [],
+      "suitable_for": [
+        "Erstpiercings, wenn das Zertifikat ISO 5832-3 nennt (auf der APP-Liste)",
+        "verheilte Piercings"
+      ],
       "not_suitable_for": [
         "jewellery sold as \"implant grade\" when you require ASTM F136"
       ],
@@ -650,7 +672,7 @@
       ],
       "red_flags": [
         "Grad 5 als 'Implantat-Güte' vermarktet",
-        "Verkäufer zeigt ISO 5832-3 statt ASTM F136",
+        "Keine Implantatspezifikation auf dem Zertifikat genannt (ASTM B348 ist Industriestab)",
         "Sehr billiger 'Titanschmuck'",
         "Irreführende Marketingbehauptungen"
       ],
@@ -671,8 +693,8 @@
         "Chirurgischer Edelstahl"
       ],
       "suitable_for": [
-        "Abgeheilte Piercings",
-        "Kurzzeitiges Tragen"
+        "Erstpiercings (keine Nickelallergie; ASTM F138 steht auf der APP-Liste)",
+        "verheilte Piercings"
       ],
       "not_suitable_for": [
         "Bekannte Nickelallergie",
@@ -693,7 +715,7 @@
         "Enthält 13-15% Nickel",
         "Kann allergische Reaktionen auslösen",
         "Schwerer als Titan",
-        "Nicht ideal für Erstpiercings",
+        "Nicht für Kunden mit Nickelallergie",
         "EU-Grenzwerte für Nickelfreisetzung beachten"
       ],
       "red_flags": [
@@ -757,7 +779,7 @@
       "name": "Reines Niob (Nb 99,9 %)",
       "biocompatibility": "Hervorragend (100 % inertes, reines metallisches Element)",
       "composition": "Reines elementares Niob zu 99,9 % (ASTM B392). 100 % nickelfrei.",
-      "verification_tips": "99,9 % Reinheitsgrad anhand des technischen Datenblatts prüfen.",
+      "verification_tips": "Fordern Sie ein Werkszeugnis an, das ASTM B392 und die Niob-Güte nennt. Für Niob gibt es keine Implantatqualitäts-Spezifikation (APP). Ein Niob-Zertifikat mit der Angabe ASTM F2229 oder F1586 ist falsch: Das sind Spezifikationen für Edelstahl-Implantate.",
       "maintenance": "Sanfte Reinigung mit steriler Kochsalzlösung.",
       "common_names": "Niob, Reines Nb",
       "suitable_for": "Erstpiercings, Ohr, Nase, Septum, hochgradig allergische Personen",
@@ -787,7 +809,7 @@
       "name": "18K Massivgold",
       "biocompatibility": "Hervorragend (75 % Feingold, nickelfrei)",
       "composition": "75,0 % Feingold. Hochwertige edle Legierung ohne Nickelanteile.",
-      "verification_tips": "Feingehaltsstempel (750) und Nachweis einer nickelfreien Legierung.",
+      "verification_tips": "Wie 14K: Überprüfen Sie, ob es massiv ist (nicht plattiert oder gefüllt) sowie nickel- und cadmiumfrei. Die APP akzeptiert 14K und höher für Erstpiercings; Gold über 18K ist zu weich für Körperschmuck.",
       "maintenance": "Schonende, nicht scheuernde Reinigung.",
       "common_names": "18 Karat Gold, 750er Gold",
       "suitable_for": "Erstpiercings und abgeheilte Piercings im High-End-Bereich",
@@ -920,7 +942,7 @@
       "name": "Borosilikatglas (Pyrex 3.3)",
       "biocompatibility": "Hervorragend (Inertes, porenfreies Silikatglas nach ISO 3585)",
       "composition": "Hochreines Siliciumdioxid und Bortrioxid mit exzellenter thermischer und chemischer Beständigkeit.",
-      "verification_tips": "Auf makellose glatte Oberfläche und Abwesenheit von Mikrobläschen oder Rissen achten.",
+      "verification_tips": "Überprüfen Sie, ob das Glas bleifrei ist: Quarzglas, Borosilikat- oder Kalknatronglas (alle drei stehen auf der APP-Liste). Vor der Verwendung auf Risse oder Abplatzungen prüfen.",
       "maintenance": "Reinigung mit Wasser und Seife oder mildem Desinfektionsmittel.",
       "common_names": "Pyrex, Borosilikatglas, Medizinisches Glas",
       "suitable_for": "Erstpiercings, Dehnen von Ohrlöchern (Stretching), Retainer, Allergiker",
@@ -1111,11 +1133,12 @@
     "gap_eli_oxygen": "ELI-Sauerstoffprüfung: Titan Grad 5 (0,20% Sauerstoff) wird oft fälschlich als generisches „Titan“ verkauft. Nur ASTM F136 garantiert den niedrigen Sauerstoffgrenzwert (ELI ≤ 0,13%).",
     "gap_var_remelt": "Vakuum-Lichtbogen-Umschmelzung (VAR): Kommerzieller 316L wird an der Luft erschmolzen und hat höhere Kohlenstoff-/Schwefelwerte und Einschlüsse als vakuumumgeschmolzener ASTM F138 316LVM.",
     "gap_allergen_proof": "Allergener Nachweis: „Hypoallergen“ gibt weder Nickelgehalt noch Schichtdicken oder metallische Trägerwerkstoffe an.",
+    "gap_niobium_wrong_spec": "Falsche Spezifikation: ASTM F2229 und F1586 sind Spezifikationen für Edelstahl-Implantate, nicht für Niob. Niob wird nach ASTM B392 geliefert; fragen Sie den Lieferanten, warum das Zertifikat eine Stahlnorm nennt.",
     "gap_doc_physical_proof": "Physischer Dokumentenbeweis: Eine Händlerangabe oder ein Lieferschein ist kein Werksprüfzeugnis (MTR). Ein echter Nachweis erfordert das Prüfzertifikat des Schmelzwerks.",
     "proof_titanium": "Original-Werksprüfzeugnis (MTR) nach EN 10204 3.1 gemäß ASTM F136 (Ti-6Al-4V ELI), Sauerstoff ≤ 0,13%, Eisen ≤ 0,25%, mit auf der Verpackung eingestanzter Schmelzchargennummer.",
     "proof_steel": "Werksprüfzeugnis gemäß ASTM F138 (Grad 2 Stäbe/Drähte), 316LVM vakuumumgeschmolzen, Kohlenstoff ≤ 0,030%, Schwefel ≤ 0,010%, mit Schmelzchargennummer.",
     "proof_polymer": "Prüfzeugnis über biologische Reaktivität nach USP Klasse VI + ISO 10993-5 Zytotoxizitätsbericht für medizinisches PP-R-Granulat.",
-    "proof_niobium": "Werksprüfzeugnis für unlegiertes Niob nach ASTM F2229 (≥ 99,85% Nb) mit niedrigen interstitiellen Gehalten.",
+    "proof_niobium": "Werkszeugnis mit Nennung von ASTM B392 und der Niob-Güte sowie einer Chargennummer (Niob hat keine Implantatqualitäts-Spezifikation).",
     "proof_generic": "Offizielles Abnahmeprüfzeugnis (MTR) des Schmelzwerks mit chemischer Zusammensetzung, mechanischen Werten und Schmelzchargen-Kennzeichnung.",
     "copy_summary_title": "MATERIALZERTIFIZIERUNGSPRÜFER - FORMULIERUNGSANALYSE",
     "copy_summary_date": "Datum:",
@@ -1135,7 +1158,7 @@
     "opt_astm_f136": "ASTM F136 Titan (Ti-6Al-4V ELI)",
     "opt_astm_f138": "ASTM F138 Edelstahl (316LVM)",
     "opt_bioflex": "BioFlex® body jewelry (PP-R; Harz nach USP Klasse VI)",
-    "opt_niobium": "ASTM F2229 Niob (unlegiert)",
+    "opt_niobium": "ASTM B392 Niob (unlegiert)",
     "opt_glass": "Borosilikatglas 3.3",
     "opt_gold": "Massives 14K/18K Gold",
     "opt_commercial_316l": "Kommerzielles 316L / Titan Grad 5",
@@ -1197,7 +1220,7 @@
     "use_healed_piercing_req_2": "Sichere mechanische Verarbeitung ohne scharfe Kanten",
     "use_healed_piercing_req_3": "Stabile, inerte Zusammensetzung",
     "use_sensitive_client_context": "Kunde mit bekannter Überempfindlichkeit gegen Nickel, Chrom oder Legierungsunreinheiten. Erfordert absolut nickelfreie Werkstoffe zur Vermeidung von Kontaktdermatitis.",
-    "use_sensitive_client_req_0": "Null Nickelgehalt: ASTM F136 Titan, ASTM F2229 Niob oder USP Class VI PP-R",
+    "use_sensitive_client_req_0": "Nickelfrei: Titan nach ASTM F136, Niob (ASTM B392) oder PP-R nach USP Class VI",
     "use_sensitive_client_req_1": "Vermeidung von 316L/316LVM Stahl (enthält 13 bis 15 % gebundenes Nickel)",
     "use_sensitive_client_req_2": "Weißgold vermeiden, außer es ist ausschließlich mit Palladium legiert",
     "use_sensitive_client_req_3": "Nachweis sauberer, kreuzkontaminationsfreier Fertigungswerkzeuge",
@@ -1245,10 +1268,10 @@
     "q_bioflex_polymer_2_sat": "Klare Validierung für Dampfautoklavzyklen (z. B. 121°C für 20 Minuten) ohne thermische Zersetzung oder Schadstoffausdünstung.",
     "q_bioflex_polymer_2_unsat": "\"Nicht autoklavieren\" oder Kunststoffe, die bei Autoklavtemperaturen schmelzen oder sich verziehen (wie Acryl oder PVC).",
     "q_bioflex_polymer_3_q": "Wurde das Polymer ohne Weichmacher (wie Phthalate), Bisphenol A (BPA) und schwermetallhaltige Farbmittel formuliert?",
-    "q_bioflex_polymer_3_sat": "Sicherheitsdatenblatt zur Rezeptur mit Bestätigung der vollkommenen Abwesenheit von Phthalaten, BPA und toxischen Stabilisatoren.",
+    "q_bioflex_polymer_3_sat": "Formulierungserklärung, die bestätigt, dass keine Phthalate, BPA oder toxischen Stabilisatoren zugesetzt wurden.",
     "q_bioflex_polymer_3_unsat": "Flexibles Vinyl/PVC mit migrierenden Weichmachern oder ungeprüfte Farb-Masterbatches.",
-    "q_niobium_0_q": "Können Sie ein Werksprüfzeugnis vorlegen, das die Konformität von unlegiertem Niob mit ASTM F2229 (oder reinem Nb ≥ 99,9 %) bestätigt?",
-    "q_niobium_0_sat": "Zeugnis mit reinem Niobgehalt (mindestens 99,85 % bis 99,9 % Nb) und niedrigen interstitiellen Elementen (Ta ≤ 0,3 %, O ≤ 0,04 %).",
+    "q_niobium_0_q": "Können Sie ein Werksprüfzeugnis vorlegen, das ASTM B392 und die Niob-Güte sowie eine Chargennummer nennt?",
+    "q_niobium_0_sat": "MTR mit Nennung von ASTM B392 und der Niob-Güte, mit der chemischen Analyse und einer Chargennummer.",
     "q_niobium_0_unsat": "Beschichtete unedle Metalle oder Legierungen mit unklarer Zusammensetzung.",
     "q_niobium_1_q": "Besteht das Schmuckstück durchgehend aus massivem Niob, frei von Oberflächenbeschichtungen oder Kernen aus unedlen Metallen?",
     "q_niobium_1_sat": "Nachweis aus 100 % massivem gewalztem Niobmetall über den gesamten Querschnitt.",
@@ -1258,7 +1281,7 @@
     "q_niobium_2_unsat": "Emaille-Lack, Klarlacke oder chemische Tauchfärbungen.",
     "q_borosilicate_glass_0_q": "Können Sie bestätigen, dass der Schmuck aus massivem, bleifreiem Borosilikatglas gefertigt ist (Borosilikat 3.3 nach ISO 3585)?",
     "q_borosilicate_glass_0_sat": "Herstellerbestätigung über massive Borosilikatglas 3.3 Zusammensetzung, 100 % frei von Blei-, Arsen- und Cadmiumflussmitteln.",
-    "q_borosilicate_glass_0_unsat": "Weiches Kalk-Natron-Bastelglas, Bleikristall oder Glas mit oberflächlicher Emailfarbe.",
+    "q_borosilicate_glass_0_unsat": "Bleikristall, Glas unbekannter Zusammensetzung oder Glas mit Oberflächen-Emaillierung.",
     "q_borosilicate_glass_1_q": "Wurde das fertige Stück gründlich im Ofen getempert, um innere thermische Spannungen zu eliminieren?",
     "q_borosilicate_glass_1_sat": "Prüfnachweis unter einem Polariskop, der das Fehlen von Spannungsdoppelbrechung und Mikrorissen nach dem Kühlzyklus belegt.",
     "q_borosilicate_glass_1_unsat": "Ungetempertes brennergeformtes Glas, das bei Temperaturschwankungen spontan reißen kann.",
@@ -1305,7 +1328,7 @@
     "cat_general": "Allgemein",
     "empty_msg": "Keine Aussagen entsprechen Ihrem Suchfilter. Versuchen Sie, den Suchbegriff zu löschen.",
     "item_implant_grade_titanium_claim": "Implant Grade Titan (Implantatqualität)",
-    "item_implant_grade_titanium_doc": "Werksprüfzeugnis (MTR / EN 10204 Typ 3.1) mit Nennung von ASTM F136 oder ISO 5832-3 ELI",
+    "item_implant_grade_titanium_doc": "Werksprüfzeugnis (MTR / EN 10204 Typ 3.1) mit Verweis auf ASTM F136 oder ISO 5832-3",
     "item_implant_grade_titanium_proves": "Belegt geschmiedete Ti-6Al-4V ELI (Extra Low Interstitial) Legierung mit maximal 0,13 % Sauerstoff, zertifizierten Zug- und Streckgrenzen sowie eindeutiger Schmelzchargennummer.",
     "item_implant_grade_titanium_absence": "Das Fehlen bedeutet, dass der Begriff reines Marketing ist. Die Legierung kann industrielles Grade 5 (0,20 % Sauerstoff), Umschmelzschrott oder unreines Titan sein. Kein Beleg garantiert die Biokompatibilität.",
     "item_implant_grade_titanium_action": "Werkszeugnis anfordern. Auf \"ASTM F136\", \"ELI\", Sauerstoff ≤ 0,13 % und Chargennummer passend zur Lieferung prüfen.",
@@ -1321,7 +1344,7 @@
     "item_hypoallergenic_action": "Das Wort \"hypoallergen\" ignorieren. Die exakte Werkstoffspezifikation und ein unabhängiges Laborprotokoll verlangen.",
     "item_medical_grade_polymer_claim": "Medizinisches Polymer / BioFlex® / Kunststoff",
     "item_medical_grade_polymer_doc": "USP Class VI Reaktivitätszertifikat und ISO 10993-5 Zytotoxizitätstest",
-    "item_medical_grade_polymer_proves": "Belegt In-vivo-Biokompatibilität bei 121°C und Zytotoxizitätsgrad 0 für medizinisches PP-R Harz, ohne Weichmacher oder Schwermetallpigmente.",
+    "item_medical_grade_polymer_proves": "Zeigt, dass das Harz die Tierversuche nach USP Class VI (systemische Injektion, intrakutan, Implantation) und den Zytotoxizitätstest nach ISO 10993-5 bestanden hat. Es beweist allein nicht die Abwesenheit von Weichmachern oder Pigmentmetallen: Fragen Sie nach der Formulierungserklärung.",
     "item_medical_grade_polymer_absence": "Fehlen bedeutet industrielles Acryl (PMMA), PTFE, PVC oder Bastelharz. Diese zersetzen sich bei Körperwärme, setzen Monomere frei und überstehen keine Dampfautoklavierung.",
     "item_medical_grade_polymer_action": "Nachweis über USP Class VI Konformität und ISO 10993-5 Zytotoxizität anfordern. Freigabe für Dampfautoklav prüfen.",
     "item_nickel_free_claim": "Nickelfrei",
@@ -1489,7 +1512,7 @@
     "badge": "[VERGLEICH ZERTIFIZIERTER NORMEN]",
     "th_parameter": "Technischer Normparameter",
     "tag_specification": "[SPEZIFIKATION]",
-    "footer_note": "Methodischer Hinweis: Die aufgeführten Spezifikationen entsprechen den aktuellen Ausgaben von ASTM F136, ASTM F138, ASTM F2229, ISO 10993 und USP Klasse VI. Im Studio erfordern Wareneingangsprotokolle den unabhängigen Abgleich des Werksprüfzeugnisses (MTR) mit der Schmelzchargennummer auf der Verpackung.",
+    "footer_note": "Methodischer Hinweis: Die aufgeführten Spezifikationen entsprechen den aktuellen Ausgaben von ASTM F136, ASTM F138, ASTM B392, ISO 10993 und USP Klasse VI. Im Studio erfordern Wareneingangsprotokolle den unabhängigen Abgleich des Werksprüfzeugnisses (MTR) mit der Schmelzchargennummer auf der Verpackung.",
     "row_biocompatibility_standard": "Zertifizierte Biokompatibilitätsprüfung",
     "row_autoclave_thermal_limit": "Thermische Dampfsterilisationsgrenze",
     "row_traceability_unit": "Erforderliche Rückverfolgbarkeitseinheit",
@@ -1504,11 +1527,11 @@
     "mat_surgical_steel_316l_tissue_boundary": "Schiffsausrüstung, Lebensmitteltechnik, äußerer Schmuck auf intakter abgeheilter Haut",
     "mat_bioflex_biocompatibility_standard": "Harz erfüllt USP Klasse VI und Ph. Eur. 3.2.2; biologische Prüfungen nach ISO 10993 nachweislich bestanden",
     "mat_bioflex_tissue_boundary": "Erstpiercings, orale Piercings, flexible Gewebekanäle; metallfrei, nicht magnetisch (bei MRT und Röntgen das Radiologiepersonal informieren)",
-    "mat_niobium_biocompatibility_standard": "Besteht ISO 10993; hochgradig biokompatibel, 100% nickelfrei, nicht reaktiv",
+    "mat_niobium_biocompatibility_standard": "Nickelfrei; seit langem im Piercing verwendet und auf der APP-Liste für Erstpiercings",
     "mat_niobium_tissue_boundary": "Erstpiercing-Wundkanal, empfindliches Gewebe, subkutane und abgeheilte Körperpiercings",
-    "mat_glass_biocompatibility_standard": "Chemisch absolut inert; null Ionenfreisetzung in physiologischen Lösungen",
+    "mat_glass_biocompatibility_standard": "Sehr widerstandsfähig gegen chemische Angriffe; sehr geringe Ionenfreisetzung in Körperflüssigkeiten",
     "mat_glass_tissue_boundary": "Erstpiercingkanal, Dehnfisteln, dauerhaft abgeheilter Schmuck",
-    "mat_gold_14k_biocompatibility_standard": "Biokompatibel bei verifizierter Nickel- und Cadmiumfreiheit; edelmetallische Korrosionsbeständigkeit",
+    "mat_gold_14k_biocompatibility_standard": "Biokompatibel bei nachgewiesener Nickel- und Cadmiumfreiheit; Korrosionsbeständigkeit von Edelmetallen",
     "mat_gold_14k_tissue_boundary": "Erstpiercing (sofern massiv und nickelfrei verifiziert), abgeheilte Piercingkanäle",
     "mat_acrylic_biocompatibility_standard": "NICHT für chirurgische Implantate oder offenen Wundkontakt zertifiziert; mikroporös; setzt Monomere frei",
     "mat_acrylic_tissue_boundary": "NUR für abgeheilte Ohrläppchen für kurze Zeiträume; in frischen Wunden strikt unzulässig"
