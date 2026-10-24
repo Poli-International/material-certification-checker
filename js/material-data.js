@@ -17,7 +17,7 @@ const rawMaterialDatabase = {
   'titanium_grade_23': {
     name: 'Titanium Grade 23 (Ti-6Al-4V ELI)',
     common_names: ['Implant Grade Titanium', 'ASTM F136', 'Grade 23', 'Ti-6Al-4V ELI'],
-    required_certs: ['ASTM F136', 'ISO 5832-3 (implant specification, not ELI; F136 preferred)'],
+    required_certs: ['ASTM F136', 'ISO 5832-3 (also on the APP list; not ELI)'],
     body_safe: 'excellent',
     safety_rating: 'safe',
     biocompatibility: 'Excellent - ISO 10993 compliant',
@@ -48,7 +48,7 @@ const rawMaterialDatabase = {
     red_flags: [
       'Unusually cheap "implant grade" titanium',
       'No mill certification provided',
-      'Listed as "Grade 5" or "ISO 5832-3" (a different specification from F136)',
+      'Listed as "Grade 5" with no implant specification named (ISO 5832-3 or ASTM F1472)',
       'Generic "titanium" without grade specification',
       'Supplier refuses documentation'
     ],
@@ -67,9 +67,9 @@ const rawMaterialDatabase = {
     nickel_free: true,
     autoclave_safe: true,
     allergy_risk: 'low',
-    suitable_for: [],
+    suitable_for: ['initial piercings, if the certificate names ISO 5832-3 (on the APP list)', 'healed piercings'],
     not_suitable_for: ['jewellery sold as "implant grade" when you require ASTM F136'],
-    healing_stage: [],
+    healing_stage: ['initial (if certified to ISO 5832-3)', 'healed'],
     color_options: ['natural grey'],
     cost_rating: 'low',
     pros: [
@@ -82,10 +82,10 @@ const rawMaterialDatabase = {
       'Often misrepresented as "implant grade"',
       'Not the grade most piercing guidance names (ASTM F136)'
     ],
-    verification_tips: 'Ask which specification the mill certificate names. ISO 5832-3 and ASTM F1472 are genuine surgical implant specifications for Ti-6Al-4V, but not F136 (Grade 23, ELI), which has the lower oxygen limit most piercing guidance names. ASTM B348 is an industrial bar specification with no implant requirements. "Implant grade" with no named specification proves nothing.',
+    verification_tips: 'Ask which specification the mill certificate names. ISO 5832-3 is on the APP list for initial jewelry, as is ASTM F136 (Grade 23, ELI), which has the lower oxygen limit. ASTM F1472 is also a surgical implant specification. ASTM B348 is an industrial bar specification with no implant requirements. "Implant grade" with no named specification proves nothing.',
     red_flags: [
       'Grade 5 marketed as "implant grade"',
-      'Seller shows ISO 5832-3 instead of ASTM F136',
+      'No implant specification named on the certificate (ASTM B348 is industrial bar)',
       'Very cheap "titanium" jewelry',
       'Misleading marketing language'
     ],
@@ -107,7 +107,7 @@ const rawMaterialDatabase = {
     nickel_free: false,
     autoclave_safe: true,
     allergy_risk: 'moderate',
-    suitable_for: ['healed piercings', 'short-term wear'],
+    suitable_for: ['initial piercings (no nickel allergy; ASTM F138 is on the APP list)', 'healed piercings'],
     not_suitable_for: ['known nickel allergy', 'very sensitive skin'],
     healing_stage: ['healed', 'initial with caution'],
     color_options: ['silver/polished', 'black (PVD coating)'],
@@ -123,7 +123,7 @@ const rawMaterialDatabase = {
       'Contains 13-15% nickel',
       'Can cause allergic reactions',
       'Heavier than titanium',
-      'Not ideal for initial piercings',
+      'Not for clients with a nickel allergy',
       'EU restrictions on nickel release'
     ],
     verification_tips: 'Must be ASTM F138 certified. Regular "316L" or generic "surgical steel" is NOT sufficient. Request mill certification showing F138 compliance and "LVM" designation.',
@@ -181,8 +181,8 @@ const rawMaterialDatabase = {
   // ═══════════════════════════════════════════════════════════
   'niobium': {
     name: 'Niobium (Pure or Alloyed)',
-    common_names: ['Niobium', 'ASTM F2229', 'Niobium Grade 1'],
-    required_certs: ['ASTM F2229 (pure)', 'ASTM F1586 (alloyed)'],
+    common_names: ['Niobium', 'ASTM B392', 'Niobium Grade 1'],
+    required_certs: ['ASTM B392 (niobium bar and wire; no implant-grade specification exists)'],
     body_safe: 'excellent',
     safety_rating: 'safe',
     biocompatibility: 'Excellent - Hypoallergenic',
@@ -208,7 +208,7 @@ const rawMaterialDatabase = {
       'Limited availability',
       'Fewer design options'
     ],
-    verification_tips: 'Request mill certification for ASTM F2229 or F1586. Pure niobium should be 99.8% minimum.',
+    verification_tips: 'Ask for a mill certificate naming ASTM B392 and the niobium grade. Niobium has no implant-grade specification (APP). A niobium certificate citing ASTM F2229 or F1586 is wrong: those are stainless steel implant specifications.',
     red_flags: [
       'No certification provided',
       'Suspiciously cheap "niobium"',
@@ -269,7 +269,7 @@ const rawMaterialDatabase = {
     common_names: ['18 Karat Gold', '18K', '750 Gold'],
     required_certs: ['Nickel-free certification', 'Purity testing'],
     body_safe: 'excellent',
-    safety_rating: 'safe',
+    safety_rating: 'conditional',
     biocompatibility: 'Excellent IF nickel-free',
     composition: '75% gold + alloys (MUST be nickel-free)',
     nickel_free: 'Depends on the alloy. White gold is often alloyed with nickel. Ask for the alloy composition or an assay.',
@@ -282,7 +282,7 @@ const rawMaterialDatabase = {
     cost_rating: 'very_high',
     pros: [
       'Higher gold content (75%)',
-      'Better biocompatibility than 14K',
+      'Richer yellow color than 14K',
       'Luxurious appearance',
       'Does not tarnish',
       'Hypoallergenic when nickel-free'
@@ -294,7 +294,7 @@ const rawMaterialDatabase = {
       'Limited design options',
       'Can dent or scratch'
     ],
-    verification_tips: 'Same as 14K - verify nickel-free. 18K is preferred over 14K for initial piercings due to higher purity.',
+    verification_tips: 'Same as 14K: verify it is solid (not plated or filled) and nickel- and cadmium-free. The APP accepts 14K and above for initial piercings; gold above 18K is too soft for body jewelry.',
     red_flags: [
       'White gold without nickel-free proof',
       'No hallmark or purity stamp',
@@ -382,8 +382,8 @@ const rawMaterialDatabase = {
     cost_rating: 'low',
     pros: [
       'Biocompatible and inert',
-      'Used in medical implants for non-load bearing joints',
-      'Autoclavable (up to 230°C)',
+      'Used in medical implants (for example expanded-PTFE vascular grafts)',
+      'Autoclavable',
       'Gamma irradiation sterilizable',
       'Ethylene oxide sterilizable',
       'Extremely flexible',
@@ -409,7 +409,7 @@ const rawMaterialDatabase = {
       'Seller cannot confirm medical-grade status'
     ],
     maintenance: 'Autoclavable. Clean with mild soap and water. Replace if discolored or damaged. Medical-grade PTFE is very stable.',
-    sterilization_methods: ['Autoclave (up to 230°C)', 'Gamma irradiation', 'Ethylene oxide']
+    sterilization_methods: ['Autoclave', 'Gamma irradiation', 'Ethylene oxide']
   },
 
   'glass': {
@@ -441,11 +441,11 @@ const rawMaterialDatabase = {
       'Limited threading options',
       'Must be lead-free'
     ],
-    verification_tips: 'Verify lead-free and borosilicate. Avoid soda-lime glass for body jewelry. Check for cracks or chips before use.',
+    verification_tips: 'Verify the glass is lead-free: fused quartz, borosilicate or soda-lime (all three are on the APP list). Check for cracks or chips before use.',
     red_flags: [
       'Contains lead (some decorative glass)',
       'Cracked or chipped glass',
-      'Soda-lime glass (less durable)',
+      'Glass of unknown type, or with surface paint',
       'Extremely cheap glass (quality concerns)'
     ],
     maintenance: 'Easy to clean. Inspect for damage regularly. Autoclave safe.',
@@ -582,8 +582,8 @@ const materialCategories = {
   metals: ['titanium_grade_23', 'titanium_grade_5', 'surgical_steel_316lvm', 'surgical_steel_316l', 'niobium', 'gold_14k', 'gold_18k'],
   polymers_glass: ['bioflex', 'bioplast', 'ptfe', 'glass'],
   organics_minerals: ['stone', 'wood', 'acrylic'],
-  initial_safe: ['titanium_grade_23', 'surgical_steel_316lvm', 'niobium', 'gold_18k', 'glass', 'bioflex', 'bioplast', 'ptfe'],
-  healed_only: ['titanium_grade_5', 'surgical_steel_316l', 'stone', 'wood', 'acrylic'],
+  initial_safe: ['titanium_grade_23', 'surgical_steel_316lvm', 'niobium', 'gold_14k', 'gold_18k', 'glass', 'bioflex', 'bioplast', 'ptfe'],
+  healed_only: ['surgical_steel_316l', 'stone', 'wood', 'acrylic'],
   nickel_free: ['titanium_grade_23', 'titanium_grade_5', 'niobium', 'glass', 'stone', 'wood', 'bioflex', 'bioplast', 'ptfe', 'acrylic']
 };
 
