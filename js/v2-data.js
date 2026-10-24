@@ -43,7 +43,7 @@ const CERT_READER_PRESETS = [
     name: 'Polymer Claim: BioFlex® USP Class VI',
     tag: 'Medical Polymer',
     tier: 2,
-    text: "BioFlex® body jewelry shaft, medical-grade PP-R. Resin holds USP Class VI; material certified as passing the ISO 10993 biological tests. Steam autoclave safe to 121°C."
+    text: "BioFlex® body jewelry shaft, medical-grade PP-R. Resin holds USP Class VI; material certified as passing the ISO 10993 biological tests. Withstands standard steam autoclave cycles (121–134°C)."
   },
   {
     id: 'ambiguous_g23',
@@ -349,7 +349,7 @@ const CLAIM_MATRIX_DATA = [
     required_document: 'Thermal cycling test validation (ISO 17665 steam sterilization validation report)',
     what_it_proves: 'Proves the piece survives saturated steam at 121°C–134°C without warping, melting, decomposing, releasing toxic fumes, or degrading polish.',
     what_absence_means: 'Absence means the item may melt inside an autoclave chamber, destroy the autoclave vacuum pump, or coat other jewelry in toxic polymer melt.',
-    verification_action: 'Verify manufacturer temperature tolerance: 134°C for titanium/steel/glass; 121°C for BioFlex. Never autoclave acrylic or glued stone gems.'
+    verification_action: 'Verify manufacturer temperature tolerance: 134°C for titanium/steel/glass; 121–134°C for BioFlex (standard steam cycles). Never autoclave acrylic or glued stone gems.'
   },
   {
     id: 'biocompatible_iso10993',
@@ -437,7 +437,7 @@ const CERTIFIED_COMPARISON_DATA = {
     certified_composition: 'Medical-grade polypropylene random copolymer (PP-R); contains no metal',
     melting_process: 'Made in one piece, with no joints or glued parts, even with a jewel',
     biocompatibility_standard: 'Resin holds USP Class VI and meets Ph. Eur. 3.2.2; certified as passing the ISO 10993 biological tests',
-    autoclave_thermal_limit: 'Validated steam autoclave safe up to 121°C (250°F) for 20 minutes',
+    autoclave_thermal_limit: 'Withstands standard steam autoclave cycles, 121–134°C (250–273°F)',
     traceability_unit: 'Raw medical resin manufacturer lot certificate & production batch',
     surface_finish_spec: 'High-gloss, low-friction surface (internal lubricant)',
     tissue_boundary: 'Initial piercings, oral piercings, flexible tissue canals; no metal, not magnetic (for MRI and X-ray, tell the radiology staff)'
