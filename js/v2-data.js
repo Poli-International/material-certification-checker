@@ -152,18 +152,18 @@ const SUPPLIER_QUESTIONS_CONFIG = {
         },
         {
           q: 'Is the polymer formulated without plasticizers (such as phthalates), bisphenol-A (BPA), and heavy-metal colorants?',
-          satisfactory: 'Material safety formulation sheet confirming 100% absence of phthalates, BPA, and toxic stabilizers.',
+          satisfactory: 'Formulation statement confirming no phthalates, BPA or toxic stabilizers were added.',
           unsatisfactory: 'Flexible vinyl/PVC containing migration plasticizers or unverified colored masterbatch.'
         }
       ]
     },
     niobium: {
-      name: 'Niobium (ASTM F2229 / 99.9% Pure)',
-      standard_code: 'ASTM F2229',
+      name: 'Niobium (ASTM B392)',
+      standard_code: 'ASTM B392',
       questions: [
         {
-          q: 'Can you provide a Mill Test Report confirming unalloyed niobium compliance with ASTM F2229 (or commercially pure Nb ≥ 99.9%)?',
-          satisfactory: 'MTR showing pure niobium assay (minimum 99.85% to 99.9% Nb) with low interstitials (Ta ≤ 0.3%, O ≤ 0.04%).',
+          q: 'Can you provide a Mill Test Report naming ASTM B392 and the niobium grade, with a heat number?',
+          satisfactory: 'MTR naming ASTM B392 and the niobium grade, with the chemical analysis and a heat number.',
           unsatisfactory: 'Plated base metals or alloys with unverified composition.'
         },
         {
@@ -185,7 +185,7 @@ const SUPPLIER_QUESTIONS_CONFIG = {
         {
           q: 'Can you verify that the jewelry is manufactured from solid, lead-free borosilicate glass (Borosilicate 3.3 per ISO 3585)?',
           satisfactory: 'Manufacturer statement confirming solid borosilicate glass 3.3 composition, 100% free of lead, arsenic, and cadmium fluxes.',
-          unsatisfactory: 'Soft soda-lime craft glass, lead crystal, or glass with surface enamel paint.'
+          unsatisfactory: 'Lead crystal, glass of unknown composition, or glass with surface enamel paint.'
         },
         {
           q: 'Has the finished piece undergone thorough furnace annealing to eliminate internal thermal stress?',
@@ -263,7 +263,7 @@ const SUPPLIER_QUESTIONS_CONFIG = {
       name: 'Sensitive Skin / Suspected Nickel Allergy',
       tissue_context: 'Client with known hypersensitivity to nickel, chrome, or generic alloy impurities. Requires strict zero-nickel materials to prevent contact dermatitis.',
       critical_requirements: [
-        'Zero nickel content: ASTM F136 Titanium, ASTM F2229 Niobium, or USP Class VI PP-R',
+        'Nickel-free: ASTM F136 titanium, niobium (ASTM B392) or USP Class VI PP-R',
         'Avoid all 316L/316LVM steel (which contains 13-15% bound nickel)',
         'Avoid white gold unless alloyed exclusively with palladium',
         'Verification of clean uncross-contaminated manufacturing tools'
@@ -301,7 +301,7 @@ const CLAIM_MATRIX_DATA = [
     id: 'implant_grade_titanium',
     claim: 'Implant Grade Titanium',
     category: 'Metals',
-    required_document: 'Mill Test Report (MTR / EN 10204 Type 3.1) citing ASTM F136 or ISO 5832-3 ELI',
+    required_document: 'Mill Test Report (MTR / EN 10204 Type 3.1) citing ASTM F136 or ISO 5832-3',
     what_it_proves: 'Substantiates wrought Ti-6Al-4V ELI (Extra Low Interstitial) alloy with maximum 0.13% oxygen, certified mechanical tensile/yield data, and unique melt heat lot identification.',
     what_absence_means: 'Absence means the term functions purely as unregulated sales copy. The alloy may be Grade 5 (0.20% oxygen limit), scrap remelt, or commercial titanium with high interstitial impurities. No documentary evidence supports biocompatibility.',
     verification_action: 'Request the mill test report. Confirm "ASTM F136", "ELI", oxygen ≤ 0.13%, and heat number matching the shipment lot.'
@@ -329,7 +329,7 @@ const CLAIM_MATRIX_DATA = [
     claim: 'Medical Grade Polymer / BioFlex® / Plastic',
     category: 'Polymers',
     required_document: 'USP Class VI biological reactivity certificate + ISO 10993-5 cytotoxicity test',
-    what_it_proves: 'Substantiates in vivo biocompatibility at 121°C and in vitro zero-cytotoxicity for medical-grade PP-R resin, with zero phthalate plasticizers or heavy metal pigments.',
+    what_it_proves: "Shows the resin passed the USP Class VI animal tests (systemic injection, intracutaneous, implantation) and the ISO 10993-5 cytotoxicity test. It does not by itself prove the absence of plasticizers or pigment metals: ask for the formulation statement.",
     what_absence_means: 'Absence means the plastic is industrial acrylic (PMMA), commercial PTFE, PVC, or cheap craft resin. These degrade under body warmth, leach monomer residues or plasticizers, and cannot survive steam autoclave cycles.',
     verification_action: 'Require documented USP Class VI conformity and ISO 10993-5 cytotoxicity testing. Check steam autoclave validation.'
   },
@@ -443,11 +443,11 @@ const CERTIFIED_COMPARISON_DATA = {
     tissue_boundary: 'Initial piercings, oral piercings, flexible tissue canals; no metal, not magnetic (for MRI and X-ray, tell the radiology staff)'
   },
   niobium: {
-    name: 'Niobium (ASTM F2229 / Pure Element 41)',
-    governing_standard: 'ASTM F2229 (Unalloyed Niobium for Surgical Implants)',
-    certified_composition: 'Nb: 99.85–99.9% minimum, Ta ≤ 0.30%, Fe ≤ 0.02%, O ≤ 0.04%, C ≤ 0.01%, N ≤ 0.01%, H ≤ 0.001%',
+    name: 'Niobium (ASTM B392 / Element 41)',
+    governing_standard: 'ASTM B392 (niobium bar, rod and wire; niobium has no implant-grade specification)',
+    certified_composition: 'Unalloyed niobium (or Nb-1Zr); the mill certificate gives the analysis for the grade',
     melting_process: 'Electron beam melted ingot with multiple cold-hearth passes',
-    biocompatibility_standard: 'Passes ISO 10993; highly biocompatible, 100% nickel-free, non-reactive',
+    biocompatibility_standard: 'Nickel-free; long used in body piercing and on the APP list for initial piercings',
     autoclave_thermal_limit: 'Validated steam autoclave safe to 134°C (273°F)',
     traceability_unit: 'Melt heat lot number on MTR',
     surface_finish_spec: 'Mechanically polished and/or electrolytically anodized surface oxide layer',
@@ -458,7 +458,7 @@ const CERTIFIED_COMPARISON_DATA = {
     governing_standard: 'ISO 3585 / ASTM E438 (Type I, Class A Borosilicate)',
     certified_composition: 'SiO2: ~81%, B2O3: ~13%, Na2O/K2O: ~4%, Al2O3: ~2%; 100% lead-free, cadmium-free',
     melting_process: 'Refractory furnace melt, hot flame-worked, kiln annealed',
-    biocompatibility_standard: 'Chemically completely inert; zero ion elution in physiological solutions',
+    biocompatibility_standard: 'Highly resistant to chemical attack; very low ion release in body fluids',
     autoclave_thermal_limit: 'Steam autoclave safe up to 134°C (requires gradual cooling to prevent thermal shock)',
     traceability_unit: 'Glass rod manufacturer batch certificate',
     surface_finish_spec: 'Fire-polished non-porous vitreous surface with zero surface micro-roughness',
@@ -469,7 +469,7 @@ const CERTIFIED_COMPARISON_DATA = {
     governing_standard: 'Hallmark / Assay Standard (58.3% Au Minimum)',
     certified_composition: 'Au: 58.3–58.5%, alloyed with Ag (Silver), Cu (Copper), Zn (Zinc); Ni < 0.01% (Undetectable)',
     melting_process: 'Controlled induction casting in inert atmosphere',
-    biocompatibility_standard: 'Biocompatible when verified 100% nickel-free and cadmium-free; noble metal corrosion resistance',
+    biocompatibility_standard: 'Biocompatible when verified nickel-free and cadmium-free; noble metal corrosion resistance',
     autoclave_thermal_limit: 'Steam autoclave safe to 134°C',
     traceability_unit: 'Alloy assay certificate & hallmarked karat stamp',
     surface_finish_spec: 'Hand polished to mirror luster (Ra < 0.05 µm)',
