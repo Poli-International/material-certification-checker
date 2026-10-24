@@ -2695,6 +2695,12 @@ body.embed-mode {
   color: var(--color-text-primary);
 }
 
+.cert-decoder__piercing-status--conditional {
+  background: rgba(250, 204, 21, 0.12);
+  border-color: var(--color-conditional);
+  color: var(--color-text-primary);
+}
+
 .cert-decoder__piercing-status--fail {
   background: rgba(239, 68, 68, 0.12);
   border-color: var(--color-unsafe);
@@ -2727,6 +2733,10 @@ body.embed-mode {
 
 .cert-decoder__piercing-status--fail .cert-decoder__piercing-status-title {
   color: var(--color-unsafe);
+}
+
+.cert-decoder__piercing-status--conditional .cert-decoder__piercing-status-title {
+  color: var(--color-conditional);
 }
 
 .cert-decoder__piercing-status-desc {
@@ -3533,6 +3543,10 @@ body.light-mode .cert-decoder__compare-category-notice {
 
   .cert-decoder__piercing-status--fail .cert-decoder__piercing-status-title {
     color: #b91c1c !important;
+  }
+
+  .cert-decoder__piercing-status--conditional .cert-decoder__piercing-status-title {
+    color: #854d0e !important;
   }
 
   .cert-decoder__footer-info {
