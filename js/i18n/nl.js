@@ -65,7 +65,7 @@
     "opt_titanium_5": "Titanium Graad 5 (Ti-6Al-4V)",
     "opt_steel_316lvm": "Chirurgisch Staal 316LVM - ASTM F138",
     "opt_steel_316l": "Chirurgisch Staal 316L (Niet implanteerbaar)",
-    "opt_niobium": "Niobium (Puur / Gelegeerd) - ASTM F2229",
+    "opt_niobium": "Niobium (Puur / Gelegeerd) - ASTM B392",
     "opt_gold_14k": "14K Goud",
     "opt_gold_18k": "18K Goud (Nikkelvrij)",
     "opt_bioflex": "BioFlex® body jewelry (PP-R van medische kwaliteit)",
@@ -93,10 +93,10 @@
     "sensitivity_sensitive": "Gevoelig / Nikkelallergie",
     "submit_button": "Materiaalveiligheid Controleren",
     "alert_select_material": "Selecteer een materiaalsoort.",
-    "initial_pass_title": "GESCHIKT - Goedgekeurd voor Eerste Piercings",
-    "initial_pass_desc": "Voldoet aan vastgestelde biocompatibiliteitscriteria (ASTM/ISO) voor directe plaatsing in vers doorboord weefsel.",
+    "initial_pass_title": "GOEDKEURING - Geschikt voor Eerste Piercings",
+    "initial_pass_desc": "Geschikt voor een verse piercing zodra de documenten kloppen. Onze beoordeling, gebaseerd op de richtlijnen voor initiële sieraden van de APP en de certificaten van het materiaal (industriële praktijk, geen wet).",
     "initial_fail_title": "NIET GESCHIKT - Niet Aanbevolen voor Eerste Piercings",
-    "initial_fail_desc": "Voldoet niet aan de veiligheidsnormen voor eerste piercings; uitsluitend geschikt voor volledig genezen weefsel.",
+    "initial_fail_desc": "Alleen genezen piercings, of helemaal niet aanbevolen. Onze beoordeling, gebaseerd op de richtlijnen voor initiële sieraden van de APP (industriële praktijk, geen wet).",
     "warning_not_initial": "Dit materiaal wordt NIET aanbevolen voor eerste of verse piercings.",
     "warning_sensitive": "Dit materiaal is mogelijk niet geschikt voor een gevoelige huid.",
     "warning_nickel": "Dit materiaal bevat nikkel, wat allergische reacties kan veroorzaken bij gevoelige personen.",
@@ -133,7 +133,9 @@
     "how_to_verify_title": "Echtheid Controleren",
     "related_standards_title": "Gerelateerde Normen",
     "allergy_risk_title": "Allergierisicobeoordeling",
-    "required_certs_title": "Vereiste Certificaten"
+    "required_certs_title": "Vereiste Certificaten",
+    "initial_conditional_title": "VOORWAARDELIJK - Eerste Piercings Alleen Als Aan de Voorwaarde Is Voldaan",
+    "initial_conditional_desc": "Alleen geaccepteerd voor verse piercings onder een voorwaarde: massief goud dat nikkel- en cadmiumvrij is, geen nikkelallergie voor ASTM F138 staal, een benoemde implantaatspecificatie (ISO 5832-3) voor Grade 5 titanium. Lees de onderstaande opmerkingen."
   },
   "recent_checks": {
     "title": "Recente Materiaalcontroles",
@@ -283,7 +285,7 @@
     "material": "Materiaal:",
     "safety_rating": "Veiligheidsclassificatie:",
     "initial_status": "Status voor Eerste Piercing:",
-    "initial_pass": "GESCHIKT VOOR EERSTE PLAATSING",
+    "initial_pass": "GOEDKEURING - Geschikt voor Eerste Piercing",
     "initial_fail": "NIET GESCHIKT VOOR EERSTE PLAATSING",
     "section_tech": "TECHNISCHE SPECIFICATIES EN CERTIFICATIE",
     "biocompatibility": "Biocompatibiliteit:",
@@ -306,7 +308,8 @@
     "section_disclaimer": "JURIDISCHE EN PROFESSIONELE KENNISGEVING",
     "disclaimer_1": "Dit rapport is gebaseerd op gepubliceerde internationale normen (ASTM, ISO, CEN) en vastgestelde professionele praktijken.",
     "disclaimer_2": "Het vormt geen medische diagnose of individueel advies.",
-    "disclaimer_3": "Raadpleeg bij complicaties of weefselreacties onmiddellijk een bevoegde arts."
+    "disclaimer_3": "Raadpleeg bij complicaties of weefselreacties onmiddellijk een bevoegde arts.",
+    "initial_conditional": "VOORWAARDELIJK - Eerste Piercing Alleen Als Aan de Voorwaarde Is Voldaan"
   },
   "glossary": {
     "modal_title": "A–Z Woordenlijst van Body Jewelry Normen",
@@ -431,29 +434,30 @@
     },
     "ASTM_F2229": {
       "code": "ASTM F2229",
-      "full_name": "Standaardspecificatie voor ongelegeerd niobium voor chirurgische implantaattoepassingen",
+      "full_name": "Standaardspecificatie voor gewalst, stikstofversterkt 23Mangaan-21Chroom-1Molybdeen roestvrij staallegering staaf en draad voor chirurgische implantaten (UNS S29108)",
       "organization": "ASTM International",
-      "material_type": "Zuiver ongelegeerd niobium (Element 41)",
-      "body_piercing_use": "Uitstekend voor initiële piercings en cliënten met ernstige metaalgevoeligheid.",
-      "biocompatibility": "Buitengewoon hoog, biologisch inert en nikkelvrij",
+      "material_type": "Roestvrij staal met een laag nikkelgehalte (geen niobium)",
+      "body_piercing_use": "Zeldzaam in lichaamsieraden",
+      "biocompatibility": "Specificatie voor chirurgische implantaten",
       "sterilization": "Stoomautoclaaf bij 134°C",
-      "important_notes": "Zuiver elementair metaal met nul weefselreactiviteit. Kan worden geanodiseerd in levendige kleuren zonder oppervlaktecoatings.",
+      "important_notes": "Een roestvrij staal, geen niobium. Een niobiumcertificaat dat ASTM F2229 vermeldt, noemt de verkeerde specificatie: vraag de leverancier waarom.",
       "verification_method": "Chemisch analyserapport van de niobiumpartij",
-      "common_uses": "Sieraden voor klanten met nikkelallergie die de uitstraling van staal verkiezen."
+      "common_uses": [
+        "Chirurgische implantaten"
+      ]
     },
     "ASTM_F1586": {
       "code": "ASTM F1586",
-      "full_name": "Standaardspecificatie voor stikstofverrijkt austenitisch roestvrij staal voor chirurgische implantaten",
+      "full_name": "Standaardspecificatie voor gewalst stikstofversterkt 21Chroom-10Nikkel-3Mangaan-2,5Molybdeen roestvrij staallegering staaf voor chirurgische implantaten (UNS S31675)",
       "organization": "ASTM International",
-      "material_type": "Stikstofverrijkt roestvrij staal (Biodur 108 / Rex 734)",
-      "body_piercing_use": "Hoogwaardig staal met superieure weerstand tegen putcorrosie.",
-      "biocompatibility": "Uitstekende corrosiebestendigheid tegen agressieve lichaamsvloeistoffen.",
+      "material_type": "Stikstofversterkt roestvrij staal, ongeveer 10% nikkel (geen niobium)",
+      "body_piercing_use": "Zeldzaam in lichaamsieraden; bevat nikkel",
+      "biocompatibility": "Specificatie voor chirurgische implantaten; bevat nikkel",
       "sterilization": "Stoomautoclaaf, droge hitte",
-      "important_notes": "Stikstofverrijking zorgt voor grotere mechanische sterkte en minimaliseert ionenuittreding.",
+      "important_notes": "Een roestvrij staal dat nikkel bevat, geen niobiumlegering. Een niobiumcertificaat dat ASTM F1586 vermeldt, noemt de verkeerde specificatie.",
       "verification_method": "Metallurgisch keuringsrapport met treksterktewaarden en stikstofanalyse",
       "common_uses": [
-        "Zwaarbelaste orthopedische fixaties",
-        "Hoogwaardige implantaatsieraden"
+        "Chirurgische implantaten"
       ]
     },
     "ISO_5832-1": {
@@ -570,6 +574,21 @@
         "Wettelijke handhaving op piercingsieraden",
         "Chemische conformiteit op de Europese markt"
       ]
+    },
+    "ASTM_B392": {
+      "code": "ASTM B392",
+      "full_name": "Standaardspecificatie voor staaf, stang en draad van niobium en niobiumlegering",
+      "organization": "ASTM International",
+      "material_type": "Niobium, ongelegeerd of met 1% zirkonium",
+      "body_piercing_use": "Goed - nikkelvrij, geschikt voor de gevoelige huid",
+      "biocompatibility": "Nikkelvrij; al lang gebruikt in bodypiercing",
+      "sterilization": "Autoclaafveilig",
+      "important_notes": "Een industriële specificatie: niobium heeft geen aanduiding voor implantaatkwaliteit (APP). De APP vermeldt niobium nog steeds voor eerste piercings. Zachter dan titanium; kan worden geanodiseerd.",
+      "verification_method": "Fabriekscertificaat met vermelding van ASTM B392 en de niobiumkwaliteit",
+      "common_uses": [
+        "Lichaamsieraden",
+        "Rekjoden"
+      ]
     }
   },
   "materials": {
@@ -614,7 +633,7 @@
       "red_flags": [
         "Verdacht goedkoop 'implantaat-titanium'",
         "Geen fabriekscertificaat geleverd",
-        "Listed as \"Grade 5\" or \"ISO 5832-3\" (a different specification from F136)",
+        "Vermoeld als \"Grade 5\" zonder dat een implantaatspecificatie is genoemd (ISO 5832-3 of ASTM F1472)",
         "Generiek 'titanium' zonder graadspecificatie",
         "Leverancier weigert documentatie"
       ],
@@ -627,13 +646,16 @@
       "name": "Titanium Graad 5 (Ti-6Al-4V)",
       "biocompatibility": "Specified for surgical implants; most piercing guidance names its extra-low-interstitial version, ASTM F136 (Grade 23)",
       "composition": "Titaniumlegering: Ti-6Al-4V (hoger zuurstofgehalte dan Graad 23)",
-      "verification_tips": "Ask which specification the mill certificate names. ISO 5832-3 and ASTM F1472 are genuine surgical implant specifications for Ti-6Al-4V, but not F136 (Grade 23, ELI), which has the lower oxygen limit most piercing guidance names. ASTM B348 is an industrial bar specification with no implant requirements. \"Implant grade\" with no named specification proves nothing.",
+      "verification_tips": "Vraag welke specificatie het fabriekscertificaat vermeldt. ISO 5832-3 staat op de lijst van de APP voor initiële sieraden, evenals ASTM F136 (Grade 23, ELI), welke de lagere zuurstoflimiet heeft. ASTM F1472 is tevens een specificatie voor chirurgische implantaten. ASTM B348 is een industriële staafspecificatie zonder vereisten voor implantaten. \"Implantaatkwaliteit\" zonder genoemde specificatie bewijst niets.",
       "maintenance": "Same care as other titanium jewellery: mild soap and water",
       "common_names": [
         "Grade 5",
         "Ti-6Al-4V"
       ],
-      "suitable_for": [],
+      "suitable_for": [
+        "eerste piercings, als het certificaat ISO 5832-3 vermeldt (op de APP-lijst)",
+        "genezen piercings"
+      ],
       "not_suitable_for": [
         "jewellery sold as \"implant grade\" when you require ASTM F136"
       ],
@@ -652,7 +674,7 @@
       ],
       "red_flags": [
         "Graad 5 verkocht als 'implantaatgraad'",
-        "Verkoper toont ISO 5832-3 in plaats van ASTM F136",
+        "Geen implantaatspecificatie vermeld op het certificaat (ASTM B348 is een industriële staaf)",
         "Zeer goedkope 'titanium' sieraden",
         "Misleidende marketingclaims"
       ],
@@ -673,8 +695,8 @@
         "Chirurgisch roestvrij staal"
       ],
       "suitable_for": [
-        "Genezen piercings",
-        "Kortstondig dragen"
+        "eerste piercings (geen nikkelallergie; ASTM F138 staat op de APP-lijst)",
+        "genezen piercings"
       ],
       "not_suitable_for": [
         "Bekende nikkelallergie",
@@ -695,7 +717,7 @@
         "Bevat 13-15% nikkel",
         "Kan allergische reacties veroorzaken",
         "Zwaarder dan titanium",
-        "Niet ideaal voor initiële piercings",
+        "Niet voor klanten met een nikkelallergie",
         "Onderworpen aan Europese limieten voor nikkelafgifte"
       ],
       "red_flags": [
@@ -759,7 +781,7 @@
       "name": "Puur Niobium (Nb 99,9%)",
       "biocompatibility": "Uitstekend (100% inert, zuiver metallisch element)",
       "composition": "Puur elementair niobium van 99,9% (ASTM B392). 100% nikkelvrij.",
-      "verification_tips": "99,9% zuiverheidsgraad verifiëren aan de hand van het technisch gegevensblad.",
+      "verification_tips": "Vraag om een fabriekscertificaat met vermelding van ASTM B392 en de niobiumkwaliteit. Niobium heeft geen specificatie voor implantaatkwaliteit (APP). Een niobiumcertificaat dat ASTM F2229 of F1586 vermeldt is fout: dat zijn specificaties voor roestvrijstalen implantaten.",
       "maintenance": "Zachte reiniging met steriele fysiologische zoutoplossing.",
       "common_names": "Niobium, Puur Nb",
       "suitable_for": "Initiële piercings, oor, neus, septum, personen met ernstige allergieën",
@@ -789,7 +811,7 @@
       "name": "18K Goud",
       "biocompatibility": "Uitstekend mits nikkelvrije legering",
       "composition": "75,0% zuiver goud. Hoogwaardige edele legering zonder nikkel of toxische toevoegingen.",
-      "verification_tips": "Keurmerkstempel (750) en bewijs van een nikkelvrije hypoallergene samenstelling.",
+      "verification_tips": "Hetzelfde als 14K: verifieer dat het massief is (niet verguld of gevuld) en nikkel- en cadmiumvrij. De APP accepteert 14K en hoger voor eerste piercings; goud boven 18K is te zacht voor lichaamsieraden.",
       "maintenance": "Zachte, niet-schurende reiniging.",
       "common_names": "18-karaats goud, 750 goud",
       "suitable_for": "Initiële piercings en genezen piercings in het hogere segment",
@@ -922,7 +944,7 @@
       "name": "Borosilicaatglas (Pyrex 3.3)",
       "biocompatibility": "Uitstekend (Inert, niet-poreus silicaatglas volgens ISO)",
       "composition": "Zeer zuiver siliciumdioxide en boortrioxide met uitstekende thermische stabiliteit.",
-      "verification_tips": "Controleren op een onberispelijk glad oppervlak en afwezigheid van microscheurtjes.",
+      "verification_tips": "Verifieer dat het glas loodvrij is: gesmolten kwarts, borosilicaat of natriumkalkglas (alle drie staan op de APP-lijst). Controleer voor gebruik op barstjes of chips.",
       "maintenance": "Reinigen met water en zeep of een mild desinfectiemiddel.",
       "common_names": "Pyrex, Borosilicaatglas, Medisch Glas",
       "suitable_for": "Initiële piercings, oprekken van oorlellen (stretching), orale en lichaamspiercings",
@@ -1113,11 +1135,12 @@
     "gap_eli_oxygen": "ELI-zuurstofverificatie: Titanium Graad 5 (0,20% zuurstof) wordt vaak verkocht als generiek «titanium». Alleen ASTM F136 garandeert het extra lage zuurstofplafond (ELI ≤ 0,13%).",
     "gap_var_remelt": "Vacuümboog-hersmelting (VAR): Commercieel 316L wordt in open lucht gesmolten en bevat hogere koolstof-/zwavelgehaltes en niet-metalen insluitsels dan vacuüm-hergesmolten ASTM F138 316LVM.",
     "gap_allergen_proof": "Chemisch allergeenbewijs: De claim «hypoallergeen» vermeldt geen nikkelgehalte, coatingdikte of onderliggende basismetalen.",
+    "gap_niobium_wrong_spec": "Verkeerde specificatie: ASTM F2229 en F1586 zijn specificaties voor roestvrijstalen implantaten, niet voor niobium. Niobium wordt geleverd volgens ASTM B392; vraag de leverancier waarom het certificaat een staalnorm noemt.",
     "gap_doc_physical_proof": "Fysiek documentair bewijs: Een claim van een distributeur of een factuurbewijs is geen fabriekscertificaat (MTR). Echte verificatie vereist het laboratoriumrapport van de smelterij.",
     "proof_titanium": "Origineel fabriekscertificaat (MTR) volgens EN 10204 3.1 met vermelding van ASTM F136 (Ti-6Al-4V ELI), Zuurstof ≤ 0,13%, IJzer ≤ 0,25%, en overeenkomstig chargenummer op de verpakking.",
     "proof_steel": "Fabriekscertificaat met specificatie ASTM F138 (Graad 2 Staven/Draden), 316LVM vacuüm-hergesmolten, Koolstof ≤ 0,030%, Zwavel ≤ 0,010%, met chargenummer.",
     "proof_polymer": "Certificaat voor biologische reactiviteit volgens USP Klasse VI + ISO 10993-5 cytotoxiciteitsrapport voor medische PP-R-hars.",
-    "proof_niobium": "Fabriekscertificaat voor ongelegeerd niobium volgens ASTM F2229 (≥ 99,85% Nb) met lage interstitiële waarden.",
+    "proof_niobium": "Fabriekscertificaat met vermelding van ASTM B392 en de niobiumkwaliteit, met een smeltnummer (niobium heeft geen specificatie voor implantaatkwaliteit).",
     "proof_generic": "Officieel fabriekscertificaat (MTR) van de smelterij met chemische analyse, mechanische tests en smeltchargenummer.",
     "copy_summary_title": "MATERIAALCERTIFICERING CONTROLEUR - TEKSTANALYSE",
     "copy_summary_date": "Datum:",
@@ -1137,7 +1160,7 @@
     "opt_astm_f136": "ASTM F136 Titanium (Ti-6Al-4V ELI)",
     "opt_astm_f138": "ASTM F138 Roestvrij staal (316LVM)",
     "opt_bioflex": "BioFlex® body jewelry (PP-R; hars USP Klasse VI)",
-    "opt_niobium": "ASTM F2229 Niobium (ongelegeerd)",
+    "opt_niobium": "ASTM B392 Niobium (Ongelegeerd)",
     "opt_glass": "Borosilicaatglas 3.3",
     "opt_gold": "Massief 14K/18K goud",
     "opt_commercial_316l": "Commercieel 316L / Titanium Graad 5",
@@ -1199,7 +1222,7 @@
     "use_healed_piercing_req_2": "Veilige mechanische afwerking zonder scherpe randen",
     "use_healed_piercing_req_3": "Stabiele, inerte samenstelling",
     "use_sensitive_client_context": "Cliënt met gediagnosticeerde overgevoeligheid voor nikkel, chroom of onzuiverheden in reguliere legeringen. Vereist strikt nikkelvrije materialen om contacteczeem te voorkomen.",
-    "use_sensitive_client_req_0": "Nul nikkelgehalte: ASTM F136 Titanium, ASTM F2229 Niobium of USP Klasse VI PP-R",
+    "use_sensitive_client_req_0": "Nikkelvrij: ASTM F136 titanium, niobium (ASTM B392) of USP Class VI PP-R",
     "use_sensitive_client_req_1": "Vermijd elk 316L/316LVM staal (bevat 13 tot 15% gebonden nikkel)",
     "use_sensitive_client_req_2": "Vermijd witgoud tenzij uitsluitend gelegeerd met palladium",
     "use_sensitive_client_req_3": "Verificatie van schone bewerkingsgereedschappen zonder kruisbesmetting",
@@ -1247,10 +1270,10 @@
     "q_bioflex_polymer_2_sat": "Ondubbelzinnige validatie voor stoomautoclaafcycli (bijv. 121°C gedurende 20 minuten) zonder thermische degradatie of uitstoot van giftige dampen.",
     "q_bioflex_polymer_2_unsat": "\"Niet autoclaveren\", of kunststoffen die vervormen bij autoclaaftemperaturen (zoals commercieel acryl of PVC).",
     "q_bioflex_polymer_3_q": "Is het polymeer samengesteld zonder weekmakers (zoals ftalaten), bisfenol A (BPA) en zware metaalkleurstoffen?",
-    "q_bioflex_polymer_3_sat": "Veiligheidsinformatieblad dat de volledige afwezigheid van ftalaten, BPA en toxische stabilisatoren bevestigt.",
+    "q_bioflex_polymer_3_sat": "Formuleringsverklaring die bevestigt dat er geen ftalaten, BPA of giftige stabilisatoren zijn toegevoegd.",
     "q_bioflex_polymer_3_unsat": "Flexibel vinyl/PVC met migrerende weekmakers of niet-gevalideerde kleurmasterbatches.",
-    "q_niobium_0_q": "Kunt u een fabriekstestcertificaat overleggen dat aantoont dat het ongelegeerde niobium voldoet aan ASTM F2229 (of zuiver Nb ≥ 99,9%)?",
-    "q_niobium_0_sat": "Certificaat met analyse van zuiver niobium (minimaal 99,85% tot 99,9% Nb) met lage interstitiële waarden (Ta ≤ 0,3%, O ≤ 0,04%).",
+    "q_niobium_0_q": "Kunt u een Mill Test Report verstrekken waarin ASTM B392 en de niobiumkwaliteit worden vermeld, samen met een smeltnummer?",
+    "q_niobium_0_sat": "MTR met vermelding van ASTM B392 en de niobiumkwaliteit, met de chemische analyse en een smeltnummer.",
     "q_niobium_0_unsat": "Vergulde basismetalen of legeringen met onbekende samenstelling.",
     "q_niobium_1_q": "Bestaat het sieraad volledig uit massief niobium, vrij van oppervlakkige coatings of kernen van onedel metaal?",
     "q_niobium_1_sat": "Bewijs van 100% massief gewalst niobium over de gehele doorsnede.",
@@ -1260,7 +1283,7 @@
     "q_niobium_2_unsat": "Emailverf, vernis of chemische dompelbadkleuringen.",
     "q_borosilicate_glass_0_q": "Kunt u aantonen dat het sieraad is vervaardigd uit massief, loodvrij borosilicaatglas (Borosilicaat 3.3 conform ISO 3585)?",
     "q_borosilicate_glass_0_sat": "Verklaring van de fabrikant ter bevestiging van massieve borosilicaatglas 3.3 samenstelling, 100% vrij van lood-, arseen- en cadmiumvloeimiddelen.",
-    "q_borosilicate_glass_0_unsat": "Zacht kalk-natronglas, loodkristal of glas met emaillak op het oppervlak.",
+    "q_borosilicate_glass_0_unsat": "Loodkristal, glas van onbekende samenstelling of glas met glazuurverf op het oppervlak.",
     "q_borosilicate_glass_1_q": "Heeft het afgewerkte sieraad een grondige ovenkoeling (annealing) ondergaan om interne thermische spanningen weg te nemen?",
     "q_borosilicate_glass_1_sat": "Inspectie onder een polariscoop die aantoont dat er geen dubbelbreking of spanningen meer in het glas aanwezig zijn.",
     "q_borosilicate_glass_1_unsat": "Niet-nagegloeid glas dat vatbaar is voor spontane breuk door thermische schokken.",
@@ -1307,7 +1330,7 @@
     "cat_general": "Algemeen",
     "empty_msg": "Geen claims komen overeen met uw zoekfilter. Probeer het zoekwoord te wissen.",
     "item_implant_grade_titanium_claim": "Implant Grade Titanium (Implantaatkwaliteit)",
-    "item_implant_grade_titanium_doc": "Fabriekstestcertificaat (MTR / EN 10204 Type 3.1) met vermelding van ASTM F136 of ISO 5832-3 ELI",
+    "item_implant_grade_titanium_doc": "Mill Test Report (MTR / EN 10204 Type 3.1) met vermelding van ASTM F136 of ISO 5832-3",
     "item_implant_grade_titanium_proves": "Toont aan dat het smeedbare Ti-6Al-4V ELI (Extra Low Interstitial) legering betreft met maximaal 0,13% zuurstof, gecertificeerde treksterkte en uniek smeltchargenummer.",
     "item_implant_grade_titanium_absence": "Het ontbreken toont aan dat de term uitsluitend als verkoopkreet fungeert. De legering kan industrieel Grade 5 (0,20% zuurstof) of schrootmetaal zijn met hoge onzuiverheden. Geen enkel bewijs ondersteunt biocompatibiliteit.",
     "item_implant_grade_titanium_action": "Vraag het fabriekstestcertificaat op. Controleer op \"ASTM F136\", \"ELI\", zuurstof ≤ 0,13% en smeltchargenummer dat overeenkomt met de zending.",
@@ -1323,7 +1346,7 @@
     "item_hypoallergenic_action": "Negeer het woord \"hypoallergeen\" volledig. Controleer de specifieke legeringsnorm en het testrapport van een onafhankelijk laboratorium.",
     "item_medical_grade_polymer_claim": "Medisch Polymeer / BioFlex® / Kunststof",
     "item_medical_grade_polymer_doc": "USP Klasse VI reactiviteitscertificaat en ISO 10993-5 cytotoxiciteitstest",
-    "item_medical_grade_polymer_proves": "Toont in vivo biocompatibiliteit bij 121°C en graad 0 in vitro cytotoxiciteit aan voor medische PP-R hars, vrij van weekmakers of zware metaalpigmenten.",
+    "item_medical_grade_polymer_proves": "Toont aan dat de hars de dierproeven volgens USP Class VI heeft doorstaan (systemische injectie, intracutaan, implantatie) en de cytotoxiciteitstest volgens ISO 10993-5. Dit bewijst op zich niet de afwezigheid van weekmakers of pigmentmetalen: vraag om de formuleringsverklaring.",
     "item_medical_grade_polymer_absence": "Het ontbreken duidt op industrieel acryl (PMMA), PTFE, PVC of goedkope knutselhars. Deze degraderen bij lichaamswarmte, lekken monomeren en kunnen een stoomautoclaaf niet doorstaan.",
     "item_medical_grade_polymer_action": "Eis gedocumenteerde conformiteit met USP Klasse VI en ISO 10993-5 cytotoxiciteitstesten. Controleer geschiktheid voor stoomautoclaaf.",
     "item_nickel_free_claim": "Nikkelvrij",
@@ -1491,7 +1514,7 @@
     "badge": "[VERGELIJKING GECERTIFICEERDE NORMEN]",
     "th_parameter": "Technische Normparameter",
     "tag_specification": "[SPECIFICATIE]",
-    "footer_note": "Methodologische Opmerking: De vermelde specificaties zijn gebaseerd op de geldende uitgaven van ASTM F136, ASTM F138, ASTM F2229, ISO 10993 en USP Klasse VI. In piercingstudio's vereisen ontvangstprotocollen onafhankelijke controle van het fabriekscertificaat (MTR) dat overeenkomt met het smeltchargenummer op de verpakking.",
+    "footer_note": "Methodologische Opmerking: De vermelde specificaties zijn gebaseerd op de geldende uitgaven van ASTM F136, ASTM F138, ASTM B392, ISO 10993 en USP Klasse VI. In piercingstudio's vereisen ontvangstprotocollen onafhankelijke controle van het fabriekscertificaat (MTR) dat overeenkomt met het smeltchargenummer op de verpakking.",
     "row_biocompatibility_standard": "Gecertificeerde Biocompatibiliteitstest",
     "row_autoclave_thermal_limit": "Thermische Tolerantie Stoomautoclaaf",
     "row_traceability_unit": "Vereiste Traceerbaarheidseenheid",
@@ -1506,11 +1529,11 @@
     "mat_surgical_steel_316l_tissue_boundary": "Maritieme materialen, voedingsmiddelenindustrie, buitensieraden op intacte genezen huid",
     "mat_bioflex_biocompatibility_standard": "Hars voldoet aan USP Klasse VI en Ph. Eur. 3.2.2; gecertificeerd als geslaagd voor de biologische tests van ISO 10993",
     "mat_bioflex_tissue_boundary": "Eerste piercings, orale piercings, flexibele weefselkanalen; zonder metaal, niet magnetisch (meld het bij MRI en röntgen aan de radiologiemedewerkers)",
-    "mat_niobium_biocompatibility_standard": "Voldoet aan ISO 10993; zeer biocompatibel, 100% nikkelvrij, niet-reactief",
+    "mat_niobium_biocompatibility_standard": "Nikkelvrij; al lang gebruikt bij bodypiercing en op de APP-lijst voor initiële piercings",
     "mat_niobium_tissue_boundary": "Initiële piercingfistels, gevoelig weefsel, subdermale en genezen piercings",
-    "mat_glass_biocompatibility_standard": "Chemisch volkomen inert; nul ionenafgifte in fysiologische oplossingen",
+    "mat_glass_biocompatibility_standard": "Zeer bestand tegen chemische aantasting; zeer lage ionenafgifte in lichaamsvloeistoffen",
     "mat_glass_tissue_boundary": "Initieel piercingkanaal, rekkende fistels, langdurig genezen piercings",
-    "mat_gold_14k_biocompatibility_standard": "Biocompatibel mits geverifieerd 100% vrij van nikkel en cadmium; corrosiebestendig edelmetaal",
+    "mat_gold_14k_biocompatibility_standard": "Biocompatibel wanneer geverifieerd nikkelvrij en cadmiumvrij; corrosiebestendigheid van edelmetaal",
     "mat_gold_14k_tissue_boundary": "Initiële piercing (indien massief en nikkelvrij geverifieerd), genezen piercings",
     "mat_acrylic_biocompatibility_standard": "NIET gecertificeerd voor chirurgische implantaten of open wondcontact; microporeus; lekt monomeren",
     "mat_acrylic_tissue_boundary": "Genezen, intacte oorlellen UITSLUITEND voor korte perioden; strikt verboden in verse wonden"
