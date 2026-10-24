@@ -1653,7 +1653,7 @@
       "item_autoclave_safe_doc": "ผลการตรวจสอบรอบความร้อน (รายงานการตรวจสอบการฆ่าเชื้อด้วยไอน้ำ ISO 17665)",
       "item_autoclave_safe_proves": "พิสูจน์ว่าชิ้นงานทนไอน้ำอิ่มตัวที่ 121°C–134°C ได้โดยไม่บิดเบี้ยว ไม่หลอมละลาย ไม่สลายตัว ไม่ปล่อยควันพิษ และไม่ทำให้ผิวเสื่อม",
       "item_autoclave_safe_absence": "การไม่มีหมายความว่าชิ้นงานอาจหลอมละลายในห้องนึ่งฆ่าเชื้อ ทำลายปั๊มสุญญากาศของเครื่อง หรือเคลือบเครื่องประดับชิ้นอื่นด้วยพอลิเมอร์หลอมที่เป็นพิษ",
-      "item_autoclave_safe_action": "Verify manufacturer temperature tolerance: 134°C for titanium/steel/glass; 121°C for BioFlex. Never autoclave acrylic or glued stone gems.",
+      "item_autoclave_safe_action": "Verify manufacturer temperature tolerance: 134°C for titanium/steel/glass; 121–134°C for BioFlex (standard steam cycles). Never autoclave acrylic or glued stone gems.",
       "item_biocompatible_iso10993_claim": "เข้ากันได้ทางชีวภาพ / ผ่านการทดสอบ ISO 10993",
       "item_biocompatible_iso10993_doc": "รายงานการทดสอบจากห้องปฏิบัติการที่ได้รับการรับรองซึ่งอ้างถึง ISO 10993-5 และ ISO 10993-10 โดยเฉพาะ",
       "item_biocompatible_iso10993_proves": "ยืนยันว่าการเพาะเลี้ยงเซลล์ที่มีชีวิตที่สัมผัสวัสดุไม่แสดงการแตกสลายหรือการตายของเซลล์ (ความเป็นพิษต่อเซลล์ระดับ 0) และการทดสอบในหนูแกสบี/หนูเมาส์ไม่แสดงการไวต่อสาร",
