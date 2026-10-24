@@ -1358,7 +1358,7 @@
     "item_autoclave_safe_doc": "Validação de ciclos térmicos (relatório de esterilização a vapor ISO 17665)",
     "item_autoclave_safe_proves": "Comprova que o artigo suporta vapor saturado a 121°C–134°C sem deformação, fusão, libertação de gases nocivos nem perda de acabamento.",
     "item_autoclave_safe_absence": "A ausência expõe ao risco de derretimento da peça na câmara, danos na bomba de vácuo do autoclave ou contaminação dos restantes artigos com plástico tóxico.",
-    "item_autoclave_safe_action": "Confirme os limites de temperatura: 134°C para titânio/aço/vidro; 121°C para BioFlex. Nunca esterilize em autoclave acrílico ou gemas coladas.",
+    "item_autoclave_safe_action": "Confirme os limites de temperatura: 134°C para titânio/aço/vidro; 121–134°C para BioFlex (ciclos de vapor padrão). Nunca esterilize em autoclave acrílico ou gemas coladas.",
     "item_biocompatible_iso10993_claim": "Biocompatível / Testado ISO 10993",
     "item_biocompatible_iso10993_doc": "Relatório de ensaio acreditado referenciando expressamente as partes ISO 10993-5 e ISO 10993-10",
     "item_biocompatible_iso10993_proves": "Certifica que as culturas celulares não sofreram lise (citotoxicidade grau 0) e que não ocorreram sinais de irritação ou sensibilização dérmica.",
