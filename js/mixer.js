@@ -45,7 +45,7 @@ Poli International
     },
     'niobium': {
       id: 'niobium',
-      name: 'ASTM F2229 Niobium (Unalloyed)',
+      name: 'ASTM B392 Niobium (Unalloyed)',
       galvanic_emf: -0.18,
       elements: ['Niobium (Nb 99.8%)', 'Tantalum (Ta < 0.1%)'],
       biocompatibilityTier: 3,
