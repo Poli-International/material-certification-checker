@@ -103,7 +103,8 @@
     if (/astm\s*f\s*136/i.test(lower)) standardsFound.push({ code: 'ASTM F136', name: 'Wrought Ti-6Al-4V ELI for Surgical Implants', surgical: true });
     if (/astm\s*f\s*138/i.test(lower)) standardsFound.push({ code: 'ASTM F138', name: 'Wrought 316LVM Stainless Steel for Surgical Implants', surgical: true });
     if (/astm\s*f\s*67/i.test(lower)) standardsFound.push({ code: 'ASTM F67', name: 'Unalloyed Titanium for Surgical Implants (Grades 1-4)', surgical: true });
-    if (/astm\s*f\s*2229/i.test(lower)) standardsFound.push({ code: 'ASTM F2229', name: 'Wrought Unalloyed Niobium for Surgical Implants', surgical: true });
+    if (/astm\s*f\s*2229/i.test(lower)) standardsFound.push({ code: 'ASTM F2229', name: 'Low-Nickel Stainless Steel for Surgical Implants (not niobium)', surgical: true });
+    if (/astm\s*b\s*392/i.test(lower)) standardsFound.push({ code: 'ASTM B392', name: 'Niobium Bar, Rod and Wire (industrial; niobium has no implant-grade specification)', surgical: false });
     if (/astm\s*f\s*1295/i.test(lower)) standardsFound.push({ code: 'ASTM F1295', name: 'Wrought Ti-6Al-7Nb for Surgical Implants', surgical: true });
     if (/iso\s*5832-1/i.test(lower)) standardsFound.push({ code: 'ISO 5832-1', name: 'Stainless Steel for Surgical Implants (316LVM equivalent)', surgical: true });
     if (/iso\s*5832-3/i.test(lower)) standardsFound.push({ code: 'ISO 5832-3', name: 'Wrought Ti-6Al-4V (surgical implant specification, not ELI - check the oxygen limit)', surgical: true });
@@ -199,8 +200,11 @@
     if (lower.includes('316l') && !lower.includes('316lvm') && !lower.includes('f138')) {
       criticalGaps.push(safeT('cert_reader.gap_var_remelt', 'Vacuum Arc Remelting (VAR): Commercial 316L is melted in open air and has higher carbon/sulfur and non-metallic inclusions than vacuum-melted ASTM F138 316LVM.'));
     }
-    if ((marketingFound.includes('Hypoallergenic') || lower.includes('hypoallergenic')) && !standardsFound.some(s => s.code === 'ASTM F136' || s.code === 'ASTM F2229')) {
+    if ((marketingFound.includes('Hypoallergenic') || lower.includes('hypoallergenic')) && !standardsFound.some(s => s.code === 'ASTM F136' || s.code === 'ASTM B392')) {
       criticalGaps.push(safeT('cert_reader.gap_allergen_proof', 'Allergen Chemical Proof: "Hypoallergenic" does not disclose nickel content, plating thickness, or substrate base metals.'));
+    }
+    if (lower.includes('niobium') && /astm\s*f\s*(2229|1586)/i.test(lower)) {
+      criticalGaps.push(safeT('cert_reader.gap_niobium_wrong_spec', 'Wrong Specification: ASTM F2229 and F1586 are stainless steel implant specifications, not niobium. Niobium is sold to ASTM B392; ask the supplier why the certificate cites a steel standard.'));
     }
     if (!lower.includes('mtr') && !lower.includes('mill cert') && !lower.includes('test report')) {
       criticalGaps.push(safeT('cert_reader.gap_doc_physical_proof', 'Documentary Physical Proof: A distributor claim or invoice label is not a Mill Test Report (MTR). True verification requires the melt mill laboratory sheet.'));
@@ -215,7 +219,7 @@
     } else if (lower.includes('bioflex') || lower.includes('polymer') || lower.includes('plastic')) {
       requiredProof = safeT('cert_reader.proof_polymer', 'USP Class VI biological reactivity testing certificate + ISO 10993-5 cytotoxicity report for medical-grade PP-R resin.');
     } else if (lower.includes('niobium')) {
-      requiredProof = safeT('cert_reader.proof_niobium', 'Mill Test Certificate showing ASTM F2229 unalloyed niobium (≥ 99.85% Nb) with low interstitials.');
+      requiredProof = safeT('cert_reader.proof_niobium', 'Mill certificate naming ASTM B392 and the niobium grade, with a heat number (niobium has no implant-grade specification).');
     } else {
       requiredProof = safeT('cert_reader.proof_generic', 'Official raw material Mill Test Report (MTR) from melting mill with chemical analysis, mechanical testing, and heat lot identifier.');
     }
@@ -946,7 +950,7 @@ ${analysis.requiredProof}
     const btnPrint = safeT('cert_compare.btn_print', 'Print Comparison');
     const thParam = safeT('cert_compare.th_parameter', 'Technical Standard Parameter');
     const tagSpec = safeT('cert_compare.tag_specification', '[SPECIFICATION]');
-    const footerNote = safeT('cert_compare.footer_note', 'Methodology Note: Specifications cited reflect current published revisions of ASTM F136, ASTM F138, ASTM F2229, ISO 10993, and USP Class VI. In body art studios, receiving protocols require independent verification of the manufacturer\'s Mill Test Report (MTR) matching the packaging heat number.');
+    const footerNote = safeT('cert_compare.footer_note', 'Methodology Note: Specifications cited reflect current published revisions of ASTM F136, ASTM F138, ASTM B392, ISO 10993, and USP Class VI. In body art studios, receiving protocols require independent verification of the manufacturer\'s Mill Test Report (MTR) matching the packaging heat number.');
 
     resultsDiv.style.display = 'block';
     resultsDiv.classList.remove('fade-in-result');
