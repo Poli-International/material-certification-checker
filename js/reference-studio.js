@@ -56,7 +56,7 @@ Poli International
     },
     {
       id: 'niobium',
-      name: 'ASTM F2229 Niobium (Unalloyed)',
+      name: 'ASTM B392 Niobium (Unalloyed)',
       autoclave: '121°C - 134°C (Steam autoclave safe)',
       ultrasonic: 'Suitable with enzymatic wash',
       dryHeat: 'Compatible up to 200°C',
