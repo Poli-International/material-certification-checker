@@ -1358,7 +1358,7 @@
     "item_autoclave_safe_doc": "Validación de ciclado térmico (informe de esterilización por vapor ISO 17665)",
     "item_autoclave_safe_proves": "Demuestra que la pieza soporta vapor saturado a 121°C–134°C sin deformarse, fundirse, liberar vapores nocivos ni dañar el pulido superficial.",
     "item_autoclave_safe_absence": "Su ausencia expone al riesgo de que la pieza se funda en la cámara, dañe la bomba de vacío o contamine otras joyas con plástico fundido tóxico.",
-    "item_autoclave_safe_action": "Compruebe la tolerancia térmica: 134°C para titanio/acero/vidrio; 121°C para BioFlex. No autoclave acrílico ni gemas encoladas.",
+    "item_autoclave_safe_action": "Compruebe la tolerancia térmica: 134°C para titanio/acero/vidrio; 121–134°C para BioFlex (ciclos de vapor estándar). No autoclave acrílico ni gemas encoladas.",
     "item_biocompatible_iso10993_claim": "Biocompatible / Conforme a ISO 10993",
     "item_biocompatible_iso10993_doc": "Informe de ensayo acreditado que cite expresamente las partes ISO 10993-5 e ISO 10993-10",
     "item_biocompatible_iso10993_proves": "Certifica que los cultivos celulares no experimentaron lisis (citotoxicidad grado 0) y que no se detectaron indicios de sensibilización dérmica.",
