@@ -1356,7 +1356,7 @@
     "item_autoclave_safe_doc": "Validazione dei cicli termici (rapporto di sterilizzazione a vapore ISO 17665)",
     "item_autoclave_safe_proves": "Dimostra che il pezzo resiste a vapore saturo tra 121°C e 134°C senza deformarsi, fondersi, degradarsi, rilasciare gas nocivi o alterare la lucidatura.",
     "item_autoclave_safe_absence": "L'assenza comporta il rischio che il gioiello si deformi nella camera di sterilizzazione, danneggi la pompa a vuoto o contamini gli altri pezzi.",
-    "item_autoclave_safe_action": "Verificare la temperatura massima: 134°C per titanio/acciaio/vetro; 121°C per BioFlex. Non autoclavare mai acrilico o pietre incollate.",
+    "item_autoclave_safe_action": "Verificare la temperatura massima: 134°C per titanio/acciaio/vetro; 121–134°C per BioFlex (cicli a vapore standard). Non autoclavare mai acrilico o pietre incollate.",
     "item_biocompatible_iso10993_claim": "Biocompatibile / Testato ISO 10993",
     "item_biocompatible_iso10993_doc": "Rapporto di prova accreditato che cita esplicitamente ISO 10993-5 e ISO 10993-10",
     "item_biocompatible_iso10993_proves": "Conferma che le colture cellulari vive esposte al materiale non hanno subito lisi (citotossicità grado 0) e che non si sono verificate reazioni avverse.",
