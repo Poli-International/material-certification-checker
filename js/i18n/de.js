@@ -1356,7 +1356,7 @@
     "item_autoclave_safe_doc": "Validierung thermischer Zyklen (ISO 17665 Dampfsterilisationsbericht)",
     "item_autoclave_safe_proves": "Beweist, dass das Teil Sattdampf bei 121°C bis 134°C unbeschadet übersteht, ohne Verformung, Schmelzen, giftige Ausdünstungen oder Oberflächenverlust.",
     "item_autoclave_safe_absence": "Fehlen birgt das Risiko, dass der Schmuck im Autoklaven schmilzt, die Vakuumpumpe beschädigt oder andere Teile mit giftigem Polymer überzieht.",
-    "item_autoclave_safe_action": "Zulässige Temperatur prüfen: 134°C für Titan/Stahl/Glas; 121°C für BioFlex. Niemals Acryl oder geklebte Schmucksteine autoklavieren.",
+    "item_autoclave_safe_action": "Zulässige Temperatur prüfen: 134°C für Titan/Stahl/Glas; 121–134°C für BioFlex (Standard-Dampfzyklen). Niemals Acryl oder geklebte Schmucksteine autoklavieren.",
     "item_biocompatible_iso10993_claim": "Biokompatibel / ISO 10993 Geprüft",
     "item_biocompatible_iso10993_doc": "Akkreditierter Prüfbericht mit konkreter Nennung von ISO 10993-5 und ISO 10993-10",
     "item_biocompatible_iso10993_proves": "Bestätigt, dass lebende Zellkulturen keine Lyse zeigten (Zytotoxizität Grad 0) und im Tierversuch keine Reizungen oder Sensibilisierungen auftraten.",
