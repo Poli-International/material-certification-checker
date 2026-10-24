@@ -1358,7 +1358,7 @@
     "item_autoclave_safe_doc": "Validatie thermische cyclustest (ISO 17665 stoomsterilisatierapport)",
     "item_autoclave_safe_proves": "Bewijst dat het sieraad verzadigde stoom bij 121°C tot 134°C doorstaat zonder te vervormen, te smelten, giftige dampen af te geven of de polijsting aan te tasten.",
     "item_autoclave_safe_absence": "Het ontbreken brengt het gevaar met zich mee dat het sieraad smelt in de autoclaaf, de vacuümpomp beschadigt of andere sieraden vervuilt met giftig gesmolten polymeer.",
-    "item_autoclave_safe_action": "Controleer de temperatuurtolerantie: 134°C voor titanium/staal/glas; 121°C voor BioFlex. Nooit acryl of gelijmde edelstenen autoclaveren.",
+    "item_autoclave_safe_action": "Controleer de temperatuurtolerantie: 134°C voor titanium/staal/glas; 121–134°C voor BioFlex (standaard stoomcycli). Nooit acryl of gelijmde edelstenen autoclaveren.",
     "item_biocompatible_iso10993_claim": "Biocompatibel / ISO 10993 Getest",
     "item_biocompatible_iso10993_doc": "Geaccrediteerd testrapport waarin ISO 10993-5 en ISO 10993-10 specifiek worden vermeld",
     "item_biocompatible_iso10993_proves": "Bevestigt dat levende celkweken geen celverval vertoonden (cytotoxiciteit graad 0) en dat er geen huidirritatie of sensibilisatie optrad.",
