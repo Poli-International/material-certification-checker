@@ -1656,7 +1656,7 @@ Language: English (Reference Dictionary)
         "item_autoclave_safe_doc": "Thermal cycling test validation (ISO 17665 steam sterilization validation report)",
         "item_autoclave_safe_proves": "Proves the piece survives saturated steam at 121°C–134°C without warping, melting, decomposing, releasing toxic fumes, or degrading polish.",
         "item_autoclave_safe_absence": "Absence means the item may melt inside an autoclave chamber, destroy the autoclave vacuum pump, or coat other jewelry in toxic polymer melt.",
-        "item_autoclave_safe_action": "Verify manufacturer temperature tolerance: 134°C for titanium/steel/glass; 121°C for BioFlex. Never autoclave acrylic or glued stone gems.",
+        "item_autoclave_safe_action": "Verify manufacturer temperature tolerance: 134°C for titanium/steel/glass; 121–134°C for BioFlex (standard steam cycles). Never autoclave acrylic or glued stone gems.",
         "item_biocompatible_iso10993_claim": "Biocompatible / ISO 10993 Tested",
         "item_biocompatible_iso10993_doc": "Accredited lab test report specifically citing ISO 10993-5 and ISO 10993-10",
         "item_biocompatible_iso10993_proves": "Confirms that living cell cultures exposed to the material showed no lysis or cell death (cytotoxicity grade 0), and guinea pig/murine assays showed no sensitization.",
